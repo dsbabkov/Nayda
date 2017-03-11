@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\main_application.o
+./release\Before_TheGame_Interface.o
+./release\Before_TheGame_Master.o
+./release\Before_TheGame_Server.o
+./release\AddressLineClass.o
+./release\Parent_GUI.o
+./release\Parent_Master.o
+./release\Parent_Server.o
+./release\TheGame_Munckin_Interface.o
+./release\TheGame_Munckin_Master.o
+./release\TheGame_Munckin_Server.o
+./release\Before_TheGame.o
+./release\moc_main_application.o
+);
