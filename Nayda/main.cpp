@@ -17,5 +17,8 @@ int main(int argc, char *argv[])
 
     qDebug() << "Here we go!";
 
+    //w.hide();
+
+
     return a.exec();
 }

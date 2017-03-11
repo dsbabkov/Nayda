@@ -16,6 +16,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -25,25 +26,38 @@ QT_BEGIN_NAMESPACE
 class Ui_Main_Application
 {
 public:
+    QWidget *centralWidget;
+    QPushButton *btnHide;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
-    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *Main_Application)
     {
         if (Main_Application->objectName().isEmpty())
             Main_Application->setObjectName(QStringLiteral("Main_Application"));
-        Main_Application->resize(400, 300);
+        Main_Application->resize(1244, 797);
+        centralWidget = new QWidget(Main_Application);
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        btnHide = new QPushButton(centralWidget);
+        btnHide->setObjectName(QStringLiteral("btnHide"));
+        btnHide->setGeometry(QRect(420, 220, 80, 21));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(420, 270, 80, 21));
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(420, 310, 80, 21));
+        Main_Application->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Main_Application);
         menuBar->setObjectName(QStringLiteral("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 1244, 20));
         Main_Application->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Main_Application);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        Main_Application->addToolBar(mainToolBar);
-        centralWidget = new QWidget(Main_Application);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        Main_Application->setCentralWidget(centralWidget);
+        Main_Application->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(Main_Application);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         Main_Application->setStatusBar(statusBar);
@@ -56,6 +70,9 @@ public:
     void retranslateUi(QMainWindow *Main_Application)
     {
         Main_Application->setWindowTitle(QApplication::translate("Main_Application", "Main_Application", Q_NULLPTR));
+        btnHide->setText(QApplication::translate("Main_Application", "btnHide", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("Main_Application", "PushButton", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("Main_Application", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };
