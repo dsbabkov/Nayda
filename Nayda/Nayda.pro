@@ -28,7 +28,6 @@ SOURCES += main.cpp\
     BeforeTheGame/Classes/Before_TheGame_Interface.cpp \
     BeforeTheGame/Classes/Before_TheGame_Master.cpp \
     BeforeTheGame/Classes/Before_TheGame_Server.cpp \
-    Classes/AddressLineClass.cpp \
     Classes/Parent_GUI.cpp \
     Classes/Parent_Master.cpp \
     Classes/Parent_Server.cpp \
@@ -41,7 +40,6 @@ HEADERS  += main_application.h \
     BeforeTheGame/Classes/Before_TheGame_Interface.h \
     BeforeTheGame/Classes/Before_TheGame_Master.h \
     BeforeTheGame/Classes/Before_TheGame_Server.h \
-    Classes/AddressLineClass.h \
     Classes/Parent_GUI.h \
     Classes/Parent_Master.h \
     Classes/Parent_Server.h \
