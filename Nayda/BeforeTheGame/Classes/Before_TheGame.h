@@ -1,0 +1,4 @@
+#ifndef BEFORE_THEGAME_H
+#define BEFORE_THEGAME_H
+
+#endif // BEFORE_THEGAME_H
