@@ -24,8 +24,34 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        main_application.cpp
+        main_application.cpp \
+    BeforeTheGame/Classes/Before_TheGame_Interface.cpp \
+    BeforeTheGame/Classes/Before_TheGame_Master.cpp \
+    BeforeTheGame/Classes/Before_TheGame_Server.cpp \
+    Classes/AddressLineClass.cpp \
+    Classes/Parent_GUI.cpp \
+    Classes/Parent_Master.cpp \
+    Classes/Parent_Server.cpp \
+    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Interface.cpp \
+    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Master.cpp \
+    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Server.cpp \
+    BeforeTheGame/Classes/Before_TheGame.cpp
 
-HEADERS  += main_application.h
+HEADERS  += main_application.h \
+    BeforeTheGame/Classes/Before_TheGame_Interface.h \
+    BeforeTheGame/Classes/Before_TheGame_Master.h \
+    BeforeTheGame/Classes/Before_TheGame_Server.h \
+    Classes/AddressLineClass.h \
+    Classes/Parent_GUI.h \
+    Classes/Parent_Master.h \
+    Classes/Parent_Server.h \
+    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Interface.h \
+    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Master.h \
+    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Server.h \
+    BeforeTheGame/Classes/Before_TheGame.h
 
 FORMS    += main_application.ui
+
+DISTFILES += \
+    Game/Munchkin/Munchkin.cfg \
+    Sys_Config.cfg
