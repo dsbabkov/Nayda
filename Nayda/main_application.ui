@@ -14,44 +14,70 @@
    <string>Main_Application</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="btnHide">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>220</y>
-      <width>80</width>
-      <height>21</height>
+      <x>80</x>
+      <y>100</y>
+      <width>151</width>
+      <height>251</height>
      </rect>
     </property>
-    <property name="text">
-     <string>btnHide</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QPushButton" name="Settings">
+       <property name="text">
+        <string>Настройки</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="Create_Lobby">
+       <property name="text">
+        <string>Создать зал</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="About_Authors">
+       <property name="text">
+        <string>Об Авторах</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="Find_Lobby">
+       <property name="text">
+        <string>Найти зал</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="btnHide">
+       <property name="text">
+        <string>btnHide</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Выход</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>270</y>
-      <width>80</width>
-      <height>21</height>
+      <x>250</x>
+      <y>100</y>
+      <width>301</width>
+      <height>251</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>310</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout_2"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -60,7 +86,7 @@
      <x>0</x>
      <y>0</y>
      <width>1244</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
