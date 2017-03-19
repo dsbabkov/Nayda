@@ -35,7 +35,8 @@ SOURCES += main.cpp\
     Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Master.cpp \
     Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Server.cpp \
     BeforeTheGame/Classes/Before_TheGame.cpp \
-    TheGame_GUIcpp.cpp
+    TheGame_GUIcpp.cpp \
+    Classes/errors.cpp
 
 HEADERS  += main_application.h \
     BeforeTheGame/Classes/Before_TheGame_Interface.h \
@@ -48,7 +49,8 @@ HEADERS  += main_application.h \
     Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Master.h \
     Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Server.h \
     BeforeTheGame/Classes/Before_TheGame.h \
-    TheGame_GUIi.h
+    TheGame_GUIi.h \
+    Classes/errors.h
 
 FORMS    += main_application.ui \
     TheGame_GUI.ui
