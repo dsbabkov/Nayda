@@ -12,7 +12,6 @@ INPUT(
 ./debug\TheGame_Munckin_Server.o
 ./debug\Before_TheGame.o
 ./debug\TheGame_GUIcpp.o
-./debug\errors.o
 ./debug\moc_main_application.o
 ./debug\moc_TheGame_GUIi.o
 );

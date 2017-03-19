@@ -12,7 +12,6 @@ INPUT(
 ./release\TheGame_Munckin_Server.o
 ./release\Before_TheGame.o
 ./release\TheGame_GUIcpp.o
-./release\errors.o
 ./release\moc_main_application.o
 ./release\moc_TheGame_GUIi.o
 );
