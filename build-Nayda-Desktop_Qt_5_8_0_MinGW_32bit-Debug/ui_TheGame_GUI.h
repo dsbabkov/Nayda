@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
 
@@ -23,6 +24,7 @@ QT_BEGIN_NAMESPACE
 class Ui_TheGame_GUI
 {
 public:
+    QGridLayout *gridLayout_2;
     QDialogButtonBox *buttonBox;
     QPushButton *pushButton;
 
@@ -31,14 +33,20 @@ public:
         if (TheGame_GUI->objectName().isEmpty())
             TheGame_GUI->setObjectName(QStringLiteral("TheGame_GUI"));
         TheGame_GUI->resize(1244, 797);
+        gridLayout_2 = new QGridLayout(TheGame_GUI);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         buttonBox = new QDialogButtonBox(TheGame_GUI);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(250, 320, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+
+        gridLayout_2->addWidget(buttonBox, 1, 0, 1, 1);
+
         pushButton = new QPushButton(TheGame_GUI);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(40, 30, 80, 21));
+
+        gridLayout_2->addWidget(pushButton, 0, 1, 1, 1);
+
 
         retranslateUi(TheGame_GUI);
         QObject::connect(buttonBox, SIGNAL(accepted()), TheGame_GUI, SLOT(accept()));
