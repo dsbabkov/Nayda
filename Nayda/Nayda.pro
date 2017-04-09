@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-03-11T17:33:56
+# Project created by QtCreator 2017-04-09T00:43:10
 #
 #-------------------------------------------------
 
@@ -25,34 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         main_application.cpp \
-    BeforeTheGame/Classes/Before_TheGame_Interface.cpp \
-    BeforeTheGame/Classes/Before_TheGame_Master.cpp \
-    BeforeTheGame/Classes/Before_TheGame_Server.cpp \
-    Classes/Parent_GUI.cpp \
-    Classes/Parent_Master.cpp \
-    Classes/Parent_Server.cpp \
-    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Interface.cpp \
-    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Master.cpp \
-    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Server.cpp \
-    BeforeTheGame/Classes/Before_TheGame.cpp \
-    TheGame_GUI.cpp
+    Application/Before_The_Game/Before_The_Game.cpp \
+    Application/The_Game/The_Game.cpp \
+    Logs/errors.cpp
 
 HEADERS  += main_application.h \
-    BeforeTheGame/Classes/Before_TheGame_Interface.h \
-    BeforeTheGame/Classes/Before_TheGame_Master.h \
-    BeforeTheGame/Classes/Before_TheGame_Server.h \
-    Classes/Parent_GUI.h \
-    Classes/Parent_Master.h \
-    Classes/Parent_Server.h \
-    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Interface.h \
-    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Master.h \
-    Game/Munchkin/Munchkin_Classes/TheGame_Munckin_Server.h \
-    BeforeTheGame/Classes/Before_TheGame.h \
-    TheGame_GUIi.h
+    Application/Before_The_Game/Before_The_Game.h \
+    Application/The_Game/The_Game.h
 
 FORMS    += main_application.ui \
-    TheGame_GUI.ui
-
-DISTFILES += \
-    Game/Munchkin/Munchkin.cfg \
-    Sys_Config.cfg
+    Application/Before_The_Game/Before_The_Game.ui \
+    Application/The_Game/the_game.ui
