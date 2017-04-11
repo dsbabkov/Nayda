@@ -27,11 +27,15 @@ SOURCES += main.cpp\
         main_application.cpp \
     Application/Before_The_Game/Before_The_Game.cpp \
     Application/The_Game/The_Game.cpp \
-    Logs/errors.cpp
+    Logs/errors.cpp \
+    System_Manager/system_manager.cpp \
+    Server/server.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
-    Application/The_Game/The_Game.h
+    Application/The_Game/The_Game.h \
+    System_Manager/system_manager.h \
+    Server/server.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \

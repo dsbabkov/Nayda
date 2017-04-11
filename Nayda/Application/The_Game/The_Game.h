@@ -16,6 +16,17 @@ public:
     explicit The_Game (QWidget *parent = 0);
     ~The_Game();
 
+    //Ui::The_Game *getUi() const;
+
+signals:
+    void dbg_to_be_shown(bool);
+    void dbg_return_to_before_the_game(bool);
+
+public slots:
+    void dbg_was_pushed_to_game_mode();
+    void dbg_return_to_the_main_window();
+
+    
 private:
     Ui::The_Game *ui;
 };

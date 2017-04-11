@@ -13,9 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -25,6 +28,9 @@ class Ui_The_Game
 {
 public:
     QWidget *centralwidget;
+    QPushButton *btn_switch_back;
+    QGraphicsView *graphicsView;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -35,6 +41,15 @@ public:
         The_Game->resize(800, 600);
         centralwidget = new QWidget(The_Game);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        btn_switch_back = new QPushButton(centralwidget);
+        btn_switch_back->setObjectName(QStringLiteral("btn_switch_back"));
+        btn_switch_back->setGeometry(QRect(280, 230, 80, 21));
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setGeometry(QRect(30, 390, 256, 192));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(440, 190, 241, 301));
         The_Game->setCentralWidget(centralwidget);
         menubar = new QMenuBar(The_Game);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -52,6 +67,8 @@ public:
     void retranslateUi(QMainWindow *The_Game)
     {
         The_Game->setWindowTitle(QApplication::translate("The_Game", "MainWindow", Q_NULLPTR));
+        btn_switch_back->setText(QApplication::translate("The_Game", "Switch_Back", Q_NULLPTR));
+        label->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
 };
