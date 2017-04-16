@@ -1,6 +1,7 @@
 #include "Application/The_Game/The_Game.h"
 #include "ui_The_Game.h"
 #include <QPixmap>
+#include <QPropertyAnimation>
 
 The_Game::The_Game(QWidget *parent) :
     QMainWindow(parent),
@@ -15,7 +16,8 @@ The_Game::The_Game(QWidget *parent) :
 
     QPixmap myPixmap("Klirik_1.jpg");
     ui->label->setPixmap(myPixmap);
-
+    QPixmap another = myPixmap.scaled(300, 250, Qt::KeepAspectRatio);
+    ui->label->setPixmap(another);
 
 
 }

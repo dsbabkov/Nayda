@@ -49,7 +49,7 @@ public:
         graphicsView->setGeometry(QRect(30, 390, 256, 192));
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(440, 190, 241, 301));
+        label->setGeometry(QRect(440, 190, 250, 300));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
