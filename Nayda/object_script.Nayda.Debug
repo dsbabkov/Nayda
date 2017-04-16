@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\main_application.o
+./debug\Before_The_Game.o
+./debug\The_Game.o
+./debug\errors.o
+./debug\system_manager.o
+./debug\server.o
+./debug\moc_main_application.o
+./debug\moc_Before_The_Game.o
+./debug\moc_The_Game.o
+);

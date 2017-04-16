@@ -50,6 +50,11 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(440, 190, 241, 301));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
         The_Game->setCentralWidget(centralwidget);
         menubar = new QMenuBar(The_Game);
         menubar->setObjectName(QStringLiteral("menubar"));

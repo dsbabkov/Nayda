@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\main_application.o
+./release\Before_The_Game.o
+./release\The_Game.o
+./release\errors.o
+./release\system_manager.o
+./release\server.o
+./release\moc_main_application.o
+./release\moc_Before_The_Game.o
+./release\moc_The_Game.o
+);
