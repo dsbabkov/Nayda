@@ -11,13 +11,30 @@ The_Game::The_Game(QWidget *parent) :
 
     //QObject::connect( ui->btnHide, SIGNAL(clicked()), this, SLOT(hide()));
     QObject::connect(ui->btn_switch_back, SIGNAL(clicked()), this, SLOT(hide()));
-    QObject::connect(this, SIGNAL(dbg_to_be_shown(bool)), this, SLOT(show()));
+    QObject::connect(this, SIGNAL(dbg_to_be_shown(bool)), this, SLOT(show()));//SLOT(showFullScreen()));
     QObject::connect(ui->btn_switch_back, SIGNAL(clicked(bool)), this, SLOT(dbg_return_to_the_main_window()));
 
     QPixmap myPixmap("Klirik_1.jpg");
+    QPixmap my1Pixmap("Grudnoi.jpg");
     ui->label->setPixmap(myPixmap);
     QPixmap another = myPixmap.scaled(300, 250, Qt::KeepAspectRatio);
     ui->label->setPixmap(another);
+    ui->label->setPixmap(my1Pixmap);
+
+
+    QPalette somepalette;
+    somepalette.setBrush(ui->pushButton_4->backgroundRole(),QBrush(my1Pixmap));
+    ui->pushButton_4->setAutoFillBackground(true);
+    ui->pushButton_4->setAutoFillBackground(true);
+    ui->pushButton_4->setPalette(somepalette);
+    ui->pushButton_4->setFlat(true);
+
+//    ui->pushButton_4->setIcon(QIcon(another));
+//    ui->pushButton_4->setIconSize(another.rect().size());
+    ui->pushButton_4->setFixedSize(another.rect().size());
+
+
+
 
 
 }
