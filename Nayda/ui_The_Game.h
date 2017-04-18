@@ -21,6 +21,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -68,10 +69,19 @@ public:
     QLabel *label_13;
     QLabel *label_14;
     QHBoxLayout *horizontalLayout_5;
+    QPushButton *pushButton_2;
     QPushButton *pushButton_4;
     QPushButton *pushButton_3;
-    QPushButton *pushButton_2;
+    QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout;
+    QPushButton *pushButton_12;
+    QPushButton *pushButton_11;
+    QPushButton *pushButton_10;
+    QPushButton *pushButton_9;
+    QPushButton *pushButton_8;
+    QPushButton *pushButton_7;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_5;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -264,6 +274,11 @@ public:
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+
+        horizontalLayout_5->addWidget(pushButton_2);
+
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
 
@@ -274,13 +289,53 @@ public:
 
         horizontalLayout_5->addWidget(pushButton_3);
 
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_5->addWidget(pushButton_2);
+        horizontalLayout_5->addItem(horizontalSpacer);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(5, -1, -1, -1);
+        pushButton_12 = new QPushButton(centralwidget);
+        pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
+
+        horizontalLayout->addWidget(pushButton_12);
+
+        pushButton_11 = new QPushButton(centralwidget);
+        pushButton_11->setObjectName(QStringLiteral("pushButton_11"));
+
+        horizontalLayout->addWidget(pushButton_11);
+
+        pushButton_10 = new QPushButton(centralwidget);
+        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
+
+        horizontalLayout->addWidget(pushButton_10);
+
+        pushButton_9 = new QPushButton(centralwidget);
+        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
+
+        horizontalLayout->addWidget(pushButton_9);
+
+        pushButton_8 = new QPushButton(centralwidget);
+        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+
+        horizontalLayout->addWidget(pushButton_8);
+
+        pushButton_7 = new QPushButton(centralwidget);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+
+        horizontalLayout->addWidget(pushButton_7);
+
+        pushButton_6 = new QPushButton(centralwidget);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+
+        horizontalLayout->addWidget(pushButton_6);
+
+        pushButton_5 = new QPushButton(centralwidget);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+
+        horizontalLayout->addWidget(pushButton_5);
+
 
         horizontalLayout_5->addLayout(horizontalLayout);
 
@@ -335,9 +390,17 @@ public:
         label_5->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
         label_13->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
         label_14->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_12->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_11->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_10->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_9->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_8->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_7->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_6->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
+        pushButton_5->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };

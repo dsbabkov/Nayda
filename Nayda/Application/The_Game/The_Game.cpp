@@ -19,7 +19,7 @@ The_Game::The_Game(QWidget *parent) :
     ui->label->setPixmap(myPixmap);
     QPixmap another = myPixmap.scaled(300, 250, Qt::KeepAspectRatio);
     ui->label->setPixmap(another);
-    ui->label->setPixmap(my1Pixmap);
+    //ui->label->setPixmap(my1Pixmap);
 
 
     QPalette somepalette;
@@ -28,10 +28,39 @@ The_Game::The_Game(QWidget *parent) :
     ui->pushButton_4->setAutoFillBackground(true);
     ui->pushButton_4->setPalette(somepalette);
     ui->pushButton_4->setFlat(true);
+    ui->pushButton_4->setFixedSize(another.rect().size());
+
+    //QPixmap someother = myPixmap.scaled(this->size().height(),0.1*this->size().width(), Qt::KeepAspectRatio);
+
+    QPixmap pxmp_MunchkinHero("Munchkin_game_cover.jpg");
+    QPixmap someother = pxmp_MunchkinHero.scaled(300,250, Qt::KeepAspectRatio);
+
+    QPalette someotherpalette;
+    someotherpalette.setBrush(ui->pushButton_3->backgroundRole(), QBrush(someother));
+    //somepalette.setBrush(ui->pushButton_3->backgroundRole(),QBrush(my1Pixmap));
+    ui->pushButton_3->setAutoFillBackground(true);
+    ui->pushButton_3->setAutoFillBackground(true);
+    ui->pushButton_3->setPalette(someotherpalette);
+    ui->pushButton_3->setFlat(true);
+    ui->pushButton_3->setFixedSize(someother.rect().size());
+
+
+
+    QPixmap pxmp_Hireling("Hireling.jpg");
+    QPixmap someother2 = pxmp_Hireling.scaled(300,250, Qt::KeepAspectRatio);
+
+    QPalette someotherpalette2;
+    someotherpalette2.setBrush(ui->pushButton_2->backgroundRole(), QBrush(someother2));
+    //somepalette.setBrush(ui->pushButton_3->backgroundRole(),QBrush(my1Pixmap));
+    ui->pushButton_2->setAutoFillBackground(true);
+    ui->pushButton_2->setAutoFillBackground(true);
+    ui->pushButton_2->setPalette(someotherpalette2);
+    ui->pushButton_2->setFlat(true);
+    ui->pushButton_2->setFixedSize(someother2.rect().size());
 
 //    ui->pushButton_4->setIcon(QIcon(another));
 //    ui->pushButton_4->setIconSize(another.rect().size());
-    ui->pushButton_4->setFixedSize(another.rect().size());
+
 
 
 
