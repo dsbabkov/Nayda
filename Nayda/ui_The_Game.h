@@ -51,8 +51,8 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *verticalLayout_15;
     QHBoxLayout *horizontalLayout_7;
-    QLabel *label_2;
     QLabel *label;
+    QLabel *label_2;
     QHBoxLayout *horizontalLayout_6;
     QPushButton *pushButton;
     QGridLayout *gridLayout_4;
@@ -176,15 +176,15 @@ public:
         verticalLayout_15->setObjectName(QStringLiteral("verticalLayout_15"));
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        horizontalLayout_7->addWidget(label_2);
-
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
 
         horizontalLayout_7->addWidget(label);
+
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        horizontalLayout_7->addWidget(label_2);
 
 
         verticalLayout_15->addLayout(horizontalLayout_7);
@@ -375,8 +375,8 @@ public:
         The_Game->setWindowTitle(QApplication::translate("The_Game", "MainWindow", Q_NULLPTR));
         btn_switch_back->setText(QApplication::translate("The_Game", "Switch_Back", Q_NULLPTR));
         label_43->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
-        label_2->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
         label->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
+        label_2->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
         pushButton->setText(QApplication::translate("The_Game", "PushButton", Q_NULLPTR));
         label_8->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
         label_12->setText(QApplication::translate("The_Game", "TextLabel", Q_NULLPTR));
