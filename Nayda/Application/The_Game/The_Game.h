@@ -4,6 +4,9 @@
 #include <QMainWindow>
 //#include "Application/Main_Application/main_application.h"
 
+#define PC_VERSION //begin with PC
+#define DEBUG_MESSAGES //start with debug enabled
+
 namespace Ui {
 class The_Game;
 }

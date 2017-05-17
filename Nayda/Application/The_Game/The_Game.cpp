@@ -5,11 +5,57 @@
 #include <QDesktopWidget>
 #include <QDebug>
 
+
+
 The_Game::The_Game(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::The_Game)
 {
     ui->setupUi(this);
+
+
+    //setup size before rescaling.
+    //resize will be allowed only for PC version and only for some preset definition
+
+#ifdef PC_VERSION
+    //some code
+
+    //find the HW size of the window
+    QRect HW_Screen_Size = QApplication::desktop()->screenGeometry();
+    int HW_Screen_Size_Width = HW_Screen_Size.width();
+    int HW_Screen_Size_Heigh = HW_Screen_Size.height();
+
+#ifdef DEBUG_MESSAGES
+    qDebug() << "Available dimensions. Screen w = " << HW_Screen_Size_Width << " Screen h = " << HW_Screen_Size_Heigh;
+#endif
+
+    //set the size_constants
+    //height of Munchkin picture, width, etc...
+    //with respect to the size of the window - use proportions
+
+    const double Main_Picture_Size_Width = 0.13021;
+    const double Main_Picture_Size_Height = 0.27778;
+
+    const double Race_Ico_Size_Width = 0.2 * Main_Picture_Size_Width;
+    const double Race_Ico_Size_Height = 0.4 * Main_Picture_Size_Height;
+
+    const double Class_Ico_Size_Width = Race_Ico_Size_Width;
+    const double Class_Ico_Size_Height = Race_Ico_Size_Height;
+
+    const double Level_Ico_Size_Width = Race_Ico_Size_Width;
+    const double Level_Ico_Size_Height = Race_Ico_Size_Height;
+
+
+
+#endif
+
+#ifdef MOBILE_VERSION
+    //some code
+#endif
+
+
+
+
 
     //QObject::connect( ui->btnHide, SIGNAL(clicked()), this, SLOT(hide()));
     QObject::connect(ui->btn_switch_back, SIGNAL(clicked()), this, SLOT(hide()));
@@ -97,7 +143,7 @@ The_Game::The_Game(QWidget *parent) :
     //ui->pushButton_12->set
 
     //remeber the double! =)
-    double height_level_icon_size_coeff = 0.2 *(height_hand_card_size_coeff);
+    double height_level_icon_size_coeff = 0.4 *(height_hand_card_size_coeff);
     double width_level_icon_size_coeff = 0.2 * (width_hand_card_size_coeff);
     QPixmap Level_Initial("level1.jpg");
     QPixmap rescaled_level_initial = Level_Initial.scaled(height_level_icon_size_coeff*height, width_level_icon_size_coeff*width,
@@ -107,6 +153,26 @@ The_Game::The_Game(QWidget *parent) :
     qDebug() << "Height = " << height_level_icon_size_coeff << "Width = " << width_level_icon_size_coeff;
 
     ui->label_2->setPixmap(rescaled_level_initial);
+    ui->label_2->setFixedSize(rescaled_level_initial.size());
+
+
+
+    ui->label->setPixmap(rescaled_level_initial);
+    ui->label->setScaledContents(true);
+    ui->label->setFixedSize(rescaled_level_initial.size());
+
+
+     QPalette quick_info_Button_Palette;
+     quick_info_Button_Palette.setBrush(ui->pushButton->backgroundRole(),QBrush(rescaled_level_initial));
+     ui->pushButton->setAutoFillBackground(true);
+     ui->pushButton->setPalette(quick_info_Button_Palette);
+     ui->pushButton->setFlat(true);
+     ui->pushButton->setFixedSize(rescaled_level_initial.rect().size());
+
+
+
+
+
 
     QLabel* defining_array[12];
     defining_array[0] = ui->label_3;
@@ -155,6 +221,7 @@ The_Game::The_Game(QWidget *parent) :
                                                         Qt::KeepAspectRatio);
     defining_array[i]->setScaledContents(true);
     defining_array[i]->setPixmap(rescaled);
+    defining_array[i]->setFixedSize(rescaled.size());
 
     }
 
