@@ -31,7 +31,8 @@ SOURCES += main.cpp\
     System_Manager/system_manager.cpp \
     Server/server.cpp \
     gamerwidget.cpp \
-    gametimers.cpp
+    gametimers.cpp \
+    gameinfowidget.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
@@ -39,7 +40,8 @@ HEADERS  += main_application.h \
     System_Manager/system_manager.h \
     Server/server.h \
     gamerwidget.h \
-    gametimers.h
+    gametimers.h \
+    gameinfowidget.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \
@@ -47,4 +49,5 @@ FORMS    += main_application.ui \
     form.ui \
     form2.ui \
     gamerwidget.ui \
-    gametimers.ui
+    gametimers.ui \
+    gameinfowidget.ui

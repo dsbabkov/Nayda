@@ -8,9 +8,11 @@ INPUT(
 ./debug\server.o
 ./debug\gamerwidget.o
 ./debug\gametimers.o
+./debug\gameinfowidget.o
 ./debug\moc_main_application.o
 ./debug\moc_Before_The_Game.o
 ./debug\moc_The_Game.o
 ./debug\moc_gamerwidget.o
 ./debug\moc_gametimers.o
+./debug\moc_gameinfowidget.o
 );

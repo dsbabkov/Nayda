@@ -20,10 +20,10 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <gameinfowidget.h>
 #include <gamerwidget.h>
 #include <gametimers.h>
 
@@ -39,9 +39,10 @@ public:
     QVBoxLayout *verticalLayout_5;
     GameTimers *TimersWidget;
     QVBoxLayout *verticalLayout_2;
-    QSpacerItem *verticalSpacer;
+    QVBoxLayout *verticalLayout_7;
     QPushButton *btn_switch_back;
-    QSpacerItem *verticalSpacer_2;
+    QVBoxLayout *verticalLayout_6;
+    GameInfoWidget *GameInfoBox;
     QHBoxLayout *horizontalLayout_5;
     QWidget *GameField;
     QHBoxLayout *horizontalLayout;
@@ -89,18 +90,25 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_2->addItem(verticalSpacer);
-
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
         btn_switch_back = new QPushButton(centralwidget);
         btn_switch_back->setObjectName(QStringLiteral("btn_switch_back"));
 
-        verticalLayout_2->addWidget(btn_switch_back);
+        verticalLayout_7->addWidget(btn_switch_back);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer_2);
+        verticalLayout_2->addLayout(verticalLayout_7);
+
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        GameInfoBox = new GameInfoWidget(centralwidget);
+        GameInfoBox->setObjectName(QStringLiteral("GameInfoBox"));
+
+        verticalLayout_6->addWidget(GameInfoBox);
+
+
+        verticalLayout_2->addLayout(verticalLayout_6);
 
 
         gridLayout->addLayout(verticalLayout_2, 0, 0, 3, 1);
