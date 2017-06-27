@@ -29,16 +29,22 @@ SOURCES += main.cpp\
     Application/The_Game/The_Game.cpp \
     Logs/errors.cpp \
     System_Manager/system_manager.cpp \
-    Server/server.cpp
+    Server/server.cpp \
+    gamerwidget.cpp \
+    gametimers.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
     Application/The_Game/The_Game.h \
     System_Manager/system_manager.h \
-    Server/server.h
+    Server/server.h \
+    gamerwidget.h \
+    gametimers.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \
     Application/The_Game/the_game.ui \
     form.ui \
-    form2.ui
+    form2.ui \
+    gamerwidget.ui \
+    gametimers.ui

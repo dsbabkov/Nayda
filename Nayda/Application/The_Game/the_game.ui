@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1141</width>
+    <height>664</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,78 +20,85 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_switch_back">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>174</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Switch_Back</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_mainGamer_QuickAction">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>950</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>QuickAction</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_mainGamer_Avatar">
-    <property name="geometry">
-     <rect>
-      <x>599</x>
-      <y>930</y>
-      <width>81</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Avatar</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_mainGamer_number_of_quick_actions">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>930</y>
-      <width>31</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_mainGamer_level">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>910</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Level</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2" rowspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4"/>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="GameTimers" name="TimersWidget" native="true"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" rowspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_switch_back">
+        <property name="text">
+         <string>btn_switch_back</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QWidget" name="GameField" native="true"/>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="GamerWidget" name="MainGamer" native="true">
+        <zorder>GameField</zorder>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1920</width>
+     <width>1141</width>
      <height>20</height>
     </rect>
    </property>
@@ -116,6 +123,20 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GamerWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">gamerwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GameTimers</class>
+   <extends>QWidget</extends>
+   <header location="global">gametimers.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

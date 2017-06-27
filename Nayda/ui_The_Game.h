@@ -13,14 +13,19 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <gamerwidget.h>
+#include <gametimers.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -28,11 +33,20 @@ class Ui_The_Game
 {
 public:
     QWidget *centralwidget;
+    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_5;
+    GameTimers *TimersWidget;
+    QVBoxLayout *verticalLayout_2;
+    QSpacerItem *verticalSpacer;
     QPushButton *btn_switch_back;
-    QPushButton *btn_mainGamer_QuickAction;
-    QPushButton *btn_mainGamer_Avatar;
-    QLabel *lbl_mainGamer_number_of_quick_actions;
-    QLabel *lbl_mainGamer_level;
+    QSpacerItem *verticalSpacer_2;
+    QHBoxLayout *horizontalLayout_5;
+    QWidget *GameField;
+    QHBoxLayout *horizontalLayout;
+    GamerWidget *MainGamer;
+    QHBoxLayout *horizontalLayout_6;
     QMenuBar *menubar;
     QMenu *menuStart;
     QMenu *menuOptions;
@@ -43,7 +57,7 @@ public:
     {
         if (The_Game->objectName().isEmpty())
             The_Game->setObjectName(QStringLiteral("The_Game"));
-        The_Game->resize(1920, 1080);
+        The_Game->resize(1141, 664);
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Ignored);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -51,25 +65,76 @@ public:
         The_Game->setSizePolicy(sizePolicy);
         centralwidget = new QWidget(The_Game);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+
+        verticalLayout_3->addLayout(verticalLayout_4);
+
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        TimersWidget = new GameTimers(centralwidget);
+        TimersWidget->setObjectName(QStringLiteral("TimersWidget"));
+
+        verticalLayout_5->addWidget(TimersWidget);
+
+
+        verticalLayout_3->addLayout(verticalLayout_5);
+
+
+        gridLayout->addLayout(verticalLayout_3, 0, 2, 3, 1);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer);
+
         btn_switch_back = new QPushButton(centralwidget);
         btn_switch_back->setObjectName(QStringLiteral("btn_switch_back"));
-        btn_switch_back->setGeometry(QRect(9, 174, 80, 21));
-        btn_mainGamer_QuickAction = new QPushButton(centralwidget);
-        btn_mainGamer_QuickAction->setObjectName(QStringLiteral("btn_mainGamer_QuickAction"));
-        btn_mainGamer_QuickAction->setGeometry(QRect(510, 950, 80, 21));
-        btn_mainGamer_Avatar = new QPushButton(centralwidget);
-        btn_mainGamer_Avatar->setObjectName(QStringLiteral("btn_mainGamer_Avatar"));
-        btn_mainGamer_Avatar->setGeometry(QRect(599, 930, 81, 51));
-        lbl_mainGamer_number_of_quick_actions = new QLabel(centralwidget);
-        lbl_mainGamer_number_of_quick_actions->setObjectName(QStringLiteral("lbl_mainGamer_number_of_quick_actions"));
-        lbl_mainGamer_number_of_quick_actions->setGeometry(QRect(530, 930, 31, 16));
-        lbl_mainGamer_level = new QLabel(centralwidget);
-        lbl_mainGamer_level->setObjectName(QStringLiteral("lbl_mainGamer_level"));
-        lbl_mainGamer_level->setGeometry(QRect(600, 910, 47, 13));
+
+        verticalLayout_2->addWidget(btn_switch_back);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
+
+        gridLayout->addLayout(verticalLayout_2, 0, 0, 3, 1);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        GameField = new QWidget(centralwidget);
+        GameField->setObjectName(QStringLiteral("GameField"));
+
+        horizontalLayout_5->addWidget(GameField);
+
+
+        gridLayout->addLayout(horizontalLayout_5, 1, 1, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        MainGamer = new GamerWidget(centralwidget);
+        MainGamer->setObjectName(QStringLiteral("MainGamer"));
+        GameField->raise();
+
+        horizontalLayout->addWidget(MainGamer);
+
+
+        gridLayout->addLayout(horizontalLayout, 2, 1, 1, 1);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+
+        gridLayout->addLayout(horizontalLayout_6, 0, 1, 1, 1);
+
         The_Game->setCentralWidget(centralwidget);
         menubar = new QMenuBar(The_Game);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1920, 20));
+        menubar->setGeometry(QRect(0, 0, 1141, 20));
         menuStart = new QMenu(menubar);
         menuStart->setObjectName(QStringLiteral("menuStart"));
         menuOptions = new QMenu(menubar);
@@ -93,11 +158,7 @@ public:
     void retranslateUi(QMainWindow *The_Game)
     {
         The_Game->setWindowTitle(QApplication::translate("The_Game", "MainWindow", Q_NULLPTR));
-        btn_switch_back->setText(QApplication::translate("The_Game", "Switch_Back", Q_NULLPTR));
-        btn_mainGamer_QuickAction->setText(QApplication::translate("The_Game", "QuickAction", Q_NULLPTR));
-        btn_mainGamer_Avatar->setText(QApplication::translate("The_Game", "Avatar", Q_NULLPTR));
-        lbl_mainGamer_number_of_quick_actions->setText(QApplication::translate("The_Game", "1", Q_NULLPTR));
-        lbl_mainGamer_level->setText(QApplication::translate("The_Game", "Level", Q_NULLPTR));
+        btn_switch_back->setText(QApplication::translate("The_Game", "btn_switch_back", Q_NULLPTR));
         menuStart->setTitle(QApplication::translate("The_Game", "Start", Q_NULLPTR));
         menuOptions->setTitle(QApplication::translate("The_Game", "Options", Q_NULLPTR));
         menuAbout->setTitle(QApplication::translate("The_Game", "About", Q_NULLPTR));
