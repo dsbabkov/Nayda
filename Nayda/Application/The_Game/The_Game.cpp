@@ -78,6 +78,9 @@ The_Game::The_Game(QWidget *parent) :
 
     const float koeff_GameTimers_size_Height = koeff_GamerWidget_size_Height; // should be the same
     const float koeff_GameTimers_size_Width = koeff_GameField_size/3;
+    const float koeff_GameInfoBox_size_Height = 0.66; //why it is impossible 2/3???
+    const float koeff_GameInfoBox_size_Width = (1 - koeff_GameField_size) / 2;
+
 
     //setting up the GUI staff
     //Defining its coefficients with respect to the total size of availible field;
@@ -101,7 +104,26 @@ The_Game::The_Game(QWidget *parent) :
     ui->TimersWidget->setMinimumWidth(koeff_GameTimers_size_Width*HW_Screen_Size_Width);
     ui->TimersWidget->setMaximumWidth(koeff_GameTimers_size_Width*HW_Screen_Size_Width);
 
+    ui->GameInfoBox->setMinimumHeight(koeff_GameInfoBox_size_Height*HW_Screen_Size_Heigh);
+    ui->GameInfoBox->setMaximumHeight(koeff_GameInfoBox_size_Height*HW_Screen_Size_Heigh);
 
+    ui->GameInfoBox->setMinimumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);
+    ui->GameInfoBox->setMaximumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);
+
+
+#ifdef DEBUG_MESSAGES
+    qDebug() << "GameInfoBox. setMinimumHeight = setMaximumHeight " << koeff_GameInfoBox_size_Height*HW_Screen_Size_Heigh << endl
+             <<" GameInfoBox.setMinimumWidth = " << koeff_GameInfoBox_size_Width*HW_Screen_Size_Width;
+#endif
+
+
+
+
+
+
+
+    ui->btn_switch_back->setMinimumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);
+    ui->btn_switch_back->setMaximumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);
 
 
 }

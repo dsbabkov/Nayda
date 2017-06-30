@@ -127,7 +127,6 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         MainGamer = new GamerWidget(centralwidget);
         MainGamer->setObjectName(QStringLiteral("MainGamer"));
-        GameField->raise();
 
         horizontalLayout->addWidget(MainGamer);
 
