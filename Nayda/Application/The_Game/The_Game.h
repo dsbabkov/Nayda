@@ -2,7 +2,9 @@
 #define THE_GAME_H
 
 #include <QMainWindow>
-//#include "Application/Main_Application/main_application.h"
+#include "gamerwidget.h"
+
+#include "Server/server.h"
 
 #define PC_VERSION //begin with PC
 #define DEBUG_MESSAGES //start with debug enabled
@@ -32,6 +34,16 @@ public slots:
     
 private:
     Ui::The_Game *ui;
+    GamerWidget* opponent_1;
+    GamerWidget* opponent_2;
+    GamerWidget* opponent_3;
+    GamerWidget* opponent_4;
+    GamerWidget* opponent_5;
+
+
+
+
+
 };
 
 

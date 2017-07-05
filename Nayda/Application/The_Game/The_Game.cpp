@@ -14,6 +14,13 @@ The_Game::The_Game(QWidget *parent) :
     ui->setupUi(this);
 
 
+    //Algorithm:
+    //1. Receive the size of the screen;
+    //2. Define sizes of an objects;
+    //3. Receive information about number of players from Before_the_Game
+    //                            and another game concepts;
+
+
     //setup size before rescaling.
     //resize will be allowed only for PC version and only for some preset definition
 
@@ -115,11 +122,6 @@ The_Game::The_Game(QWidget *parent) :
     qDebug() << "GameInfoBox. setMinimumHeight = setMaximumHeight " << koeff_GameInfoBox_size_Height*HW_Screen_Size_Heigh << endl
              <<" GameInfoBox.setMinimumWidth = " << koeff_GameInfoBox_size_Width*HW_Screen_Size_Width;
 #endif
-
-
-
-
-
 
 
     ui->btn_switch_back->setMinimumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);

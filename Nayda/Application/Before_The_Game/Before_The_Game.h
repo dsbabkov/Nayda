@@ -2,7 +2,9 @@
 #define BEFORE_THE_GAME_H
 
 #include <QMainWindow>
-//#include "Application/Main_Application/main_application.h"
+#include "Server/server.h"
+
+
 
 namespace Ui {
 class Before_The_Game;
@@ -18,7 +20,11 @@ public:
     ~Before_The_Game();
 
     Ui::Before_The_Game *getUi() const;
-    //void setUi(Ui::Before_The_Game *value);
+
+    void update_game_options_number_of_players (int number_of_players);
+    void update_game_options_game_type (int game_type);
+    void update_game_options_card_stack_type (int card_stack_type);
+
 
 signals:
 
@@ -31,6 +37,7 @@ public slots:
 
 private:
     Ui::Before_The_Game *ui;
+    Server* m_server_ptr;
     
 };
 

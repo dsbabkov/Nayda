@@ -16,6 +16,8 @@ Before_The_Game::Before_The_Game(QWidget *parent) :
 //    QObject::connect( TheGame_GUI_obj, SIGNAL(ClosingTheWindow(bool)),this , SLOT(show()));
 //    QObject::connect(ui->btnHide, SIGNAL(clicked()), SomeTestAnotherMain_obj, SLOT(show()));
 
+    //m_server_ptr = server;
+
 
 }
 
