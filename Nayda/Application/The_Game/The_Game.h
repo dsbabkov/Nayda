@@ -34,11 +34,8 @@ public slots:
     
 private:
     Ui::The_Game *ui;
-    GamerWidget* opponent_1;
-    GamerWidget* opponent_2;
-    GamerWidget* opponent_3;
-    GamerWidget* opponent_4;
-    GamerWidget* opponent_5;
+
+    GamerWidget* opponent[5]; //make as controlled unique_ptr;
 
 
 

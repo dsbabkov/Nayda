@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Before_The_Game_t {
-    QByteArrayData data[4];
-    char stringdata0[80];
+    QByteArrayData data[5];
+    char stringdata0[100];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,13 @@ static const qt_meta_stringdata_Before_The_Game_t qt_meta_stringdata_Before_The_
 QT_MOC_LITERAL(0, 0, 15), // "Before_The_Game"
 QT_MOC_LITERAL(1, 16, 23), // "dbg_switch_to_game_mode"
 QT_MOC_LITERAL(2, 40, 0), // ""
-QT_MOC_LITERAL(3, 41, 38) // "dbg_switch_to_game_mode_butto..."
+QT_MOC_LITERAL(3, 41, 19), // "dbg_the_game_begins"
+QT_MOC_LITERAL(4, 61, 38) // "dbg_switch_to_game_mode_butto..."
 
     },
     "Before_The_Game\0dbg_switch_to_game_mode\0"
-    "\0dbg_switch_to_game_mode_button_pressed"
+    "\0dbg_the_game_begins\0"
+    "dbg_switch_to_game_mode_button_pressed"
 };
 #undef QT_MOC_LITERAL
 
@@ -48,20 +50,22 @@ static const uint qt_meta_data_Before_The_Game[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06 /* Public */,
+       1,    1,   29,    2, 0x06 /* Public */,
+       3,    1,   32,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   27,    2, 0x0a /* Public */,
+       4,    0,   35,    2, 0x0a /* Public */,
 
  // signals: parameters
+    QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
 
  // slots: parameters
@@ -77,7 +81,8 @@ void Before_The_Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->dbg_switch_to_game_mode((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 1: _t->dbg_switch_to_game_mode_button_pressed(); break;
+        case 1: _t->dbg_the_game_begins((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 2: _t->dbg_switch_to_game_mode_button_pressed(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -87,6 +92,13 @@ void Before_The_Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
             typedef void (Before_The_Game::*_t)(bool );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&Before_The_Game::dbg_switch_to_game_mode)) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            typedef void (Before_The_Game::*_t)(bool );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&Before_The_Game::dbg_the_game_begins)) {
+                *result = 1;
                 return;
             }
         }
@@ -118,13 +130,13 @@ int Before_The_Game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
@@ -134,6 +146,13 @@ void Before_The_Game::dbg_switch_to_game_mode(bool _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void Before_The_Game::dbg_the_game_begins(bool _t1)
+{
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

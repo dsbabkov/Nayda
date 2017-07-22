@@ -36,19 +36,6 @@ The_Game::The_Game(QWidget *parent) :
     qDebug() << "Available dimensions. Screen w = " << HW_Screen_Size_Width << " Screen h = " << HW_Screen_Size_Heigh;
 #endif
 
-    //set the size_constants
-    //height of Munchkin picture, width, etc...
-    //with respect to the size of the window - use proportions
-
-    const double Main_Picture_Size_Width_coeff = 0.13021*0.75;
-    const double Main_Picture_Size_Height_coeff = 0.27778*0.75;
-
-    const double Quick_Acion_Size_Width_coeff = Main_Picture_Size_Width_coeff*0.75*0.4;
-    const double Quick_Acion_Size_Height_coeff = Main_Picture_Size_Height_coeff*0.75;
-
-    const double Level_Label_Size_Width_coeff = Main_Picture_Size_Width_coeff*0.7;
-    const double Level_Label_Size_Height_coeff = Main_Picture_Size_Height_coeff*0.7;
-
 
 #endif
 
@@ -78,14 +65,14 @@ The_Game::The_Game(QWidget *parent) :
     //7. define whether it could be movable???
 
     //Setting up coefficients
-    const float koeff_GameField_size = 0.7;
+    const float koeff_GameField_size = 0.7f;
 
     const float koeff_GamerWidget_size_Height = (1 - koeff_GameField_size)/2;
     const float koeff_GamerWidget_size_Width = koeff_GameField_size/3;
 
     const float koeff_GameTimers_size_Height = koeff_GamerWidget_size_Height; // should be the same
     const float koeff_GameTimers_size_Width = koeff_GameField_size/3;
-    const float koeff_GameInfoBox_size_Height = 0.66; //why it is impossible 2/3???
+    const float koeff_GameInfoBox_size_Height = 0.66f; //why it is impossible 2/3???
     const float koeff_GameInfoBox_size_Width = (1 - koeff_GameField_size) / 2;
 
 
@@ -126,6 +113,16 @@ The_Game::The_Game(QWidget *parent) :
 
     ui->btn_switch_back->setMinimumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);
     ui->btn_switch_back->setMaximumWidth(koeff_GameInfoBox_size_Width*HW_Screen_Size_Width);
+
+
+    //receiving number of players;
+
+
+
+
+
+
+
 
 
 }

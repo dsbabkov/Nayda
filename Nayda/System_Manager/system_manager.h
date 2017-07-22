@@ -8,6 +8,12 @@
  
 
 //They all are singltones
+
+
+/* This class is responsible for all interactions of the Layers (The_Game, Before_The_Game and Sever).
+ * It doesn't strore any information, but working as post system between the Lyers.
+ * */
+
 class System_Manager
 {
 private:

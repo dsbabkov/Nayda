@@ -29,6 +29,7 @@ public:
 signals:
 
     void dbg_switch_to_game_mode(bool);
+    void dbg_the_game_begins(bool);
 
 public slots:
 
@@ -38,6 +39,17 @@ public slots:
 private:
     Ui::Before_The_Game *ui;
     Server* m_server_ptr;
+
+
+
+    int number_of_players; //total amount of players
+    int card_stack_mode; //type_of_stack(wich_addons)
+    int time_for_move; //time to make first step (seconds) - may be do define strategy
+    int time_to_think; //time to think before next step
+
+
+
+
     
 };
 
