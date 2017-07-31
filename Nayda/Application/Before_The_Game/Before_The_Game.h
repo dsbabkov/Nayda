@@ -21,15 +21,17 @@ public:
 
     Ui::Before_The_Game *getUi() const;
 
-    void update_game_options_number_of_players (int number_of_players);
-    void update_game_options_game_type (int game_type);
-    void update_game_options_card_stack_type (int card_stack_type);
-
 
 signals:
 
     void dbg_switch_to_game_mode(bool);
     void dbg_the_game_begins(bool);
+
+
+    void update_game_options_number_of_players (int number_of_players);
+    void update_game_options_ (int game_type);
+    void update_game_options_card_stack_type (int card_stack_type);
+
 
 public slots:
 

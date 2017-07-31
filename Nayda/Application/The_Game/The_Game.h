@@ -35,6 +35,11 @@ public slots:
 private:
     Ui::The_Game *ui;
 
+    //game_settings
+    int m_time_to_think;
+    int m_time_for_move;
+    int m_number_of_players;
+
     GamerWidget* opponent[5]; //make as controlled unique_ptr;
 
 

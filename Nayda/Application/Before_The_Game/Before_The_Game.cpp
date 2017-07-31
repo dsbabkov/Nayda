@@ -36,6 +36,8 @@ void Before_The_Game::dbg_switch_to_game_mode_button_pressed()
 {
     emit dbg_switch_to_game_mode(true);
     emit dbg_the_game_begins(true);
+    emit update_game_options_card_stack_type(this->card_stack_mode);
+    //emit update_game
 }
 
 
