@@ -117,6 +117,53 @@ The_Game::The_Game(QWidget *parent) :
 
     //receiving number of players;
 
+#ifdef DEBUG_NO_SERVER
+    //do not receive actual parameters from Before_the_Game, but start immidiately
+
+    this->m_number_of_players = 6; //default maximum (extended - special code entered by user will be needed)
+    this->m_time_for_move = 30; //seconds
+    this->m_time_to_think = 15; //seconds
+
+#endif
+
+
+    //creating opponents
+    //remember, opponents less by 1 than total amount of players
+    for (int j = 0; j < m_number_of_players - 1; j++) {
+        this->opponent[j] = new GamerWidget;
+
+    }
+
+
+    //first two of them to the top layout
+    //fixed numbers, they are allways there
+    ui->top_opponents_layout->addWidget(this->opponent[0]);
+    ui->top_opponents_layout->addWidget(this->opponent[1]);
+
+    //if there is(are) some other players, add them to the right_side layout
+    if (m_number_of_players - 3 > 0) {
+        for (int i = 0; i < m_number_of_players - 3; i++) {
+            ui->right_side_opponents_layout->addWidget(this->opponent[2+i]);
+        }
+    }
+
+
+
+    //resizing 'em all
+    for (int j = 0; j < m_number_of_players - 1; j++) {
+
+        this->opponent[j]->setMinimumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
+        this->opponent[j]->setMaximumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
+        this->opponent[j]->setMaximumWidth(koeff_GamerWidget_size_Width*HW_Screen_Size_Width);
+
+    }
+
+
+
+
+
+
+
 
 
 

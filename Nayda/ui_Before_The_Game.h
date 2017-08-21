@@ -119,7 +119,7 @@ public:
         Create_Lobby->setText(QApplication::translate("Before_The_Game", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214 \320\267\320\260\320\273", Q_NULLPTR));
         About_Authors->setText(QApplication::translate("Before_The_Game", "\320\236\320\261 \320\220\320\262\321\202\320\276\321\200\320\260\321\205", Q_NULLPTR));
         Find_Lobby->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\320\271\321\202\320\270 \320\267\320\260\320\273", Q_NULLPTR));
-        btnHide->setText(QApplication::translate("Before_The_Game", "btnHide", Q_NULLPTR));
+        btnHide->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\321\207\320\260\320\273\320\276 (\320\236\321\202\320\273\320\260\320\264\320\272\320\260)", Q_NULLPTR));
         pushButton->setText(QApplication::translate("Before_The_Game", "\320\222\321\213\321\205\320\276\320\264", Q_NULLPTR));
     } // retranslateUi
 

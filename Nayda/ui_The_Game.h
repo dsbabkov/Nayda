@@ -35,7 +35,7 @@ public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout_3;
-    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *right_side_opponents_layout;
     QVBoxLayout *verticalLayout_5;
     GameTimers *TimersWidget;
     QVBoxLayout *verticalLayout_2;
@@ -47,7 +47,7 @@ public:
     QWidget *GameField;
     QHBoxLayout *horizontalLayout;
     GamerWidget *MainGamer;
-    QHBoxLayout *horizontalLayout_6;
+    QHBoxLayout *top_opponents_layout;
     QMenuBar *menubar;
     QMenu *menuStart;
     QMenu *menuOptions;
@@ -70,10 +70,10 @@ public:
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        right_side_opponents_layout = new QVBoxLayout();
+        right_side_opponents_layout->setObjectName(QStringLiteral("right_side_opponents_layout"));
 
-        verticalLayout_3->addLayout(verticalLayout_4);
+        verticalLayout_3->addLayout(right_side_opponents_layout);
 
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
@@ -133,10 +133,10 @@ public:
 
         gridLayout->addLayout(horizontalLayout, 2, 1, 1, 1);
 
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        top_opponents_layout = new QHBoxLayout();
+        top_opponents_layout->setObjectName(QStringLiteral("top_opponents_layout"));
 
-        gridLayout->addLayout(horizontalLayout_6, 0, 1, 1, 1);
+        gridLayout->addLayout(top_opponents_layout, 0, 1, 1, 1);
 
         The_Game->setCentralWidget(centralwidget);
         menubar = new QMenuBar(The_Game);
@@ -165,7 +165,7 @@ public:
     void retranslateUi(QMainWindow *The_Game)
     {
         The_Game->setWindowTitle(QApplication::translate("The_Game", "MainWindow", Q_NULLPTR));
-        btn_switch_back->setText(QApplication::translate("The_Game", "btn_switch_back", Q_NULLPTR));
+        btn_switch_back->setText(QApplication::translate("The_Game", "\320\272_\320\237\321\200\320\265\320\264\321\213\320\263\321\200\320\265", Q_NULLPTR));
         menuStart->setTitle(QApplication::translate("The_Game", "Start", Q_NULLPTR));
         menuOptions->setTitle(QApplication::translate("The_Game", "Options", Q_NULLPTR));
         menuAbout->setTitle(QApplication::translate("The_Game", "About", Q_NULLPTR));

@@ -55,7 +55,7 @@
      <item row="5" column="0">
       <widget class="QPushButton" name="btnHide">
        <property name="text">
-        <string>btnHide</string>
+        <string>Начало (Отладка)</string>
        </property>
       </widget>
      </item>

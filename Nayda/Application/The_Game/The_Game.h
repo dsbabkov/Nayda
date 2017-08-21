@@ -8,6 +8,7 @@
 
 #define PC_VERSION //begin with PC
 #define DEBUG_MESSAGES //start with debug enabled
+#define DEBUG_NO_SERVER
 
 namespace Ui {
 class The_Game;
@@ -40,6 +41,7 @@ private:
     int m_time_for_move;
     int m_number_of_players;
 
+    //special option will allow to be more than 5 opponents
     GamerWidget* opponent[5]; //make as controlled unique_ptr;
 
 
