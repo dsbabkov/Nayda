@@ -159,6 +159,7 @@ The_Game::The_Game(QWidget *parent) :
     }
 
     //this->m_time_for_move = 150;
+    //some other git test
 
 
 
