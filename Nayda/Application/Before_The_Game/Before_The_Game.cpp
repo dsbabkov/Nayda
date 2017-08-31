@@ -18,6 +18,11 @@ Before_The_Game::Before_The_Game(QWidget *parent) :
     QObject::connect (ui->btnHide, SIGNAL(clicked(bool)), this, SLOT(dbg_switch_to_game_mode_button_pressed()));
     QObject::connect(ui->Create_Lobby, SIGNAL(clicked(bool)),ui->Strt_New_Room, SLOT(show()));
 
+    //QObject::connect(ui->Strt_New_Room, SIGNAL(), this, SLOT(dbg_start_the_game_with_default_settings()));
+
+    connect(ui->Strt_New_Room, &start_new_room::dbg_btn_play_with_defaults_pressed,this, &Before_The_Game::dbg_start_the_game_with_default_settings);
+
+    //dbg_btn_play_with_defaults_pressed
 
 
     //configure_with_default_settings;
@@ -87,6 +92,13 @@ void Before_The_Game::dbg_switch_to_game_mode_button_pressed()
     emit dbg_the_game_begins(true);
     emit update_game_options_card_stack_type(this->card_stack_mode);
     //emit update_game
+}
+
+void Before_The_Game::dbg_start_the_game_with_default_settings()
+{
+    emit dbg_switch_to_game_mode(true);
+    emit dbg_the_game_begins(true);
+    emit update_game_options_card_stack_type(this->card_stack_mode);
 }
 
 

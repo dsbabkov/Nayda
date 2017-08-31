@@ -14,5 +14,8 @@ System_Manager::System_Manager(Before_The_Game * befr_the_game,
     QObject::connect(m_the_game_ptr, SIGNAL(dbg_return_to_before_the_game(bool)),m_before_the_game_ptr, SLOT(show()));
     QObject::connect(m_before_the_game_ptr, SIGNAL(dbg_switch_to_game_mode(bool)),
                     m_server_ptr, SLOT(dbg_the_game_begins_state_received(bool)));
+
+
+
   
 }
