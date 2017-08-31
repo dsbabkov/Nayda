@@ -9,6 +9,7 @@ INPUT(
 ./release\gamerwidget.o
 ./release\gametimers.o
 ./release\gameinfowidget.o
+./release\start_new_room.o
 ./release\moc_main_application.o
 ./release\moc_Before_The_Game.o
 ./release\moc_The_Game.o
@@ -16,4 +17,5 @@ INPUT(
 ./release\moc_gamerwidget.o
 ./release\moc_gametimers.o
 ./release\moc_gameinfowidget.o
+./release\moc_start_new_room.o
 );

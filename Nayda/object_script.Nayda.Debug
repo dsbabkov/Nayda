@@ -9,6 +9,7 @@ INPUT(
 ./debug\gamerwidget.o
 ./debug\gametimers.o
 ./debug\gameinfowidget.o
+./debug\start_new_room.o
 ./debug\moc_main_application.o
 ./debug\moc_Before_The_Game.o
 ./debug\moc_The_Game.o
@@ -16,4 +17,5 @@ INPUT(
 ./debug\moc_gamerwidget.o
 ./debug\moc_gametimers.o
 ./debug\moc_gameinfowidget.o
+./debug\moc_start_new_room.o
 );

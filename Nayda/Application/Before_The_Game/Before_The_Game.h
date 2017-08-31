@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "Server/server.h"
+#include <QDebug>
+#define DEBUG_MESSAGES
 
 
 

@@ -29,11 +29,14 @@ signals:
     void dbg_return_to_before_the_game(bool);
 
 public slots:
+
     void dbg_was_pushed_to_game_mode();
     void dbg_return_to_the_main_window();
 
     
 private:
+
+
     Ui::The_Game *ui;
 
     //game_settings
@@ -47,8 +50,18 @@ private:
 
 
 
+    //Game_Card_Stock Game_Stock_Doors;
+    //Game_Card_Stock Game_Stock_Treasures;
+    //Game_Card_Stock Fold_Doors;
+    //Game_Card_Stock Fold_Treausures;
+
+
+
 
 };
+
+
+
 
 
 

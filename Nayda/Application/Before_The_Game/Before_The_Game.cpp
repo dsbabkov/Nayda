@@ -1,6 +1,10 @@
 #include "Application/Before_The_Game/Before_The_Game.h"
 //#include "ui_main_application.h"
 #include "ui_Before_The_Game.h"
+#include <QDesktopWidget>
+
+
+
 
 Before_The_Game::Before_The_Game(QWidget *parent) :
     QMainWindow(parent),
@@ -12,6 +16,7 @@ Before_The_Game::Before_The_Game(QWidget *parent) :
 
     QObject::connect( ui->btnHide, SIGNAL(clicked()), this, SLOT(hide()));
     QObject::connect (ui->btnHide, SIGNAL(clicked(bool)), this, SLOT(dbg_switch_to_game_mode_button_pressed()));
+    QObject::connect(ui->Create_Lobby, SIGNAL(clicked(bool)),ui->Strt_New_Room, SLOT(show()));
 
 
 
@@ -19,6 +24,31 @@ Before_The_Game::Before_The_Game(QWidget *parent) :
     number_of_players = 3;
     time_for_move = 30;
     time_to_think = 30;
+
+
+    //configure_initial_widgets
+    //find the HW size of the window
+    QRect HW_Screen_Size = QApplication::desktop()->screenGeometry();
+    int HW_Screen_Size_Width = HW_Screen_Size.width();
+    int HW_Screen_Size_Heigh = HW_Screen_Size.height();
+
+    //Setting up coefficients
+    const float koeff_Create_Room_size = 0.7f;
+
+
+
+    #ifdef DEBUG_MESSAGES
+    qDebug() << "Available dimensions. Screen w = " << HW_Screen_Size_Width << " Screen h = " << HW_Screen_Size_Heigh;
+    #endif
+
+    ui->Strt_New_Room->setMinimumHeight(koeff_Create_Room_size*HW_Screen_Size_Heigh);
+    ui->Strt_New_Room->setMinimumWidth(koeff_Create_Room_size*HW_Screen_Size_Width);
+    ui->Strt_New_Room->setMaximumHeight(koeff_Create_Room_size*HW_Screen_Size_Heigh);
+    ui->Strt_New_Room->setMaximumWidth(koeff_Create_Room_size*HW_Screen_Size_Width);
+
+
+    ui->Strt_New_Room->hide();
+    //ui->Strt_New_Room->show();
 
 }
 

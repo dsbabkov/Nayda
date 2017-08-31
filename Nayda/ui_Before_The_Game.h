@@ -21,6 +21,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
+#include <start_new_room.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -28,7 +29,7 @@ class Ui_Before_The_Game
 {
 public:
     QWidget *centralWidget;
-    QWidget *gridLayoutWidget;
+    QGridLayout *gridLayout_3;
     QGridLayout *gridLayout;
     QPushButton *Settings;
     QPushButton *Create_Lobby;
@@ -36,8 +37,8 @@ public:
     QPushButton *Find_Lobby;
     QPushButton *btnHide;
     QPushButton *pushButton;
-    QWidget *gridLayoutWidget_2;
     QGridLayout *gridLayout_2;
+    start_new_room *Strt_New_Room;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -49,52 +50,57 @@ public:
         Before_The_Game->resize(1244, 797);
         centralWidget = new QWidget(Before_The_Game);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        gridLayoutWidget = new QWidget(centralWidget);
-        gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(80, 100, 151, 251));
-        gridLayout = new QGridLayout(gridLayoutWidget);
+        gridLayout_3 = new QGridLayout(centralWidget);
+        gridLayout_3->setSpacing(6);
+        gridLayout_3->setContentsMargins(11, 11, 11, 11);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        Settings = new QPushButton(gridLayoutWidget);
+        Settings = new QPushButton(centralWidget);
         Settings->setObjectName(QStringLiteral("Settings"));
 
         gridLayout->addWidget(Settings, 2, 0, 1, 1);
 
-        Create_Lobby = new QPushButton(gridLayoutWidget);
+        Create_Lobby = new QPushButton(centralWidget);
         Create_Lobby->setObjectName(QStringLiteral("Create_Lobby"));
 
         gridLayout->addWidget(Create_Lobby, 0, 0, 1, 1);
 
-        About_Authors = new QPushButton(gridLayoutWidget);
+        About_Authors = new QPushButton(centralWidget);
         About_Authors->setObjectName(QStringLiteral("About_Authors"));
 
         gridLayout->addWidget(About_Authors, 3, 0, 1, 1);
 
-        Find_Lobby = new QPushButton(gridLayoutWidget);
+        Find_Lobby = new QPushButton(centralWidget);
         Find_Lobby->setObjectName(QStringLiteral("Find_Lobby"));
 
         gridLayout->addWidget(Find_Lobby, 1, 0, 1, 1);
 
-        btnHide = new QPushButton(gridLayoutWidget);
+        btnHide = new QPushButton(centralWidget);
         btnHide->setObjectName(QStringLiteral("btnHide"));
 
         gridLayout->addWidget(btnHide, 5, 0, 1, 1);
 
-        pushButton = new QPushButton(gridLayoutWidget);
+        pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
         gridLayout->addWidget(pushButton, 4, 0, 1, 1);
 
-        gridLayoutWidget_2 = new QWidget(centralWidget);
-        gridLayoutWidget_2->setObjectName(QStringLiteral("gridLayoutWidget_2"));
-        gridLayoutWidget_2->setGeometry(QRect(250, 100, 301, 251));
-        gridLayout_2 = new QGridLayout(gridLayoutWidget_2);
+
+        gridLayout_3->addLayout(gridLayout, 0, 0, 1, 1);
+
+        gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(6);
-        gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        Strt_New_Room = new start_new_room(centralWidget);
+        Strt_New_Room->setObjectName(QStringLiteral("Strt_New_Room"));
+
+        gridLayout_2->addWidget(Strt_New_Room, 0, 0, 1, 1);
+
+
+        gridLayout_3->addLayout(gridLayout_2, 0, 1, 1, 1);
+
         Before_The_Game->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Before_The_Game);
         menuBar->setObjectName(QStringLiteral("menuBar"));

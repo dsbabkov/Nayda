@@ -33,7 +33,8 @@ SOURCES += main.cpp\
     Server/server.cpp \
     gamerwidget.cpp \
     gametimers.cpp \
-    gameinfowidget.cpp
+    gameinfowidget.cpp \
+    start_new_room.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
@@ -42,7 +43,8 @@ HEADERS  += main_application.h \
     Server/server.h \
     gamerwidget.h \
     gametimers.h \
-    gameinfowidget.h
+    gameinfowidget.h \
+    start_new_room.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \
@@ -51,4 +53,5 @@ FORMS    += main_application.ui \
     form2.ui \
     gamerwidget.ui \
     gametimers.ui \
-    gameinfowidget.ui
+    gameinfowidget.ui \
+    start_new_room.ui
