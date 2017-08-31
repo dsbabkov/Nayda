@@ -16,46 +16,46 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_3">
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="0">
-       <widget class="QPushButton" name="Settings">
-        <property name="text">
-         <string>Настройки</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
        <widget class="QPushButton" name="Create_Lobby">
         <property name="text">
          <string>Создать зал</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="About_Authors">
-        <property name="text">
-         <string>Об Авторах</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
+      <item>
        <widget class="QPushButton" name="Find_Lobby">
         <property name="text">
          <string>Найти зал</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
-       <widget class="QPushButton" name="btnHide">
+      <item>
+       <widget class="QPushButton" name="Settings">
         <property name="text">
-         <string>Начало (Отладка)</string>
+         <string>Настройки</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item>
+       <widget class="QPushButton" name="About_Authors">
+        <property name="text">
+         <string>Об Авторах</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
          <string>Выход</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnHide">
+        <property name="text">
+         <string>Начало (Отладка)</string>
         </property>
        </widget>
       </item>

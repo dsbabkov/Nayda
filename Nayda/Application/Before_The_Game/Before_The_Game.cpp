@@ -34,12 +34,31 @@ Before_The_Game::Before_The_Game(QWidget *parent) :
 
     //Setting up coefficients
     const float koeff_Create_Room_size = 0.7f;
+    const float koeff_Dialog_size = 0.1f;
+
 
 
 
     #ifdef DEBUG_MESSAGES
     qDebug() << "Available dimensions. Screen w = " << HW_Screen_Size_Width << " Screen h = " << HW_Screen_Size_Heigh;
     #endif
+
+
+
+    ui->About_Authors->setMaximumWidth(koeff_Dialog_size*HW_Screen_Size_Width);
+
+    ui->Create_Lobby->setMaximumWidth(koeff_Dialog_size*HW_Screen_Size_Width);
+
+    ui->Settings->setMaximumWidth(koeff_Dialog_size*HW_Screen_Size_Width);
+
+    ui->Find_Lobby->setMaximumWidth(koeff_Dialog_size*HW_Screen_Size_Width);
+
+    ui->btnHide->setMaximumWidth(koeff_Dialog_size*HW_Screen_Size_Width);
+
+
+
+
+
 
     ui->Strt_New_Room->setMinimumHeight(koeff_Create_Room_size*HW_Screen_Size_Heigh);
     ui->Strt_New_Room->setMinimumWidth(koeff_Create_Room_size*HW_Screen_Size_Width);

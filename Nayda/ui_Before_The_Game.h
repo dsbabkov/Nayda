@@ -20,6 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include <start_new_room.h>
 
@@ -30,13 +31,13 @@ class Ui_Before_The_Game
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_3;
-    QGridLayout *gridLayout;
-    QPushButton *Settings;
+    QVBoxLayout *verticalLayout;
     QPushButton *Create_Lobby;
-    QPushButton *About_Authors;
     QPushButton *Find_Lobby;
-    QPushButton *btnHide;
+    QPushButton *Settings;
+    QPushButton *About_Authors;
     QPushButton *pushButton;
+    QPushButton *btnHide;
     QGridLayout *gridLayout_2;
     start_new_room *Strt_New_Room;
     QMenuBar *menuBar;
@@ -54,41 +55,41 @@ public:
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
-        gridLayout = new QGridLayout();
-        gridLayout->setSpacing(6);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        Settings = new QPushButton(centralWidget);
-        Settings->setObjectName(QStringLiteral("Settings"));
-
-        gridLayout->addWidget(Settings, 2, 0, 1, 1);
-
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(6);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         Create_Lobby = new QPushButton(centralWidget);
         Create_Lobby->setObjectName(QStringLiteral("Create_Lobby"));
 
-        gridLayout->addWidget(Create_Lobby, 0, 0, 1, 1);
-
-        About_Authors = new QPushButton(centralWidget);
-        About_Authors->setObjectName(QStringLiteral("About_Authors"));
-
-        gridLayout->addWidget(About_Authors, 3, 0, 1, 1);
+        verticalLayout->addWidget(Create_Lobby);
 
         Find_Lobby = new QPushButton(centralWidget);
         Find_Lobby->setObjectName(QStringLiteral("Find_Lobby"));
 
-        gridLayout->addWidget(Find_Lobby, 1, 0, 1, 1);
+        verticalLayout->addWidget(Find_Lobby);
 
-        btnHide = new QPushButton(centralWidget);
-        btnHide->setObjectName(QStringLiteral("btnHide"));
+        Settings = new QPushButton(centralWidget);
+        Settings->setObjectName(QStringLiteral("Settings"));
 
-        gridLayout->addWidget(btnHide, 5, 0, 1, 1);
+        verticalLayout->addWidget(Settings);
+
+        About_Authors = new QPushButton(centralWidget);
+        About_Authors->setObjectName(QStringLiteral("About_Authors"));
+
+        verticalLayout->addWidget(About_Authors);
 
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        gridLayout->addWidget(pushButton, 4, 0, 1, 1);
+        verticalLayout->addWidget(pushButton);
+
+        btnHide = new QPushButton(centralWidget);
+        btnHide->setObjectName(QStringLiteral("btnHide"));
+
+        verticalLayout->addWidget(btnHide);
 
 
-        gridLayout_3->addLayout(gridLayout, 0, 0, 1, 1);
+        gridLayout_3->addLayout(verticalLayout, 0, 0, 1, 1);
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(6);
@@ -121,12 +122,12 @@ public:
     void retranslateUi(QMainWindow *Before_The_Game)
     {
         Before_The_Game->setWindowTitle(QApplication::translate("Before_The_Game", "Main_Application", Q_NULLPTR));
-        Settings->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", Q_NULLPTR));
         Create_Lobby->setText(QApplication::translate("Before_The_Game", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214 \320\267\320\260\320\273", Q_NULLPTR));
-        About_Authors->setText(QApplication::translate("Before_The_Game", "\320\236\320\261 \320\220\320\262\321\202\320\276\321\200\320\260\321\205", Q_NULLPTR));
         Find_Lobby->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\320\271\321\202\320\270 \320\267\320\260\320\273", Q_NULLPTR));
-        btnHide->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\321\207\320\260\320\273\320\276 (\320\236\321\202\320\273\320\260\320\264\320\272\320\260)", Q_NULLPTR));
+        Settings->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", Q_NULLPTR));
+        About_Authors->setText(QApplication::translate("Before_The_Game", "\320\236\320\261 \320\220\320\262\321\202\320\276\321\200\320\260\321\205", Q_NULLPTR));
         pushButton->setText(QApplication::translate("Before_The_Game", "\320\222\321\213\321\205\320\276\320\264", Q_NULLPTR));
+        btnHide->setText(QApplication::translate("Before_The_Game", "\320\235\320\260\321\207\320\260\320\273\320\276 (\320\236\321\202\320\273\320\260\320\264\320\272\320\260)", Q_NULLPTR));
     } // retranslateUi
 
 };
