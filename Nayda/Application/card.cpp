@@ -15,9 +15,19 @@ Game_Card_Stock::Game_Card_Stock(int stock_type, int total_cards_to_be_played, i
 
 }
 
+int Game_Card_Stock::type() const
+{
+    return _type;
+}
+
+void Game_Card_Stock::setType(int type)
+{
+    _type = type;
+}
+
 Game_Card::Game_Card()
 {
-
+    
 }
 
 Game_Card::Game_Card(int card_ID, QString picture_address, QString card_name)

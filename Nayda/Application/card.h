@@ -32,7 +32,10 @@ class Game_Card_Stock
   Game_Card_Stock();
   Game_Card_Stock (int stock_type, int total_cards_to_be_played, int cards_left_to_be_played, int time_replayed);
 
-  private:
+  int type() const;
+  void setType(int type);
+
+private:
 
   int _type;  //make it as a specific type!
   int _total_cards; //how many card were in an initial stock

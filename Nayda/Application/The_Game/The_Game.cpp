@@ -127,18 +127,32 @@ The_Game::The_Game(QWidget *parent) :
 #endif
 
 
+
+
+    //setting MainGamer
+    ui->MainGamer->setIs_MainPlayer(true);
+
+
     //creating opponents
     //remember, opponents less by 1 than total amount of players
     for (int j = 0; j < m_number_of_players - 1; j++) {
         this->opponent[j] = new GamerWidget;
+        opponent[j]->redraw_as_a_secondary_player();
+        opponent[j]->setIs_MainPlayer(false);
 
     }
+
 
 
     //first two of them to the top layout
     //fixed numbers, they are allways there
     ui->top_opponents_layout->addWidget(this->opponent[0]);
     ui->top_opponents_layout->addWidget(this->opponent[1]);
+
+
+
+    //this->opponent[0]->
+
 
     //if there is(are) some other players, add them to the right_side layout
     if (m_number_of_players - 3 > 0) {
