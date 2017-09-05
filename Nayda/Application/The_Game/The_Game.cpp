@@ -65,7 +65,7 @@ The_Game::The_Game(QWidget *parent) :
     //7. define whether it could be movable???
 
     //Setting up coefficients
-    const float koeff_GameField_size = 0.7f;
+    const float koeff_GameField_size = 0.5f;
 
     const float koeff_GamerWidget_size_Height = (1 - koeff_GameField_size)/2;
     const float koeff_GamerWidget_size_Width = koeff_GameField_size/3;
@@ -171,6 +171,10 @@ The_Game::The_Game(QWidget *parent) :
         this->opponent[j]->setMaximumWidth(koeff_GamerWidget_size_Width*HW_Screen_Size_Width);
 
     }
+
+    qDebug() << "Maximum Height of the Gamer_Widget: " << koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh;
+    qDebug() << "Maximum Width of the Gamer_Widget: " << koeff_GamerWidget_size_Width*HW_Screen_Size_Width;
+
 
 
 
