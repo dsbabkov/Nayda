@@ -2,6 +2,9 @@
 #define GAMERWIDGET_H
 
 #include <QWidget>
+#include <QDesktopWidget>
+#include <QDebug>
+
 
 namespace Ui {
 class GamerWidget;

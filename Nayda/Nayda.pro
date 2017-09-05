@@ -34,7 +34,8 @@ SOURCES += main.cpp\
     gamerwidget.cpp \
     gametimers.cpp \
     gameinfowidget.cpp \
-    start_new_room.cpp
+    start_new_room.cpp \
+    Application/card.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
@@ -44,7 +45,8 @@ HEADERS  += main_application.h \
     gamerwidget.h \
     gametimers.h \
     gameinfowidget.h \
-    start_new_room.h
+    start_new_room.h \
+    Application/card.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \
