@@ -44,7 +44,7 @@ GamerWidget::GamerWidget(QWidget *parent) :
     ui->btn_race_1->setMinimumHeight(race_class_btn_size_height*HW_Screen_Size_Width);
 
 
-    QPixmap pxmp_icon_race_1("Picture/No_Race.jpg");
+    QPixmap pxmp_icon_race_1("Pictures/No_Race.jpg");
     QPalette plte_icon_race_1;
     plte_icon_race_1.setBrush(ui->btn_race_1->backgroundRole(),
                               QBrush(pxmp_icon_race_1.scaled(134,208,
