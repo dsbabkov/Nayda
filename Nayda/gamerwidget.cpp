@@ -44,7 +44,15 @@ GamerWidget::GamerWidget(QWidget *parent) :
     ui->btn_race_1->setMinimumHeight(race_class_btn_size_height*HW_Screen_Size_Width);
 
 
-    QPixmap pxmp_icon_race_1("Pictures/No_Race.jpg");
+    QPixmap pxmp_icon_race_1("Picture/No_Race.jpg");
+    QPalette plte_icon_race_1;
+    plte_icon_race_1.setBrush(ui->btn_race_1->backgroundRole(),
+                              QBrush(pxmp_icon_race_1.scaled(134,208,
+                              Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+     ui->btn_race_1->setFlat(true);
+     ui->btn_race_1->setAutoFillBackground(true);
+     ui->btn_race_1->setPalette(plte_icon_race_1);
+
 
     //resizing pxmp
     pxmp_icon_race_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,race_class_btn_size_height*HW_Screen_Size_Height,
@@ -53,25 +61,25 @@ GamerWidget::GamerWidget(QWidget *parent) :
 
 
 
-    QIcon icon_race_1(pxmp_icon_race_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,race_class_btn_size_height*HW_Screen_Size_Height,
+    QIcon icon_race_1(pxmp_icon_race_1.scaled(196,300,
                                               Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
 
-    qDebug() <<"Size of the pixmap.scaled, Width: " << pxmp_icon_race_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,race_class_btn_size_height*HW_Screen_Size_Height,
+    qDebug() <<"Size of the pixmap.scaled, Width: " << pxmp_icon_race_1.scaled(134,208,
                                                                                Qt::KeepAspectRatio, Qt::SmoothTransformation).size().width();
-    qDebug() << "Size of the pixmap.scaled, Height: " << pxmp_icon_race_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,race_class_btn_size_height*HW_Screen_Size_Height,
+    qDebug() << "Size of the pixmap.scaled, Height: " << pxmp_icon_race_1.scaled(134,208,
                                                                                  Qt::KeepAspectRatio, Qt::SmoothTransformation).size().height();
 
 
 
 
 
-    ui->btn_race_1->setIcon(icon_race_1);
-    ui->btn_race_1->setText("");
+    //ui->btn_race_1->setIcon(icon_race_1);
+    //ui->btn_race_1->setText("");
 
 
     qDebug() << "Size of the button, Width: " << race_class_btn_size_width*HW_Screen_Size_Width;
-    qDebug() << "Size of the button, Height: " <<race_class_btn_size_height*HW_Screen_Size_Height;
+    qDebug() << "Size of the button, Height: " << race_class_btn_size_height*HW_Screen_Size_Width;
 
 
 
