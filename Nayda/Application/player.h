@@ -66,6 +66,16 @@ public:
     Profession _profession;
 
 
+    bool _halfBlood;
+    bool _superMunchkin;
+
+    Race _second_race;
+    Profession _second_profession;
+
+    bool _halfBlood_without_second_race;
+    bool _superMunchkin_without_second_profession;
+
+
 
     int playerLevel() const;
     void setPlayerLevel(int playerLevel);
@@ -93,6 +103,14 @@ public:
     void setRace(const Race &race);
     Profession profession() const;
     void setProfession(const Profession &profession);
+    Race second_race() const;
+    void setSecond_race(const Race &second_race);
+    Profession second_profession() const;
+    void setSecond_profession(const Profession &second_profession);
+    bool halfBlood_without_second_race() const;
+    void setHalfBlood_without_second_race(bool halfBlood_without_second_race);
+    bool superMunchkin_without_second_profession() const;
+    void setSuperMunchkin_without_second_profession(bool superMunchkin_without_second_profession);
 };
 
 #endif // PLAYER_H

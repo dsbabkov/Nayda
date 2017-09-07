@@ -33,9 +33,24 @@ player::player()
 
 }
 
-void player::addRaceActiveAbility(Race_Active_Abilities ability)
+bool player::superMunchkin_without_second_profession() const
 {
-    //_raceActiveAbilities.insert()
+    return _superMunchkin_without_second_profession;
+}
+
+void player::setSuperMunchkin_without_second_profession(bool superMunchkin_without_second_profession)
+{
+    _superMunchkin_without_second_profession = superMunchkin_without_second_profession;
+}
+
+bool player::halfBlood_without_second_race() const
+{
+    return _halfBlood_without_second_race;
+}
+
+void player::setHalfBlood_without_second_race(bool halfBlood_without_second_race)
+{
+    _halfBlood_without_second_race = halfBlood_without_second_race;
 }
 
 Profession player::second_profession() const
@@ -58,25 +73,9 @@ void player::setSecond_race(const Race &second_race)
     _second_race = second_race;
 }
 
-bool player::superMunchkin_without_second_profession() const
-{
-    return _superMunchkin_without_second_profession;
-}
 
-void player::setSuperMunchkin_without_second_profession(bool superMunchkin_without_second_profession)
-{
-    _superMunchkin_without_second_profession = superMunchkin_without_second_profession;
-}
 
-bool player::halfBlood_without_second_race() const
-{
-    return _halfBlood_without_second_race;
-}
 
-void player::setHalfBlood_without_second_race(bool halfBlood_without_second_race)
-{
-    _halfBlood_without_second_race = halfBlood_without_second_race;
-}
 
 Profession player::profession() const
 {
