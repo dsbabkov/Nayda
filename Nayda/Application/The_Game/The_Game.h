@@ -5,6 +5,8 @@
 #include "gamerwidget.h"
 
 #include "Server/server.h"
+#include "Application/player.h"
+
 
 #define PC_VERSION //begin with PC
 #define DEBUG_MESSAGES //start with debug enabled
@@ -46,6 +48,10 @@ private:
 
     //special option will allow to be more than 5 opponents
     GamerWidget* opponent[5]; //make as controlled unique_ptr;
+
+    player _players_opponents[5];
+    player _main_player;
+
 
 
 
