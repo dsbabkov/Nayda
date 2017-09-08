@@ -180,11 +180,6 @@ The_Game::The_Game(QWidget *parent) :
     //Game_Card kamikazeKobolds(1,"Pictures/No_Class_dbg.png","Kamikaze Kobolds",cardAddon::ClirickalMistakes);
     //_basisStock.insert({1, kamikazeKobolds});
 
-
-
-
-
-
 }
 
 The_Game::~The_Game()
