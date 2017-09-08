@@ -1,6 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <map>
+
+
 #define DEFAULT_GAME_STOCK
 
 //Depending on the game stock!!!!!
@@ -35,15 +38,18 @@ enum class Profession_Active_Abilities {No_Abilities,  Ressurection, Banishment,
                              Flight, Pacification };
 enum class Profession_Passive_Abilities {No_Abilities, Power_of_the_Parity, Bards_Luck };
 
+enum class Abilities_Keys_Races {elven_ability_1, elven_ability_2, dwarfs_ability_1, dwarfs_ability_2,
+                           gnomes_ability_1, gnomes_ability_2, halflings_ability_1, halflings_ability_2,
+                           orks_ability_1, orks_ability_2 };
+enum class Abilities_Keys_Professions {warriors_ability_1, warriors_ability_2, rogue_ability_1, rogue_ability_2,
+                                      priests_ability_1, priests_ability_2, bards_ability_1, bards_ability_2,
+                                      mage_ability_1, mage_ability_2};
+
 #endif
 
 
 class player
 {
-public:
-
-
-    player();
 
     bool _isMainPlayer;
 
@@ -75,6 +81,22 @@ public:
     bool _halfBlood_without_second_race;
     bool _superMunchkin_without_second_profession;
 
+    std::map <Race_Active_Abilities, Abilities_Keys_Races> _raceActiveAbilities;
+    std::map <Race_Passive_Abilities, Abilities_Keys_Races> _racePassiveAbilities;
+    std::map <Profession_Active_Abilities, Abilities_Keys_Professions> _professionActiveAbilities;
+    std::map <Profession_Passive_Abilities, Abilities_Keys_Professions> _professionPassiveAbilites;
+
+
+public:
+
+
+    player();
+
+
+    void addRaceActiveAbility(Race_Active_Abilities raceActiveAbility, Abilities_Keys_Races raceAbilityKey);
+    void addRacePassiveAbility(Race_Passive_Abilities racePassiveAbility, Abilities_Keys_Races raceAbilityKey);
+    void addProfessionActiveAbility(Profession_Active_Abilities professionActiveAbility, Abilities_Keys_Professions professionAbilityKey);
+    void addProfessionPassiveAbility(Profession_Passive_Abilities professionPassiveAbility, Abilities_Keys_Professions professionAbilityKey);
 
 
     int playerLevel() const;
@@ -111,6 +133,8 @@ public:
     void setHalfBlood_without_second_race(bool halfBlood_without_second_race);
     bool superMunchkin_without_second_profession() const;
     void setSuperMunchkin_without_second_profession(bool superMunchkin_without_second_profession);
+
+
 };
 
 #endif // PLAYER_H

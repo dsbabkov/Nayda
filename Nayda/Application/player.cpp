@@ -33,6 +33,26 @@ player::player()
 
 }
 
+void player::addRaceActiveAbility(Race_Active_Abilities raceActiveAbility, Abilities_Keys_Races raceAbilityKey)
+{
+    _raceActiveAbilities.insert({raceActiveAbility, raceAbilityKey});
+}
+
+void player::addRacePassiveAbility(Race_Passive_Abilities racePassiveAbility, Abilities_Keys_Races raceAbilityKey)
+{
+    _racePassiveAbilities.insert({racePassiveAbility, raceAbilityKey});
+}
+
+void player::addProfessionActiveAbility(Profession_Active_Abilities professionActiveAbility, Abilities_Keys_Professions professionAbilityKey)
+{
+    _professionActiveAbilities.insert({professionActiveAbility, professionAbilityKey});
+}
+
+void player::addProfessionPassiveAbility(Profession_Passive_Abilities professionPassiveAbility, Abilities_Keys_Professions professionAbilityKey)
+{
+    _professionPassiveAbilites.insert({professionPassiveAbility,professionAbilityKey});
+}
+
 bool player::superMunchkin_without_second_profession() const
 {
     return _superMunchkin_without_second_profession;
