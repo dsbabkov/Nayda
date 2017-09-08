@@ -62,12 +62,7 @@ private:
 
     //Game_Cards are filled inside the Game.cpp (constructor)
 
-    std::map <Game_Card, int> Basis_Stock;
-
-
-
-
-
+    std::map <int, Game_Card> _basisStock;
 
     //Game_Card_Stock Game_Stock_Doors;
     //Game_Card_Stock Game_Stock_Treasures;
