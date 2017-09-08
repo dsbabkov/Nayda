@@ -6,7 +6,8 @@
 
 #include "Server/server.h"
 #include "Application/player.h"
-
+#include <map>
+#include "Application/card.h"
 
 #define PC_VERSION //begin with PC
 #define DEBUG_MESSAGES //start with debug enabled
@@ -51,6 +52,18 @@ private:
 
     player _players_opponents[5];
     player _main_player;
+
+
+    //this stock depends on the Game Mode;
+    //Nonetheless, it is allways the same through all the game, since its only function is
+    //to store the whole amount of cards that can be played and to display them on widgets
+    //The real card stock is the VECTOR!!! And it should never been stored on the client side
+    //during debug stage it will be generated and stored alltogether in the game constructor
+
+    //Game_Cards are filled inside the Game.cpp (constructor)
+
+    std::map <Game_Card, int> Basis_Stock;
+
 
 
 

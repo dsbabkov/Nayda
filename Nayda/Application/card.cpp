@@ -36,3 +36,13 @@ Game_Card::Game_Card(int card_ID, QString picture_address, QString card_name)
     _card_Picture_address = picture_address;
     _card_Name = card_name;
 }
+
+int Game_Card::card_ID() const
+{
+    return _card_ID;
+}
+
+void Game_Card::setCard_ID(int card_ID)
+{
+    _card_ID = card_ID;
+}

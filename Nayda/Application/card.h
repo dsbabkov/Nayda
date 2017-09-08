@@ -3,7 +3,7 @@
 
 #include <QString>
 #include <QMap>
-
+#include <map>
 
 
 
@@ -13,6 +13,9 @@ class Game_Card
 public:
     Game_Card();
     Game_Card (int card_ID, QString picture_address, QString card_name);
+
+    int card_ID() const;
+    void setCard_ID(int card_ID);
 
 private:
 
@@ -42,10 +45,12 @@ private:
   int _cards_left; //how many cards left in a game;
   int _time_replayed; //how many times were the stock replayed (somekind of a debug info)
 
-  QMap<Game_Card, int> _stock;
+  std::vector<Game_Card> _stock;
 
 
 };
+
+
 
 
 
