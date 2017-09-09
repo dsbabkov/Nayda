@@ -77,3 +77,4 @@ void Game_Card::setCardAddOn(const cardAddon &cardAddOn)
 {
     _cardAddOn = cardAddOn;
 }
+

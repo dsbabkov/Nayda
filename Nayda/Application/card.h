@@ -26,7 +26,8 @@
 */
 
 
-enum class cardAddon {Basic, WildAxe, ClirickalMistakes };
+enum class cardAddon {Basic, WildAxe, ClericalErrors };
+enum class doorType {Monster, MonsterAmplifier, Curse, Race, Profession, SpecialMechanics };
 
 
 class Game_Card
@@ -48,7 +49,7 @@ public:
     cardAddon cardAddOn() const;
     void setCardAddOn(const cardAddon &cardAddOn);
 
-private:
+protected:
 
     int _card_ID;
     QString _card_Picture_address;
@@ -57,13 +58,35 @@ private:
 
 
 
+
 };
+
+class Game_Card_Door : public Game_Card
+{
+    Game_Card_Door();
+
+
+public:
+    //doorType doorType() const;
+    //void setDoorType(const doorType &doorType);
+
+
+protected:
+
+    doorType _doorType();
+
+};
+
+//class Game_Card_Door_Monster
+
+
+
 
 class Game_Card_Stock
 
 
 {
-  public:
+public:
   Game_Card_Stock();
   Game_Card_Stock (int stock_type, int total_cards_to_be_played, int cards_left_to_be_played, int time_replayed);
 
