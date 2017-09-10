@@ -2,50 +2,9 @@
 #define PLAYER_H
 
 #include <map>
+#include "card.h" //since it is better to store "Races", "Professions" inside the class of card.h
 
 
-#define DEFAULT_GAME_STOCK
-
-//Depending on the game stock!!!!!
-
-#ifdef DEFAULT_GAME_STOCK
-//There will be five Races and five Classes (Here and Further Renamed to Professions) in the Basic Game
-//Player can only have 4 abilities from Races and 4 abilities from Classes;
-//Therefore there will be an array of each group;
-//Passive abilities should have a special sign near Avatar, active abilities should have not only the sign,
-//but also the button in the specific menu (the total of six buttons for Mage-Priest & Halfling-Ork for ex).
-//There will be maximum of
-// Race-Active-Abilities == 2
-// Race-Passive-Abilities == 4
-// Profession-Active-Abilities == 4
-// Profession-Passive-Abilities == 2
-//Therefore maximum of
-// Passive_labels == 6
-// Active_labels == 6 (will be made as buttons in a spec. menu)
-
-
-
-enum class Race { Human, Elf, Dwarf, Gnome, Halfling, Ork };
-enum class Profession {No_Profession, Warrior, Rogue, Priest, Bard, Mage}; //using "profession instead of class
-
-
-
-enum class Race_Active_Abilities {No_Abilities, Power_of_the_Lonesome, The_Second_Chance, Rejecting};
-enum class Race_Passive_Abilities {No_Abilities, Big_Guy, Big_Hands, Escaping, Semi_Altruism,
-                                   Power_of_GN_Nose_Auto_Escape, Businessman, Overpower};
-
-enum class Profession_Active_Abilities {No_Abilities,  Ressurection, Banishment, Theft, Shrinking, Berserking, Enchanting,
-                             Flight, Pacification };
-enum class Profession_Passive_Abilities {No_Abilities, Power_of_the_Parity, Bards_Luck };
-
-enum class Abilities_Keys_Races {elven_ability_1, elven_ability_2, dwarfs_ability_1, dwarfs_ability_2,
-                           gnomes_ability_1, gnomes_ability_2, halflings_ability_1, halflings_ability_2,
-                           orks_ability_1, orks_ability_2 };
-enum class Abilities_Keys_Professions {warriors_ability_1, warriors_ability_2, rogue_ability_1, rogue_ability_2,
-                                      priests_ability_1, priests_ability_2, bards_ability_1, bards_ability_2,
-                                      mage_ability_1, mage_ability_2};
-
-#endif
 
 
 class player
@@ -70,6 +29,7 @@ class player
 
     Race _race;
     Profession _profession;
+    Players_Sex _playersSex;
 
 
     bool _halfBlood;
