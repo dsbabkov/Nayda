@@ -8,6 +8,8 @@
 #include "Application/player.h"
 #include <map>
 #include "Application/card.h"
+#include <QFile>
+
 
 #define PC_VERSION //begin with PC
 #define DEBUG_MESSAGES //start with debug enabled
@@ -26,6 +28,9 @@ public:
     ~The_Game();
 
     //Ui::The_Game *getUi() const;
+
+    void theMonstersParser(const QString& filename);
+    gameCardDoorMonster monsterStringParser(const QString& monster_string);
 
 signals:
     void dbg_to_be_shown(bool);
@@ -63,6 +68,8 @@ private:
     //Game_Cards are filled inside the Game.cpp (constructor)
 
     std::map <int, Game_Card> _basisStock;
+    std::map <int, gameCardDoorMonster> _monstersDeck;
+
 
     //Game_Card_Stock Game_Stock_Doors;
     //Game_Card_Stock Game_Stock_Treasures;

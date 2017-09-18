@@ -20,7 +20,7 @@ player::player()
     _race = Race::Human;
     _profession = Profession::No_Profession;
 
-    _halfBlood = false;
+    _halfBreed = false;
     _superMunchkin = false;
 
     _second_race = Race::Human;
@@ -28,6 +28,12 @@ player::player()
 
     _halfBlood_without_second_race = false;
     _superMunchkin_without_second_profession = false;
+
+
+
+
+
+
 
 
 

@@ -180,12 +180,102 @@ The_Game::The_Game(QWidget *parent) :
     //Game_Card kamikazeKobolds(1,"Pictures/No_Class_dbg.png","Kamikaze Kobolds",cardAddon::ClirickalMistakes);
     //_basisStock.insert({1, kamikazeKobolds});
 
+
+    //gameCardDoorMonster monster;
+    //_monstersDeck.insert({1, monster});
+
+    //filling up the monsters' stock!
+
+    theMonstersParser("Tables/cards_doors_monsters.csv");
+    qDebug() << "Monsters parsing complete!" << endl;
+
 }
 
 The_Game::~The_Game()
 {
     delete ui;
 }
+
+
+
+gameCardDoorMonster The_Game::monsterStringParser(const QString &monster_string)
+{
+
+    gameCardDoorMonster theMonster;
+    QStringList lst = monster_string.split(";");
+    theMonster.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+    theMonster.setPictureAddress(lst.first());
+    lst.removeFirst();
+    theMonster.setCardName(lst.first());
+    lst.removeFirst();
+    if (lst.first() == "Basic") theMonster.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theMonster.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theMonster.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+    theMonster.setType(doorType::Monster);
+    lst.removeFirst();
+    theMonster.setMonsterLevel(lst.first().toInt());
+    lst.removeFirst();
+    //for debug; needed to be reworked;
+    theMonster.setStrongAgainstBard(5);
+    lst.removeFirst();
+    //
+    lst.first() == "false" ? theMonster.setIsUndead(false) :  theMonster.setIsUndead(true);
+    lst.removeFirst();
+    lst.first() == "false" ? theMonster.setFromHell(false) : theMonster.setFromHell(true);
+    lst.removeFirst();
+    if (lst.first() == "Woman") theMonster.setDontFightWithWoman(true);
+    if (lst.first() == "Thief") theMonster.setDontFightWithThief(true);
+    if (lst.first() == "Ork") theMonster.setDontFightwithOrk(true);
+    if (lst.first() == "Elf") theMonster.setDontFightWithElf(true);
+    lst.removeFirst();
+    theMonster.setDontFightTillLevel(lst.first().toInt());
+    lst.removeFirst();
+
+    if (lst.first() == "noone") { lst.removeFirst(); }
+        else {
+        if (lst.first() == "Woman") theMonster.setSpecialMechanicAgainstWoman(true);
+        if (lst.first() == "Cleric") theMonster.setSpecialMechanicAgainstCleric(true);
+        if (lst.first() == "all") theMonster.setSpecialMechanicAgainstAll(true);
+        if (lst.first() == "Thief") theMonster.setSpecialMechanicAginstThief(true);
+        if (lst.first() == "Elf") theMonster.setSpecialMechanicAgainstElf(true);
+        if (lst.first() == "Halfling") theMonster.setSpecialMechanicAgainstHalfling(true);
+        if (lst.first() == "Wizard") theMonster.setSpecialMechanicAgainstWizard(true);
+
+    }
+
+    return theMonster;
+
+
+}
+
+
+
+void The_Game::theMonstersParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Monsters parsing starts!" << endl;
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _monstersDeck.insert({(lst.first()).toInt(),monsterStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
 
 void The_Game::dbg_was_pushed_to_game_mode()
 {

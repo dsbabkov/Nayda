@@ -76,6 +76,8 @@ enum class Players_Sex {Man, Woman};
 
 enum class Card_Type {Monster, Monsters_Amplifier, Curse, Race, Profession, Special_Mechanics};
 
+
+
 #endif
 
 
@@ -113,23 +115,141 @@ protected:
 
 };
 
-class Game_Card_Door : public Game_Card
-{
-    Game_Card_Door();
+class gameCardDoorMonster {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    QString _monsterName;
+    cardAddon _addOn;
+    doorType _type;
+
+    bool _isUndead;
+    bool _fromHell;
+
+    int _monsterLevel;
+
+    int _strongAgainstHuman;
+    int _strongAgainstElf;
+    int _strongAgainstHalfling;
+    int _strongAgainstDwarf;
+    int _strongAgainstOrk;
+    int _strongAgainstGnome;
+    int _strongAgainstNoClass;
+    int _strongAgainstHalfBreed;
+    int _strongAgainstSuperMunchkin;
+    int _strongAgainstWoman;
+    int _strongAgainstWarrior;
+    int _strongAgainstWizard;
+    int _strongAgainstThief;
+    int _strongAgainstBard;
+    int _strongAgainstCleric;
+    int _strongAgainstSaturday;
+
+    bool _dontFightWithWoman;
+    bool _dontFightWithThief;
+    bool _dontFightWithElf;
+    bool _dontFightwithOrk;
+
+    int _dontFightTillLevel;
+
+    bool _specialMechanicAgainstAll;
+    bool _specialMechanicAgainstWoman;
+    bool _specialMechanicAgainstCleric;
+    bool _specialMechanicAginstThief;
+    bool _specialMechanicAgainstElf;
+    bool _specialMechanicAgainstWizard;
+    bool _specialMechanicAgainstHalfling;
 
 
 public:
-    //doorType doorType() const;
-    //void setDoorType(const doorType &doorType);
+
+    //I will try default constructor with no parameters;
+    //The parameters will be filled up in the Parser;
+    gameCardDoorMonster() {}
+
+//    gameCardDoorMonster(int card_ID, QString picture_Address, QString card_Name,
+//                        QString monster_Name, cardAddon card_Addon, doorType the_type,
+//                        bool is_Undead, bool is_from_Hell, int monster_Level,
+//                        int strong_AgainstHuman, int strong_AgainstElf,
+//                        int strong_AgainstHalfling, int strong_Against);
 
 
-protected:
-
-    doorType _doorType();
-
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    QString monsterName() const;
+    void setMonsterName(const QString &monsterName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    doorType type() const;
+    void setType(const doorType &type);
+    bool isUndead() const;
+    void setIsUndead(bool isUndead);
+    bool fromHell() const;
+    void setFromHell(bool fromHell);
+    int monsterLevel() const;
+    void setMonsterLevel(int monsterLevel);
+    int strongAgainstHuman() const;
+    void setStrongAgainstHuman(int strongAgainstHuman);
+    int strongAgainstElf() const;
+    void setStrongAgainstElf(int strongAgainstElf);
+    int strongAgainstHalfling() const;
+    void setStrongAgainstHalfling(int strongAgainstHalfling);
+    int strongAgainstDwarf() const;
+    void setStrongAgainstDwarf(int strongAgainstDwarf);
+    int strongAgainstOrk() const;
+    void setStrongAgainstOrk(int strongAgainstOrk);
+    int strongAgainstGnome() const;
+    void setStrongAgainstGnome(int strongAgainstGnome);
+    int strongAgainstNoClass() const;
+    void setStrongAgainstNoClass(int strongAgainstNoClass);
+    int strongAgainstHalfBreed() const;
+    void setStrongAgainstHalfBreed(int strongAgainstHalfBreed);
+    int strongAgainstSuperMunchkin() const;
+    void setStrongAgainstSuperMunchkin(int strongAgainstSuperMunchkin);
+    int strongAgainstWoman() const;
+    void setStrongAgainstWoman(int strongAgainstWoman);
+    int strongAgainstWarrior() const;
+    void setStrongAgainstWarrior(int strongAgainstWarrior);
+    int strongAgainstWizard() const;
+    void setStrongAgainstWizard(int strongAgainstWizard);
+    int strongAgainstThief() const;
+    void setStrongAgainstThief(int strongAgainstThief);
+    int strongAgainstBard() const;
+    void setStrongAgainstBard(int strongAgainstBard);
+    int strongAgainstCleric() const;
+    void setStrongAgainstCleric(int strongAgainstCleric);
+    int strongAgainstSaturday() const;
+    void setStrongAgainstSaturday(int strongAgainstSaturday);
+    bool dontFightWithWoman() const;
+    void setDontFightWithWoman(bool dontFightWithWoman);
+    bool dontFightWithThief() const;
+    void setDontFightWithThief(bool dontFightWithThief);
+    bool dontFightWithElf() const;
+    void setDontFightWithElf(bool dontFightWithElf);
+    bool dontFightwithOrk() const;
+    void setDontFightwithOrk(bool dontFightwithOrk);
+    int dontFightTillLevel() const;
+    void setDontFightTillLevel(int dontFightTillLevel);
+    bool specialMechanicAgainstAll() const;
+    void setSpecialMechanicAgainstAll(bool specialMechanicAgainstAll);
+    bool specialMechanicAgainstWoman() const;
+    void setSpecialMechanicAgainstWoman(bool specialMechanicAgainstWoman);
+    bool specialMechanicAgainstCleric() const;
+    void setSpecialMechanicAgainstCleric(bool specialMechanicAgainstCleric);
+    bool specialMechanicAginstThief() const;
+    void setSpecialMechanicAginstThief(bool specialMechanicAginstThief);
+    bool specialMechanicAgainstElf() const;
+    void setSpecialMechanicAgainstElf(bool specialMechanicAgainstElf);
+    bool specialMechanicAgainstWizard() const;
+    void setSpecialMechanicAgainstWizard(bool specialMechanicAgainstWizard);
+    bool specialMechanicAgainstHalfling() const;
+    void setSpecialMechanicAgainstHalfling(bool specialMechanicAgainstHalfling);
 };
-
-//class Game_Card_Door_Monster
 
 
 
@@ -139,8 +259,8 @@ class Game_Card_Stock
 
 {
 public:
-  Game_Card_Stock();
-  Game_Card_Stock (int stock_type, int total_cards_to_be_played, int cards_left_to_be_played, int time_replayed);
+    Game_Card_Stock();
+    Game_Card_Stock (int stock_type, int total_cards_to_be_played, int cards_left_to_be_played, int time_replayed);
 
   int type() const;
   void setType(int type);

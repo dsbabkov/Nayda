@@ -3,7 +3,7 @@
 
 #include <map>
 #include "card.h" //since it is better to store "Races", "Professions" inside the class of card.h
-
+#include <QDebug>
 
 
 
@@ -32,7 +32,7 @@ class player
     Players_Sex _playersSex;
 
 
-    bool _halfBlood;
+    bool _halfBreed;
     bool _superMunchkin;
 
     Race _second_race;
