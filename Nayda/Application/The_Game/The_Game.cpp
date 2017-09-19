@@ -189,6 +189,9 @@ The_Game::The_Game(QWidget *parent) :
     theMonstersParser("Tables/cards_doors_monsters.csv");
     qDebug() << "Monsters parsing complete!";
 
+    theAmplifiersParser("Tables/cards_doors_amplifiers.csv");
+    qDebug() << "Amplifiers parsing complete!";
+
 }
 
 The_Game::~The_Game()
@@ -329,6 +332,78 @@ strongAgainst The_Game::theMonsterStrongAgainstParser(const QString &strongAgain
         }
         return strong;
     }
+}
+
+void The_Game::theAmplifiersParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Amplifiers parsing starts!" << endl;
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _amplifiersDeck.insert({(lst.first()).toInt(), amplifierStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+
+}
+
+gameCardDoorAmplifier The_Game::amplifierStringParser(const QString &amplifier_string)
+{
+    gameCardDoorAmplifier theAmplifier;
+    QStringList lst = amplifier_string.split(";");
+    theAmplifier.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+    theAmplifier.setPictureAddress(lst.first());
+    lst.removeFirst();
+    theAmplifier.setCardName(lst.first());
+    //setting specifiers
+    theAmplifier.setIsEnraged(false);
+    theAmplifier.setIsFromHell(false);
+    theAmplifier.setIsUndead(false);
+    theAmplifier.setIsAncient(false);
+    theAmplifier.setIsSleeping(false);
+    theAmplifier.setIsBaby(false);
+    theAmplifier.setIsVeryDepressed(false);
+
+    if (lst.first() == "Enraged") theAmplifier.setIsEnraged(true);
+    if (lst.first() == "Ancient") theAmplifier.setIsAncient(true);
+    if (lst.first() == "Baby") theAmplifier.setIsBaby(true);
+    if (lst.first() == "Sleeping") theAmplifier.setIsSleeping(true);
+    if ((lst.first() == "Undead_1") || (lst.first() == "Undead_2")) theAmplifier.setIsUndead(true);
+    if (lst.first() == "From Hell_1") theAmplifier.setIsFromHell(true);
+    if (lst.first() == "Very Depressed") theAmplifier.setIsVeryDepressed(true);
+
+    lst.removeFirst();
+    if (lst.first() == "Basic") theAmplifier.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theAmplifier.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theAmplifier.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+    theAmplifier.setType(doorType::MonsterAmplifier);
+    lst.removeFirst();
+
+    theAmplifier.setAmplification(lst.first().toInt());
+    lst.removeFirst();
+
+    theAmplifier.setAdditionalTreasures(lst.first().toInt());
+
+
+    return theAmplifier;
+
+
+
+
 }
 
 

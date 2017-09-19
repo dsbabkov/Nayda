@@ -448,3 +448,148 @@ void gameCardDoorMonster::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardDoorAmplifier::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardDoorAmplifier::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardDoorAmplifier::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardDoorAmplifier::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+
+
+cardAddon gameCardDoorAmplifier::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardDoorAmplifier::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+doorType gameCardDoorAmplifier::type() const
+{
+    return _type;
+}
+
+void gameCardDoorAmplifier::setType(const doorType &type)
+{
+    _type = type;
+}
+
+
+bool gameCardDoorAmplifier::isSleeping() const
+{
+    return _isSleeping;
+}
+
+void gameCardDoorAmplifier::setIsSleeping(bool isSleeping)
+{
+    _isSleeping = isSleeping;
+}
+
+bool gameCardDoorAmplifier::isEnraged() const
+{
+    return _isEnraged;
+}
+
+void gameCardDoorAmplifier::setIsEnraged(bool isAngry)
+{
+    _isEnraged = isAngry;
+}
+
+bool gameCardDoorAmplifier::isAncient() const
+{
+    return _isAncient;
+}
+
+void gameCardDoorAmplifier::setIsAncient(bool isOld)
+{
+    _isAncient = isOld;
+}
+
+bool gameCardDoorAmplifier::isBaby() const
+{
+    return _isBaby;
+}
+
+void gameCardDoorAmplifier::setIsBaby(bool isYoung)
+{
+    _isBaby = isYoung;
+}
+
+bool gameCardDoorAmplifier::isUndead() const
+{
+    return _isUndead;
+}
+
+void gameCardDoorAmplifier::setIsUndead(bool isUndead)
+{
+    _isUndead = isUndead;
+}
+
+bool gameCardDoorAmplifier::isFromHell() const
+{
+    return _isFromHell;
+}
+
+void gameCardDoorAmplifier::setIsFromHell(bool isFromHell)
+{
+    _isFromHell = isFromHell;
+}
+
+int gameCardDoorAmplifier::getAmplification() const
+{
+    return amplification;
+}
+
+void gameCardDoorAmplifier::setAmplification(int value)
+{
+    amplification = value;
+}
+
+int gameCardDoorAmplifier::getAdditionalTreasures() const
+{
+    return additionalTreasures;
+}
+
+void gameCardDoorAmplifier::setAdditionalTreasures(int value)
+{
+    additionalTreasures = value;
+}
+
+
+
+bool gameCardDoorAmplifier::getIsVeryDepressed() const
+{
+    return _isVeryDepressed;
+}
+
+void gameCardDoorAmplifier::setIsVeryDepressed(bool isVeryDepressed)
+{
+    _isVeryDepressed = isVeryDepressed;
+}
+
+int gameCardDoorAmplifier::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardDoorAmplifier::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

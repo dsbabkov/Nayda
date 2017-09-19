@@ -56,6 +56,10 @@ public:
     gameCardDoorMonster monsterStringParser(const QString& monster_string);
     strongAgainst theMonsterStrongAgainstParser (const QString& strongAgainstString);
 
+    void theAmplifiersParser(const QString& filename);
+    gameCardDoorAmplifier amplifierStringParser (const QString& amplifier_string);
+
+
 signals:
     void dbg_to_be_shown(bool);
     void dbg_return_to_before_the_game(bool);
@@ -93,6 +97,7 @@ private:
 
     std::map <int, Game_Card> _basisStock;
     std::map <int, gameCardDoorMonster> _monstersDeck;
+    std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
 
 
     //Game_Card_Stock Game_Stock_Doors;

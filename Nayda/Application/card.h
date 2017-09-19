@@ -252,7 +252,60 @@ public:
 };
 
 
+class gameCardDoorAmplifier {
 
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    doorType _type;
+
+    bool _isSleeping;
+    bool _isEnraged;
+    bool _isAncient;
+    bool _isBaby;
+    bool _isUndead;
+    bool _isFromHell;
+    bool _isVeryDepressed;
+
+    int amplification;
+    int additionalTreasures;
+
+
+
+public:
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    QString monsterName() const;
+    void setMonsterName(const QString &monsterName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    doorType type() const;
+    void setType(const doorType &type);
+    bool isSleeping() const;
+    void setIsSleeping(bool isSleeping);
+    bool isEnraged() const;
+    void setIsEnraged(bool isEnraged);
+    bool isAncient() const;
+    void setIsAncient(bool isAncient);
+    bool isBaby() const;
+    void setIsBaby(bool isBaby);
+    bool isUndead() const;
+    void setIsUndead(bool isUndead);
+    bool isFromHell() const;
+    void setIsFromHell(bool isFromHell);
+    int getAmplification() const;
+    void setAmplification(int value);
+    int getAdditionalTreasures() const;
+    void setAdditionalTreasures(int value);
+
+    bool getIsVeryDepressed() const;
+    void setIsVeryDepressed(bool isVeryDepressed);
+};
 
 class Game_Card_Stock
 
