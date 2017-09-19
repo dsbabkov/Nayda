@@ -593,3 +593,73 @@ void gameCardDoorAmplifier::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardDoorCurse::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardDoorCurse::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardDoorCurse::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardDoorCurse::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardDoorCurse::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardDoorCurse::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+doorType gameCardDoorCurse::type() const
+{
+    return _type;
+}
+
+void gameCardDoorCurse::setType(const doorType &type)
+{
+    _type = type;
+}
+
+int gameCardDoorCurse::getMechanicID() const
+{
+    return mechanicID;
+}
+
+void gameCardDoorCurse::setMechanicID(int value)
+{
+    mechanicID = value;
+}
+
+QString gameCardDoorCurse::getMechanic() const
+{
+    return _mechanic;
+}
+
+void gameCardDoorCurse::setMechanic(const QString &mechanic)
+{
+    _mechanic = mechanic;
+}
+
+int gameCardDoorCurse::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardDoorCurse::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

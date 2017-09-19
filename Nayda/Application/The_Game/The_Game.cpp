@@ -192,6 +192,9 @@ The_Game::The_Game(QWidget *parent) :
     theAmplifiersParser("Tables/cards_doors_amplifiers.csv");
     qDebug() << "Amplifiers parsing complete!";
 
+    theCursesParser("Tables/cards_doors_curses.csv");
+    qDebug() << "Curses parsing complete!";
+
 }
 
 The_Game::~The_Game()
@@ -403,6 +406,54 @@ gameCardDoorAmplifier The_Game::amplifierStringParser(const QString &amplifier_s
 
 
 
+
+}
+
+void The_Game::theCursesParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Curses parsing starts!" << endl;
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _cursesDeck.insert({(lst.first()).toInt(), curseStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardDoorCurse The_Game::curseStringParser(const QString &curse_string)
+{
+    gameCardDoorCurse theCurse;
+    QStringList lst = curse_string.split(";");
+    theCurse.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+    theCurse.setPictureAddress(lst.first());
+    lst.removeFirst();
+    theCurse.setCardName(lst.first());
+    lst.removeFirst();
+    if (lst.first() == "Basic") theCurse.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theCurse.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theCurse.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+    theCurse.setType(doorType::Curse);
+    lst.removeFirst();
+    theCurse.setMechanic(lst.first());
+    lst.removeFirst();
+    theCurse.setMechanicID(lst.first().toInt());
+
+    return theCurse;
 
 }
 

@@ -251,7 +251,6 @@ public:
     void setSpecialMechanicAgainstHalfling(bool specialMechanicAgainstHalfling);
 };
 
-
 class gameCardDoorAmplifier {
 
     int _cardID;
@@ -305,6 +304,37 @@ public:
 
     bool getIsVeryDepressed() const;
     void setIsVeryDepressed(bool isVeryDepressed);
+};
+
+
+class gameCardDoorCurse {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    doorType _type;
+
+    QString _mechanic;
+    int mechanicID;
+
+public:
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    doorType type() const;
+    void setType(const doorType &type);
+    int getMechanicID() const;
+    void setMechanicID(int value);
+    QString getMechanic() const;
+    void setMechanic(const QString &mechanic);
 };
 
 class Game_Card_Stock

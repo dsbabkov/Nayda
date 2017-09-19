@@ -59,6 +59,9 @@ public:
     void theAmplifiersParser(const QString& filename);
     gameCardDoorAmplifier amplifierStringParser (const QString& amplifier_string);
 
+    void theCursesParser(const QString& filename);
+    gameCardDoorCurse curseStringParser(const QString& curse_string);
+
 
 signals:
     void dbg_to_be_shown(bool);
@@ -98,6 +101,7 @@ private:
     std::map <int, Game_Card> _basisStock;
     std::map <int, gameCardDoorMonster> _monstersDeck;
     std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
+    std::map <int, gameCardDoorCurse> _cursesDeck;
 
 
     //Game_Card_Stock Game_Stock_Doors;
