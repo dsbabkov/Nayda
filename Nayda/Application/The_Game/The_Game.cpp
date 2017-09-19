@@ -195,6 +195,9 @@ The_Game::The_Game(QWidget *parent) :
     theCursesParser("Tables/cards_doors_curses.csv");
     qDebug() << "Curses parsing complete!";
 
+    theProfessionsParser("Tables/cards_doors_professions.csv");
+    qDebug() << "Professions parsing complete!";
+
 }
 
 The_Game::~The_Game()
@@ -454,6 +457,58 @@ gameCardDoorCurse The_Game::curseStringParser(const QString &curse_string)
     theCurse.setMechanicID(lst.first().toInt());
 
     return theCurse;
+
+}
+
+void The_Game::theProfessionsParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Professions parsing starts!" << endl;
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _professionsDeck.insert({(lst.first()).toInt(), professionStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardDoorProfession The_Game::professionStringParser(const QString &profession_string)
+{
+    gameCardDoorProfession theProfession;
+    QStringList lst = profession_string.split(";");
+    theProfession.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+    theProfession.setPictureAddress(lst.first());
+    lst.removeFirst();
+    theProfession.setCardName(lst.first());
+    QStringList newLst = lst.first().split("_");
+    if (newLst.first() == "Cleric") theProfession.setProfession(Profession::Cleric);
+    if (newLst.first() == "Bard") theProfession.setProfession(Profession::Bard);
+    if (newLst.first() == "Warrior") theProfession.setProfession(Profession::Warrior);
+    if (newLst.first() == "Thief") theProfession.setProfession(Profession::Thief);
+    if (newLst.first() == "Wizard") theProfession.setProfession(Profession::Wizard);
+
+    lst.removeFirst();
+    if (lst.first() == "Basic") theProfession.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theProfession.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theProfession.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+    theProfession.setType(doorType::Profession);
+
+    return theProfession;
+
 
 }
 

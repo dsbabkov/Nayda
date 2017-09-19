@@ -62,6 +62,9 @@ public:
     void theCursesParser(const QString& filename);
     gameCardDoorCurse curseStringParser(const QString& curse_string);
 
+    void theProfessionsParser(const QString& filename);
+    gameCardDoorProfession professionStringParser(const QString& curse_string);
+
 
 signals:
     void dbg_to_be_shown(bool);
@@ -102,6 +105,7 @@ private:
     std::map <int, gameCardDoorMonster> _monstersDeck;
     std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
     std::map <int, gameCardDoorCurse> _cursesDeck;
+    std::map <int, gameCardDoorProfession> _professionsDeck;
 
 
     //Game_Card_Stock Game_Stock_Doors;

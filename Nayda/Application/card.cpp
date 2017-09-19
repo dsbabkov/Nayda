@@ -663,3 +663,63 @@ void gameCardDoorCurse::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardDoorProfession::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardDoorProfession::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardDoorProfession::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardDoorProfession::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardDoorProfession::addOn() const
+{
+    return _addOn;
+}
+
+doorType gameCardDoorProfession::type() const
+{
+    return _type;
+}
+
+void gameCardDoorProfession::setType(const doorType &type)
+{
+    _type = type;
+}
+
+Profession gameCardDoorProfession::profession() const
+{
+    return _profession;
+}
+
+void gameCardDoorProfession::setProfession(const Profession &profession)
+{
+    _profession = profession;
+}
+
+void gameCardDoorProfession::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+int gameCardDoorProfession::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardDoorProfession::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

@@ -53,7 +53,7 @@ enum class doorType {Monster, MonsterAmplifier, Curse, Race, Profession, Special
 
 
 enum class Race { Human, Elf, Dwarf, Gnome, Halfling, Ork };
-enum class Profession {No_Profession, Warrior, Rogue, Priest, Bard, Mage}; //using "profession instead of class
+enum class Profession {No_Profession, Warrior, Thief, Cleric, Bard, Wizard}; //using "profession instead of class
 
 
 
@@ -336,6 +336,35 @@ public:
     QString getMechanic() const;
     void setMechanic(const QString &mechanic);
 };
+
+class gameCardDoorProfession {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    doorType _type;
+    Profession _profession;
+
+public:
+
+
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    doorType type() const;
+    void setType(const doorType &type);
+    Profession profession() const;
+    void setProfession(const Profession &profession);
+    void setAddOn(const cardAddon &addOn);
+};
+
 
 class Game_Card_Stock
 
