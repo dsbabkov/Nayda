@@ -187,7 +187,7 @@ The_Game::The_Game(QWidget *parent) :
     //filling up the monsters' stock!
 
     theMonstersParser("Tables/cards_doors_monsters.csv");
-    qDebug() << "Monsters parsing complete!" << endl;
+    qDebug() << "Monsters parsing complete!";
 
 }
 
@@ -208,6 +208,7 @@ gameCardDoorMonster The_Game::monsterStringParser(const QString &monster_string)
     theMonster.setPictureAddress(lst.first());
     lst.removeFirst();
     theMonster.setCardName(lst.first());
+    theMonster.setMonsterName(lst.first());
     lst.removeFirst();
     if (lst.first() == "Basic") theMonster.setAddOn(cardAddon::Basic);
     else if (lst.first() == "WildAxe") theMonster.setAddOn(cardAddon::WildAxe);
@@ -218,13 +219,35 @@ gameCardDoorMonster The_Game::monsterStringParser(const QString &monster_string)
     theMonster.setMonsterLevel(lst.first().toInt());
     lst.removeFirst();
     //for debug; needed to be reworked;
-    theMonster.setStrongAgainstBard(5);
+    strongAgainst monsterStruct = theMonsterStrongAgainstParser(lst.first());
+    theMonster.setStrongAgainstWoman(monsterStruct.strongAgainstWoman);
+    theMonster.setStrongAgainstBard(monsterStruct.strongAgainstBard);
+    theMonster.setStrongAgainstCleric(monsterStruct.strongAgainstCleric);
+    theMonster.setStrongAgainstDwarf(monsterStruct.strongAgainstDwarf);
+    theMonster.setStrongAgainstElf(monsterStruct.strongAgainstElf);
+    theMonster.setStrongAgainstGnome(monsterStruct.strongAgainstGnome);
+    theMonster.setStrongAgainstHalfBreed(monsterStruct.strongAgainstHalfBreed);
+    theMonster.setStrongAgainstHalfling(monsterStruct.strongAgainstHalfling);
+    theMonster.setStrongAgainstHuman(monsterStruct.strongAgainstHuman);
+    theMonster.setStrongAgainstNoClass(monsterStruct.strongAgainstNoClass);
+    theMonster.setStrongAgainstOrk(monsterStruct.strongAgainstOrk);
+    theMonster.setStrongAgainstSaturday(monsterStruct.strongAgainstSaturday);
+    theMonster.setStrongAgainstSuperMunchkin(monsterStruct.strongAgainstSuperMunchkin);
+    theMonster.setStrongAgainstThief(monsterStruct.strongAgainstThief);
+    theMonster.setStrongAgainstWarrior(monsterStruct.strongAgainstWarrior);
+    theMonster.setStrongAgainstWizard(monsterStruct.strongAgainstWizard);
+
     lst.removeFirst();
     //
     lst.first() == "false" ? theMonster.setIsUndead(false) :  theMonster.setIsUndead(true);
     lst.removeFirst();
     lst.first() == "false" ? theMonster.setFromHell(false) : theMonster.setFromHell(true);
     lst.removeFirst();
+    theMonster.setDontFightWithWoman(false);
+    theMonster.setDontFightWithElf(false);
+    theMonster.setDontFightWithThief(false);
+    theMonster.setDontFightwithOrk(false);
+
     if (lst.first() == "Woman") theMonster.setDontFightWithWoman(true);
     if (lst.first() == "Thief") theMonster.setDontFightWithThief(true);
     if (lst.first() == "Ork") theMonster.setDontFightwithOrk(true);
@@ -232,6 +255,14 @@ gameCardDoorMonster The_Game::monsterStringParser(const QString &monster_string)
     lst.removeFirst();
     theMonster.setDontFightTillLevel(lst.first().toInt());
     lst.removeFirst();
+
+    theMonster.setSpecialMechanicAgainstAll(false);
+    theMonster.setSpecialMechanicAgainstCleric(false);
+    theMonster.setSpecialMechanicAgainstElf(false);
+    theMonster.setSpecialMechanicAgainstHalfling(false);
+    theMonster.setSpecialMechanicAgainstWizard(false);
+    theMonster.setSpecialMechanicAgainstWoman(false);
+    theMonster.setSpecialMechanicAginstThief(false);
 
     if (lst.first() == "noone") { lst.removeFirst(); }
         else {
@@ -248,6 +279,56 @@ gameCardDoorMonster The_Game::monsterStringParser(const QString &monster_string)
     return theMonster;
 
 
+}
+
+strongAgainst The_Game::theMonsterStrongAgainstParser(const QString &strongAgainstString)
+{
+    strongAgainst strong;
+    strong.strongAgainstBard = 0;
+    strong.strongAgainstCleric = 0;
+    strong.strongAgainstDwarf = 0;
+    strong.strongAgainstElf = 0;
+    strong.strongAgainstGnome = 0;
+    strong.strongAgainstHalfBreed = 0;
+    strong.strongAgainstHalfling = 0;
+    strong.strongAgainstHuman = 0;
+    strong.strongAgainstNoClass = 0;
+    strong.strongAgainstOrk = 0;
+    strong.strongAgainstSuperMunchkin = 0;
+    strong.strongAgainstThief = 0;
+    strong.strongAgainstWarrior = 0;
+    strong.strongAgainstWizard = 0;
+    strong.strongAgainstWoman = 0;
+    strong.strongAgainstSaturday = 0;
+
+    QStringList lst = strongAgainstString.split("#");
+    if (lst.first() == "noone") {
+
+        return strong;
+    }
+    else {
+        for (int var = 0; var < lst.size(); ++var) {
+            qDebug() << lst.at(var);
+            const QStringList& newLst = lst.at(var).split("_");
+
+            if (newLst.first() == "Bard") strong.strongAgainstBard = newLst.at(1).toInt();
+            if (newLst.first() == "Cleric") strong.strongAgainstCleric = newLst.at(1).toInt();
+            if (newLst.first() == "Dwarf") strong.strongAgainstDwarf = newLst.at(1).toInt();
+            if (newLst.first() == "Elf") strong.strongAgainstElf= newLst.at(1).toInt();
+            if (newLst.first() == "Gnome") strong.strongAgainstGnome = newLst.at(1).toInt();
+            if (newLst.first() == "HalfBreed") strong.strongAgainstHalfBreed = newLst.at(1).toInt();
+            if (newLst.first() == "Halfling") strong.strongAgainstHalfling = newLst.at(1).toInt();
+            if (newLst.first() == "Human") strong.strongAgainstHuman = newLst.at(1).toInt();
+            if (newLst.first() == "NoClass") strong.strongAgainstNoClass = newLst.at(1).toInt();
+            if (newLst.first() == "Ork") strong.strongAgainstOrk = newLst.at(1).toInt();
+            if (newLst.first() == "SuperMunchkin") strong.strongAgainstSuperMunchkin = newLst.at(1).toInt();
+            if (newLst.first() == "Thief") strong.strongAgainstThief = newLst.at(1).toInt();
+            if (newLst.first() == "Warrior") strong.strongAgainstWarrior = newLst.at(1).toInt();
+            if (newLst.first() == "Woman") strong.strongAgainstWoman = newLst.at(1).toInt();
+            if (newLst.first() == "Saturday") strong.strongAgainstSaturday = newLst.at(1).toInt();
+        }
+        return strong;
+    }
 }
 
 

@@ -19,6 +19,29 @@ namespace Ui {
 class The_Game;
 }
 
+
+
+struct strongAgainst {
+
+    int strongAgainstHuman;
+    int strongAgainstElf;
+    int strongAgainstHalfling;
+    int strongAgainstDwarf;
+    int strongAgainstOrk;
+    int strongAgainstGnome;
+    int strongAgainstNoClass;
+    int strongAgainstHalfBreed;
+    int strongAgainstSuperMunchkin;
+    int strongAgainstWoman;
+    int strongAgainstWarrior;
+    int strongAgainstWizard;
+    int strongAgainstThief;
+    int strongAgainstBard;
+    int strongAgainstCleric;
+    int strongAgainstSaturday;
+
+};
+
 class The_Game :  public QMainWindow
 {
     Q_OBJECT
@@ -31,6 +54,7 @@ public:
 
     void theMonstersParser(const QString& filename);
     gameCardDoorMonster monsterStringParser(const QString& monster_string);
+    strongAgainst theMonsterStrongAgainstParser (const QString& strongAgainstString);
 
 signals:
     void dbg_to_be_shown(bool);
