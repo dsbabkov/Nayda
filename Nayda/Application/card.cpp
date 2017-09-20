@@ -634,14 +634,14 @@ void gameCardDoorCurse::setType(const doorType &type)
     _type = type;
 }
 
-int gameCardDoorCurse::getMechanicID() const
+int gameCardDoorCurse::getCurseMechanicID() const
 {
-    return mechanicID;
+    return _curseMechanicID;
 }
 
-void gameCardDoorCurse::setMechanicID(int value)
+void gameCardDoorCurse::setCurseMechanicID(int value)
 {
-    mechanicID = value;
+    _curseMechanicID = value;
 }
 
 QString gameCardDoorCurse::getMechanic() const
@@ -720,6 +720,126 @@ int gameCardDoorProfession::cardID() const
 }
 
 void gameCardDoorProfession::setCardID(int cardID)
+{
+    _cardID = cardID;
+}
+
+QString gameCardDoorRace::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardDoorRace::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardDoorRace::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardDoorRace::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardDoorRace::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardDoorRace::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+doorType gameCardDoorRace::type() const
+{
+    return _type;
+}
+
+void gameCardDoorRace::setType(const doorType &type)
+{
+    _type = type;
+}
+
+Race gameCardDoorRace::race() const
+{
+    return _race;
+}
+
+void gameCardDoorRace::setRace(const Race &race)
+{
+    _race = race;
+}
+
+int gameCardDoorRace::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardDoorRace::setCardID(int cardID)
+{
+    _cardID = cardID;
+}
+
+QString gameCardDoorSpecialMechanic::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardDoorSpecialMechanic::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardDoorSpecialMechanic::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardDoorSpecialMechanic::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardDoorSpecialMechanic::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardDoorSpecialMechanic::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+doorType gameCardDoorSpecialMechanic::type() const
+{
+    return _type;
+}
+
+void gameCardDoorSpecialMechanic::setType(const doorType &type)
+{
+    _type = type;
+}
+
+int gameCardDoorSpecialMechanic::specialFunctionId() const
+{
+    return _specialFunctionId;
+}
+
+void gameCardDoorSpecialMechanic::setSpecialFunctionId(int specialFunctionId)
+{
+    _specialFunctionId = specialFunctionId;
+}
+
+int gameCardDoorSpecialMechanic::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardDoorSpecialMechanic::setCardID(int cardID)
 {
     _cardID = cardID;
 }

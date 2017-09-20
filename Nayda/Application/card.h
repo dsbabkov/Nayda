@@ -27,7 +27,7 @@
 
 
 enum class cardAddon {Basic, WildAxe, ClericalErrors };
-enum class doorType {Monster, MonsterAmplifier, Curse, Race, Profession, SpecialMechanics };
+enum class doorType {Monster, MonsterAmplifier, Curse, Race, Profession, SpecialMechanic };
 
 
 
@@ -316,7 +316,7 @@ class gameCardDoorCurse {
     doorType _type;
 
     QString _mechanic;
-    int mechanicID;
+    int _curseMechanicID;
 
 public:
 
@@ -331,8 +331,8 @@ public:
     void setAddOn(const cardAddon &addOn);
     doorType type() const;
     void setType(const doorType &type);
-    int getMechanicID() const;
-    void setMechanicID(int value);
+    int getCurseMechanicID() const;
+    void setCurseMechanicID(int value);
     QString getMechanic() const;
     void setMechanic(const QString &mechanic);
 };
@@ -363,6 +363,62 @@ public:
     Profession profession() const;
     void setProfession(const Profession &profession);
     void setAddOn(const cardAddon &addOn);
+};
+
+
+class gameCardDoorRace {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    doorType _type;
+    Race _race;
+
+public:
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    doorType type() const;
+    void setType(const doorType &type);
+    Race race() const;
+    void setRace(const Race &race);
+};
+
+
+class gameCardDoorSpecialMechanic {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    doorType _type;
+    int _specialFunctionId;
+
+public:
+
+
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    doorType type() const;
+    void setType(const doorType &type);
+    int specialFunctionId() const;
+    void setSpecialFunctionId(int specialFunctionId);
 };
 
 

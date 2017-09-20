@@ -198,6 +198,14 @@ The_Game::The_Game(QWidget *parent) :
     theProfessionsParser("Tables/cards_doors_professions.csv");
     qDebug() << "Professions parsing complete!";
 
+    theRacesParser("Tables/cards_doors_races.csv");
+    qDebug() << "Races parsing complete!";
+
+    theSpecialMechanicsParser("Tables/cards_doors_specialmechanics.csv");
+    qDebug() << "Special mechanics parsing complete!";
+
+
+
 }
 
 The_Game::~The_Game()
@@ -317,7 +325,7 @@ strongAgainst The_Game::theMonsterStrongAgainstParser(const QString &strongAgain
     }
     else {
         for (int var = 0; var < lst.size(); ++var) {
-            qDebug() << lst.at(var);
+            //qDebug() << lst.at(var);
             const QStringList& newLst = lst.at(var).split("_");
 
             if (newLst.first() == "Bard") strong.strongAgainstBard = newLst.at(1).toInt();
@@ -343,7 +351,7 @@ strongAgainst The_Game::theMonsterStrongAgainstParser(const QString &strongAgain
 void The_Game::theAmplifiersParser(const QString &filename)
 {
     QFile file(filename);
-    qDebug() << "Amplifiers parsing starts!" << endl;
+    qDebug() << "Amplifiers parsing starts!";
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -415,7 +423,7 @@ gameCardDoorAmplifier The_Game::amplifierStringParser(const QString &amplifier_s
 void The_Game::theCursesParser(const QString &filename)
 {
     QFile file(filename);
-    qDebug() << "Curses parsing starts!" << endl;
+    qDebug() << "Curses parsing starts!";
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -454,7 +462,7 @@ gameCardDoorCurse The_Game::curseStringParser(const QString &curse_string)
     lst.removeFirst();
     theCurse.setMechanic(lst.first());
     lst.removeFirst();
-    theCurse.setMechanicID(lst.first().toInt());
+    theCurse.setCurseMechanicID(lst.first().toInt());
 
     return theCurse;
 
@@ -463,7 +471,7 @@ gameCardDoorCurse The_Game::curseStringParser(const QString &curse_string)
 void The_Game::theProfessionsParser(const QString &filename)
 {
     QFile file(filename);
-    qDebug() << "Professions parsing starts!" << endl;
+    qDebug() << "Professions parsing starts!";
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -512,12 +520,109 @@ gameCardDoorProfession The_Game::professionStringParser(const QString &professio
 
 }
 
+void The_Game::theRacesParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Races parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _racesDeck.insert({(lst.first()).toInt(), racesStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardDoorRace The_Game::racesStringParser(const QString &race_string)
+{
+    gameCardDoorRace theRace;
+    QStringList lst = race_string.split(";");
+    theRace.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+    theRace.setPictureAddress(lst.first());
+    lst.removeFirst();
+    theRace.setCardName(lst.first());
+    QStringList newLst = lst.first().split("_");
+    theRace.setRace(Race::Human);
+    if (newLst.first() == "Dwarf") theRace.setRace(Race::Dwarf);
+    if (newLst.first() == "Elf") theRace.setRace(Race::Elf);
+    if (newLst.first() == "Gnome") theRace.setRace(Race::Gnome);
+    if (newLst.first() == "Halfling") theRace.setRace(Race::Halfling);
+    if (newLst.first() == "Ork") theRace.setRace(Race::Ork);
+
+    lst.removeFirst();
+    if (lst.first() == "Basic") theRace.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theRace.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theRace.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+    theRace.setType(doorType::Race);
+
+    return theRace;
+}
+
+void The_Game::theSpecialMechanicsParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "SpecialMechanics parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _specialMechanicsDeck.insert({(lst.first()).toInt(), specialMechanicStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardDoorSpecialMechanic The_Game::specialMechanicStringParser(const QString &specialMechanic_string)
+{
+    gameCardDoorSpecialMechanic theSpecialMechanic;
+    QStringList lst = specialMechanic_string.split(";");
+    theSpecialMechanic.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+    theSpecialMechanic.setPictureAddress(lst.first());
+    lst.removeFirst();
+    theSpecialMechanic.setCardName(lst.first());
+    lst.removeFirst();
+    if (lst.first() == "Basic") theSpecialMechanic.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theSpecialMechanic.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theSpecialMechanic.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+    theSpecialMechanic.setType(doorType::SpecialMechanic);
+    lst.removeFirst();
+    lst.removeFirst();
+    theSpecialMechanic.setSpecialFunctionId(lst.first().toInt());
+
+    return theSpecialMechanic;
+}
+
 
 
 void The_Game::theMonstersParser(const QString &filename)
 {
     QFile file(filename);
-    qDebug() << "Monsters parsing starts!" << endl;
+    qDebug() << "Monsters parsing starts!";
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text))
     {

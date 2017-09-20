@@ -63,7 +63,14 @@ public:
     gameCardDoorCurse curseStringParser(const QString& curse_string);
 
     void theProfessionsParser(const QString& filename);
-    gameCardDoorProfession professionStringParser(const QString& curse_string);
+    gameCardDoorProfession professionStringParser(const QString& profession_string);
+
+    void theRacesParser(const QString& filename);
+    gameCardDoorRace racesStringParser(const QString& race_string);
+
+    void theSpecialMechanicsParser(const QString& filename);
+    gameCardDoorSpecialMechanic specialMechanicStringParser(const QString& specialMechanic_string);
+
 
 
 signals:
@@ -106,6 +113,8 @@ private:
     std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
     std::map <int, gameCardDoorCurse> _cursesDeck;
     std::map <int, gameCardDoorProfession> _professionsDeck;
+    std::map <int, gameCardDoorRace> _racesDeck;
+    std::map <int, gameCardDoorSpecialMechanic> _specialMechanicsDeck;
 
 
     //Game_Card_Stock Game_Stock_Doors;
