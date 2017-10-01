@@ -1,0 +1,36 @@
+CardId;Path to File;CardName;AddOn;CardType;Hands;Size;Bonus;OnlyFor;SpecialMechanic;Price;bonusToFlee;additionalBonusAgainstUndead;automaticLooseToCalmadzila;additionalBonusAgainst_J;addingClericalAbility;addingThiefAbility
+56;Pictures/Munchkin_game_cover.jpg;Bow With Ribbons;Basic;Weapon;2;small;4;Elf;no;800;0;0;0;0;0;0
+57;Pictures/Munchkin_game_cover.jpg;Chainsaw of Bloody Dismemberment;Basic;Weapon;2;big;3;all;no;600;0;0;0;0;0;0
+58;Pictures/Munchkin_game_cover.jpg;Huge Rock;Basic;Weapon;2;big;3;all;no;0;0;0;0;0;0;0
+59;Pictures/Munchkin_game_cover.jpg;Buckler of Swashing;Basic;Weapon;1;small;2;all;no;400;0;0;0;0;0;0
+60;Pictures/Munchkin_game_cover.jpg;Gentlemen's Club;Basic;Weapon;1;small;3;Man;no;400;0;0;0;0;0;0
+61;Pictures/Munchkin_game_cover.jpg;Hammer of Kneecapping;Basic;Weapon;2;small;4;Dwarf;no;600;0;0;0;0;0;0
+62;Pictures/Munchkin_game_cover.jpg;Sneaky Bastard Sword;Basic;Weapon;2;small;1;all;no;400;0;0;0;0;0;0
+63;Pictures/Munchkin_game_cover.jpg;Swiss Army Polearm;Basic;Weapon;2;big;4;Human;no;600;0;0;0;0;0;0
+64;Pictures/Munchkin_game_cover.jpg;Staff of Napalm;Basic;Weapon;1;small;5;Wizard;no;800;0;0;0;0;0;0
+65;Pictures/Munchkin_game_cover.jpg;Tuba of Charm;Basic;Weapon;1;big;0;Wizard;yes;300;3;0;0;0;0;0
+66;Pictures/Munchkin_game_cover.jpg;Broad Sword;Basic;Weapon;1;small;3;Woman;no;400;0;0;0;0;0;0
+67;Pictures/Munchkin_game_cover.jpg;Rapier of Unfairness;Basic;Weapon;1;small;3;Elf;no;600;0;0;0;0;0;0
+68;Pictures/Munchkin_game_cover.jpg;Shield of Ubiquity;Basic;Weapon;1;big;4;Warrior;no;600;0;0;0;0;0;0
+69;Pictures/Munchkin_game_cover.jpg;Rat on a Stick;Basic;Weapon;1;small;1;all;yes;0;0;0;0;0;0;0
+70;Pictures/Munchkin_game_cover.jpg;Dagger of Treachery;Basic;Weapon;1;small;3;Thief;no;400;0;0;0;0;0;0
+71;Pictures/Munchkin_game_cover.jpg;Cheese Grater of Peace;Basic;Weapon;1;small;3;Cleric;no;400;0;0;0;0;0;0
+72;Pictures/Munchkin_game_cover.jpg;Mace of Sharpness;Basic;Weapon;1;small;4;Cleric;no;600;0;0;0;0;0;0
+73;Pictures/Munchkin_game_cover.jpg;Eleven-Foot Pole;Basic;Weapon;2;small;1;all;no;200;0;0;0;0;0;0
+108;Pictures/Munchkin_game_cover.jpg;Tweezers of Terror;WildAxe;Weapon;1;small;3;Elf;no;400;0;0;0;0;0;0
+109;Pictures/Munchkin_game_cover.jpg;Unnatural Axe;WildAxe;Weapon;1;big;5;Warrior;no;800;0;0;0;0;0;0
+110;Pictures/Munchkin_game_cover.jpg;Slug Thrower;WildAxe;Weapon;2;small;5;Ork;no;800;0;0;0;0;0;0
+111;Pictures/Munchkin_game_cover.jpg;Boomdagger;WildAxe;Weapon;0;small;1;Thief;yes;100;0;0;0;0;0;0
+112;Pictures/Munchkin_game_cover.jpg;Barbecue Fork;WildAxe;Weapon;1;small;3;Halfling;no;400;0;0;0;0;0;0
+113;Pictures/Munchkin_game_cover.jpg;Blessed Mallet of St. Eeeeeeuuuuuuuuw;WildAxe;Weapon;2;big;4;all;yes;1200;0;0;0;0;1;0
+114;Pictures/Munchkin_game_cover.jpg;Funny-Looking Sword;WildAxe;Weapon;1;small;4;Ork;no;600;0;0;0;0;0;0
+115;Pictures/Munchkin_game_cover.jpg;Lawn Roller;WildAxe;Weapon;1;big;4;Dwarf;no;400;0;0;0;0;0;0
+116;Pictures/Munchkin_game_cover.jpg;Sword of Slaying Everything Except Squid;WildAxe;Weapon;1;small;4;all;no;800;0;0;1;0;0;0
+117;Pictures/Munchkin_game_cover.jpg;Siege Engine;WildAxe;Weapon;2;big;4;all;yes;700;-1;0;0;0;0;0
+157;Pictures/Munchkin_game_cover.jpg;Stab-A-Matic;ClericalErrors;Weapon;1;small;0;all;no;400;0;0;0;0;0;1
+158;Pictures/Munchkin_game_cover.jpg;Vorpal Blade;ClericalErrors;Weapon;1;small;3;all;no;400;0;0;0;10;0;0
+159;Pictures/Munchkin_game_cover.jpg;Slay Bells;ClericalErrors;Weapon;1;small;3;all;yes;400;0;0;0;0;0;0
+160;Pictures/Munchkin_game_cover.jpg;Two-Handed Sword;ClericalErrors;Weapon;-1;small;2;all;no;800;0;0;0;0;0;0
+161;Pictures/Munchkin_game_cover.jpg;Joy Buzzer;ClericalErrors;Weapon;1;small;5;Gnome;no;400;0;0;0;0;0;0
+162;Pictures/Munchkin_game_cover.jpg;Big Fat Lyre;ClericalErrors;Weapon;1;big;4;Bard;no;500;0;0;0;0;0;0
+163;Pictures/Munchkin_game_cover.jpg;Ghoul Lash;ClericalErrors;Weapon;1;small;3;all;no;500;0;3;0;0;0;0

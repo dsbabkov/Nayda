@@ -1,0 +1,22 @@
+CardId;Path to File;CardName;AddOn;CardType;Bonus;isPotion;SpecialMechanic
+13;Pictures/Munchkin_game_cover.jpg;Cotion Ponfusion;Basic;battleAmplifier;3;1;no
+14;Pictures/Munchkin_game_cover.jpg;Pretty Balloons;Basic;battleAmplifier;5;0;no
+15;Pictures/Munchkin_game_cover.jpg;Potion of Idiotic Bravery;Basic;battleAmplifier;2;1;no
+16;Pictures/Munchkin_game_cover.jpg;Flaming Poison Potion;Basic;battleAmplifier;3;1;no
+17;Pictures/Munchkin_game_cover.jpg;Electric Radioactive Acid Potion;Basic;battleAmplifier;5;1;no
+18;Pictures/Munchkin_game_cover.jpg;Yuppie Water;Basic;battleAmplifier;2;1;yes
+19;Pictures/Munchkin_game_cover.jpg;Magic Missile;Basic;battleAmplifier;5;0;no
+20;Pictures/Munchkin_game_cover.jpg;Nasty-Tasting Sports Drink;Basic;battleAmplifier;2;0;no
+21;Pictures/Munchkin_game_cover.jpg;Sleep Potion;Basic;battleAmplifier;2;1;no
+22;Pictures/Munchkin_game_cover.jpg;Freezing Explosive Potion;Basic;battleAmplifier;3;1;no
+23;Pictures/Munchkin_game_cover.jpg;Potion of Halitosis;Basic;battleAmplifier;2;1;no
+80;Pictures/Munchkin_game_cover.jpg;Your Shoe's Untied!;WildAxe;battleAmplifier;3;0;no
+81;Pictures/Munchkin_game_cover.jpg;Potion of Flight;WildAxe;battleAmplifier;5;1;no
+82;Pictures/Munchkin_game_cover.jpg;Lemming Juice;WildAxe;battleAmplifier;3;0;no
+83;Pictures/Munchkin_game_cover.jpg;Druid Fluid;WildAxe;battleAmplifier;3;0;no
+126;Pictures/Munchkin_game_cover.jpg;Tasty Pie;ClericalErrors;battleAmplifier;2;0;yes
+127;Pictures/Munchkin_game_cover.jpg;Hot Pepper Sauce;ClericalErrors;battleAmplifier;3;1;yes
+128;Pictures/Munchkin_game_cover.jpg;Royal Oil;ClericalErrors;battleAmplifier;3;0;no
+129;Pictures/Munchkin_game_cover.jpg;Monster Chow;ClericalErrors;battleAmplifier;5;0;no
+130;Pictures/Munchkin_game_cover.jpg;Liquid Wench;ClericalErrors;battleAmplifier;3;0;no
+131;Pictures/Munchkin_game_cover.jpg;Oil of Boiling;ClericalErrors;battleAmplifier;3;0;yes
