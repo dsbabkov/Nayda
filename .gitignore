@@ -13,3 +13,4 @@ debug/
 x64/
 
 build-*
+*.o
