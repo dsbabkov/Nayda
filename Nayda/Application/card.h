@@ -80,6 +80,13 @@ enum class Body_Part {Head, Armor, Feet};
 
 enum class Size {Big, Small};
 
+enum class Time_To_Use {ownFight, anytime, eachFight, immediately, afterFight,
+                       dieWasPlayed, ownMove, exceptFight};
+
+enum class Additional_Request {noCompanion, failedToFlee,
+                              succeededToFlee, win, onceReceived,
+                              haveCompanion, thereIsDwarf, noRequest};
+
 
 
 #endif
@@ -592,7 +599,45 @@ public:
 
 
 
+class gameCardTreasureSpecialMechanic {
 
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    treasureType _type;
+
+    int _price;
+    bool _isPotion;
+    Time_To_Use _timeToUse;
+    Additional_Request _additionalRequest;
+
+public:
+
+
+
+
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    treasureType type() const;
+    void setType(const treasureType &type);
+    int price() const;
+    void setPrice(int price);
+    bool isPotion() const;
+    void setIsPotion(bool isPotion);
+    Time_To_Use timeToUse() const;
+    void setTimeToUse(const Time_To_Use &timeToUse);
+    Additional_Request additionalRequest() const;
+    void setAdditionalRequest(const Additional_Request &additionalRequest);
+};
 
 
 

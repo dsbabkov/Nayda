@@ -216,6 +216,8 @@ The_Game::The_Game(QWidget *parent) :
     theLevelUpParser("Tables/cards_treasures_levelUp.csv");
     qDebug() << "LevelUps parsing complete!";
 
+    theSpecialMechanicTreasureParser("Tables/cards_treasures_specialMechanics.csv");
+    qDebug() << "SpecialMechanicsTreasures parsing complete!";
 
 
 }
@@ -945,6 +947,137 @@ gameCardTreasureLevelUp The_Game::levelUpStringParser(const QString &levelUp_str
 
     return theLevelUp;
 
+}
+
+
+//enum class Additional_Request {noCompanion, failedToFlee,
+//                              succeededToFlee, win, onceReceived,
+//                              haveCompanion, thereIsDwarf, noRequest};
+
+Additional_Request The_Game::theAdditionalRequestParser(const QString &additionalRequest_string)
+{
+    Additional_Request request = Additional_Request::noRequest;
+
+    if (additionalRequest_string == "noCompanion\n") {
+        request = Additional_Request::noCompanion;
+    }
+    if (additionalRequest_string == "failedToFlee\n") {
+        request = Additional_Request::failedToFlee;
+    }
+    if (additionalRequest_string == "succeededToFlee\n") {
+        request = Additional_Request::succeededToFlee;
+    }
+    if (additionalRequest_string == "win\n") {
+        request = Additional_Request::win;
+    }
+    if (additionalRequest_string == "onceReceived\n") {
+        request = Additional_Request::onceReceived;
+    }
+    if (additionalRequest_string == "haveCompanion\n") {
+        request = Additional_Request::haveCompanion;
+    }
+    if (additionalRequest_string == "thereIsDwarf\n") {
+        request = Additional_Request::thereIsDwarf;
+    }
+
+    return request;
+}
+
+
+//enum class Time_To_Use {ownFight, anytime, eachFight, immediately, afterFight,
+//                       dieWasPlayed, ownMove, exceptFight};
+
+Time_To_Use The_Game::theTimeToUseParser(const QString &timeTouse_string)
+{
+    Time_To_Use gamePhaseToPlay = Time_To_Use::anytime;
+    if (timeTouse_string == "ownFight") {
+        gamePhaseToPlay = Time_To_Use::ownFight;
+    }
+    if (timeTouse_string == "anytime") {
+        gamePhaseToPlay = Time_To_Use::anytime;
+    }
+    if (timeTouse_string == "eachFight") {
+        gamePhaseToPlay = Time_To_Use::eachFight;
+    }
+    if (timeTouse_string == "immediately") {
+        gamePhaseToPlay = Time_To_Use::immediately;
+    }
+    if (timeTouse_string == "afterFight") {
+        gamePhaseToPlay = Time_To_Use::afterFight;
+    }
+    if (timeTouse_string == "dieWasPlayed") {
+        gamePhaseToPlay = Time_To_Use::dieWasPlayed;
+    }
+    if (timeTouse_string == "ownMove") {
+        gamePhaseToPlay = Time_To_Use::ownMove;
+    }
+    if (timeTouse_string == "exceptFight") {
+        gamePhaseToPlay = Time_To_Use::exceptFight;
+    }
+    return gamePhaseToPlay;
+}
+
+void The_Game::theSpecialMechanicTreasureParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "TreasureSpecialMechanics parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _specialMechanicsTreasureDeck.insert({(lst.first()).toInt(),SpecialMechanicTreasureStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardTreasureSpecialMechanic The_Game::SpecialMechanicTreasureStringParser(const QString &specialMechanicsTreasure_string)
+{
+    gameCardTreasureSpecialMechanic theSpecialMechanic;
+    QStringList lst = specialMechanicsTreasure_string.split(";");
+
+    theSpecialMechanic.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theSpecialMechanic.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theSpecialMechanic.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theSpecialMechanic.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theSpecialMechanic.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theSpecialMechanic.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theSpecialMechanic.setType(treasureType::SpecialMechanic);
+    lst.removeFirst();
+
+    theSpecialMechanic.setPrice(lst.first().toInt());
+    lst.removeFirst();
+
+    theSpecialMechanic.setIsPotion(false);
+    if (lst.first().toInt()) {
+        theSpecialMechanic.setIsPotion(true);
+    }
+    lst.removeFirst();
+
+    theSpecialMechanic.setTimeToUse(theTimeToUseParser(lst.first()));
+    lst.removeFirst();
+
+    theSpecialMechanic.setAdditionalRequest(theAdditionalRequestParser(lst.first()));
+
+    return theSpecialMechanic;
 }
 
 

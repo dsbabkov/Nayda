@@ -100,6 +100,10 @@ public:
     void theLevelUpParser (const QString& filename);
     gameCardTreasureLevelUp levelUpStringParser(const QString& levelUp_string);
 
+    Additional_Request theAdditionalRequestParser (const QString& additionalRequest_string);
+    Time_To_Use theTimeToUseParser (const QString& timeTouse_string);
+    void theSpecialMechanicTreasureParser (const QString& filename);
+    gameCardTreasureSpecialMechanic SpecialMechanicTreasureStringParser(const QString& specialMechanicsTreasure_string);
 
 
 signals:
@@ -149,6 +153,7 @@ private:
     std::map <int, gameCardTreasureArmorAmplifier> _armorAmplifiersDeck;
     std::map <int, gameCardTreasureBattleAmplifier> _battleAmplifiersDeck;
     std::map <int, gameCardTreasureLevelUp> _levelUpDeck;
+    std::map <int, gameCardTreasureSpecialMechanic> _specialMechanicsTreasureDeck;
 
 
 

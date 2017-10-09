@@ -1,4 +1,3 @@
-CardId;Path to File;CardName;AddOn;CardType;Price;isPotion;timeToUse;additionalRequest
 33;Pictures/Munchkin_game_cover.jpg;Doppleganger;Basic;specialMechanic;300;0;ownFight;noCompanion
 34;Pictures/Munchkin_game_cover.jpg;Hireling_1;Basic;specialMechanic;0;0;anytime;0
 35;Pictures/Munchkin_game_cover.jpg;Transferral Potion;Basic;specialMechanic;300;1;eachFight;0

@@ -1243,3 +1243,93 @@ void gameCardTreasureLevelUp::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureSpecialMechanic::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureSpecialMechanic::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureSpecialMechanic::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureSpecialMechanic::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureSpecialMechanic::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureSpecialMechanic::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureSpecialMechanic::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureSpecialMechanic::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+int gameCardTreasureSpecialMechanic::price() const
+{
+    return _price;
+}
+
+void gameCardTreasureSpecialMechanic::setPrice(int price)
+{
+    _price = price;
+}
+
+bool gameCardTreasureSpecialMechanic::isPotion() const
+{
+    return _isPotion;
+}
+
+void gameCardTreasureSpecialMechanic::setIsPotion(bool isPotion)
+{
+    _isPotion = isPotion;
+}
+
+Time_To_Use gameCardTreasureSpecialMechanic::timeToUse() const
+{
+    return _timeToUse;
+}
+
+void gameCardTreasureSpecialMechanic::setTimeToUse(const Time_To_Use &timeToUse)
+{
+    _timeToUse = timeToUse;
+}
+
+Additional_Request gameCardTreasureSpecialMechanic::additionalRequest() const
+{
+    return _additionalRequest;
+}
+
+void gameCardTreasureSpecialMechanic::setAdditionalRequest(const Additional_Request &additionalRequest)
+{
+    _additionalRequest = additionalRequest;
+}
+
+int gameCardTreasureSpecialMechanic::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureSpecialMechanic::setCardID(int cardID)
+{
+    _cardID = cardID;
+}
