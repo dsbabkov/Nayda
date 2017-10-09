@@ -94,6 +94,10 @@ public:
     void theArmorAmplifiersParser (const QString& filename);
     gameCardTreasureArmorAmplifier armorAmplifierStringParser (const QString& armorAmplifier_string);
 
+    void theBattleAmplifiersParser (const QString& filename);
+    gameCardTreasureBattleAmplifier battleAmplifierStringParser(const QString& armorAmplifier_string);
+
+
 
 signals:
     void dbg_to_be_shown(bool);
@@ -140,6 +144,8 @@ private:
 
     std::map <int, gameCardTreasureArmor> _armorDeck;
     std::map <int, gameCardTreasureArmorAmplifier> _armorAmplifiersDeck;
+    std::map <int, gameCardTreasureBattleAmplifier> _battleAmplifiersDeck;
+
 
 
 

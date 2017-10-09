@@ -210,6 +210,9 @@ The_Game::The_Game(QWidget *parent) :
     theArmorAmplifiersParser("Tables/cards_treasures_armorAmplifiers.csv");
     qDebug() << "ArmorAmplifiers parsing complete!";
 
+    theBattleAmplifiersParser("Tables/cards_treasures_battleAmplifiers.csv");
+    qDebug() << "BattleAmplifiers parsing complete!";
+
 
 
 }
@@ -813,6 +816,76 @@ gameCardTreasureArmorAmplifier The_Game::armorAmplifierStringParser(const QStrin
     theArmorAmplifier.setBonus(lst.first().toInt());
 
     return theArmorAmplifier;
+
+}
+
+void The_Game::theBattleAmplifiersParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "BattleAmplifiers parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _battleAmplifiersDeck.insert({(lst.first()).toInt(), battleAmplifierStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+
+
+}
+
+gameCardTreasureBattleAmplifier The_Game::battleAmplifierStringParser(const QString &battleAmplifier_string)
+{
+    gameCardTreasureBattleAmplifier theBattleAmplifier;
+    QStringList lst = battleAmplifier_string.split(";");
+
+    theBattleAmplifier.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theBattleAmplifier.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theBattleAmplifier.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theBattleAmplifier.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theBattleAmplifier.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theBattleAmplifier.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theBattleAmplifier.setType(treasureType::BattleAmplifier);
+    lst.removeFirst();
+
+    theBattleAmplifier.setBonus(lst.first().toInt());
+    lst.removeFirst();
+
+    if (lst.first().toInt()) {
+        theBattleAmplifier.setIsPotion(true);
+    }
+    else {
+        theBattleAmplifier.setIsPotion(false);
+    }
+
+    lst.removeFirst();
+
+    theBattleAmplifier.setHasSpecialMechanic(false);
+    if (lst.first() == "yes\n") {
+        theBattleAmplifier.setHasSpecialMechanic(true);
+    };
+    return theBattleAmplifier;
+
+
 
 }
 

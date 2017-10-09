@@ -1103,3 +1103,83 @@ void gameCardTreasureArmorAmplifier::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureBattleAmplifier::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureBattleAmplifier::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureBattleAmplifier::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureBattleAmplifier::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureBattleAmplifier::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureBattleAmplifier::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureBattleAmplifier::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureBattleAmplifier::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+int gameCardTreasureBattleAmplifier::bonus() const
+{
+    return _bonus;
+}
+
+void gameCardTreasureBattleAmplifier::setBonus(int bonus)
+{
+    _bonus = bonus;
+}
+
+bool gameCardTreasureBattleAmplifier::isPotion() const
+{
+    return _isPotion;
+}
+
+void gameCardTreasureBattleAmplifier::setIsPotion(bool isPotion)
+{
+    _isPotion = isPotion;
+}
+
+bool gameCardTreasureBattleAmplifier::hasSpecialMechanic() const
+{
+    return _hasSpecialMechanic;
+}
+
+void gameCardTreasureBattleAmplifier::setHasSpecialMechanic(bool hasSpecialMechanic)
+{
+    _hasSpecialMechanic = hasSpecialMechanic;
+}
+
+int gameCardTreasureBattleAmplifier::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureBattleAmplifier::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

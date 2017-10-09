@@ -1,4 +1,3 @@
-CardId;Path to File;CardName;AddOn;CardType;Bonus;isPotion;SpecialMechanic
 13;Pictures/Munchkin_game_cover.jpg;Cotion Ponfusion;Basic;battleAmplifier;3;1;no
 14;Pictures/Munchkin_game_cover.jpg;Pretty Balloons;Basic;battleAmplifier;5;0;no
 15;Pictures/Munchkin_game_cover.jpg;Potion of Idiotic Bravery;Basic;battleAmplifier;2;1;no
