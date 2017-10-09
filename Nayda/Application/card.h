@@ -28,7 +28,7 @@
 
 enum class cardAddon {Basic, WildAxe, ClericalErrors };
 enum class doorType {Monster, MonsterAmplifier, Curse, Race, Profession, SpecialMechanic };
-
+enum class treasureType {Armor, ArmorAmplifier, BattleAmplifier, LevelUp, SpecialMechanic, ThingsAmplifiers, Weapon };
 
 
 #define DEFAULT_GAME_STOCK
@@ -75,6 +75,10 @@ enum class Abilities_Keys_Professions {warriors_ability_1, warriors_ability_2, r
 enum class Players_Sex {Man, Woman};
 
 enum class Card_Type {Monster, Monsters_Amplifier, Curse, Race, Profession, Special_Mechanics};
+
+enum class Body_Part {Head, Armor, Feet};
+
+enum class Size {Big, Small};
 
 
 
@@ -168,11 +172,6 @@ public:
     //The parameters will be filled up in the Parser;
     gameCardDoorMonster() {}
 
-//    gameCardDoorMonster(int card_ID, QString picture_Address, QString card_Name,
-//                        QString monster_Name, cardAddon card_Addon, doorType the_type,
-//                        bool is_Undead, bool is_from_Hell, int monster_Level,
-//                        int strong_AgainstHuman, int strong_AgainstElf,
-//                        int strong_AgainstHalfling, int strong_Against);
 
 
     int cardID() const;
@@ -306,7 +305,6 @@ public:
     void setIsVeryDepressed(bool isVeryDepressed);
 };
 
-
 class gameCardDoorCurse {
 
     int _cardID;
@@ -365,7 +363,6 @@ public:
     void setAddOn(const cardAddon &addOn);
 };
 
-
 class gameCardDoorRace {
 
     int _cardID;
@@ -391,7 +388,6 @@ public:
     Race race() const;
     void setRace(const Race &race);
 };
-
 
 class gameCardDoorSpecialMechanic {
 
@@ -420,6 +416,94 @@ public:
     int specialFunctionId() const;
     void setSpecialFunctionId(int specialFunctionId);
 };
+
+
+
+
+class gameCardTreasureArmor {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    treasureType _type;
+
+    Body_Part _part;
+    Size _size;
+
+    int _bonus;
+    int _additionalBonusforElf;
+    int _additionalBonusforOrk;
+
+    bool _isOnlyForHuman;
+    bool _isOnlyForWizard;
+    bool _isOnlyForDwarf;
+    bool _isOnlyForGnome;
+
+    bool _isRestrictedToWizard;
+    bool _isRestrictedToGnome;
+
+    bool _hasSpecialMechanic;
+
+    int _price;
+
+    int _bonusToFleeing;
+
+    bool _isCombined;
+
+
+public:
+
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    treasureType type() const;
+    void setType(const treasureType &type);
+    Body_Part part() const;
+    void setPart(const Body_Part &part);
+    Size size() const;
+    void setSize(const Size &size);
+    int bonus() const;
+    void setBonus(int bonus);
+    int additionalBonusforElf() const;
+    void setAdditionalBonusforElf(int additionalBonusforElf);
+    int additionalBonusforOrk() const;
+    void setAdditionalBonusforOrk(int additionalBonusforOrk);
+    bool isOnlyForHuman() const;
+    void setIsOnlyForHuman(bool isOnlyForHuman);
+    bool isOnlyForWizard() const;
+    void setIsOnlyForWizard(bool isOnlyForWizard);
+    bool isOnlyForDwarf() const;
+    void setIsOnlyForDwarf(bool isOnlyForDwarf);
+    bool isOnlyForGnome() const;
+    void setIsOnlyForGnome(bool isOnlyForGnome);
+    bool isRestrictedToWizard() const;
+    void setIsRestrictedToWizard(bool isRestrictedToWizard);
+    bool isRestrictedToGnome() const;
+    void setIsRestrictedToGnome(bool isRestrictedToGnome);
+    bool hasSpecialMechanic() const;
+    void setHasSpecialMechanic(bool hasSpecialMechanic);
+    int price() const;
+    void setPrice(int price);
+    int bonusToFleeing() const;
+    void setBonusToFleeing(int bonusToFleeing);
+    bool isCombined() const;
+    void setIsCombined(bool isCombined);
+};
+
+
+
+
+
+
+
 
 
 class Game_Card_Stock

@@ -204,6 +204,9 @@ The_Game::The_Game(QWidget *parent) :
     theSpecialMechanicsParser("Tables/cards_doors_specialmechanics.csv");
     qDebug() << "Special mechanics parsing complete!";
 
+    theArmorsParser("Tables/cards_treasures_armor.csv");
+    qDebug() << "Armor parsing complete!";
+
 
 
 }
@@ -281,15 +284,15 @@ gameCardDoorMonster The_Game::monsterStringParser(const QString &monster_string)
     theMonster.setSpecialMechanicAgainstWoman(false);
     theMonster.setSpecialMechanicAginstThief(false);
 
-    if (lst.first() == "noone") { lst.removeFirst(); }
+    if (lst.first() == "noone\n") { lst.removeFirst(); }
         else {
-        if (lst.first() == "Woman") theMonster.setSpecialMechanicAgainstWoman(true);
-        if (lst.first() == "Cleric") theMonster.setSpecialMechanicAgainstCleric(true);
-        if (lst.first() == "all") theMonster.setSpecialMechanicAgainstAll(true);
-        if (lst.first() == "Thief") theMonster.setSpecialMechanicAginstThief(true);
-        if (lst.first() == "Elf") theMonster.setSpecialMechanicAgainstElf(true);
-        if (lst.first() == "Halfling") theMonster.setSpecialMechanicAgainstHalfling(true);
-        if (lst.first() == "Wizard") theMonster.setSpecialMechanicAgainstWizard(true);
+        if (lst.first() == "Woman\n") theMonster.setSpecialMechanicAgainstWoman(true);
+        if (lst.first() == "Cleric\n") theMonster.setSpecialMechanicAgainstCleric(true);
+        if (lst.first() == "all\n") theMonster.setSpecialMechanicAgainstAll(true);
+        if (lst.first() == "Thief\n") theMonster.setSpecialMechanicAginstThief(true);
+        if (lst.first() == "Elf\n") theMonster.setSpecialMechanicAgainstElf(true);
+        if (lst.first() == "Halfling\n") theMonster.setSpecialMechanicAgainstHalfling(true);
+        if (lst.first() == "Wizard\n") theMonster.setSpecialMechanicAgainstWizard(true);
 
     }
 
@@ -615,6 +618,145 @@ gameCardDoorSpecialMechanic The_Game::specialMechanicStringParser(const QString 
     theSpecialMechanic.setSpecialFunctionId(lst.first().toInt());
 
     return theSpecialMechanic;
+}
+
+void The_Game::theArmorsParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Armors parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _armorDeck.insert({(lst.first()).toInt(), armorsStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+
+
+
+}
+
+gameCardTreasureArmor The_Game::armorsStringParser(const QString &armor_string)
+{
+    gameCardTreasureArmor theArmor;
+    QStringList lst = armor_string.split(";");
+
+    theArmor.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theArmor.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theArmor.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theArmor.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theArmor.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theArmor.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theArmor.setType(treasureType::Armor);
+    lst.removeFirst();
+
+    if (lst.first() == "Head") theArmor.setPart(Body_Part::Head);
+    else if (lst.first() == "Feet") theArmor.setPart(Body_Part::Feet);
+    else if (lst.first() == "Armor") theArmor.setPart(Body_Part::Armor);
+    lst.removeFirst();
+
+    if (lst.first() == "Big") theArmor.setSize(Size::Big);
+    else theArmor.setSize(Size::Small);
+    lst.removeFirst();
+
+    theArmor.setBonus(lst.first().toInt());
+    lst.removeFirst();
+
+    //some cheat here! Needed to be reworked to work with everyone
+    theArmor.setAdditionalBonusforElf(0);
+    theArmor.setAdditionalBonusforOrk(0);
+    QStringList newLst = lst.first().split("_");
+    if (newLst.first() == "Elf_2") theArmor.setAdditionalBonusforElf(2);
+    else if (newLst.first() == "Ork_2") theArmor.setAdditionalBonusforOrk(2);
+    lst.removeFirst();
+
+    //parsing "is..for"
+    isOnlyFor restrictions = TheArmorIsForParser(lst.first());
+    theArmor.setIsOnlyForDwarf(restrictions.isOnlyForDwarf);
+    theArmor.setIsOnlyForHuman(restrictions.isOnlyForHuman);
+    theArmor.setIsOnlyForWizard(restrictions.isOnlyForWizard);
+    theArmor.setIsOnlyForGnome(restrictions.isOnlyForGnome);
+    theArmor.setIsRestrictedToGnome(restrictions.isRestrictedToGnome);
+    theArmor.setIsRestrictedToWizard(restrictions.isRestrictedToWizard);
+
+    lst.removeFirst();
+
+    theArmor.setHasSpecialMechanic(false);
+    if (lst.first() == "yes") theArmor.setHasSpecialMechanic(true);
+    lst.removeFirst();
+
+    theArmor.setPrice(lst.first().toInt());
+    lst.removeFirst();
+
+    theArmor.setBonusToFleeing(lst.first().toInt());
+    lst.removeFirst();
+
+    theArmor.setIsCombined(false);
+    if (lst.first() == "yes\n") {
+        theArmor.setIsCombined(true);
+    };
+
+    return theArmor;
+
+
+}
+
+isOnlyFor The_Game::TheArmorIsForParser(const QString &isFor_string)
+{
+     QStringList newLst = isFor_string.split("_");
+     isOnlyFor armor;
+
+     armor.isOnlyForDwarf = false;
+     armor.isOnlyForHuman = false;
+     armor.isOnlyForGnome = false;
+     armor.isOnlyForWizard = false;
+
+     armor.isRestrictedToGnome = false;
+     armor.isRestrictedToWizard = false;
+
+     if (newLst.first() == "ex") {
+         if (newLst.last() == "Wizard") {
+         armor.isRestrictedToWizard = true;
+         };
+         if (newLst.last() == "Gnome") {
+         armor.isRestrictedToGnome = true;
+         };
+     }
+     else {
+         if (newLst.first() == "Human") {
+             armor.isOnlyForHuman = true;
+         };
+         if (newLst.first() == "Wizard") {
+             armor.isOnlyForWizard = true;
+         };
+         if (newLst.first() == "Dwarf") {
+             armor.isOnlyForDwarf = true;
+         };
+         if (newLst.first() == "Gnome") {
+             armor.isOnlyForGnome = true;
+         };
+     }
+
+     return armor;
 }
 
 

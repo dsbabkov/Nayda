@@ -843,3 +843,203 @@ void gameCardDoorSpecialMechanic::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureArmor::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureArmor::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureArmor::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureArmor::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureArmor::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureArmor::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureArmor::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureArmor::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+Body_Part gameCardTreasureArmor::part() const
+{
+    return _part;
+}
+
+void gameCardTreasureArmor::setPart(const Body_Part &part)
+{
+    _part = part;
+}
+
+Size gameCardTreasureArmor::size() const
+{
+    return _size;
+}
+
+void gameCardTreasureArmor::setSize(const Size &size)
+{
+    _size = size;
+}
+
+int gameCardTreasureArmor::bonus() const
+{
+    return _bonus;
+}
+
+void gameCardTreasureArmor::setBonus(int bonus)
+{
+    _bonus = bonus;
+}
+
+int gameCardTreasureArmor::additionalBonusforElf() const
+{
+    return _additionalBonusforElf;
+}
+
+void gameCardTreasureArmor::setAdditionalBonusforElf(int additionalBonusforElf)
+{
+    _additionalBonusforElf = additionalBonusforElf;
+}
+
+int gameCardTreasureArmor::additionalBonusforOrk() const
+{
+    return _additionalBonusforOrk;
+}
+
+void gameCardTreasureArmor::setAdditionalBonusforOrk(int additionalBonusforOrk)
+{
+    _additionalBonusforOrk = additionalBonusforOrk;
+}
+
+bool gameCardTreasureArmor::isOnlyForHuman() const
+{
+    return _isOnlyForHuman;
+}
+
+void gameCardTreasureArmor::setIsOnlyForHuman(bool isOnlyForHuman)
+{
+    _isOnlyForHuman = isOnlyForHuman;
+}
+
+bool gameCardTreasureArmor::isOnlyForWizard() const
+{
+    return _isOnlyForWizard;
+}
+
+void gameCardTreasureArmor::setIsOnlyForWizard(bool isOnlyForWizard)
+{
+    _isOnlyForWizard = isOnlyForWizard;
+}
+
+bool gameCardTreasureArmor::isOnlyForDwarf() const
+{
+    return _isOnlyForDwarf;
+}
+
+void gameCardTreasureArmor::setIsOnlyForDwarf(bool isOnlyForDwarf)
+{
+    _isOnlyForDwarf = isOnlyForDwarf;
+}
+
+bool gameCardTreasureArmor::isOnlyForGnome() const
+{
+    return _isOnlyForGnome;
+}
+
+void gameCardTreasureArmor::setIsOnlyForGnome(bool isOnlyForGnome)
+{
+    _isOnlyForGnome = isOnlyForGnome;
+}
+
+bool gameCardTreasureArmor::isRestrictedToWizard() const
+{
+    return _isRestrictedToWizard;
+}
+
+void gameCardTreasureArmor::setIsRestrictedToWizard(bool isRestrictedToWizard)
+{
+    _isRestrictedToWizard = isRestrictedToWizard;
+}
+
+bool gameCardTreasureArmor::isRestrictedToGnome() const
+{
+    return _isRestrictedToGnome;
+}
+
+void gameCardTreasureArmor::setIsRestrictedToGnome(bool isRestrictedToGnome)
+{
+    _isRestrictedToGnome = isRestrictedToGnome;
+}
+
+bool gameCardTreasureArmor::hasSpecialMechanic() const
+{
+    return _hasSpecialMechanic;
+}
+
+void gameCardTreasureArmor::setHasSpecialMechanic(bool hasSpecialMechanic)
+{
+    _hasSpecialMechanic = hasSpecialMechanic;
+}
+
+int gameCardTreasureArmor::price() const
+{
+    return _price;
+}
+
+void gameCardTreasureArmor::setPrice(int price)
+{
+    _price = price;
+}
+
+int gameCardTreasureArmor::bonusToFleeing() const
+{
+    return _bonusToFleeing;
+}
+
+void gameCardTreasureArmor::setBonusToFleeing(int bonusToFleeing)
+{
+    _bonusToFleeing = bonusToFleeing;
+}
+
+bool gameCardTreasureArmor::isCombined() const
+{
+    return _isCombined;
+}
+
+void gameCardTreasureArmor::setIsCombined(bool isCombined)
+{
+    _isCombined = isCombined;
+}
+
+int gameCardTreasureArmor::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureArmor::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

@@ -42,6 +42,21 @@ struct strongAgainst {
 
 };
 
+
+struct isOnlyFor {
+
+    bool isOnlyForGnome;
+    bool isOnlyForDwarf;
+    bool isOnlyForHuman;
+    bool isOnlyForWizard;
+
+    bool isRestrictedToGnome;
+    bool isRestrictedToWizard;
+
+
+};
+
+
 class The_Game :  public QMainWindow
 {
     Q_OBJECT
@@ -71,6 +86,10 @@ public:
     void theSpecialMechanicsParser(const QString& filename);
     gameCardDoorSpecialMechanic specialMechanicStringParser(const QString& specialMechanic_string);
 
+
+    void theArmorsParser (const QString& filename);
+    gameCardTreasureArmor armorsStringParser (const QString& armor_string);
+    isOnlyFor TheArmorIsForParser (const QString& isFor_string);
 
 
 signals:
@@ -116,12 +135,7 @@ private:
     std::map <int, gameCardDoorRace> _racesDeck;
     std::map <int, gameCardDoorSpecialMechanic> _specialMechanicsDeck;
 
-
-    //Game_Card_Stock Game_Stock_Doors;
-    //Game_Card_Stock Game_Stock_Treasures;
-    //Game_Card_Stock Fold_Doors;
-    //Game_Card_Stock Fold_Treausures;
-
+    std::map <int, gameCardTreasureArmor> _armorDeck;
 
 
 
