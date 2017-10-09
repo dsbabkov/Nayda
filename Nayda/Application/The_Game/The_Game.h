@@ -73,6 +73,29 @@ struct isOnlyFor_ThingsAmplifiers {
 };
 
 
+struct isOnlyFor_Weapon {
+
+    bool isOnlyForElf;
+    bool isOnlyForMan;
+    bool isOnlyForDwarf;
+    bool isOnlyForHuman;
+    bool isOnlyForWizard;
+    bool isOnlyForWoman;
+    bool isOnlyForWarrior;
+    bool isOnlyForOrk;
+    bool isOnlyForThief;
+    bool isOnlyForHalfling;
+    bool isOnlyForGnome;
+    bool isOnlyForBard;
+    bool isOnlyForCleric;
+
+
+};
+
+
+
+
+
 
 
 class The_Game :  public QMainWindow
@@ -128,6 +151,10 @@ public:
     void theThingsAmplifiersParser (const QString& filename);
     gameCardTreasureThingsAmplifiers ThingsAmplifiersStringParser (const QString& thingsAmplifiers_string);
 
+    isOnlyFor_Weapon TheWeaponIsForParser (const QString& isFor_string);
+    void theWeaponParser (const QString& filename);
+    gameCardTreasureWeapon WeaponStringParser (const QString& weapons_string);
+
 
 
 
@@ -180,8 +207,7 @@ private:
     std::map <int, gameCardTreasureLevelUp> _levelUpDeck;
     std::map <int, gameCardTreasureSpecialMechanic> _specialMechanicsTreasureDeck;
     std::map <int, gameCardTreasureThingsAmplifiers> _thingsAmplifiersDeck;
-
-
+    std::map <int, gameCardTreasureWeapon> _weaponsDeck;
 
 
 };

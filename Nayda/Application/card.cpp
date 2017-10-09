@@ -1563,3 +1563,293 @@ void gameCardTreasureThingsAmplifiers::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureWeapon::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureWeapon::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureWeapon::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureWeapon::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureWeapon::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureWeapon::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureWeapon::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureWeapon::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+int gameCardTreasureWeapon::hands() const
+{
+    return _hands;
+}
+
+void gameCardTreasureWeapon::setHands(int hands)
+{
+    _hands = hands;
+}
+
+int gameCardTreasureWeapon::bonus() const
+{
+    return _bonus;
+}
+
+void gameCardTreasureWeapon::setBonus(int bonus)
+{
+    _bonus = bonus;
+}
+
+bool gameCardTreasureWeapon::isOnlyForElf() const
+{
+    return _isOnlyForElf;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForElf(bool isOnlyForElf)
+{
+    _isOnlyForElf = isOnlyForElf;
+}
+
+bool gameCardTreasureWeapon::isOnlyForMan() const
+{
+    return _isOnlyForMan;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForMan(bool isOnlyForMan)
+{
+    _isOnlyForMan = isOnlyForMan;
+}
+
+bool gameCardTreasureWeapon::isOnlyForDwarf() const
+{
+    return _isOnlyForDwarf;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForDwarf(bool isOnlyForDwarf)
+{
+    _isOnlyForDwarf = isOnlyForDwarf;
+}
+
+bool gameCardTreasureWeapon::isOnlyForHuman() const
+{
+    return _isOnlyForHuman;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForHuman(bool isOnlyForHuman)
+{
+    _isOnlyForHuman = isOnlyForHuman;
+}
+
+bool gameCardTreasureWeapon::isOnlyForWizard() const
+{
+    return _isOnlyForWizard;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForWizard(bool isOnlyForWizard)
+{
+    _isOnlyForWizard = isOnlyForWizard;
+}
+
+bool gameCardTreasureWeapon::isOnlyForWoman() const
+{
+    return _isOnlyForWoman;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForWoman(bool isOnlyForWoman)
+{
+    _isOnlyForWoman = isOnlyForWoman;
+}
+
+bool gameCardTreasureWeapon::isOnlyForWarrior() const
+{
+    return _isOnlyForWarrior;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForWarrior(bool isOnlyForWarrior)
+{
+    _isOnlyForWarrior = isOnlyForWarrior;
+}
+
+bool gameCardTreasureWeapon::isOnlyForOrk() const
+{
+    return _isOnlyForOrk;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForOrk(bool isOnlyForOrk)
+{
+    _isOnlyForOrk = isOnlyForOrk;
+}
+
+bool gameCardTreasureWeapon::isOnlyForThief() const
+{
+    return _isOnlyForThief;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForThief(bool isOnlyForThief)
+{
+    _isOnlyForThief = isOnlyForThief;
+}
+
+bool gameCardTreasureWeapon::isOnlyForHalfling() const
+{
+    return _isOnlyForHalfling;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForHalfling(bool isOnlyForHalfling)
+{
+    _isOnlyForHalfling = isOnlyForHalfling;
+}
+
+bool gameCardTreasureWeapon::isOnlyForGnome() const
+{
+    return _isOnlyForGnome;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForGnome(bool isOnlyForGnome)
+{
+    _isOnlyForGnome = isOnlyForGnome;
+}
+
+bool gameCardTreasureWeapon::isOnlyForBard() const
+{
+    return _isOnlyForBard;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForBard(bool isOnlyForBard)
+{
+    _isOnlyForBard = isOnlyForBard;
+}
+
+bool gameCardTreasureWeapon::hasSpecialMechanic() const
+{
+    return _hasSpecialMechanic;
+}
+
+void gameCardTreasureWeapon::setHasSpecialMechanic(bool hasSpecialMechanic)
+{
+    _hasSpecialMechanic = hasSpecialMechanic;
+}
+
+int gameCardTreasureWeapon::price() const
+{
+    return _price;
+}
+
+void gameCardTreasureWeapon::setPrice(int price)
+{
+    _price = price;
+}
+
+int gameCardTreasureWeapon::bonusToFlee() const
+{
+    return _bonusToFlee;
+}
+
+void gameCardTreasureWeapon::setBonusToFlee(int bonusToFlee)
+{
+    _bonusToFlee = bonusToFlee;
+}
+
+int gameCardTreasureWeapon::additionalBonusAgainstUndead() const
+{
+    return _additionalBonusAgainstUndead;
+}
+
+void gameCardTreasureWeapon::setAdditionalBonusAgainstUndead(int additionalBonusAgainstUndead)
+{
+    _additionalBonusAgainstUndead = additionalBonusAgainstUndead;
+}
+
+bool gameCardTreasureWeapon::automaticLooseToCalmadzila() const
+{
+    return _automaticLooseToCalmadzila;
+}
+
+void gameCardTreasureWeapon::setAutomaticLooseToCalmadzila(bool automaticLooseToCalmadzila)
+{
+    _automaticLooseToCalmadzila = automaticLooseToCalmadzila;
+}
+
+int gameCardTreasureWeapon::additionalBonusAgainst_J() const
+{
+    return _additionalBonusAgainst_J;
+}
+
+void gameCardTreasureWeapon::setAdditionalBonusAgainst_J(int additionalBonusAgainst_J)
+{
+    _additionalBonusAgainst_J = additionalBonusAgainst_J;
+}
+
+bool gameCardTreasureWeapon::addingClericalAbility() const
+{
+    return _addingClericalAbility;
+}
+
+void gameCardTreasureWeapon::setAddingClericalAbility(bool addingClericalAbility)
+{
+    _addingClericalAbility = addingClericalAbility;
+}
+
+bool gameCardTreasureWeapon::addingThiefAbility() const
+{
+    return _addingThiefAbility;
+}
+
+void gameCardTreasureWeapon::setAddingThiefAbility(bool addingThiefAbility)
+{
+    _addingThiefAbility = addingThiefAbility;
+}
+
+bool gameCardTreasureWeapon::isOnlyForCleric() const
+{
+    return _isOnlyForCleric;
+}
+
+void gameCardTreasureWeapon::setIsOnlyForCleric(bool isOnlyForCleric)
+{
+    _isOnlyForCleric = isOnlyForCleric;
+}
+
+Size gameCardTreasureWeapon::size() const
+{
+    return _size;
+}
+
+void gameCardTreasureWeapon::setSize(const Size &size)
+{
+    _size = size;
+}
+
+int gameCardTreasureWeapon::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureWeapon::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

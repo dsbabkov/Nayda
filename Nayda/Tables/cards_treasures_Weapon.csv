@@ -1,4 +1,3 @@
-CardId;Path to File;CardName;AddOn;CardType;Hands;Size;Bonus;OnlyFor;SpecialMechanic;Price;bonusToFlee;additionalBonusAgainstUndead;automaticLooseToCalmadzila;additionalBonusAgainst_J;addingClericalAbility;addingThiefAbility
 56;Pictures/Munchkin_game_cover.jpg;Bow With Ribbons;Basic;Weapon;2;small;4;Elf;no;800;0;0;0;0;0;0
 57;Pictures/Munchkin_game_cover.jpg;Chainsaw of Bloody Dismemberment;Basic;Weapon;2;big;3;all;no;600;0;0;0;0;0;0
 58;Pictures/Munchkin_game_cover.jpg;Huge Rock;Basic;Weapon;2;big;3;all;no;0;0;0;0;0;0;0

@@ -222,6 +222,9 @@ The_Game::The_Game(QWidget *parent) :
     theThingsAmplifiersParser("Tables/cards_treasures_thingsAmplifiers.csv");
     qDebug() << "ThingsAmplifiers parsing complete!";
 
+    theWeaponParser("Tables/cards_treasures_Weapon.csv");
+    qDebug() << "Weapons parsing complete!";
+
 }
 
 The_Game::~The_Game()
@@ -1235,6 +1238,183 @@ gameCardTreasureThingsAmplifiers The_Game::ThingsAmplifiersStringParser(const QS
 
 
     return theThingAmplifier;
+}
+
+isOnlyFor_Weapon The_Game::TheWeaponIsForParser(const QString &isFor_string)
+{
+    isOnlyFor_Weapon restrictions;
+
+    restrictions.isOnlyForBard = false;
+    restrictions.isOnlyForDwarf = false;
+    restrictions.isOnlyForElf = false;
+    restrictions.isOnlyForGnome = false;
+    restrictions.isOnlyForHalfling = false;
+    restrictions.isOnlyForHuman = false;
+    restrictions.isOnlyForMan = false;
+    restrictions.isOnlyForOrk = false;
+    restrictions.isOnlyForThief = false;
+    restrictions.isOnlyForWarrior = false;
+    restrictions.isOnlyForWizard = false;
+    restrictions.isOnlyForWoman = false;
+    restrictions.isOnlyForCleric = false;
+
+
+    if (isFor_string == "Elf") {
+        restrictions.isOnlyForElf = true;
+    };
+    if (isFor_string == "Man") {
+        restrictions.isOnlyForMan = true;
+    };
+    if (isFor_string == "Dwarf") {
+        restrictions.isOnlyForDwarf = true;
+    };
+    if (isFor_string == "Human") {
+        restrictions.isOnlyForHuman = true;
+    };
+    if (isFor_string == "Wizard") {
+        restrictions.isOnlyForWizard = true;
+    };
+    if (isFor_string == "Woman") {
+        restrictions.isOnlyForWoman = true;
+    };
+    if (isFor_string == "Warrior") {
+        restrictions.isOnlyForWarrior = true;
+    };
+    if (isFor_string == "Thief") {
+        restrictions.isOnlyForThief = true;
+    };
+    if (isFor_string == "Cleric") {
+        restrictions.isOnlyForCleric = true;
+    };
+    if (isFor_string == "Ork") {
+        restrictions.isOnlyForOrk = true;
+    };
+    if (isFor_string == "Halfling") {
+        restrictions.isOnlyForHalfling = true;
+    };
+    if (isFor_string == "Gnome") {
+        restrictions.isOnlyForGnome = true;
+    };
+    if (isFor_string == "Bard") {
+        restrictions.isOnlyForBard = true;
+    };
+
+    return restrictions;
+}
+
+void The_Game::theWeaponParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Weapons parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _weaponsDeck.insert({(lst.first()).toInt(),WeaponStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardTreasureWeapon The_Game::WeaponStringParser(const QString &weapons_string)
+{
+    gameCardTreasureWeapon theWeapon;
+    QStringList lst = weapons_string.split(";");
+
+    theWeapon.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theWeapon.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theWeapon.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theWeapon.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theWeapon.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theWeapon.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theWeapon.setType(treasureType::Weapon);
+    lst.removeFirst();
+
+    theWeapon.setHands(lst.first().toInt());
+    lst.removeFirst();
+
+    theWeapon.setSize(Size::Small);
+    if (lst.first() == "big") {
+        theWeapon.setSize(Size::Big);
+    }
+    lst.removeFirst();
+
+    theWeapon.setBonus(lst.first().toInt());
+    lst.removeFirst();
+
+
+    isOnlyFor_Weapon restrictions = TheWeaponIsForParser(lst.first());
+    theWeapon.setIsOnlyForBard(restrictions.isOnlyForBard);
+    theWeapon.setIsOnlyForCleric(restrictions.isOnlyForCleric);
+    theWeapon.setIsOnlyForDwarf(restrictions.isOnlyForDwarf);
+    theWeapon.setIsOnlyForElf(restrictions.isOnlyForElf);
+    theWeapon.setIsOnlyForGnome(restrictions.isOnlyForGnome);
+    theWeapon.setIsOnlyForHalfling(restrictions.isOnlyForHalfling);
+    theWeapon.setIsOnlyForHuman(restrictions.isOnlyForHuman);
+    theWeapon.setIsOnlyForMan(restrictions.isOnlyForMan);
+    theWeapon.setIsOnlyForOrk(restrictions.isOnlyForOrk);
+    theWeapon.setIsOnlyForThief(restrictions.isOnlyForThief);
+    theWeapon.setIsOnlyForWarrior(restrictions.isOnlyForWarrior);
+    theWeapon.setIsOnlyForWizard(restrictions.isOnlyForWizard);
+    theWeapon.setIsOnlyForWoman(restrictions.isOnlyForWoman);
+
+    lst.removeFirst();
+
+    theWeapon.setHasSpecialMechanic(false);
+    if (lst.first() == "yes") {
+        theWeapon.setHasSpecialMechanic(true);;
+    }
+    lst.removeFirst();
+
+    theWeapon.setPrice(lst.first().toInt());
+    lst.removeFirst();
+
+    theWeapon.setBonusToFlee(lst.first().toInt());
+    lst.removeFirst();
+
+    theWeapon.setAdditionalBonusAgainstUndead(lst.first().toInt());
+    lst.removeFirst();
+
+    theWeapon.setAutomaticLooseToCalmadzila(false);
+    if (lst.first().toInt()) {
+         theWeapon.setAutomaticLooseToCalmadzila(true);
+    }
+    lst.removeFirst();
+
+    theWeapon.setAdditionalBonusAgainst_J(lst.first().toInt());
+    lst.removeFirst();
+
+    theWeapon.setAddingClericalAbility(false);
+    if (lst.first().toInt()) {
+         theWeapon.setAddingClericalAbility(true);
+    }
+    lst.removeFirst();
+
+    theWeapon.setAddingThiefAbility(false);
+    if (lst.first().toInt()) {
+         theWeapon.setAddingThiefAbility(true);
+    }
+
+    return theWeapon;
+
 }
 
 

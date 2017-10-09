@@ -728,7 +728,115 @@ public:
 };
 
 
+class gameCardTreasureWeapon {
 
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    treasureType _type;
+
+    int _hands;
+    Size _size;
+    int _bonus;
+
+    bool _isOnlyForElf;
+    bool _isOnlyForMan;
+    bool _isOnlyForDwarf;
+    bool _isOnlyForHuman;
+    bool _isOnlyForWizard;
+    bool _isOnlyForWoman;
+    bool _isOnlyForWarrior;
+    bool _isOnlyForOrk;
+    bool _isOnlyForThief;
+    bool _isOnlyForHalfling;
+    bool _isOnlyForGnome;
+    bool _isOnlyForBard;
+    bool _isOnlyForCleric;
+
+    bool _hasSpecialMechanic;
+
+    int _price;
+
+    int _bonusToFlee;
+    int _additionalBonusAgainstUndead;
+
+    bool _automaticLooseToCalmadzila;
+
+    int _additionalBonusAgainst_J;
+
+    bool _addingClericalAbility;
+
+    bool _addingThiefAbility;
+
+public:
+
+
+
+
+
+
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    treasureType type() const;
+    void setType(const treasureType &type);
+    int hands() const;
+    void setHands(int hands);
+    int bonus() const;
+    void setBonus(int bonus);
+    bool isOnlyForElf() const;
+    void setIsOnlyForElf(bool isOnlyForElf);
+    bool isOnlyForMan() const;
+    void setIsOnlyForMan(bool isOnlyForMan);
+    bool isOnlyForDwarf() const;
+    void setIsOnlyForDwarf(bool isOnlyForDwarf);
+    bool isOnlyForHuman() const;
+    void setIsOnlyForHuman(bool isOnlyForHuman);
+    bool isOnlyForWizard() const;
+    void setIsOnlyForWizard(bool isOnlyForWizard);
+    bool isOnlyForWoman() const;
+    void setIsOnlyForWoman(bool isOnlyForWoman);
+    bool isOnlyForWarrior() const;
+    void setIsOnlyForWarrior(bool isOnlyForWarrior);
+    bool isOnlyForOrk() const;
+    void setIsOnlyForOrk(bool isOnlyForOrk);
+    bool isOnlyForThief() const;
+    void setIsOnlyForThief(bool isOnlyForThief);
+    bool isOnlyForHalfling() const;
+    void setIsOnlyForHalfling(bool isOnlyForHalfling);
+    bool isOnlyForGnome() const;
+    void setIsOnlyForGnome(bool isOnlyForGnome);
+    bool isOnlyForBard() const;
+    void setIsOnlyForBard(bool isOnlyForBard);
+    bool hasSpecialMechanic() const;
+    void setHasSpecialMechanic(bool hasSpecialMechanic);
+    int price() const;
+    void setPrice(int price);
+    int bonusToFlee() const;
+    void setBonusToFlee(int bonusToFlee);
+    int additionalBonusAgainstUndead() const;
+    void setAdditionalBonusAgainstUndead(int additionalBonusAgainstUndead);
+    bool automaticLooseToCalmadzila() const;
+    void setAutomaticLooseToCalmadzila(bool automaticLooseToCalmadzila);
+    int additionalBonusAgainst_J() const;
+    void setAdditionalBonusAgainst_J(int additionalBonusAgainst_J);
+    bool addingClericalAbility() const;
+    void setAddingClericalAbility(bool addingClericalAbility);
+    bool addingThiefAbility() const;
+    void setAddingThiefAbility(bool addingThiefAbility);
+    bool isOnlyForCleric() const;
+    void setIsOnlyForCleric(bool isOnlyForCleric);
+    Size size() const;
+    void setSize(const Size &size);
+};
 
 
 class Game_Card_Stock
