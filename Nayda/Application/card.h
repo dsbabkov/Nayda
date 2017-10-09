@@ -641,6 +641,94 @@ public:
 
 
 
+class gameCardTreasureThingsAmplifiers {
+
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    treasureType _type;
+
+    Size _size;
+    int _bonus;
+
+    bool _hasSpecialMechanic;
+    bool _isKnees;
+    bool _isOnlyForHalfling;
+    bool _isOnlyForThief;
+    bool _isOnlyForCleric;
+    bool _isOnlyForWizard;
+
+    bool _isRestrictedToWarrior;
+    bool _isRestrictedToCleric;
+    bool _isRestrictedToThief;
+
+    int _price;
+    int _bonusToFlee;
+    int _bonusToHands;
+    int _bonusToMan;
+    int _bonusToWoman;
+
+    bool _allowedToWearDwarven;
+    bool _allowedToWearElven;
+
+
+public:
+
+
+
+
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    treasureType type() const;
+    void setType(const treasureType &type);
+    Size size() const;
+    void setSize(const Size &size);
+    int bonus() const;
+    void setBonus(int bonus);
+    bool hasSpecialMechanic() const;
+    void setHasSpecialMechanic(bool hasSpecialMechanic);
+    bool isKnees() const;
+    void setIsKnees(bool isKnees);
+    bool isOnlyForHalfling() const;
+    void setIsOnlyForHalfling(bool isOnlyForHalfling);
+    bool isOnlyForThief() const;
+    void setIsOnlyForThief(bool isOnlyForThief);
+    bool isOnlyForCleric() const;
+    void setIsOnlyForCleric(bool isOnlyForCleric);
+    bool isOnlyForWizard() const;
+    void setIsOnlyForWizard(bool isOnlyForWizard);
+    bool isRestrictedToWarrior() const;
+    void setIsRestrictedToWarrior(bool isRestrictedToWarrior);
+    bool isRestrictedToCleric() const;
+    void setIsRestrictedToCleric(bool isRestrictedToCleric);
+    bool isRestrictedToThief() const;
+    void setIsRestrictedToThief(bool isRestrictedToThief);
+    int price() const;
+    void setPrice(int price);
+    int bonusToFlee() const;
+    void setBonusToFlee(int bonusToFlee);
+    int bonusToHands() const;
+    void setBonusToHands(int bonusToHands);
+    int bonusToMan() const;
+    void setBonusToMan(int bonusToMan);
+    int bonusToWoman() const;
+    void setBonusToWoman(int bonusToWoman);
+    bool allowedToWearDwarven() const;
+    void setAllowedToWearDwarven(bool allowedToWearDwarven);
+    bool allowedToWearElven() const;
+    void setAllowedToWearElven(bool allowedToWearElven);
+};
+
+
+
 
 
 class Game_Card_Stock

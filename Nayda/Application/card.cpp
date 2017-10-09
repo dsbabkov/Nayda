@@ -1333,3 +1333,233 @@ void gameCardTreasureSpecialMechanic::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureThingsAmplifiers::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureThingsAmplifiers::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureThingsAmplifiers::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureThingsAmplifiers::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureThingsAmplifiers::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureThingsAmplifiers::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureThingsAmplifiers::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureThingsAmplifiers::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+Size gameCardTreasureThingsAmplifiers::size() const
+{
+    return _size;
+}
+
+void gameCardTreasureThingsAmplifiers::setSize(const Size &size)
+{
+    _size = size;
+}
+
+int gameCardTreasureThingsAmplifiers::bonus() const
+{
+    return _bonus;
+}
+
+void gameCardTreasureThingsAmplifiers::setBonus(int bonus)
+{
+    _bonus = bonus;
+}
+
+bool gameCardTreasureThingsAmplifiers::hasSpecialMechanic() const
+{
+    return _hasSpecialMechanic;
+}
+
+void gameCardTreasureThingsAmplifiers::setHasSpecialMechanic(bool hasSpecialMechanic)
+{
+    _hasSpecialMechanic = hasSpecialMechanic;
+}
+
+bool gameCardTreasureThingsAmplifiers::isKnees() const
+{
+    return _isKnees;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsKnees(bool isKnees)
+{
+    _isKnees = isKnees;
+}
+
+bool gameCardTreasureThingsAmplifiers::isOnlyForHalfling() const
+{
+    return _isOnlyForHalfling;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsOnlyForHalfling(bool isOnlyForHalfling)
+{
+    _isOnlyForHalfling = isOnlyForHalfling;
+}
+
+bool gameCardTreasureThingsAmplifiers::isOnlyForThief() const
+{
+    return _isOnlyForThief;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsOnlyForThief(bool isOnlyForThief)
+{
+    _isOnlyForThief = isOnlyForThief;
+}
+
+bool gameCardTreasureThingsAmplifiers::isOnlyForCleric() const
+{
+    return _isOnlyForCleric;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsOnlyForCleric(bool isOnlyForCleric)
+{
+    _isOnlyForCleric = isOnlyForCleric;
+}
+
+bool gameCardTreasureThingsAmplifiers::isOnlyForWizard() const
+{
+    return _isOnlyForWizard;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsOnlyForWizard(bool isOnlyForWizard)
+{
+    _isOnlyForWizard = isOnlyForWizard;
+}
+
+bool gameCardTreasureThingsAmplifiers::isRestrictedToWarrior() const
+{
+    return _isRestrictedToWarrior;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsRestrictedToWarrior(bool isRestrictedToWarrior)
+{
+    _isRestrictedToWarrior = isRestrictedToWarrior;
+}
+
+bool gameCardTreasureThingsAmplifiers::isRestrictedToCleric() const
+{
+    return _isRestrictedToCleric;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsRestrictedToCleric(bool isRestrictedToCleric)
+{
+    _isRestrictedToCleric = isRestrictedToCleric;
+}
+
+bool gameCardTreasureThingsAmplifiers::isRestrictedToThief() const
+{
+    return _isRestrictedToThief;
+}
+
+void gameCardTreasureThingsAmplifiers::setIsRestrictedToThief(bool isRestrictedToThief)
+{
+    _isRestrictedToThief = isRestrictedToThief;
+}
+
+int gameCardTreasureThingsAmplifiers::price() const
+{
+    return _price;
+}
+
+void gameCardTreasureThingsAmplifiers::setPrice(int price)
+{
+    _price = price;
+}
+
+int gameCardTreasureThingsAmplifiers::bonusToFlee() const
+{
+    return _bonusToFlee;
+}
+
+void gameCardTreasureThingsAmplifiers::setBonusToFlee(int bonusToFlee)
+{
+    _bonusToFlee = bonusToFlee;
+}
+
+int gameCardTreasureThingsAmplifiers::bonusToHands() const
+{
+    return _bonusToHands;
+}
+
+void gameCardTreasureThingsAmplifiers::setBonusToHands(int bonusToHands)
+{
+    _bonusToHands = bonusToHands;
+}
+
+int gameCardTreasureThingsAmplifiers::bonusToMan() const
+{
+    return _bonusToMan;
+}
+
+void gameCardTreasureThingsAmplifiers::setBonusToMan(int bonusToMan)
+{
+    _bonusToMan = bonusToMan;
+}
+
+int gameCardTreasureThingsAmplifiers::bonusToWoman() const
+{
+    return _bonusToWoman;
+}
+
+void gameCardTreasureThingsAmplifiers::setBonusToWoman(int bonusToWoman)
+{
+    _bonusToWoman = bonusToWoman;
+}
+
+bool gameCardTreasureThingsAmplifiers::allowedToWearDwarven() const
+{
+    return _allowedToWearDwarven;
+}
+
+void gameCardTreasureThingsAmplifiers::setAllowedToWearDwarven(bool allowedToWearDwarven)
+{
+    _allowedToWearDwarven = allowedToWearDwarven;
+}
+
+bool gameCardTreasureThingsAmplifiers::allowedToWearElven() const
+{
+    return _allowedToWearElven;
+}
+
+void gameCardTreasureThingsAmplifiers::setAllowedToWearElven(bool allowedToWearElven)
+{
+    _allowedToWearElven = allowedToWearElven;
+}
+
+int gameCardTreasureThingsAmplifiers::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureThingsAmplifiers::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

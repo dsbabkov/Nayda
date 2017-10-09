@@ -43,6 +43,8 @@ struct strongAgainst {
 };
 
 
+
+
 struct isOnlyFor {
 
     bool isOnlyForGnome;
@@ -55,6 +57,22 @@ struct isOnlyFor {
 
 
 };
+
+struct isOnlyFor_ThingsAmplifiers {
+
+    bool isOnlyForHalfling;
+    bool isOnlyForCleric;
+    bool isOnlyForWizard;
+    bool isOnlyForThief;
+
+    bool isRestrictedToWarrior;
+    bool isRestrictedToCleric;
+    bool isRestrictedtoThief;
+
+
+};
+
+
 
 
 class The_Game :  public QMainWindow
@@ -106,6 +124,13 @@ public:
     gameCardTreasureSpecialMechanic SpecialMechanicTreasureStringParser(const QString& specialMechanicsTreasure_string);
 
 
+    isOnlyFor_ThingsAmplifiers TheThingsAmplifiersIsForParser (const QString& isFor_string);
+    void theThingsAmplifiersParser (const QString& filename);
+    gameCardTreasureThingsAmplifiers ThingsAmplifiersStringParser (const QString& thingsAmplifiers_string);
+
+
+
+
 signals:
     void dbg_to_be_shown(bool);
     void dbg_return_to_before_the_game(bool);
@@ -154,6 +179,7 @@ private:
     std::map <int, gameCardTreasureBattleAmplifier> _battleAmplifiersDeck;
     std::map <int, gameCardTreasureLevelUp> _levelUpDeck;
     std::map <int, gameCardTreasureSpecialMechanic> _specialMechanicsTreasureDeck;
+    std::map <int, gameCardTreasureThingsAmplifiers> _thingsAmplifiersDeck;
 
 
 

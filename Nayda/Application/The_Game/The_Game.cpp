@@ -219,6 +219,8 @@ The_Game::The_Game(QWidget *parent) :
     theSpecialMechanicTreasureParser("Tables/cards_treasures_specialMechanics.csv");
     qDebug() << "SpecialMechanicsTreasures parsing complete!";
 
+    theThingsAmplifiersParser("Tables/cards_treasures_thingsAmplifiers.csv");
+    qDebug() << "ThingsAmplifiers parsing complete!";
 
 }
 
@@ -1078,6 +1080,161 @@ gameCardTreasureSpecialMechanic The_Game::SpecialMechanicTreasureStringParser(co
     theSpecialMechanic.setAdditionalRequest(theAdditionalRequestParser(lst.first()));
 
     return theSpecialMechanic;
+}
+
+isOnlyFor_ThingsAmplifiers The_Game::TheThingsAmplifiersIsForParser(const QString &isFor_string)
+{
+    QStringList newLst = isFor_string.split("_");
+    isOnlyFor_ThingsAmplifiers thingAmplifiers;
+
+    thingAmplifiers.isOnlyForCleric = false;
+    thingAmplifiers.isOnlyForHalfling = false;
+    thingAmplifiers.isOnlyForThief = false;
+    thingAmplifiers.isOnlyForWizard = false;
+
+    thingAmplifiers.isRestrictedtoThief = false;
+    thingAmplifiers.isRestrictedToCleric = false;
+    thingAmplifiers.isRestrictedToWarrior = false;
+
+    if (newLst.first() == "ex") {
+        if (newLst.last() == "Warrior") {
+        thingAmplifiers.isRestrictedToWarrior = true;
+        };
+        if (newLst.last() == "Cleric") {
+        thingAmplifiers.isRestrictedToCleric = true;
+        };
+        if (newLst.last() == "Thief") {
+        thingAmplifiers.isRestrictedtoThief = true;
+        };
+    }
+    else {
+        if (newLst.first() == "Thief") {
+            thingAmplifiers.isOnlyForThief = true;
+        };
+        if (newLst.first() == "Wizard") {
+            thingAmplifiers.isOnlyForWizard = true;
+        };
+        if (newLst.first() == "Halfling") {
+            thingAmplifiers.isOnlyForHalfling = true;
+        };
+        if (newLst.first() == "Cleric") {
+            thingAmplifiers.isOnlyForCleric = true;
+        };
+    }
+
+    return thingAmplifiers;
+}
+
+void The_Game::theThingsAmplifiersParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "Things Amplifiers parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _thingsAmplifiersDeck.insert({(lst.first()).toInt(),ThingsAmplifiersStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardTreasureThingsAmplifiers The_Game::ThingsAmplifiersStringParser(const QString &thingsAmplifiers_string)
+{
+    gameCardTreasureThingsAmplifiers theThingAmplifier;
+    QStringList lst = thingsAmplifiers_string.split(";");
+
+    theThingAmplifier.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theThingAmplifier.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theThingAmplifier.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theThingAmplifier.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theThingAmplifier.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theThingAmplifier.setType(treasureType::ThingsAmplifiers);
+    lst.removeFirst();
+
+    theThingAmplifier.setSize(Size::Small);
+    if (lst.first() == "big") {
+        theThingAmplifier.setSize(Size::Big);
+    }
+    lst.removeFirst();
+
+    theThingAmplifier.setBonus(lst.first().toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setHasSpecialMechanic(false);
+    if (lst.first() == "yes") {
+        theThingAmplifier.setHasSpecialMechanic(true);;
+    }
+    lst.removeFirst();
+
+    theThingAmplifier.setIsKnees(false);
+
+    if (lst.first().toInt()) {
+        theThingAmplifier.setIsKnees(true);;
+    }
+    lst.removeFirst();
+
+    isOnlyFor_ThingsAmplifiers restrictions = TheThingsAmplifiersIsForParser(lst.first());
+    theThingAmplifier.setIsOnlyForCleric(restrictions.isOnlyForCleric);
+    theThingAmplifier.setIsOnlyForHalfling(restrictions.isOnlyForHalfling);
+    theThingAmplifier.setIsOnlyForThief(restrictions.isOnlyForThief);
+    theThingAmplifier.setIsOnlyForWizard(restrictions.isOnlyForWizard);
+
+
+    theThingAmplifier.setIsRestrictedToWarrior(restrictions.isRestrictedToWarrior);
+    theThingAmplifier.setIsRestrictedToCleric(restrictions.isRestrictedToCleric);
+    theThingAmplifier.setIsRestrictedToThief(restrictions.isRestrictedtoThief);
+
+    lst.removeFirst();
+
+    theThingAmplifier.setPrice(lst.first().toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setBonusToFlee(lst.first().toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setBonusToHands(lst.first().toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setBonusToMan(lst.first().toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setBonusToWoman(lst.first().toInt());
+    lst.removeFirst();
+
+    theThingAmplifier.setAllowedToWearDwarven(false);
+    if (lst.first().toInt()) {
+        theThingAmplifier.setAllowedToWearDwarven(true);
+    }
+    lst.removeFirst();
+
+    theThingAmplifier.setAllowedToWearElven(false);
+    if (lst.first().toInt()) {
+        theThingAmplifier.setAllowedToWearElven(true);
+    }
+
+
+
+    return theThingAmplifier;
 }
 
 
