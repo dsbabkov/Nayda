@@ -499,7 +499,31 @@ public:
 };
 
 
+class gameCardTreasureArmorAmplifier {
 
+    int _cardID;
+    QString _pictureAddress;
+    QString _cardName;
+    cardAddon _addOn;
+    treasureType _type;
+
+    int _bonus;
+
+public:
+
+    int cardID() const;
+    void setCardID(int cardID);
+    QString pictureAddress() const;
+    void setPictureAddress(const QString &pictureAddress);
+    QString cardName() const;
+    void setCardName(const QString &cardName);
+    cardAddon addOn() const;
+    void setAddOn(const cardAddon &addOn);
+    treasureType type() const;
+    void setType(const treasureType &type);
+    int bonus() const;
+    void setBonus(int bonus);
+};
 
 
 

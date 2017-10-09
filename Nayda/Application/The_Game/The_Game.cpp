@@ -207,6 +207,9 @@ The_Game::The_Game(QWidget *parent) :
     theArmorsParser("Tables/cards_treasures_armor.csv");
     qDebug() << "Armor parsing complete!";
 
+    theArmorAmplifiersParser("Tables/cards_treasures_armorAmplifiers.csv");
+    qDebug() << "ArmorAmplifiers parsing complete!";
+
 
 
 }
@@ -757,6 +760,60 @@ isOnlyFor The_Game::TheArmorIsForParser(const QString &isFor_string)
      }
 
      return armor;
+}
+
+void The_Game::theArmorAmplifiersParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "ArmorAmplifiers parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _armorAmplifiersDeck.insert({(lst.first()).toInt(), armorAmplifierStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+
+
+}
+
+gameCardTreasureArmorAmplifier The_Game::armorAmplifierStringParser(const QString &armorAmplifier_string)
+{
+    gameCardTreasureArmorAmplifier theArmorAmplifier;
+    QStringList lst = armorAmplifier_string.split(";");
+
+    theArmorAmplifier.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theArmorAmplifier.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theArmorAmplifier.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theArmorAmplifier.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theArmorAmplifier.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theArmorAmplifier.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theArmorAmplifier.setType(treasureType::ArmorAmplifier);
+    lst.removeFirst();
+
+    theArmorAmplifier.setBonus(lst.first().toInt());
+
+    return theArmorAmplifier;
+
 }
 
 

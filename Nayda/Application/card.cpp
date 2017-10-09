@@ -1043,3 +1043,63 @@ void gameCardTreasureArmor::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureArmorAmplifier::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureArmorAmplifier::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureArmorAmplifier::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureArmorAmplifier::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureArmorAmplifier::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureArmorAmplifier::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureArmorAmplifier::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureArmorAmplifier::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+int gameCardTreasureArmorAmplifier::bonus() const
+{
+    return _bonus;
+}
+
+void gameCardTreasureArmorAmplifier::setBonus(int bonus)
+{
+    _bonus = bonus;
+}
+
+int gameCardTreasureArmorAmplifier::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureArmorAmplifier::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

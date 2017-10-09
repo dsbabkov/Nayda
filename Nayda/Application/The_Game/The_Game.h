@@ -91,6 +91,9 @@ public:
     gameCardTreasureArmor armorsStringParser (const QString& armor_string);
     isOnlyFor TheArmorIsForParser (const QString& isFor_string);
 
+    void theArmorAmplifiersParser (const QString& filename);
+    gameCardTreasureArmorAmplifier armorAmplifierStringParser (const QString& armorAmplifier_string);
+
 
 signals:
     void dbg_to_be_shown(bool);
@@ -136,6 +139,7 @@ private:
     std::map <int, gameCardDoorSpecialMechanic> _specialMechanicsDeck;
 
     std::map <int, gameCardTreasureArmor> _armorDeck;
+    std::map <int, gameCardTreasureArmorAmplifier> _armorAmplifiersDeck;
 
 
 
