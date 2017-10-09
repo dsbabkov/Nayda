@@ -213,6 +213,9 @@ The_Game::The_Game(QWidget *parent) :
     theBattleAmplifiersParser("Tables/cards_treasures_battleAmplifiers.csv");
     qDebug() << "BattleAmplifiers parsing complete!";
 
+    theLevelUpParser("Tables/cards_treasures_levelUp.csv");
+    qDebug() << "LevelUps parsing complete!";
+
 
 
 }
@@ -886,6 +889,61 @@ gameCardTreasureBattleAmplifier The_Game::battleAmplifierStringParser(const QStr
     return theBattleAmplifier;
 
 
+
+}
+
+void The_Game::theLevelUpParser(const QString &filename)
+{
+    QFile file(filename);
+    qDebug() << "LevelUp parsing starts!";
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!file.atEnd())
+        {
+
+            QString str = file.readLine();
+            QStringList lst = str.split(";");
+
+            _levelUpDeck.insert({(lst.first()).toInt(),levelUpStringParser(str)});
+
+        }
+    }
+
+    else
+    {
+        qDebug()<< "Cannot open this file!";
+    }
+}
+
+gameCardTreasureLevelUp The_Game::levelUpStringParser(const QString &levelUp_string)
+{
+    gameCardTreasureLevelUp theLevelUp;
+    QStringList lst = levelUp_string.split(";");
+
+    theLevelUp.setCardID((lst.first()).toInt());
+    lst.removeFirst();
+
+    theLevelUp.setPictureAddress(lst.first());
+    lst.removeFirst();
+
+    theLevelUp.setCardName(lst.first());
+    lst.removeFirst();
+
+    if (lst.first() == "Basic") theLevelUp.setAddOn(cardAddon::Basic);
+    else if (lst.first() == "WildAxe") theLevelUp.setAddOn(cardAddon::WildAxe);
+    else if (lst.first() == "ClericalErrors") theLevelUp.setAddOn(cardAddon::ClericalErrors);
+    lst.removeFirst();
+
+    theLevelUp.setType(treasureType::LevelUp);
+    lst.removeFirst();
+
+    theLevelUp.setHasSpecialMechanic(false);
+    if (lst.first().toInt()) {
+        theLevelUp.setHasSpecialMechanic(true);
+    }
+
+    return theLevelUp;
 
 }
 

@@ -1183,3 +1183,63 @@ void gameCardTreasureBattleAmplifier::setCardID(int cardID)
 {
     _cardID = cardID;
 }
+
+QString gameCardTreasureLevelUp::pictureAddress() const
+{
+    return _pictureAddress;
+}
+
+void gameCardTreasureLevelUp::setPictureAddress(const QString &pictureAddress)
+{
+    _pictureAddress = pictureAddress;
+}
+
+QString gameCardTreasureLevelUp::cardName() const
+{
+    return _cardName;
+}
+
+void gameCardTreasureLevelUp::setCardName(const QString &cardName)
+{
+    _cardName = cardName;
+}
+
+cardAddon gameCardTreasureLevelUp::addOn() const
+{
+    return _addOn;
+}
+
+void gameCardTreasureLevelUp::setAddOn(const cardAddon &addOn)
+{
+    _addOn = addOn;
+}
+
+treasureType gameCardTreasureLevelUp::type() const
+{
+    return _type;
+}
+
+void gameCardTreasureLevelUp::setType(const treasureType &type)
+{
+    _type = type;
+}
+
+bool gameCardTreasureLevelUp::hasSpecialMechanic() const
+{
+    return _hasSpecialMechanic;
+}
+
+void gameCardTreasureLevelUp::setHasSpecialMechanic(bool specialMechanic)
+{
+    _hasSpecialMechanic = specialMechanic;
+}
+
+int gameCardTreasureLevelUp::cardID() const
+{
+    return _cardID;
+}
+
+void gameCardTreasureLevelUp::setCardID(int cardID)
+{
+    _cardID = cardID;
+}

@@ -95,7 +95,10 @@ public:
     gameCardTreasureArmorAmplifier armorAmplifierStringParser (const QString& armorAmplifier_string);
 
     void theBattleAmplifiersParser (const QString& filename);
-    gameCardTreasureBattleAmplifier battleAmplifierStringParser(const QString& armorAmplifier_string);
+    gameCardTreasureBattleAmplifier battleAmplifierStringParser(const QString& battleAmplifier_string);
+
+    void theLevelUpParser (const QString& filename);
+    gameCardTreasureLevelUp levelUpStringParser(const QString& levelUp_string);
 
 
 
@@ -145,6 +148,7 @@ private:
     std::map <int, gameCardTreasureArmor> _armorDeck;
     std::map <int, gameCardTreasureArmorAmplifier> _armorAmplifiersDeck;
     std::map <int, gameCardTreasureBattleAmplifier> _battleAmplifiersDeck;
+    std::map <int, gameCardTreasureLevelUp> _levelUpDeck;
 
 
 
