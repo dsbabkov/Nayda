@@ -1,33 +1,33 @@
-83;Pictures/Munchkin_game_cover.jpg;Divine Interdiction;Basic;;SpecialMechanic;1
-84;Pictures/Munchkin_game_cover.jpg;Half-Breed_1;Basic;Long elf with dwarfs legs;SpecialMechanic;2
-85;Pictures/Munchkin_game_cover.jpg;Super Munchkin_1;Basic;Standard with a silver weapon;SpecialMechanic;3
-86;Pictures/Munchkin_game_cover.jpg;Super Munchkin_2;Basic;Mage with sword;SpecialMechanic;4
-87;Pictures/Munchkin_game_cover.jpg;Mate;Basic;Two cute monsters;SpecialMechanic;5
-88;Pictures/Munchkin_game_cover.jpg;Help Me Out Here;Basic;;SpecialMechanic;6
-89;Pictures/Munchkin_game_cover.jpg;Wandering Monster_1;Basic;"Mr Bones in a large ""cotel""";SpecialMechanic;7
-90;Pictures/Munchkin_game_cover.jpg;Half-Breed_2;Basic;Long legs halfling;SpecialMechanic;8
-91;Pictures/Munchkin_game_cover.jpg;Wandering Monster_2;Basic;Singing songs and appering from the corner;SpecialMechanic;9
-92;Pictures/Munchkin_game_cover.jpg;Wandering Monster_3;Basic;Wanted to Tambov;SpecialMechanic;10
-93;Pictures/Munchkin_game_cover.jpg;Cheat_1;Basic;Girl cleric with a large hammer and big tits;SpecialMechanic;11
-94;Pictures/Munchkin_game_cover.jpg;Illusion;Basic;;SpecialMechanic;12
-95;Pictures/Munchkin_game_cover.jpg;Out to Lunch;Basic;;SpecialMechanic;13
-148;Pictures/Munchkin_game_cover.jpg;Annihilation;WildAxe;;SpecialMechanic;14
-149;Pictures/Munchkin_game_cover.jpg;Wandering Monster_4;WildAxe;"Nose with note ""please take me anywere""";SpecialMechanic;15
-150;Pictures/Munchkin_game_cover.jpg;Dead;WildAxe;;SpecialMechanic;16
-151;Pictures/Munchkin_game_cover.jpg;Friendly;WildAxe;;SpecialMechanic;17
-152;Pictures/Munchkin_game_cover.jpg;Super Munchkin_3;WildAxe;Girl with a super Axe;SpecialMechanic;18
-153;Pictures/Munchkin_game_cover.jpg;Half-Breed_3;WildAxe;Ork like a dwarf with and axe;SpecialMechanic;19
-154;Pictures/Munchkin_game_cover.jpg;Wandering Monster_5;WildAxe;;SpecialMechanic;20
-155;Pictures/Munchkin_game_cover.jpg;Cheat_2;WildAxe;Rogue with superAxe and sack of clirick things;SpecialMechanic;21
-156;Pictures/Munchkin_game_cover.jpg;Deck of Too Many Things;WildAxe;From any place in any stock but not to see the cards;SpecialMechanic;22
-157;Pictures/Munchkin_game_cover.jpg;Mommy;WildAxe;;SpecialMechanic;23
-158;Pictures/Munchkin_game_cover.jpg;Find a Map;WildAxe;;SpecialMechanic;24
-159;Pictures/Munchkin_game_cover.jpg;Dead Broke;WildAxe;;SpecialMechanic;25
-218;Pictures/Munchkin_game_cover.jpg;Cheat_3;ClericalErrors;"Girl with a ""Dub of Gentlemen""";SpecialMechanic;26
-219;Pictures/Munchkin_game_cover.jpg;Monsters Are Busy;ClericalErrors;;SpecialMechanic;27
-220;Pictures/Munchkin_game_cover.jpg;Filthy Rich;ClericalErrors;;SpecialMechanic;28
-221;Pictures/Munchkin_game_cover.jpg;Super Munchkin_4;ClericalErrors;Singing cleric;SpecialMechanic;29
-222;Pictures/Munchkin_game_cover.jpg;Wandering Monster_6;ClericalErrors;A monster looking from the door;SpecialMechanic;30
-223;Pictures/Munchkin_game_cover.jpg;Wandering Monster_7;ClericalErrors;Runnig on segway;SpecialMechanic;31
-224;Pictures/Munchkin_game_cover.jpg;Typographical Error;ClericalErrors;;SpecialMechanic;32
-225;Pictures/Munchkin_game_cover.jpg;Half-Breed_4;ClericalErrors;Ork-gnome;SpecialMechanic;33
+83;Pictures/doors_specialMechanics/Божественное вмешательство.jpg;Divine Interdiction;Basic;;SpecialMechanic;1
+84;Pictures/doors_specialMechanics/Полукровка.jpg;Half-Breed_1;Basic;Long elf with dwarfs legs;SpecialMechanic;2
+85;Pictures/doors_specialMechanics/Суперманчкин.jpg;Super Munchkin_1;Basic;Standard with a silver weapon;SpecialMechanic;3
+86;Pictures/doors_specialMechanics/Суперманчкин1.jpg;Super Munchkin_2;Basic;Mage with sword;SpecialMechanic;4
+87;Pictures/doors_specialMechanics/Гадкая парочка.jpg;Mate;Basic;Two cute monsters;SpecialMechanic;5
+88;Pictures/doors_specialMechanics/Помоги, чем можешь.jpg;Help Me Out Here;Basic;;SpecialMechanic;6
+89;Pictures/doors_specialMechanics/Бродячая тварь.jpg;Wandering Monster_1;Basic;"Mr Bones in a large ""cotel""";SpecialMechanic;7
+90;Pictures/doors_specialMechanics/Полукровка1.jpg;Half-Breed_2;Basic;Long legs halfling;SpecialMechanic;8
+91;Pictures/doors_specialMechanics/Бродячая тварь1.jpg;Wandering Monster_2;Basic;Singing songs and appering from the corner;SpecialMechanic;9
+92;Pictures/doors_specialMechanics/Бродячая тварь2.jpg;Wandering Monster_3;Basic;Wanted to Tambov;SpecialMechanic;10
+93;Pictures/doors_specialMechanics/Чит.jpg;Cheat_1;Basic;Girl cleric with a large hammer and big tits;SpecialMechanic;11
+94;Pictures/doors_specialMechanics/Морок.jpg;Illusion;Basic;;SpecialMechanic;12
+95;Pictures/doors_specialMechanics/Ушел на базу.jpg;Out to Lunch;Basic;;SpecialMechanic;13
+148;Pictures/doors_specialMechanics/Аннигиляция.jpg;Annihilation;WildAxe;;SpecialMechanic;14
+149;Pictures/doors_specialMechanics/Бродячая тварь3.jpg;Wandering Monster_4;WildAxe;"Nose with note ""please take me anywere""";SpecialMechanic;15
+150;Pictures/doors_specialMechanics/Мертвые не кусаются.jpg;Dead;WildAxe;;SpecialMechanic;16
+151;Pictures/doors_specialMechanics/Миляга.jpg;Friendly;WildAxe;;SpecialMechanic;17
+152;Pictures/doors_specialMechanics/Суперманчкин2.jpg;Super Munchkin_3;WildAxe;Girl with a super Axe;SpecialMechanic;18
+153;Pictures/doors_specialMechanics/Полукровка2.jpg;Half-Breed_3;WildAxe;Ork like a dwarf with and axe;SpecialMechanic;19
+154;Pictures/doors_specialMechanics/Бродячая тварь4.jpg;Wandering Monster_5;WildAxe;;SpecialMechanic;20
+155;Pictures/doors_specialMechanics/Чит1.jpg;Cheat_2;WildAxe;Rogue with superAxe and sack of clirick things;SpecialMechanic;21
+156;Pictures/doors_specialMechanics/Колода слишком многих.jpg;Deck of Too Many Things;WildAxe;From any place in any stock but not to see the cards;SpecialMechanic;22
+157;Pictures/doors_specialMechanics/Мамаша.jpg;Mommy;WildAxe;;SpecialMechanic;23
+158;Pictures/doors_specialMechanics/Найди карту.jpg;Find a Map;WildAxe;;SpecialMechanic;24
+159;Pictures/doors_specialMechanics/Банкрот.jpg;Dead Broke;WildAxe;;SpecialMechanic;25
+218;Pictures/doors_specialMechanics/Чит2.jpg;Cheat_3;ClericalErrors;"Girl with a ""Dub of Gentlemen""";SpecialMechanic;26
+219;Pictures/doors_specialMechanics/Занятые монстры.jpg;Monsters Are Busy;ClericalErrors;;SpecialMechanic;27
+220;Pictures/doors_specialMechanics/Бессовестно богатый.jpg;Filthy Rich;ClericalErrors;;SpecialMechanic;28
+221;Pictures/doors_specialMechanics/Суперманчкин3.jpg;Super Munchkin_4;ClericalErrors;Singing cleric;SpecialMechanic;29
+222;Pictures/doors_specialMechanics/Бродячая тварь5.jpg;Wandering Monster_6;ClericalErrors;A monster looking from the door;SpecialMechanic;30
+223;Pictures/doors_specialMechanics/Бродячая тварь6.jpg;Wandering Monster_7;ClericalErrors;Runnig on segway;SpecialMechanic;31
+224;Pictures/doors_specialMechanics/Типографская ошибка.jpg;Typographical Error;ClericalErrors;;SpecialMechanic;32
+225;Pictures/doors_specialMechanics/Полукровка4.jpg;Half-Breed_4;ClericalErrors;Ork-gnome;SpecialMechanic;33

@@ -1,91 +1,91 @@
-25;Pictures/Munchkin_game_cover.jpg;Face Sucker;Basic;Monster;8;Elf_6;false;false;noone;0;noone
-26;Pictures/Munchkin_game_cover.jpg;Shrieking Geek;Basic;Monster;6;Warrior_6;false;false;noone;0;noone
-27;Pictures/Munchkin_game_cover.jpg;Wight Brothers;Basic;Monster;16;noone;true;false;noone;4;all
-28;Pictures/Munchkin_game_cover.jpg;Leperchaun;Basic;Monster;4;Elf_5;false;false;noone;0;noone
-29;Pictures/Munchkin_game_cover.jpg;Drooling Slime;Basic;Monster;1;Elf_4;false;false;noone;0;noone
-30;Pictures/Munchkin_game_cover.jpg;Gelatinous Octahedron;Basic;Monster;2;noone;false;false;noone;0;all
-31;Pictures/Munchkin_game_cover.jpg;Lawyers;Basic;Monster;6;noone;false;false;Thief;0;Thief
-32;Pictures/Munchkin_game_cover.jpg;Hyppogriff;Basic;Monster;16;noone;false;false;noone;4;noone
-33;Pictures/Munchkin_game_cover.jpg;Pukachu;Basic;Monster;6;noone;false;false;noone;0;all
-34;Pictures/Munchkin_game_cover.jpg;3872 Orcs;Basic;Monster;10;Dwarf_6;false;false;noone;0;noone
-35;Pictures/Munchkin_game_cover.jpg;Large Angry Chiken;Basic;Monster;2;noone;false;false;noone;0;all
-36;Pictures/Munchkin_game_cover.jpg;Tongue Demon;Basic;Monster;12;Cleric_4;false;true;noone;0;all
-37;Pictures/Munchkin_game_cover.jpg;Insurance Salesman;Basic;Monster;14;noone;false;false;noone;0;all
-38;Pictures/Munchkin_game_cover.jpg;Net Troll;Basic;Monster;10;noone;false;false;noone;0;noone
-39;Pictures/Munchkin_game_cover.jpg;Gazebo;Basic;Monster;8;noone;false;false;noone;0;all
-40;Pictures/Munchkin_game_cover.jpg;Stoned Golem;Basic;Monster;14;noone;false;false;noone;0;all
-41;Pictures/Munchkin_game_cover.jpg;Harpies;Basic;Monster;4;Wizard_5;false;false;noone;0;noone
-42;Pictures/Munchkin_game_cover.jpg;Mr. Bones;Basic;Monster;2;noone;true;false;noone;0;all
-43;Pictures/Munchkin_game_cover.jpg;Lame Goblin;Basic;Monster;1;noone;false;false;noone;0;all
-44;Pictures/Munchkin_game_cover.jpg;Flying Frogs;Basic;Monster;2;noone;false;false;noone;0;all
-45;Pictures/Munchkin_game_cover.jpg;Ghoulfiends;Basic;Monster;8;noone;true;false;noone;0;all
-46;Pictures/Munchkin_game_cover.jpg;Potted Plant;Basic;Monster;1;noone;false;false;noone;0;Elf
-47;Pictures/Munchkin_game_cover.jpg;Unspeakably Awful Indescribable Horror;Basic;Monster;14;Warrior_4;false;false;noone;0;noone
-48;Pictures/Munchkin_game_cover.jpg;Platycore;Basic;Monster;6;Wizard_6;false;false;noone;0;noone
-49;Pictures/Munchkin_game_cover.jpg;Squidzilla;Basic;Monster;18;Elf_4;false;false;noone;4;Elf
-50;Pictures/Munchkin_game_cover.jpg;Maul Rat;Basic;Monster;1;Cleric_3;false;true;noone;0;noone
-51;Pictures/Munchkin_game_cover.jpg;Amazon;Basic;Monster;8;noone;false;false;Woman;0;Woman
-52;Pictures/Munchkin_game_cover.jpg;Wannabe Vampire;Basic;Monster;12;noone;false;false;noone;0;Cleric
-53;Pictures/Munchkin_game_cover.jpg;Crabs;Basic;Monster;1;noone;false;false;noone;0;all
-54;Pictures/Munchkin_game_cover.jpg;Floating Nose;Basic;Monster;10;noone;false;false;noone;0;all
-55;Pictures/Munchkin_game_cover.jpg;Undead Horse;Basic;Monster;5;Dwarf_5;true;false;noone;0;noone
-56;Pictures/Munchkin_game_cover.jpg;Pit Bull;Basic;Monster;2;noone;false;false;noone;0;all
-57;Pictures/Munchkin_game_cover.jpg;Snails on Speed;Basic;Monster;4;noone;false;false;noone;0;all
-58;Pictures/Munchkin_game_cover.jpg;King Tut;Basic;Monster;16;noone;true;false;noone;4;all
-59;Pictures/Munchkin_game_cover.jpg;Plutonium Dragon;Basic;Monster;20;noone;false;false;noone;6;noone
-60;Pictures/Munchkin_game_cover.jpg;Bulrog;Basic;Monster;18;noone;false;true;noone;5;noone
-61;Pictures/Munchkin_game_cover.jpg;Bigfoot;Basic;Monster;12;Halfling_3#Dwarf_3;false;false;noone;0;noone
-110;Pictures/Munchkin_game_cover.jpg;Tentacle Demon;WildAxe;Monster;15;Cleric_5;false;true;noone;3;noone
-111;Pictures/Munchkin_game_cover.jpg;Were-Turtle;WildAxe;Monster;3;noone;false;false;noone;0;all
-112;Pictures/Munchkin_game_cover.jpg;Cat Girl;WildAxe;Monster;9;Ork_5;false;false;noone;0;noone
-113;Pictures/Munchkin_game_cover.jpg;Plague Rats;WildAxe;Monster;5;noone;false;false;Ork;0;all
-114;Pictures/Munchkin_game_cover.jpg;Grassy Gnoll;WildAxe;Monster;7;Human_5;false;false;noone;0;noone
-115;Pictures/Munchkin_game_cover.jpg;Lust Monster;WildAxe;Monster;13;noone;false;false;noone;0;all
-116;Pictures/Munchkin_game_cover.jpg;Psycho Squirrel;WildAxe;Monster;3;noone;false;false;Woman;0;all
-117;Pictures/Munchkin_game_cover.jpg;Thing With A Name So Long There's No Room For A Picture On the Card;WildAxe;Monster;13;Warrior_5;false;false;noone;0;all
-118;Pictures/Munchkin_game_cover.jpg;Pinata;WildAxe;Monster;3;noone;false;false;noone;0;all
-119;Pictures/Munchkin_game_cover.jpg;Crawling Hand;WildAxe;Monster;5;noone;true;false;noone;0;all
-120;Pictures/Munchkin_game_cover.jpg;The Shadow Nose;WildAxe;Monster;11;noone;true;false;noone;0;all
-121;Pictures/Munchkin_game_cover.jpg;Pterodactyl;WildAxe;Monster;11;Halfling_5;false;false;noone;3;noone
-122;Pictures/Munchkin_game_cover.jpg;Jabberwock;WildAxe;Monster;17;Dwarf_3#Wizard_3;false;false;noone;5;noone
-123;Pictures/Munchkin_game_cover.jpg;Judge Fredd;WildAxe;Monster;17;Thief_5;false;false;noone;0;noone
-124;Pictures/Munchkin_game_cover.jpg;Fungus;WildAxe;Monster;5;noone;false;false;noone;0;all
-125;Pictures/Munchkin_game_cover.jpg;Giant Skunk;WildAxe;Monster;9;noone;false;false;noone;0;all
-126;Pictures/Munchkin_game_cover.jpg;Santa;WildAxe;Monster;9;Elf_-5;false;false;noone;0;noone
-127;Pictures/Munchkin_game_cover.jpg;Hydrant;WildAxe;Monster;15;noone;false;false;noone;3;all
-128;Pictures/Munchkin_game_cover.jpg;The Mighty Germ;WildAxe;Monster;3;noone;false;false;noone;0;Halfling
-129;Pictures/Munchkin_game_cover.jpg;Snot Elemental;WildAxe;Monster;13;Elf_4;false;false;noone;0;all
-130;Pictures/Munchkin_game_cover.jpg;Giant Cockroach;WildAxe;Monster;7;Human_5#Elf_5;false;false;noone;0;noone
-131;Pictures/Munchkin_game_cover.jpg;Teddy Bear;WildAxe;Monster;5;Ork_5;false;false;noone;0;noone
-132;Pictures/Munchkin_game_cover.jpg;Moon Maidens;WildAxe;Monster;7;noone;false;false;noone;0;all
-133;Pictures/Munchkin_game_cover.jpg;M.T. Suit;WildAxe;Monster;11;Wizard_5#Thief_5;true;false;noone;0;noone
-134;Pictures/Munchkin_game_cover.jpg;Frost Giant;WildAxe;Monster;15;noone;false;false;noone;0;all
-135;Pictures/Munchkin_game_cover.jpg;Fowl Fiend;WildAxe;Monster;16;Wizard_5#Cleric_3;false;true;noone;0;all
-136;Pictures/Munchkin_game_cover.jpg;Kamikaze Kobolds;WildAxe;Monster;7;Wizard_3;false;false;noone;0;noone
-173;Pictures/Munchkin_game_cover.jpg;Stick Figure;ClericalErrors;Monster;1;Halfling_4;false;false;noone;0;noone
-174;Pictures/Munchkin_game_cover.jpg;Rapier Twit;ClericalErrors;Monster;3;noone;false;false;noone;0;all
-175;Pictures/Munchkin_game_cover.jpg;Poison Ivy Kudzu Flytrap;ClericalErrors;Monster;15;Elf_-4;false;false;noone;0;noone
-176;Pictures/Munchkin_game_cover.jpg;Gothyanki;ClericalErrors;Monster;4;SuperMunchkin_5#HalfBreed_5;false;false;noone;0;noone
-177;Pictures/Munchkin_game_cover.jpg;Dryad;ClericalErrors;Monster;9;noone;false;false;noone;0;Wizard
-178;Pictures/Munchkin_game_cover.jpg;Bobble-Head;ClericalErrors;Monster;2;noone;false;false;Elf;0;Elf
-179;Pictures/Munchkin_game_cover.jpg;Gummi Golem;ClericalErrors;Monster;4;noone;false;false;noone;0;all
-180;Pictures/Munchkin_game_cover.jpg;Pack Rat;ClericalErrors;Monster;3;noone;false;false;noone;0;all
-181;Pictures/Munchkin_game_cover.jpg;The Dead Sea Trolls;ClericalErrors;Monster;12;Elf_5;true;false;noone;0;all
-182;Pictures/Munchkin_game_cover.jpg;Goldfish;ClericalErrors;Monster;1;noone;false;false;noone;0;all
-183;Pictures/Munchkin_game_cover.jpg;Perfectly Ordinary Bunny Rabbit;ClericalErrors;Monster;2;noone;false;false;noone;0;all
-184;Pictures/Munchkin_game_cover.jpg;Male Chauvinist Pig;ClericalErrors;Monster;8;Woman_5;false;false;noone;0;Woman
-185;Pictures/Munchkin_game_cover.jpg;Kali;ClericalErrors;Monster;20;Cleric_5;false;true;noone;0;all
-186;Pictures/Munchkin_game_cover.jpg;Dopplegangsters;ClericalErrors;Monster;10;Bard_3;false;false;noone;0;noone
-187;Pictures/Munchkin_game_cover.jpg;Seven Year Lich;ClericalErrors;Monster;17;Warrior_5;true;false;noone;3;noone
-188;Pictures/Munchkin_game_cover.jpg;Redneck Tree;ClericalErrors;Monster;13;Warrior_5#Ork_5;false;false;noone;0;noone
-189;Pictures/Munchkin_game_cover.jpg;Tequila Mockingbird;ClericalErrors;Monster;1;Bard_5;false;false;noone;0;noone
-190;Pictures/Munchkin_game_cover.jpg;Filthy Geats;ClericalErrors;Monster;11;Bard_-3;false;false;noone;0;noone
-191;Pictures/Munchkin_game_cover.jpg;Over Bear;ClericalErrors;Monster;14;Halfling_5#Dwarf_5;false;false;noone;0;noone
-192;Pictures/Munchkin_game_cover.jpg;Auntie Paladin;ClericalErrors;Monster;18;Cleric_5#Human_5;false;true;noone;0;noone
-193;Pictures/Munchkin_game_cover.jpg;Lord Yahoo;ClericalErrors;Monster;5;Elf_5#Halfling_5#Bard_5;false;false;noone;0;noone
-194;Pictures/Munchkin_game_cover.jpg;Resident Weevil;ClericalErrors;Monster;2;NoClass_3;false;false;noone;0;noone
-195;Pictures/Munchkin_game_cover.jpg;Medusa;ClericalErrors;Monster;19;Elf_4;false;false;noone;0;noone
-196;Pictures/Munchkin_game_cover.jpg;Barrel of Monkeys;ClericalErrors;Monster;6;Halfling_2;false;false;noone;0;noone
-197;Pictures/Munchkin_game_cover.jpg;Scary Clowns;ClericalErrors;Monster;9;Halfling_5;true;false;noone;0;noone
-198;Pictures/Munchkin_game_cover.jpg;Monster The GM Made Up Himself;ClericalErrors;Monster;7;Dwarf_4#Woman_2#Wizard_-3#Saturday_-2;false;false;noone;0;noone
-199;Pictures/Munchkin_game_cover.jpg;Bad Ass;ClericalErrors;Monster;5;Ork_5;false;false;noone;0;noone
+25;Pictures/doors_monsters/Лицесос.jpg;Face Sucker;Basic;Monster;8;Elf_6;false;false;noone;0;noone
+26;Pictures/doors_monsters/Гикающий гик.jpg;Shrieking Geek;Basic;Monster;6;Warrior_6;false;false;noone;0;noone
+27;Pictures/doors_monsters/Бледные братья.jpg;Wight Brothers;Basic;Monster;16;noone;true;false;noone;4;all
+28;Pictures/doors_monsters/Лепрекон.jpg;Leperchaun;Basic;Monster;4;Elf_5;false;false;noone;0;noone
+29;Pictures/doors_monsters/Сочащаяся слизь.jpg;Drooling Slime;Basic;Monster;1;Elf_4;false;false;noone;0;noone
+30;Pictures/doors_monsters/Желатиновый октаэдр.jpg;Gelatinous Octahedron;Basic;Monster;2;noone;false;false;noone;0;all
+31;Pictures/doors_monsters/Адвокат.jpg;Lawyers;Basic;Monster;6;noone;false;false;Thief;0;Thief
+32;Pictures/doors_monsters/Гиппогриф.jpg;Hyppogriff;Basic;Monster;16;noone;false;false;noone;4;noone
+33;Pictures/doors_monsters/рыгачу.jpg;Pukachu;Basic;Monster;6;noone;false;false;noone;0;all
+34;Pictures/doors_monsters/3872 орка.jpg;3872 Orcs;Basic;Monster;10;Dwarf_6;false;false;noone;0;noone
+35;Pictures/doors_monsters/Сердитый бройлер.jpg;Large Angry Chiken;Basic;Monster;2;noone;false;false;noone;0;all
+36;Pictures/doors_monsters/Языческий демон.jpg;Tongue Demon;Basic;Monster;12;Cleric_4;false;true;noone;0;all
+37;Pictures/doors_monsters/Страховой агент.jpg;Insurance Salesman;Basic;Monster;14;noone;false;false;noone;0;all
+38;Pictures/doors_monsters/Сетевой троль.jpg;Net Troll;Basic;Monster;10;noone;false;false;noone;0;noone
+39;Pictures/doors_monsters/Газебо.jpg;Gazebo;Basic;Monster;8;noone;false;false;noone;0;all
+40;Pictures/doors_monsters/Обдолбанный голем.jpg;Stoned Golem;Basic;Monster;14;noone;false;false;noone;0;all
+41;Pictures/doors_monsters/Гарпистки.jpg;Harpies;Basic;Monster;4;Wizard_5;false;false;noone;0;noone
+42;Pictures/doors_monsters/Г-н Костин.jpg;Mr. Bones;Basic;Monster;2;noone;true;false;noone;0;all
+43;Pictures/doors_monsters/Увечный гоблин.jpg;Lame Goblin;Basic;Monster;1;noone;false;false;noone;0;all
+44;Pictures/doors_monsters/Летучие лягушки.jpg;Flying Frogs;Basic;Monster;2;noone;false;false;noone;0;all
+45;Pictures/doors_monsters/Мадемонуазели.jpg;Ghoulfiends;Basic;Monster;8;noone;true;false;noone;0;all
+46;Pictures/doors_monsters/Огоршенная трава.jpg;Potted Plant;Basic;Monster;1;noone;false;false;noone;0;Elf
+47;Pictures/doors_monsters/Невыразимо жуткий неописуемый ужас.jpg;Unspeakably Awful Indescribable Horror;Basic;Monster;14;Warrior_4;false;false;noone;0;noone
+48;Pictures/doors_monsters/Утконтикора.jpg;Platycore;Basic;Monster;6;Wizard_6;false;false;noone;0;noone
+49;Pictures/doors_monsters/Кальмадзила.jpg;Squidzilla;Basic;Monster;18;Elf_4;false;false;noone;4;Elf
+50;Pictures/doors_monsters/Молотая крысотка.jpg;Maul Rat;Basic;Monster;1;Cleric_3;false;true;noone;0;noone
+51;Pictures/doors_monsters/Амазонка.jpg;Amazon;Basic;Monster;8;noone;false;false;Woman;0;Woman
+52;Pictures/doors_monsters/Закос под вампира.jpg;Wannabe Vampire;Basic;Monster;12;noone;false;false;noone;0;Cleric
+53;Pictures/doors_monsters/Вошки.jpg;Crabs;Basic;Monster;1;noone;false;false;noone;0;all
+54;Pictures/doors_monsters/Блуждающий нос.jpg;Floating Nose;Basic;Monster;10;noone;false;false;noone;0;all
+55;Pictures/doors_monsters/Конь андедный.jpg;Undead Horse;Basic;Monster;5;Dwarf_5;true;false;noone;0;noone
+56;Pictures/doors_monsters/Питбуль.jpg;Pit Bull;Basic;Monster;2;noone;false;false;noone;0;all
+57;Pictures/doors_monsters/Улетные улитки.jpg;Snails on Speed;Basic;Monster;4;noone;false;false;noone;0;all
+58;Pictures/doors_monsters/Царь Тут.jpg;King Tut;Basic;Monster;16;noone;true;false;noone;4;all
+59;Pictures/doors_monsters/Плутониевый дракон.jpg;Plutonium Dragon;Basic;Monster;20;noone;false;false;noone;6;noone
+60;Pictures/doors_monsters/Бульрог.jpg;Bulrog;Basic;Monster;18;noone;false;true;noone;5;noone
+61;Pictures/doors_monsters/Бигфут.jpg;Bigfoot;Basic;Monster;12;Halfling_3#Dwarf_3;false;false;noone;0;noone
+110;Pictures/doors_monsters/Щупальцастый демон.jpg;Tentacle Demon;WildAxe;Monster;15;Cleric_5;false;true;noone;3;noone
+111;Pictures/doors_monsters/Черепаха-оборотень.jpg;Were-Turtle;WildAxe;Monster;3;noone;false;false;noone;0;all
+112;Pictures/doors_monsters/Крошка-кошка.jpg;Cat Girl;WildAxe;Monster;9;Ork_5;false;false;noone;0;noone
+113;Pictures/doors_monsters/Чумные крысы.jpg;Plague Rats;WildAxe;Monster;5;noone;false;false;Ork;0;all
+114;Pictures/doors_monsters/Травяной троль.jpg;Grassy Gnoll;WildAxe;Monster;7;Human_5;false;false;noone;0;noone
+115;Pictures/doors_monsters/Мержавка-похотница.jpg;Lust Monster;WildAxe;Monster;13;noone;false;false;noone;0;all
+116;Pictures/doors_monsters/Психобелка.jpg;Psycho Squirrel;WildAxe;Monster;3;noone;false;false;Woman;0;all
+117;Pictures/doors_monsters/Тварь с таким длинным.jpg;Thing With A Name So Long There's No Room For A Picture On the Card;WildAxe;Monster;13;Warrior_5;false;false;noone;0;all
+118;Pictures/doors_monsters/Пиньята.jpg;Pinata;WildAxe;Monster;3;noone;false;false;noone;0;all
+119;Pictures/doors_monsters/Рука-ползунья.jpg;Crawling Hand;WildAxe;Monster;5;noone;true;false;noone;0;all
+120;Pictures/doors_monsters/Теневой нос.jpg;The Shadow Nose;WildAxe;Monster;11;noone;true;false;noone;0;all
+121;Pictures/doors_monsters/Птеродактиль.jpg;Pterodactyl;WildAxe;Monster;11;Halfling_5;false;false;noone;3;noone
+122;Pictures/doors_monsters/Бармаглот.jpg;Jabberwock;WildAxe;Monster;17;Dwarf_3#Wizard_3;false;false;noone;5;noone
+123;Pictures/doors_monsters/Судья Фредд.jpg;Judge Fredd;WildAxe;Monster;17;Thief_5;false;false;noone;0;noone
+124;Pictures/doors_monsters/Грибок.jpg;Fungus;WildAxe;Monster;5;noone;false;false;noone;0;all
+125;Pictures/doors_monsters/Гиганский скунс.jpg;Giant Skunk;WildAxe;Monster;9;noone;false;false;noone;0;all
+126;Pictures/doors_monsters/Санта.jpg;Santa;WildAxe;Monster;9;Elf_-5;false;false;noone;0;noone
+127;Pictures/doors_monsters/Гидрантей.jpg;Hydrant;WildAxe;Monster;15;noone;false;false;noone;3;all
+128;Pictures/doors_monsters/Могучий микроб.jpg;The Mighty Germ;WildAxe;Monster;3;noone;false;false;noone;0;Halfling
+129;Pictures/doors_monsters/Соплементаль.jpg;Snot Elemental;WildAxe;Monster;13;Elf_4;false;false;noone;0;all
+130;Pictures/doors_monsters/Тараканище.jpg;Giant Cockroach;WildAxe;Monster;7;Human_5#Elf_5;false;false;noone;0;noone
+131;Pictures/doors_monsters/Плюшевый мишка.jpg;Teddy Bear;WildAxe;Monster;5;Ork_5;false;false;noone;0;noone
+132;Pictures/doors_monsters/Ягодевицы.jpg;Moon Maidens;WildAxe;Monster;7;noone;false;false;noone;0;all
+133;Pictures/doors_monsters/П.У. Стомелин.jpg;M.T. Suit;WildAxe;Monster;11;Wizard_5#Thief_5;true;false;noone;0;noone
+134;Pictures/doors_monsters/Снеговичище.jpg;Frost Giant;WildAxe;Monster;15;noone;false;false;noone;0;all
+135;Pictures/doors_monsters/Куродемон.jpg;Fowl Fiend;WildAxe;Monster;16;Wizard_5#Cleric_3;false;true;noone;0;all
+136;Pictures/doors_monsters/Кобольды-камикадзе.jpg;Kamikaze Kobolds;WildAxe;Monster;7;Wizard_3;false;false;noone;0;noone
+173;Pictures/doors_monsters/Палковник.jpg;Stick Figure;ClericalErrors;Monster;1;Halfling_4;false;false;noone;0;noone
+174;Pictures/doors_monsters/Задира с рапирой.jpg;Rapier Twit;ClericalErrors;Monster;3;noone;false;false;noone;0;all
+175;Pictures/doors_monsters/Кудзу - ядовитая мухоловка.jpg;Poison Ivy Kudzu Flytrap;ClericalErrors;Monster;15;Elf_-4;false;false;noone;0;noone
+176;Pictures/doors_monsters/Готиянки.jpg;Gothyanki;ClericalErrors;Monster;4;SuperMunchkin_5#HalfBreed_5;false;false;noone;0;noone
+177;Pictures/doors_monsters/Дриада.jpg;Dryad;ClericalErrors;Monster;9;noone;false;false;noone;0;Wizard
+178;Pictures/doors_monsters/Трясоглав.jpg;Bobble-Head;ClericalErrors;Monster;2;noone;false;false;Elf;0;Elf
+179;Pictures/doors_monsters/Жвачечный голем.jpg;Gummi Golem;ClericalErrors;Monster;4;noone;false;false;noone;0;all
+180;Pictures/doors_monsters/Запасюк.jpg;Pack Rat;ClericalErrors;Monster;3;noone;false;false;noone;0;all
+181;Pictures/doors_monsters/Мертвоморские тролли.jpg;The Dead Sea Trolls;ClericalErrors;Monster;12;Elf_5;true;false;noone;0;all
+182;Pictures/doors_monsters/Золотая рыбка.jpg;Goldfish;ClericalErrors;Monster;1;noone;false;false;noone;0;all
+183;Pictures/doors_monsters/Абсолютно обычный кролик.jpg;Perfectly Ordinary Bunny Rabbit;ClericalErrors;Monster;2;noone;false;false;noone;0;all
+184;Pictures/doors_monsters/Хряк-шовинист.jpg;Male Chauvinist Pig;ClericalErrors;Monster;8;Woman_5;false;false;noone;0;Woman
+185;Pictures/doors_monsters/Калли.jpg;Kali;ClericalErrors;Monster;20;Cleric_5;false;true;noone;0;all
+186;Pictures/doors_monsters/Допельгангстеры.jpg;Dopplegangsters;ClericalErrors;Monster;10;Bard_3;false;false;noone;0;noone
+187;Pictures/doors_monsters/Мэрилич Монро.jpg;Seven Year Lich;ClericalErrors;Monster;17;Warrior_5;true;false;noone;3;noone
+188;Pictures/doors_monsters/Деревянщина.jpg;Redneck Tree;ClericalErrors;Monster;13;Warrior_5#Ork_5;false;false;noone;0;noone
+189;Pictures/doors_monsters/Упитый пересмешник.jpg;Tequila Mockingbird;ClericalErrors;Monster;1;Bard_5;false;false;noone;0;noone
+190;Pictures/doors_monsters/Грязные вандалы.jpg;Filthy Geats;ClericalErrors;Monster;11;Bard_-3;false;false;noone;0;noone
+191;Pictures/doors_monsters/Надмедведь.jpg;Over Bear;ClericalErrors;Monster;14;Halfling_5#Dwarf_5;false;false;noone;0;noone
+192;Pictures/doors_monsters/Антипаладёща.jpg;Auntie Paladin;ClericalErrors;Monster;18;Cleric_5#Human_5;false;true;noone;0;noone
+193;Pictures/doors_monsters/Лорд Яху.jpg;Lord Yahoo;ClericalErrors;Monster;5;Elf_5#Halfling_5#Bard_5;false;false;noone;0;noone
+194;Pictures/doors_monsters/Обитель пчла.jpg;Resident Weevil;ClericalErrors;Monster;2;NoClass_3;false;false;noone;0;noone
+195;Pictures/doors_monsters/Медуза.jpg;Medusa;ClericalErrors;Monster;19;Elf_4;false;false;noone;0;noone
+196;Pictures/doors_monsters/Бочка мартышек.jpg;Barrel of Monkeys;ClericalErrors;Monster;6;Halfling_2;false;false;noone;0;noone
+197;Pictures/doors_monsters/Жуткие клоуны.jpg;Scary Clowns;ClericalErrors;Monster;9;Halfling_5;true;false;noone;0;noone
+198;Pictures/doors_monsters/Монстр, которого придумал.jpg;Monster The GM Made Up Himself;ClericalErrors;Monster;7;Dwarf_4#Woman_2#Wizard_-3#Saturday_-2;false;false;noone;0;noone
+199;Pictures/doors_monsters/Зосланец.jpg;Bad Ass;ClericalErrors;Monster;5;Ork_5;false;false;noone;0;noone
