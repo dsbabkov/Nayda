@@ -1,22 +1,22 @@
-1;Pictures/Munchkin_game_cover.jpg;Horny Helmet;Basic;Armor;Head;small;1;Elf_2;all;no;600;0;no
-2;Pictures/Munchkin_game_cover.jpg;Leather Armor;Basic;Armor;Armor;small;1;no;all ;no;200;0;no
-3;Pictures/Munchkin_game_cover.jpg;Boots of Butt-Kicking;Basic;Armor;Feet;small;2;no;all;no;400;0;no
-4;Pictures/Munchkin_game_cover.jpg;Boots of Running Really Fast;Basic;Armor;Feet;small;0;no;all;no;400;2;no
-5;Pictures/Munchkin_game_cover.jpg;Slimy Armor;Basic;Armor;Armor;small;1;no;all;no;200;0;no
-6;Pictures/Munchkin_game_cover.jpg;Bad-Ass Bandana;Basic;Armor;Head;small;3;no;Human;no;400;0;no
-7;Pictures/Munchkin_game_cover.jpg;Flaming Armor;Basic;Armor;Armor;small;2;no;all;no;400;0;no
-8;Pictures/Munchkin_game_cover.jpg;Pointy Hat of Power;Basic;Armor;Head;small;3;no;Wizard;no;400;0;no
-9;Pictures/Munchkin_game_cover.jpg;Helm of Courage;Basic;Armor;Head;small;1;no;all;no;200;0;no
-10;Pictures/Munchkin_game_cover.jpg;Mithril Armor;Basic;Armor;Armor;big;3;no;ex_Wizard;no;600;0;no
-11;Pictures/Munchkin_game_cover.jpg;Short Wide Armor;Basic;Armor;Armor;small;3;no;Dwarf;no;400;0;no
-12;Pictures/Munchkin_game_cover.jpg;Sandals of Protection;Basic;Armor;Feet;small;0;no;all;yes;700;0;no
-74;Pictures/Munchkin_game_cover.jpg;Raincoat;WildAxe;Armor;Armor;small;0;no;all;yes;100;0;yes
-75;Pictures/Munchkin_game_cover.jpg;Tinfoil Hat;WildAxe;Armor;Head;small;0;no;all;yes;800;0;no
-76;Pictures/Munchkin_game_cover.jpg;Helm of Peripheral Vision;WildAxe;Armor;Head;small;2;no;all;yes;600;0;no
-77;Pictures/Munchkin_game_cover.jpg;Knight Light;WildAxe;Armor;Head;small;2;no;all;no;400;0;yes
-78;Pictures/Munchkin_game_cover.jpg;Skull Helmet;WildAxe;Armor;Head;small;2;Ork_2;all;no;400;0;no
-118;Pictures/Munchkin_game_cover.jpg;Gnomex Suit;ClericalErrors;Armor;Armor;small;4;no;Gnome;no;600;0;yes
-119;Pictures/Munchkin_game_cover.jpg;Chainmail Bikini;ClericalErrors;Armor;Feet;small;4;no;ex_Gnome;no;200;0;yes
-120;Pictures/Munchkin_game_cover.jpg;Magnificent Hat;ClericalErrors;Armor;Head;small;2;no;all;yes;900;0;no
-121;Pictures/Munchkin_game_cover.jpg;Freudian Slippers;ClericalErrors;Armor;Feet;small;0;no;all;yes;600;0;no
-122;Pictures/Munchkin_game_cover.jpg;Awful Socks;ClericalErrors;Armor;Armor;small;3;no;all;no;600;0;no
+1;Pictures/treasures_armor/Шлем-рогач.jpg;Horny Helmet;Basic;Armor;Head;small;1;Elf_2;all;no;600;0;no
+2;Pictures/treasures_armor/Кожанный прикид.jpg;Leather Armor;Basic;Armor;Armor;small;1;no;all ;no;200;0;no
+3;Pictures/treasures_armor/Башмаки могучего пенделя.jpg;Boots of Butt-Kicking;Basic;Armor;Feet;small;2;no;all;no;400;0;no
+4;Pictures/treasures_armor/Башмаки реально быстрого бега.jpg;Boots of Running Really Fast;Basic;Armor;Feet;small;0;no;all;no;400;2;no
+5;Pictures/treasures_armor/Слизистая оболочкка.jpg;Slimy Armor;Basic;Armor;Armor;small;1;no;all;no;200;0;no
+6;Pictures/treasures_armor/Бандана сволочизма.jpg;Bad-Ass Bandana;Basic;Armor;Head;small;3;no;Human;no;400;0;no
+7;Pictures/treasures_armor/Пламенные латы.jpg;Flaming Armor;Basic;Armor;Armor;small;2;no;all;no;400;0;no
+8;Pictures/treasures_armor/Остроконечная шляпа могущества.jpg;Pointy Hat of Power;Basic;Armor;Head;small;3;no;Wizard;no;400;0;no
+9;Pictures/treasures_armor/Шлем отваги.jpg;Helm of Courage;Basic;Armor;Head;small;1;no;all;no;200;0;no
+10;Pictures/treasures_armor/Мифрильная броня.jpg;Mithril Armor;Basic;Armor;Armor;big;3;no;ex_Wizard;no;600;0;no
+11;Pictures/treasures_armor/Коротыширокие латы.jpg;Short Wide Armor;Basic;Armor;Armor;small;3;no;Dwarf;no;400;0;no
+12;Pictures/treasures_armor/Сандалеты-протекторы.jpg;Sandals of Protection;Basic;Armor;Feet;small;0;no;all;yes;700;0;no
+74;Pictures/treasures_armor/Дождевик.jpg;Raincoat;WildAxe;Armor;Armor;small;0;no;all;yes;100;0;yes
+75;Pictures/treasures_armor/Шапочка из фольги.jpg;Tinfoil Hat;WildAxe;Armor;Head;small;0;no;all;yes;800;0;no
+76;Pictures/treasures_armor/Шлем заднего вида.jpg;Helm of Peripheral Vision;WildAxe;Armor;Head;small;2;no;all;yes;600;0;no
+77;Pictures/treasures_armor/Свет рыцарства.jpg;Knight Light;WildAxe;Armor;Head;small;2;no;all;no;400;0;yes
+78;Pictures/treasures_armor/Шлем-череп.jpg;Skull Helmet;WildAxe;Armor;Head;small;2;Ork_2;all;no;400;0;no
+118;Pictures/treasures_armor/Гномексовый комбез.jpg;Gnomex Suit;ClericalErrors;Armor;Armor;small;4;no;Gnome;no;600;0;yes
+119;Pictures/treasures_armor/Кольчужное бикини.jpg;Chainmail Bikini;ClericalErrors;Armor;Feet;small;4;no;ex_Gnome;no;200;0;yes
+120;Pictures/treasures_armor/Шапка величия.jpg;Magnificent Hat;ClericalErrors;Armor;Head;small;2;no;all;yes;900;0;no
+121;Pictures/treasures_armor/Опорки по Фрейду.jpg;Freudian Slippers;ClericalErrors;Armor;Feet;small;0;no;all;yes;600;0;no
+122;Pictures/treasures_armor/Ужасные носки.jpg;Awful Socks;ClericalErrors;Armor;Armor;small;3;no;all;no;600;0;no
