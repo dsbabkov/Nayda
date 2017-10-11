@@ -229,6 +229,8 @@ The_Game::The_Game(QWidget *parent) :
     //Up to develop the "Show-Cards Animation"
     //add five "cards" to the battlefield
 
+    QPushButton* theBtn = new QPushButton (ui->GameField);
+    theBtn->setText("Hello!");
 
 
 
