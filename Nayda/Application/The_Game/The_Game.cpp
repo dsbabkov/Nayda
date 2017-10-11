@@ -1,9 +1,5 @@
 #include "Application/The_Game/The_Game.h"
 #include "ui_The_Game.h"
-#include <QPixmap>
-#include <QPropertyAnimation>
-#include <QDesktopWidget>
-#include <QDebug>
 
 
 
@@ -229,9 +225,15 @@ The_Game::The_Game(QWidget *parent) :
     //Up to develop the "Show-Cards Animation"
     //add five "cards" to the battlefield
 
-    QPushButton* theBtn = new QPushButton (ui->GameField);
-    theBtn->setText("Hello!");
+//    QPushButton* theBtn = new QPushButton (ui->GameField);
+//    theBtn->setText("Hello!");
 
+//    QPushButton* theBtn2 = new QPushButton (ui->GameField);
+//    theBtn2->setText("Hello_Again!");
+
+    //theCardsRepresenter();
+
+    showTheCards();
 
 
 }
@@ -1425,6 +1427,13 @@ gameCardTreasureWeapon The_Game::WeaponStringParser(const QString &weapons_strin
     return theWeapon;
 
 }
+
+void The_Game::showTheCards()
+{
+    ui->GameField->cardsRepresenter();
+}
+
+
 
 
 

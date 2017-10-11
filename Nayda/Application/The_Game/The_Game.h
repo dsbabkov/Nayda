@@ -11,6 +11,14 @@
 #include <QFile>
 
 
+
+
+#include <QPixmap>
+#include <QPropertyAnimation>
+#include <QDesktopWidget>
+#include <QDebug>
+
+
 #define PC_VERSION //begin with PC
 #define DEBUG_MESSAGES //start with debug enabled
 #define DEBUG_NO_SERVER
@@ -154,6 +162,9 @@ public:
     isOnlyFor_Weapon TheWeaponIsForParser (const QString& isFor_string);
     void theWeaponParser (const QString& filename);
     gameCardTreasureWeapon WeaponStringParser (const QString& weapons_string);
+
+
+    void showTheCards();
 
 
 

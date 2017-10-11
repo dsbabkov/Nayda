@@ -2,6 +2,9 @@
 #define BATTLEFIELD_H
 
 #include <QWidget>
+#include <QPropertyAnimation>
+#include <QDesktopWidget>
+
 
 namespace Ui {
 class battleField;
@@ -14,6 +17,9 @@ class battleField : public QWidget
 public:
     explicit battleField(QWidget *parent = 0);
     ~battleField();
+
+
+    void cardsRepresenter();
 
 private:
     Ui::battleField *ui;

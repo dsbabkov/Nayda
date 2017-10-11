@@ -42,13 +42,13 @@ GamerWidget::GamerWidget(QWidget *parent) :
     QPixmap pxmp_icon_race_1("Pictures/No_Race_dbg.png");
     QPalette plte_icon_race_1;
     plte_icon_race_1.setBrush(ui->btn_race_1->backgroundRole(),
-                              QBrush(pxmp_icon_race_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
+    QBrush(pxmp_icon_race_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
                                                              race_class_btn_size_height*HW_Screen_Size_Height,
                                                              Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
     QPixmap pxmp_icon_class_1("Pictures/No_Class_dbg.png");
     QPalette plte_icon_class_1;
     plte_icon_class_1.setBrush(ui->btn_class_1->backgroundRole(),
-                              QBrush(pxmp_icon_class_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
+    QBrush(pxmp_icon_class_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
                                                              race_class_btn_size_height*HW_Screen_Size_Height,
                                                              Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
 
