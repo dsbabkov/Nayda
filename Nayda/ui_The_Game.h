@@ -23,6 +23,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <battlefield.h>
 #include <gameinfowidget.h>
 #include <gamerwidget.h>
 #include <gametimers.h>
@@ -44,7 +45,7 @@ public:
     QVBoxLayout *verticalLayout_6;
     GameInfoWidget *GameInfoBox;
     QHBoxLayout *horizontalLayout_5;
-    QWidget *GameField;
+    battleField *GameField;
     QHBoxLayout *horizontalLayout;
     GamerWidget *MainGamer;
     QHBoxLayout *top_opponents_layout;
@@ -115,7 +116,7 @@ public:
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        GameField = new QWidget(centralwidget);
+        GameField = new battleField(centralwidget);
         GameField->setObjectName(QStringLiteral("GameField"));
 
         horizontalLayout_5->addWidget(GameField);

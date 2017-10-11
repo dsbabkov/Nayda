@@ -225,6 +225,13 @@ The_Game::The_Game(QWidget *parent) :
     theWeaponParser("Tables/cards_treasures_Weapon.csv");
     qDebug() << "Weapons parsing complete!";
 
+
+    //Up to develop the "Show-Cards Animation"
+    //add five "cards" to the battlefield
+
+
+
+
 }
 
 The_Game::~The_Game()
