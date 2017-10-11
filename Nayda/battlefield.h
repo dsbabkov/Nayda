@@ -5,6 +5,7 @@
 #include <QPropertyAnimation>
 #include <QDesktopWidget>
 #include <Application/card.h>
+#include <QPushButton>
 
 
 namespace Ui {

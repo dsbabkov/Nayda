@@ -4,6 +4,7 @@
 #include <QString>
 #include <QMap>
 #include <map>
+#include <cardsborderdefines.h>
 
 
 /*
@@ -24,6 +25,10 @@
  * to take some cards from player. Might be a good idea to allow player to change cards in places from time to time.
  *
 */
+
+
+
+
 
 
 enum class cardAddon {Basic, WildAxe, ClericalErrors };
@@ -91,6 +96,11 @@ enum class Additional_Request {noCompanion, failedToFlee,
 
 #endif
 
+
+struct CardsKeysBorders {
+    int lowerBorder;
+    int upperBorder;
+};
 
 
 
