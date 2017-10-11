@@ -101,7 +101,9 @@ void battleField::cardsRepresenter()
 
     //setting the iterators to default;
     _monstersIterator = _monstersDeck->begin();
-    //_showCardsTimer->start(1000);
+
+
+
 
 }
 
