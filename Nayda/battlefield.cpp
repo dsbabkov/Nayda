@@ -206,16 +206,42 @@ void battleField::continueCardRepresentation()
     int HW_Screen_Size_Height = HW_Screen_Size.height();
     QPixmap pxmpMainBtn;
 
+//    _amplifiersIterator = _amplifiersDeck->begin();
+//    _cursesIterator = _cursesDeck->begin();
+//    _professionsIterator = _professionsDeck->begin();
+//    _racesIterator = _racesDeck->begin();
+//    _specialMechanicsIterator = _specialMechanicsDeck->begin();
+
+//    _armorIterator = _armorDeck->begin();
+//    _armorAmplifiersIterator = _armorAmplifiersDeck->begin();
+//    _battleAmplifiersIterator = _battleAmplifiersDeck->begin();
+//    _levelUpIterator = _levelUpDeck->begin();
+//    _specialMechanicsTreasureIterator = _specialMechanicsTreasureDeck->begin();
+//    _thingsAmplifiersIterator = _thingsAmplifiersDeck->begin();
+//    _weaponsIterator = _weaponsDeck->begin();
+
+
+
     if (_currCardsArrayRepresentationStep < _monstersDeck->size()) {
         pxmpMainBtn.load(_monstersIterator->second.pictureAddress());
         _monstersIterator++;
         _currCardsArrayRepresentationStep++;
     }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+             + _amplifiersDeck->size())){
+        pxmpMainBtn.load(_amplifiersIterator->second.pictureAddress());
+        _amplifiersIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
     else {
         _monstersIterator = _monstersDeck->begin();
+        _amplifiersIterator = _amplifiersDeck->begin();
         pxmpMainBtn.load(_monstersIterator->second.pictureAddress());
         _currCardsArrayRepresentationStep = 0;
     }
+
+
+
 
 
     QPalette plte_btn;
@@ -225,7 +251,7 @@ void battleField::continueCardRepresentation()
                               Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
     _theBtnMainRepresenter->setPalette(plte_btn);
 
-    _showCardsTimer->start(1000);
+    _showCardsTimer->start(300);
 
 }
 
