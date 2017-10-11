@@ -6,6 +6,7 @@
 #include <QDesktopWidget>
 #include <Application/card.h>
 #include <QPushButton>
+#include <QTimer>
 
 
 namespace Ui {
@@ -41,7 +42,7 @@ private:
     Ui::battleField *ui;
 
     //const std::map<int, gameCardDoorMonster> &_monsersDeck;
-    const std::map<int, gameCardDoorMonster> *_monsersDeck;
+    const std::map<int, gameCardDoorMonster> *_monstersDeck;
     const std::map<int, gameCardDoorAmplifier> *_amplifiersDeck;
     const std::map<int, gameCardDoorCurse> *_cursesDeck;
     const std::map<int, gameCardDoorProfession> *_professionsDeck;
@@ -55,6 +56,36 @@ private:
     const std::map<int, gameCardTreasureSpecialMechanic> *_specialMechanicsTreasureDeck;
     const std::map<int, gameCardTreasureThingsAmplifiers> *_thingsAmplifiersDeck;
     const std::map<int, gameCardTreasureWeapon> *_weaponsDeck;
+
+
+
+    std::map<int, gameCardDoorMonster> :: const_iterator  _monstersIterator;
+
+
+
+    QTimer *_showCardsTimer;
+    QPushButton* _theBtnMainRepresenter;
+    QPushButton* _theBtnRepresenter1;
+    QPushButton* _theBtnRepresenter2;
+    QPushButton* _theBtnRepresenter3;
+    QPushButton* _theBtnRepresenter4;
+    QPushButton* _theBtnRepresenter5;
+
+    const float _race_class_btn_size_geometric_width_to_height_ratio = 2.71f;
+    const float _race_class_btn_size_width = 0.0415f;
+    const float _race_class_btn_size_height = _race_class_btn_size_geometric_width_to_height_ratio*_race_class_btn_size_width;
+
+
+    bool _continueToRepresentCards = false;
+    int _currCardsArrayRepresentationStep = 0;
+
+
+
+
+public slots:
+
+   void continueCardRepresentation();
+   void startCardsRepresentation();
 
 
 };
