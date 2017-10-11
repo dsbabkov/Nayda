@@ -99,9 +99,36 @@ void battleField::cardsRepresenter()
     _showCardsTimer->setSingleShot(true);
 
 
+//    std::map<int, gameCardDoorMonster> :: const_iterator  _monstersIterator;
+//    std::map<int, gameCardDoorAmplifier> :: const_iterator _amplifiersIterator;
+//    std::map<int, gameCardDoorCurse> :: const_iterator _cursesIterator;
+//    std::map<int, gameCardDoorProfession> :: const_iterator _professionsIterator;
+//    std::map<int, gameCardDoorRace> :: const_iterator _racesIterator;
+//    std::map<int, gameCardDoorSpecialMechanic> _specialMechanicsIterator;
+
+//    std::map<int, gameCardTreasureArmor> :: const_iterator _armorIterator;
+//    std::map<int, gameCardTreasureArmorAmplifier> :: const_iterator _armorAmplifiersIterator;
+//    std::map<int, gameCardTreasureBattleAmplifier> :: const_iterator _battleAmplifiersIterator;
+//    std::map<int, gameCardTreasureLevelUp> :: const_iterator _levelUpIterator;
+//    std::map<int, gameCardTreasureSpecialMechanic> :: const_iterator _specialMechanicsTreasureIterator;
+//    std::map<int, gameCardTreasureThingsAmplifiers> :: const_iterator _thingsAmplifiersIterator;
+//    std::map<int, gameCardTreasureWeapon> :: const_iterator _weaponsIterator;
+
     //setting the iterators to default;
     _monstersIterator = _monstersDeck->begin();
+    _amplifiersIterator = _amplifiersDeck->begin();
+    _cursesIterator = _cursesDeck->begin();
+    _professionsIterator = _professionsDeck->begin();
+    _racesIterator = _racesDeck->begin();
+    _specialMechanicsIterator = _specialMechanicsDeck->begin();
 
+    _armorIterator = _armorDeck->begin();
+    _armorAmplifiersIterator = _armorAmplifiersDeck->begin();
+    _battleAmplifiersIterator = _battleAmplifiersDeck->begin();
+    _levelUpIterator = _levelUpDeck->begin();
+    _specialMechanicsTreasureIterator = _specialMechanicsTreasureDeck->begin();
+    _thingsAmplifiersIterator = _thingsAmplifiersDeck->begin();
+    _weaponsIterator = _weaponsDeck->begin();
 
 
 

@@ -60,6 +60,19 @@ private:
 
 
     std::map<int, gameCardDoorMonster> :: const_iterator  _monstersIterator;
+    std::map<int, gameCardDoorAmplifier> :: const_iterator _amplifiersIterator;
+    std::map<int, gameCardDoorCurse> :: const_iterator _cursesIterator;
+    std::map<int, gameCardDoorProfession> :: const_iterator _professionsIterator;
+    std::map<int, gameCardDoorRace> :: const_iterator _racesIterator;
+    std::map<int, gameCardDoorSpecialMechanic> :: const_iterator _specialMechanicsIterator;
+
+    std::map<int, gameCardTreasureArmor> :: const_iterator _armorIterator;
+    std::map<int, gameCardTreasureArmorAmplifier> :: const_iterator _armorAmplifiersIterator;
+    std::map<int, gameCardTreasureBattleAmplifier> :: const_iterator _battleAmplifiersIterator;
+    std::map<int, gameCardTreasureLevelUp> :: const_iterator _levelUpIterator;
+    std::map<int, gameCardTreasureSpecialMechanic> :: const_iterator _specialMechanicsTreasureIterator;
+    std::map<int, gameCardTreasureThingsAmplifiers> :: const_iterator _thingsAmplifiersIterator;
+    std::map<int, gameCardTreasureWeapon> :: const_iterator _weaponsIterator;
 
 
 
