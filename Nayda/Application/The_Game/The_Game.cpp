@@ -1428,76 +1428,86 @@ void The_Game::showTheCards()
 void The_Game::passMapsToBattleField()
 {
     ui->GameField->setMonsersDeck(monstersDeck());
+    ui->GameField->setAmplifiersDeck(amplifiersDeck());
+    ui->GameField->setArmorAmplifiersDeck(armorAmplifiersDeck());
+    ui->GameField->setArmorDeck(armorDeck());
+    ui->GameField->setBattleAmplifiersDeck(battleAmplifiersDeck());
+    ui->GameField->setCursesDeck(cursesDeck());
+    ui->GameField->setLevelUpDeck(levelUpDeck());
+    ui->GameField->setProfessionsDeck(professionsDeck());
+    ui->GameField->setRacesDeck(racesDeck());
+    ui->GameField->setSpecialMechanicsDeck(specialMechanicsDeck());
+    ui->GameField->setSpecialMechanicsTreasureDeck(specialMechanicsTreasureDeck());
+    ui->GameField->setThingsAmplifiersDeck(thingsAmplifiersDeck());
+    ui->GameField->setWeaponsDeck(weaponsDeck());
+
+
 }
 
-const std::map<int, gameCardDoorMonster> &The_Game::monstersDeck() const
-{
-    return _monstersDeck;
-}
-
-const std::map<int, gameCardDoorAmplifier> &The_Game::amplifiersDeck() const
-{
-    return _amplifiersDeck;
-}
-
-const std::map<int, gameCardDoorCurse> &The_Game::cursesDeck() const
-{
-    return _cursesDeck;
-}
-
-const std::map<int, gameCardDoorProfession> &The_Game::professionsDeck() const
-{
-    return _professionsDeck;
-}
-
-const std::map<int, gameCardDoorRace> &The_Game::racesDeck() const
-{
-    return _racesDeck;
-}
-
-const std::map<int, gameCardDoorSpecialMechanic> &The_Game::specialMechanicsDeck() const
-{
-    return _specialMechanicsDeck;
-}
-
-const std::map<int, gameCardTreasureArmor> &The_Game::armorDeck() const
-{
-    return _armorDeck;
-}
-
-const std::map<int, gameCardTreasureArmorAmplifier> &The_Game::armorAmplifiersDeck() const
-{
-    return _armorAmplifiersDeck;
-}
-
-const std::map<int, gameCardTreasureBattleAmplifier> &The_Game::battleAmplifiersDeck() const
-{
-    return _battleAmplifiersDeck;
-}
-
-const std::map<int, gameCardTreasureLevelUp> &The_Game::levelUpDeck() const
-{
-    return _levelUpDeck;
-}
-
-const std::map<int, gameCardTreasureSpecialMechanic> &The_Game::specialMechanicsTreasureDeck() const
-{
-    return _specialMechanicsTreasureDeck;
-}
-
-const std::map<int, gameCardTreasureThingsAmplifiers> &The_Game::thingsAmplifiersDeck() const
-{
-    return _thingsAmplifiersDeck;
-}
-
-const std::map<int, gameCardTreasureWeapon> &The_Game::weaponsDeck() const
-{
-    return _weaponsDeck;
-}
 
 const std::map<int, gameCardDoorMonster> *The_Game::monstersDeck()
 {
     return &_monstersDeck;
+}
+
+const std::map<int, gameCardDoorAmplifier> *The_Game::amplifiersDeck()
+{
+    return &_amplifiersDeck;
+}
+
+const std::map<int, gameCardDoorCurse> *The_Game::cursesDeck()
+{
+    return &_cursesDeck;
+}
+
+const std::map<int, gameCardDoorProfession> *The_Game::professionsDeck()
+{
+    return &_professionsDeck;
+}
+
+const std::map<int, gameCardDoorRace> *The_Game::racesDeck()
+{
+    return &_racesDeck;
+}
+
+const std::map<int, gameCardDoorSpecialMechanic> *The_Game::specialMechanicsDeck()
+{
+    return &_specialMechanicsDeck;
+}
+
+const std::map<int, gameCardTreasureArmor> *The_Game::armorDeck()
+{
+    return &_armorDeck;
+}
+
+const std::map<int, gameCardTreasureArmorAmplifier> *The_Game::armorAmplifiersDeck()
+{
+    return &_armorAmplifiersDeck;
+}
+
+const std::map<int, gameCardTreasureBattleAmplifier> *The_Game::battleAmplifiersDeck()
+{
+    return &_battleAmplifiersDeck;
+}
+
+const std::map<int, gameCardTreasureLevelUp> *The_Game::levelUpDeck()
+{
+    return &_levelUpDeck;
+}
+
+const std::map<int, gameCardTreasureSpecialMechanic> *The_Game::specialMechanicsTreasureDeck()
+{
+    return &_specialMechanicsTreasureDeck;
+}
+
+const std::map<int, gameCardTreasureThingsAmplifiers> *The_Game::thingsAmplifiersDeck()
+{
+    return &_thingsAmplifiersDeck;
+}
+
+const std::map<int, gameCardTreasureWeapon> *The_Game::weaponsDeck()
+{
+    return &_weaponsDeck;
 }
 
 

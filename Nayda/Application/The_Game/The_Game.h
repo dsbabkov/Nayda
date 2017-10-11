@@ -169,23 +169,22 @@ public:
 
 
 
-    const std::map<int, gameCardDoorMonster> &monstersDeck() const;
-    const std::map<int, gameCardDoorAmplifier> &amplifiersDeck() const;
-    const std::map<int, gameCardDoorCurse> &cursesDeck() const;
-    const std::map<int, gameCardDoorProfession> &professionsDeck() const;
-    const std::map<int, gameCardDoorRace> &racesDeck() const;
-    const std::map<int, gameCardDoorSpecialMechanic> &specialMechanicsDeck() const;
-
-    const std::map<int, gameCardTreasureArmor> &armorDeck() const;
-    const std::map<int, gameCardTreasureArmorAmplifier> &armorAmplifiersDeck() const;
-    const std::map<int, gameCardTreasureBattleAmplifier> &battleAmplifiersDeck() const;
-    const std::map<int, gameCardTreasureLevelUp> &levelUpDeck() const;
-    const std::map<int, gameCardTreasureSpecialMechanic> &specialMechanicsTreasureDeck() const;
-    const std::map<int, gameCardTreasureThingsAmplifiers> &thingsAmplifiersDeck() const;
-    const std::map<int, gameCardTreasureWeapon> &weaponsDeck() const;
-
-
     const std::map<int, gameCardDoorMonster> * monstersDeck();
+    const std::map<int, gameCardDoorAmplifier> *amplifiersDeck();
+    const std::map<int, gameCardDoorCurse> *cursesDeck();
+    const std::map<int, gameCardDoorProfession> *professionsDeck();
+    const std::map<int, gameCardDoorRace> *racesDeck();
+    const std::map<int, gameCardDoorSpecialMechanic> *specialMechanicsDeck();
+
+    const std::map<int, gameCardTreasureArmor> *armorDeck();
+    const std::map<int, gameCardTreasureArmorAmplifier> *armorAmplifiersDeck();
+    const std::map<int, gameCardTreasureBattleAmplifier> *battleAmplifiersDeck();
+    const std::map<int, gameCardTreasureLevelUp> *levelUpDeck();
+    const std::map<int, gameCardTreasureSpecialMechanic> *specialMechanicsTreasureDeck();
+    const std::map<int, gameCardTreasureThingsAmplifiers> *thingsAmplifiersDeck();
+    const std::map<int, gameCardTreasureWeapon> *weaponsDeck();
+
+
 
 
 signals:

@@ -28,6 +28,8 @@
 
 
 
+//may be it is not neccessary to add <cardsborderdefines.h>, since keys can be received directly form formed maps.
+
 
 
 

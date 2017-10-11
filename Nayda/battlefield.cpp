@@ -78,3 +78,63 @@ void battleField::setMonsersDeck(const std::map<int, gameCardDoorMonster> *monse
     _monsersDeck = monsersDeck;
 }
 
+void battleField::setAmplifiersDeck(const std::map<int, gameCardDoorAmplifier> *amplifiersDeck)
+{
+    _amplifiersDeck = amplifiersDeck;
+}
+
+void battleField::setCursesDeck(const std::map<int, gameCardDoorCurse> *cursesDeck)
+{
+    _cursesDeck = cursesDeck;
+}
+
+void battleField::setProfessionsDeck(const std::map<int, gameCardDoorProfession> *professionsDeck)
+{
+    _professionsDeck = professionsDeck;
+}
+
+void battleField::setRacesDeck(const std::map<int, gameCardDoorRace> *racesDeck)
+{
+    _racesDeck = racesDeck;
+}
+
+void battleField::setSpecialMechanicsDeck(const std::map<int, gameCardDoorSpecialMechanic> *specialMechanicsDeck)
+{
+    _specialMechanicsDeck = specialMechanicsDeck;
+}
+
+void battleField::setArmorDeck(const std::map<int, gameCardTreasureArmor> *armorDeck)
+{
+    _armorDeck = armorDeck;
+}
+
+void battleField::setArmorAmplifiersDeck(const std::map<int, gameCardTreasureArmorAmplifier> *armorAmplifiersDeck)
+{
+    _armorAmplifiersDeck = armorAmplifiersDeck;
+}
+
+void battleField::setBattleAmplifiersDeck(const std::map<int, gameCardTreasureBattleAmplifier> *battleAmplifiersDeck)
+{
+    _battleAmplifiersDeck = battleAmplifiersDeck;
+}
+
+void battleField::setLevelUpDeck(const std::map<int, gameCardTreasureLevelUp> *levelUpDeck)
+{
+    _levelUpDeck = levelUpDeck;
+}
+
+void battleField::setSpecialMechanicsTreasureDeck(const std::map<int, gameCardTreasureSpecialMechanic> *specialMechanicsTreasureDeck)
+{
+    _specialMechanicsTreasureDeck = specialMechanicsTreasureDeck;
+}
+
+void battleField::setThingsAmplifiersDeck(const std::map<int, gameCardTreasureThingsAmplifiers> *thingsAmplifiersDeck)
+{
+    _thingsAmplifiersDeck = thingsAmplifiersDeck;
+}
+
+void battleField::setWeaponsDeck(const std::map<int, gameCardTreasureWeapon> *weaponsDeck)
+{
+    _weaponsDeck = weaponsDeck;
+}
+
