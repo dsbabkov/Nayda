@@ -36,7 +36,8 @@ SOURCES += main.cpp\
     gameinfowidget.cpp \
     start_new_room.cpp \
     Application/card.cpp \
-    Application/player.cpp
+    Application/player.cpp \
+    battlefield.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
@@ -48,7 +49,9 @@ HEADERS  += main_application.h \
     gameinfowidget.h \
     start_new_room.h \
     Application/card.h \
-    Application/player.h
+    Application/player.h \
+    battlefield.h \
+    cardsborderdefines.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \
@@ -58,4 +61,5 @@ FORMS    += main_application.ui \
     gamerwidget.ui \
     gametimers.ui \
     gameinfowidget.ui \
-    start_new_room.ui
+    start_new_room.ui \
+    battlefield.ui
