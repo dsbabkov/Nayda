@@ -1,21 +1,21 @@
-48;Pictures/treasures_thingsAmplifiers/Шипастые коленки.jpg;Spiky Knees;Basic;ThingAmplifier;small;1;no;1;all;200;0;0;0;0;0;0
-49;Pictures/treasures_thingsAmplifiers/Реально впечатляющий титул.jpg;Really Imressive Title;Basic;ThingAmplifier;small;3;no;0;all;0;0;0;0;0;0;0
-50;Pictures/treasures_thingsAmplifiers/Колготы великанской силы.jpg;Pantyhose of Giant Strength;Basic;ThingAmplifier;small;3;no;0;ex_Warrior;600;0;0;0;0;0;0
-51;Pictures/treasures_thingsAmplifiers/Наколенники развода.jpg;Kneepads of Allure;Basic;ThingAmplifier;small;0;yes;1;ex_Cleric;600;0;0;0;0;0;0
-52;Pictures/treasures_thingsAmplifiers/Меч песни и пляски.jpg;Singing & Dancing Sword;Basic;ThingAmplifier;small;2;no;0;ex_Thief;400;0;0;0;0;0;0
-53;Pictures/treasures_thingsAmplifiers/Плащ замутненности.jpg;Cloack of Obscurity;Basic;ThingAmplifier;small;4;no;0;Thief;600;0;0;0;0;0;0
-54;Pictures/treasures_thingsAmplifiers/Сэндвич с сыром и селедкой.jpg;Limburger and Anchovy Sandwich;Basic;ThingAmplifier;small;3;no;0;Halfling;400;0;0;0;0;0;0
-55;Pictures/treasures_thingsAmplifiers/Боевая стремянка.jpg;Stepladder;Basic;ThingAmplifier;big;3;no;0;Halfling;400;0;0;0;0;0;0
-100;Pictures/treasures_thingsAmplifiers/Пресвятая книга.jpg;Very Holy Book;WildAxe;ThingAmplifier;big;3;no;0;Cleric;400;0;0;0;0;0;0
-101;Pictures/treasures_thingsAmplifiers/Наплечный дракон.jpg;Cute Shoulder Dragon;WildAxe;ThingAmplifier;small;2;no;0;all;600;0;0;0;2;0;0
-102;Pictures/treasures_thingsAmplifiers/Рукобойник.jpg;Coat of Arms;WildAxe;ThingAmplifier;small;0;no;0;all;500;0;2;0;0;0;0
-103;Pictures/treasures_thingsAmplifiers/Мешок шипов.jpg;Bag of Caltrops;WildAxe;ThingAmplifier;small;0;no;0;all;200;1;0;0;0;0;0
-104;Pictures/treasures_thingsAmplifiers/Шипованный гульфик.jpg;Spiked Codpiece;WildAxe;ThingAmplifier;small;2;no;0;all;600;0;0;2;0;0;0
-105;Pictures/treasures_thingsAmplifiers/Накладная борода.jpg;Fake Beard;WildAxe;ThingAmplifier;small;0;no;0;all;100;0;0;0;0;1;0
-106;Pictures/treasures_thingsAmplifiers/Фамильярик.jpg;Familiar;WildAxe;ThingAmplifier;small;3;no;0;Wizard;400;0;0;0;0;0;0
-107;Pictures/treasures_thingsAmplifiers/Жуткая вставная челюст.jpg;Scary False Teeth;WildAxe;ThingAmplifier;small;1;no;0;all;200;0;0;0;0;0;0
-152;Pictures/treasures_thingsAmplifiers/Заклинательное ложе.jpg;Castig Couch;ClericalErrors;ThingAmplifier;big;0;yes;0;all;800;-1;0;0;0;0;0
-153;Pictures/treasures_thingsAmplifiers/Временами надежный аммулет.jpg;The Occasionally Reliable Amulet;ClericalErrors;ThingAmplifier;small;0;yes;0;all;600;0;0;0;0;0;0
-154;Pictures/treasures_thingsAmplifiers/Нахлобушки.jpg;Fake Ears;ClericalErrors;ThingAmplifier;small;0;no;0;all;100;0;0;0;0;0;1
-155;Pictures/treasures_thingsAmplifiers/Другое кольцо.jpg;The Other Ring;ClericalErrors;ThingAmplifier;small;2;yes;0;all;1000;0;0;0;0;0;0
-156;Pictures/treasures_thingsAmplifiers/Ножная булава.jpg;Foot-Mounted Mace;ClericalErrors;ThingAmplifier;small;4;yes;0;all;400;-2;0;0;0;0;0
+48;Pictures/treasures_thingsAmplifiers/Spiky Knees.jpg;Spiky Knees;Basic;ThingAmplifier;small;1;no;1;all;200;0;0;0;0;0;0
+49;Pictures/treasures_thingsAmplifiers/Really Imressive Title.jpg;Really Imressive Title;Basic;ThingAmplifier;small;3;no;0;all;0;0;0;0;0;0;0
+50;Pictures/treasures_thingsAmplifiers/Pantyhose of Giant Strength.jpg;Pantyhose of Giant Strength;Basic;ThingAmplifier;small;3;no;0;ex_Warrior;600;0;0;0;0;0;0
+51;Pictures/treasures_thingsAmplifiers/Kneepads of Allure.jpg;Kneepads of Allure;Basic;ThingAmplifier;small;0;yes;1;ex_Cleric;600;0;0;0;0;0;0
+52;Pictures/treasures_thingsAmplifiers/Singing & Dancing Sword.jpg;Singing & Dancing Sword;Basic;ThingAmplifier;small;2;no;0;ex_Thief;400;0;0;0;0;0;0
+53;Pictures/treasures_thingsAmplifiers/Cloack of Obscurity.jpg;Cloack of Obscurity;Basic;ThingAmplifier;small;4;no;0;Thief;600;0;0;0;0;0;0
+54;Pictures/treasures_thingsAmplifiers/Limburger and Anchovy Sandwich.jpg;Limburger and Anchovy Sandwich;Basic;ThingAmplifier;small;3;no;0;Halfling;400;0;0;0;0;0;0
+55;Pictures/treasures_thingsAmplifiers/Stepladder.jpg;Stepladder;Basic;ThingAmplifier;big;3;no;0;Halfling;400;0;0;0;0;0;0
+100;Pictures/treasures_thingsAmplifiers/Very Holy Book.jpg;Very Holy Book;WildAxe;ThingAmplifier;big;3;no;0;Cleric;400;0;0;0;0;0;0
+101;Pictures/treasures_thingsAmplifiers/Cute Shoulder Dragon.jpg;Cute Shoulder Dragon;WildAxe;ThingAmplifier;small;2;no;0;all;600;0;0;0;2;0;0
+102;Pictures/treasures_thingsAmplifiers/Coat of Arms.jpg;Coat of Arms;WildAxe;ThingAmplifier;small;0;no;0;all;500;0;2;0;0;0;0
+103;Pictures/treasures_thingsAmplifiers/Bag of Caltrops.jpg;Bag of Caltrops;WildAxe;ThingAmplifier;small;0;no;0;all;200;1;0;0;0;0;0
+104;Pictures/treasures_thingsAmplifiers/Spiked Codpiece.jpg;Spiked Codpiece;WildAxe;ThingAmplifier;small;2;no;0;all;600;0;0;2;0;0;0
+105;Pictures/treasures_thingsAmplifiers/Fake Beard.jpg;Fake Beard;WildAxe;ThingAmplifier;small;0;no;0;all;100;0;0;0;0;1;0
+106;Pictures/treasures_thingsAmplifiers/Familiar.jpg;Familiar;WildAxe;ThingAmplifier;small;3;no;0;Wizard;400;0;0;0;0;0;0
+107;Pictures/treasures_thingsAmplifiers/Scary False Teeth.jpg;Scary False Teeth;WildAxe;ThingAmplifier;small;1;no;0;all;200;0;0;0;0;0;0
+152;Pictures/treasures_thingsAmplifiers/Castig Couch.jpg;Castig Couch;ClericalErrors;ThingAmplifier;big;0;yes;0;all;800;-1;0;0;0;0;0
+153;Pictures/treasures_thingsAmplifiers/The Occasionally Reliable Amulet.jpg;The Occasionally Reliable Amulet;ClericalErrors;ThingAmplifier;small;0;yes;0;all;600;0;0;0;0;0;0
+154;Pictures/treasures_thingsAmplifiers/Fake Ears.jpg;Fake Ears;ClericalErrors;ThingAmplifier;small;0;no;0;all;100;0;0;0;0;0;1
+155;Pictures/treasures_thingsAmplifiers/The Other Ring.jpg;The Other Ring;ClericalErrors;ThingAmplifier;small;2;yes;0;all;1000;0;0;0;0;0;0
+156;Pictures/treasures_thingsAmplifiers/Foot-Mounted Mace.jpg;Foot-Mounted Mace;ClericalErrors;ThingAmplifier;small;4;yes;0;all;400;-2;0;0;0;0;0

@@ -1,37 +1,37 @@
-33;Pictures/treasures_specialMechanics/Дупельгангер.jpg;Doppleganger;Basic;specialMechanic;300;0;ownFight;noCompanion
-34;Pictures/treasures_specialMechanics/Наемничек.jpg;Hireling_1;Basic;specialMechanic;0;0;anytime;0
-35;Pictures/treasures_specialMechanics/Зелье стрелочника.jpg;Transferral Potion;Basic;specialMechanic;300;1;eachFight;0
-36;Pictures/treasures_specialMechanics/Зелье дружбы.jpg;Friendship Potion;Basic;specialMechanic;200;1;eachFight;0
-37;Pictures/treasures_specialMechanics/Волшебная лампа.jpg;Magic Lamp;Basic;specialMechanic;500;0;ownFight;0
-38;Pictures/treasures_specialMechanics/Зелье полуморфа.jpg;Pollymorph Potion;Basic;specialMechanic;1300;1;eachFight;0
-39;Pictures/treasures_specialMechanics/Ура, клад!.jpg;Hoard!;Basic;specialMechanic;0;0;immediately;0
-40;Pictures/treasures_specialMechanics/Хотельное кольцо.jpg;Wishing Ring_1;Basic;specialMechanic;500;0;anytime;0
-41;Pictures/treasures_specialMechanics/Зелье невидимости.jpg;Invisibility Potion;Basic;specialMechanic;200;1;afterFight;failedToFlee
-42;Pictures/treasures_specialMechanics/Тюбик клея.jpg;Flask of Glue;Basic;specialMechanic;100;0;afterFight;succeededToFlee
-43;Pictures/treasures_specialMechanics/Укради уровень.jpg;Steal a Level;Basic;specialMechanic;0;0;anytime;0
-44;Pictures/treasures_specialMechanics/Читерский кубик.jpg;Loaded Die_1;Basic;specialMechanic;300;0;dieWasPlayed;0
-45;Pictures/treasures_specialMechanics/Стенка мгновенка.jpg;Instant Wall;Basic;specialMechanic;300;0;eachFight;0
-46;Pictures/treasures_specialMechanics/Хотельное кольцо1.jpg;Wishing Ring_2;Basic;specialMechanic;500;0;anytime;0
-47;Pictures/treasures_specialMechanics/Штырь лозоходца.jpg;Wand of Dowsing;Basic;specialMechanic;1100;0;anytime;0
-91;Pictures/treasures_specialMechanics/Детское масло.jpg;Baby Oil;WildAxe;specialMechanic;300;1;eachFight;0
-92;Pictures/treasures_specialMechanics/Зелье трусости.jpg;Potion of Cowardice;WildAxe;specialMechanic;300;1;eachFight;0
-93;Pictures/treasures_specialMechanics/Читерский кубик1.jpg;Loaded Die_2;WildAxe;specialMechanic;300;0;dieWasPlayed;0
-94;Pictures/treasures_specialMechanics/Чесоточный порошок.jpg;Itching Powder;WildAxe;specialMechanic;300;0;eachFight;0
-95;Pictures/treasures_specialMechanics/Троянский конь.jpg;Trojan Horse;WildAxe;specialMechanic;0;0;afterFight;win
-96;Pictures/treasures_specialMechanics/Читерский кубик2.jpg;Loaded Die_3;WildAxe;specialMechanic;300;0;dieWasPlayed;0
-97;Pictures/treasures_specialMechanics/Зелье неверия.jpg;Potion of Disbelief;WildAxe;specialMechanic;1000;1;eachFight;0
-98;Pictures/treasures_specialMechanics/Хотельное кольцо2.jpg;Wishing Ring_3;WildAxe;specialMechanic;500;0;anytime;0
-99;Pictures/treasures_specialMechanics/Распродажа.jpg;Garage Sale;WildAxe;specialMechanic;0;0;ownMove;onceReceived
-139;Pictures/treasures_specialMechanics/Выбери меня.jpg;Take Me! Take Me!;ClericalErrors;specialMechanic;0;0;eachFight;0
-140;Pictures/treasures_specialMechanics/Казино подземейцев.jpg;The Dungeon Casino;ClericalErrors;specialMechanic;0;0;exceptFight;0
-141;Pictures/treasures_specialMechanics/Зелье аппатии.jpg;Potion of Apathy;ClericalErrors;specialMechanic;0;1;eachFight;haveCompanion
-142;Pictures/treasures_specialMechanics/Котошественное вмешательство.jpg;Feline Intervention;ClericalErrors;specialMechanic;0;0;dieWasPlayed;0
-143;Pictures/treasures_specialMechanics/Недобивающий удар.jpg;Semi-Final Strike;ClericalErrors;specialMechanic;0;0;ownFight;0
-144;Pictures/treasures_specialMechanics/Дварфозаброс.jpg;Dwarf Tossing;ClericalErrors;specialMechanic;0;0;eachFight;thereIsDwarf
-145;Pictures/treasures_specialMechanics/Расправедники.jpg;Deus Ex Machinegun;ClericalErrors;specialMechanic;0;0;eachFight;0
-146;Pictures/treasures_specialMechanics/Универсальный размер.jpg;One Size Fits All;ClericalErrors;specialMechanic;0;0;exceptFight;0
-147;Pictures/treasures_specialMechanics/Хотельное кольцо3.jpg;Wishing Ring_4;ClericalErrors;specialMechanic;500;0;anytime;0
-148;Pictures/treasures_specialMechanics/Раздаютка.jpg;Duck of Many Things;ClericalErrors;specialMechanic;0;0;immediately;0
-149;Pictures/treasures_specialMechanics/Запретительное постаовление.jpg;Restraining Order;ClericalErrors;specialMechanic;100;0;anytime;0
+33;Pictures/treasures_specialMechanics/Doppleganger.jpg;Doppleganger;Basic;specialMechanic;300;0;ownFight;noCompanion
+34;Pictures/treasures_specialMechanics/Hireling_1.jpg;Hireling_1;Basic;specialMechanic;0;0;anytime;0
+35;Pictures/treasures_specialMechanics/Transferral Potion.jpg;Transferral Potion;Basic;specialMechanic;300;1;eachFight;0
+36;Pictures/treasures_specialMechanics/Friendship Potion.jpg;Friendship Potion;Basic;specialMechanic;200;1;eachFight;0
+37;Pictures/treasures_specialMechanics/Magic Lamp.jpg;Magic Lamp;Basic;specialMechanic;500;0;ownFight;0
+38;Pictures/treasures_specialMechanics/Pollymorph Potion.jpg;Pollymorph Potion;Basic;specialMechanic;1300;1;eachFight;0
+39;Pictures/treasures_specialMechanics/Hoard!.jpg;Hoard!;Basic;specialMechanic;0;0;immediately;0
+40;Pictures/treasures_specialMechanics/Wishing Ring_1.jpg;Wishing Ring_1;Basic;specialMechanic;500;0;anytime;0
+41;Pictures/treasures_specialMechanics/Invisibility Potion.jpg;Invisibility Potion;Basic;specialMechanic;200;1;afterFight;failedToFlee
+42;Pictures/treasures_specialMechanics/Flask of Glue.jpg;Flask of Glue;Basic;specialMechanic;100;0;afterFight;succeededToFlee
+43;Pictures/treasures_specialMechanics/Steal a Level.jpg;Steal a Level;Basic;specialMechanic;0;0;anytime;0
+44;Pictures/treasures_specialMechanics/Loaded Die_1.jpg;Loaded Die_1;Basic;specialMechanic;300;0;dieWasPlayed;0
+45;Pictures/treasures_specialMechanics/Instant Wall.jpg;Instant Wall;Basic;specialMechanic;300;0;eachFight;0
+46;Pictures/treasures_specialMechanics/Wishing Ring_2.jpg;Wishing Ring_2;Basic;specialMechanic;500;0;anytime;0
+47;Pictures/treasures_specialMechanics/Wand of Dowsing.jpg;Wand of Dowsing;Basic;specialMechanic;1100;0;anytime;0
+91;Pictures/treasures_specialMechanics/Baby Oil.jpg;Baby Oil;WildAxe;specialMechanic;300;1;eachFight;0
+92;Pictures/treasures_specialMechanics/Potion of Cowardice.jpg;Potion of Cowardice;WildAxe;specialMechanic;300;1;eachFight;0
+93;Pictures/treasures_specialMechanics/Loaded Die_2.jpg;Loaded Die_2;WildAxe;specialMechanic;300;0;dieWasPlayed;0
+94;Pictures/treasures_specialMechanics/Itching Powder.jpg;Itching Powder;WildAxe;specialMechanic;300;0;eachFight;0
+95;Pictures/treasures_specialMechanics/Trojan Horse.jpg;Trojan Horse;WildAxe;specialMechanic;0;0;afterFight;win
+96;Pictures/treasures_specialMechanics/Loaded Die_3.jpg;Loaded Die_3;WildAxe;specialMechanic;300;0;dieWasPlayed;0
+97;Pictures/treasures_specialMechanics/Potion of Disbelief.jpg;Potion of Disbelief;WildAxe;specialMechanic;1000;1;eachFight;0
+98;Pictures/treasures_specialMechanics/Wishing Ring_3.jpg;Wishing Ring_3;WildAxe;specialMechanic;500;0;anytime;0
+99;Pictures/treasures_specialMechanics/Garage Sale.jpg;Garage Sale;WildAxe;specialMechanic;0;0;ownMove;onceReceived
+139;Pictures/treasures_specialMechanics/Take Me! Take Me!.jpg;Take Me! Take Me!;ClericalErrors;specialMechanic;0;0;eachFight;0
+140;Pictures/treasures_specialMechanics/The Dungeon Casino.jpg;The Dungeon Casino;ClericalErrors;specialMechanic;0;0;exceptFight;0
+141;Pictures/treasures_specialMechanics/Potion of Apathy.jpg;Potion of Apathy;ClericalErrors;specialMechanic;0;1;eachFight;haveCompanion
+142;Pictures/treasures_specialMechanics/Feline Intervention.jpg;Feline Intervention;ClericalErrors;specialMechanic;0;0;dieWasPlayed;0
+143;Pictures/treasures_specialMechanics/Semi-Final Strike.jpg;Semi-Final Strike;ClericalErrors;specialMechanic;0;0;ownFight;0
+144;Pictures/treasures_specialMechanics/Dwarf Tossing.jpg;Dwarf Tossing;ClericalErrors;specialMechanic;0;0;eachFight;thereIsDwarf
+145;Pictures/treasures_specialMechanics/Deus Ex Machinegun.jpg;Deus Ex Machinegun;ClericalErrors;specialMechanic;0;0;eachFight;0
+146;Pictures/treasures_specialMechanics/One Size Fits All.jpg;One Size Fits All;ClericalErrors;specialMechanic;0;0;exceptFight;0
+147;Pictures/treasures_specialMechanics/Wishing Ring_4.jpg;Wishing Ring_4;ClericalErrors;specialMechanic;500;0;anytime;0
+148;Pictures/treasures_specialMechanics/Duck of Many Things.jpg;Duck of Many Things;ClericalErrors;specialMechanic;0;0;immediately;0
+149;Pictures/treasures_specialMechanics/Restraining Order.jpg;Restraining Order;ClericalErrors;specialMechanic;100;0;anytime;0
 150;Pictures/treasures_specialMechanics/Читерский  кубик3.jpg;Loaded Die_4;ClericalErrors;specialMechanic;300;0;dieWasPlayed;0
-151;Pictures/treasures_specialMechanics/Наемница.jpg;Hireling_2;ClericalErrors;specialMechanic;0;0;anytime;0
+151;Pictures/treasures_specialMechanics/Hireling_2.jpg;Hireling_2;ClericalErrors;specialMechanic;0;0;anytime;0

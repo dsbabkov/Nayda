@@ -1,38 +1,38 @@
-6;Pictures/doors_curses/Потеряй класс1.jpg;Loose your class;Basic;Curse;Loosing class, if two - loose one, If no - loose level;1
-7;Pictures/doors_curses/Смена пола.jpg;Change Sex;Basic;Curse;Change Sex and -5 in the next fight;2
-8;Pictures/doors_curses/Курица на башне.jpg;Chicken on Your Head;Basic;Curse;Adding -1 to cube;3
-9;Pictures/doors_curses/Потеряй уровень.jpg;Loose a Level_1;Basic;Curse;Loosing level;4
-10;Pictures/doors_curses/Подоходный налог.jpg;Income Tax;Basic;Curse;Need to sell things;5
-11;Pictures/doors_curses/Потеряй надетый броник.jpg;Loose the Armor You Are Wearing;Basic;Curse;Loose the Armor You Are Wearing;6
-12;Pictures/doors_curses/Невыносимо гнусное проклятие.jpg;Truly Obnoxious Curse;Basic;Curse;Loosing the best thing;7
-13;Pictures/doors_curses/Потеряй расу.jpg;Lose Your Race;Basic;Curse;Loosing Race;8
-14;Pictures/doors_curses/Роковой нырок.jpg;Duck of Doom;Basic;Curse;minus 2 levels;9
-15;Pictures/doors_curses/Потеряй большую шмотку.jpg;Loose 1 Big Item_1;Basic;Curse;Loose 1 big item;10
-16;Pictures/doors_curses/Потеряй уровень1.jpg;Loose a Level_2;Basic;Curse;Loosing level;11
-17;Pictures/doors_curses/Потеряй мелкую шмотку.jpg;Loose 1 small Item_2;Basic;Curse;Loose 1 small Item;12
-18;Pictures/doors_curses/Смена расы.jpg;Change Race;Basic;Curse;Changing race. If there's no race - loose all;13
-19;Pictures/doors_curses/Потеряй надетую обувку.jpg;Loose the Footgear You Are Wearing;Basic;Curse;Loose footgear;14
-20;Pictures/doors_curses/Смена класса.jpg;Change Class;Basic;Curse;Find another class to use. If there's no - loose all the classes;15
-21;Pictures/doors_curses/Потеряй надетый головняк.jpg;Loose a Headgear You Are Wearing;Basic;Curse;Loose a Headgear;16
+6;Pictures/doors_curses/Loose your class.jpg;Loose your class;Basic;Curse;Loosing class, if two - loose one, If no - loose level;1
+7;Pictures/doors_curses/Change Sex.jpg;Change Sex;Basic;Curse;Change Sex and -5 in the next fight;2
+8;Pictures/doors_curses/Chicken on Your Head.jpg;Chicken on Your Head;Basic;Curse;Adding -1 to cube;3
+9;Pictures/doors_curses/Loose a Level_1.jpg;Loose a Level_1;Basic;Curse;Loosing level;4
+10;Pictures/doors_curses/Income Tax.jpg;Income Tax;Basic;Curse;Need to sell things;5
+11;Pictures/doors_curses/Loose the Armor You Are Wearing.jpg;Loose the Armor You Are Wearing;Basic;Curse;Loose the Armor You Are Wearing;6
+12;Pictures/doors_curses/Truly Obnoxious Curse.jpg;Truly Obnoxious Curse;Basic;Curse;Loosing the best thing;7
+13;Pictures/doors_curses/Lose Your Race.jpg;Lose Your Race;Basic;Curse;Loosing Race;8
+14;Pictures/doors_curses/Duck of Doom.jpg;Duck of Doom;Basic;Curse;minus 2 levels;9
+15;Pictures/doors_curses/Loose 1 Big Item_1.jpg;Loose 1 Big Item_1;Basic;Curse;Loose 1 big item;10
+16;Pictures/doors_curses/Loose a Level_2.jpg;Loose a Level_2;Basic;Curse;Loosing level;11
+17;Pictures/doors_curses/Loose 1 small Item_2.jpg;Loose 1 small Item_2;Basic;Curse;Loose 1 small Item;12
+18;Pictures/doors_curses/Change Race.jpg;Change Race;Basic;Curse;Changing race. If there's no race - loose all;13
+19;Pictures/doors_curses/Loose the Footgear You Are Wearing.jpg;Loose the Footgear You Are Wearing;Basic;Curse;Loose footgear;14
+20;Pictures/doors_curses/Change Class.jpg;Change Class;Basic;Curse;Find another class to use. If there's no - loose all the classes;15
+21;Pictures/doors_curses/Loose a Headgear You Are Wearing.jpg;Loose a Headgear You Are Wearing;Basic;Curse;Loose a Headgear;16
 22;Pictures/doors_curses/Кривое зеркало.jpg;Malign Mirror;Basic;Curse;In the next fight there's only armor bonus;30
-23;Pictures/doors_curses/Потеряй мелкую шмотку1.jpg;Loose 1 small Item_1;Basic;Curse;Loose 1 small Item;31
-24;Pictures/doors_curses/Потеряй две карты.jpg;Loose Two Cards;Basic;Curse;One from left takes 1 card, than 1 from right;32
-99;Pictures/doors_curses/Голодный рюкзак.jpg;Hungry Backpack;WildAxe;Curse;Eating Bag  - eats some cards (cube) when you need to give cards or fold them. Lasts till 6 on cube;27
-100;Pictures/doors_curses/Посмертная пакость.jpg;Dying Curse;WildAxe;Curse;The top monster in the fold makes bad things to the cursed;28
-101;Pictures/doors_curses/Роковая запинку.jpg;Tip Over Your Own Chest;WildAxe;Curse;Everyone except the cursed take the treasure card;29
-102;Pictures/doors_curses/Временная амнезия.jpg;Temporary Amnesia;WildAxe;Curse;Loose Class and Race till the win;34
-103;Pictures/doors_curses/Наколенный взрыв.jpg;Exploding Kneecaps;WildAxe;Curse;;35
-104;Pictures/doors_curses/Клирическая ошибка.jpg;Clerical Error;WildAxe;Curse;The top monster in the fold door deck arises as undead and come to fight;36
-105;Pictures/doors_curses/Капкан на туриста.jpg;Tourist Trap;WildAxe;Curse;No chance to open Doors;37
-106;Pictures/doors_curses/Дварфийский эль.jpg;Dwarven Ale;WildAxe;Curse;"For all except Dwarf -4, Dwarf +4;";38
-107;Pictures/doors_curses/Щедрость.jpg;Generosity;WildAxe;Curse;Each opponent takes 1 thing from your game. If there are not enough, they will take 2 cards from hand;17
-108;Pictures/doors_curses/Проклятая шняга.jpg;Cursed Thingy_1;WildAxe;Curse;One thing becomes cursed;18
-109;Pictures/doors_curses/Большие ноги.jpg;Big Feet;WildAxe;Curse;No opoortunity to have feet;19
-165;Pictures/doors_curses/Потеряй мелкую шмотку2.jpg;Lose 1 Small Item_3;ClericalErrors;Curse;Loose 1 small Item;20
-166;Pictures/doors_curses/Нескладный клад.jpg;Fool's Gold;ClericalErrors;Curse;Do not receive treasures for the next fight;21
-167;Pictures/doors_curses/Потеряй большую шмотку.jpg;Loose 1 Big Item_2;ClericalErrors;Curse;Loose 1 big item;22
-168;Pictures/doors_curses/Вонь.jpg;B.O.;ClericalErrors;Curse;Noone helps you in the next fight, but Noses are runnig away;23
-169;Pictures/doors_curses/Проклятая шняга.jpg;Cursed Thingy_2;ClericalErrors;Curse;One thing becomes cursed;24
-170;Pictures/doors_curses/Некрофобия.jpg;Necrophobia;ClericalErrors;Curse;Cannot help to anyone when fighting undeads. Should leave the fight, if undead comes. If faced undead - need to flee;25
-171;Pictures/doors_curses/Крохотные ручки.jpg;Tiny Hands;ClericalErrors;Curse;Only one-handed things;26
-172;Pictures/doors_curses/Новая редакция правил.jpg;New Adition Rules;ClericalErrors;Curse;minus level for all;33
+23;Pictures/doors_curses/Loose 1 small Item_1.jpg;Loose 1 small Item_1;Basic;Curse;Loose 1 small Item;31
+24;Pictures/doors_curses/Loose Two Cards.jpg;Loose Two Cards;Basic;Curse;One from left takes 1 card, than 1 from right;32
+99;Pictures/doors_curses/Hungry Backpack.jpg;Hungry Backpack;WildAxe;Curse;Eating Bag  - eats some cards (cube) when you need to give cards or fold them. Lasts till 6 on cube;27
+100;Pictures/doors_curses/Dying Curse.jpg;Dying Curse;WildAxe;Curse;The top monster in the fold makes bad things to the cursed;28
+101;Pictures/doors_curses/Tip Over Your Own Chest.jpg;Tip Over Your Own Chest;WildAxe;Curse;Everyone except the cursed take the treasure card;29
+102;Pictures/doors_curses/Temporary Amnesia.jpg;Temporary Amnesia;WildAxe;Curse;Loose Class and Race till the win;34
+103;Pictures/doors_curses/Exploding Kneecaps.jpg;Exploding Kneecaps;WildAxe;Curse;;35
+104;Pictures/doors_curses/Clerical Error.jpg;Clerical Error;WildAxe;Curse;The top monster in the fold door deck arises as undead and come to fight;36
+105;Pictures/doors_curses/Tourist Trap.jpg;Tourist Trap;WildAxe;Curse;No chance to open Doors;37
+106;Pictures/doors_curses/Dwarven Ale.jpg;Dwarven Ale;WildAxe;Curse;"For all except Dwarf -4, Dwarf +4;";38
+107;Pictures/doors_curses/Generosity.jpg;Generosity;WildAxe;Curse;Each opponent takes 1 thing from your game. If there are not enough, they will take 2 cards from hand;17
+108;Pictures/doors_curses/Cursed Thingy_2.jpg;Cursed Thingy_1;WildAxe;Curse;One thing becomes cursed;18
+109;Pictures/doors_curses/Big Feet.jpg;Big Feet;WildAxe;Curse;No opoortunity to have feet;19
+165;Pictures/doors_curses/Lose 1 Small Item_3.jpg;Lose 1 Small Item_3;ClericalErrors;Curse;Loose 1 small Item;20
+166;Pictures/doors_curses/Fool's Gold.jpg;Fool's Gold;ClericalErrors;Curse;Do not receive treasures for the next fight;21
+167;Pictures/doors_curses/Loose 1 Big Item_1.jpg;Loose 1 Big Item_2;ClericalErrors;Curse;Loose 1 big item;22
+168;Pictures/doors_curses/B.O..jpg;B.O.;ClericalErrors;Curse;Noone helps you in the next fight, but Noses are runnig away;23
+169;Pictures/doors_curses/Cursed Thingy_2.jpg;Cursed Thingy_2;ClericalErrors;Curse;One thing becomes cursed;24
+170;Pictures/doors_curses/Necrophobia.jpg;Necrophobia;ClericalErrors;Curse;Cannot help to anyone when fighting undeads. Should leave the fight, if undead comes. If faced undead - need to flee;25
+171;Pictures/doors_curses/Tiny Hands.jpg;Tiny Hands;ClericalErrors;Curse;Only one-handed things;26
+172;Pictures/doors_curses/New Adition Rules.jpg;New Adition Rules;ClericalErrors;Curse;minus level for all;33
