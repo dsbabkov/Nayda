@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPropertyAnimation>
 #include <QDesktopWidget>
+#include <Application/card.h>
 
 
 namespace Ui {
@@ -21,8 +22,15 @@ public:
 
     void cardsRepresenter();
 
+    void setMonsersDeck(const std::map<int, gameCardDoorMonster> *monsersDeck);
+
+
 private:
     Ui::battleField *ui;
+
+    //const std::map<int, gameCardDoorMonster> &_monsersDeck;
+    const std::map<int, gameCardDoorMonster> *_monsersDeck;
+
 };
 
 #endif // BATTLEFIELD_H

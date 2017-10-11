@@ -1,8 +1,8 @@
-25;Pictures/doors_monsters/Лицесос.jpg;Face Sucker;Basic;Monster;8;Elf_6;false;false;noone;0;noone
-26;Pictures/doors_monsters/Гикающий гик.jpg;Shrieking Geek;Basic;Monster;6;Warrior_6;false;false;noone;0;noone
-27;Pictures/doors_monsters/Бледные братья.jpg;Wight Brothers;Basic;Monster;16;noone;true;false;noone;4;all
-28;Pictures/doors_monsters/Лепрекон.jpg;Leperchaun;Basic;Monster;4;Elf_5;false;false;noone;0;noone
-29;Pictures/doors_monsters/Сочащаяся слизь.jpg;Drooling Slime;Basic;Monster;1;Elf_4;false;false;noone;0;noone
+25;Pictures/doors_monsters/FaceSucker.jpg;Face Sucker;Basic;Monster;8;Elf_6;false;false;noone;0;noone
+26;Pictures/doors_monsters/ShriekingGeek.jpg;Shrieking Geek;Basic;Monster;6;Warrior_6;false;false;noone;0;noone
+27;Pictures/doors_monsters/WightBrothers.jpg;Wight Brothers;Basic;Monster;16;noone;true;false;noone;4;all
+28;Pictures/doors_monsters/Leperchaun.jpg;Leperchaun;Basic;Monster;4;Elf_5;false;false;noone;0;noone
+29;Pictures/doors_monsters/Drooling Slime.jpg;Drooling Slime;Basic;Monster;1;Elf_4;false;false;noone;0;noone
 30;Pictures/doors_monsters/Желатиновый октаэдр.jpg;Gelatinous Octahedron;Basic;Monster;2;noone;false;false;noone;0;all
 31;Pictures/doors_monsters/Адвокат.jpg;Lawyers;Basic;Monster;6;noone;false;false;Thief;0;Thief
 32;Pictures/doors_monsters/Гиппогриф.jpg;Hyppogriff;Basic;Monster;16;noone;false;false;noone;4;noone

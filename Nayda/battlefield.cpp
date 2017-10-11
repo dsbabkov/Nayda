@@ -7,6 +7,7 @@ battleField::battleField(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
 }
 
 battleField::~battleField()
@@ -39,7 +40,7 @@ void battleField::cardsRepresenter()
                                                    theBtnRepresenter3,theBtnRepresenter4,
                                                    theBtnRepresenter5};
 
-
+    auto iter = _monsersDeck->begin();
     for (int var = 0; var < representersVector.size(); ++var) {
         representersVector[var]->setMaximumWidth(race_class_btn_size_width*HW_Screen_Size_Width);
         representersVector[var]->setMaximumHeight(race_class_btn_size_height*HW_Screen_Size_Height);
@@ -47,7 +48,60 @@ void battleField::cardsRepresenter()
         representersVector[var]->setMinimumHeight(race_class_btn_size_height*HW_Screen_Size_Height);
         representersVector[var]->setText("Hello!");
         ui->horizontalLayout_2->addWidget(representersVector[var]);
+
+
+
+        //QPixmap pxmp_btn("Pictures/No_Race_dbg.png");
+        QPixmap pxmp_btn(iter->second.pictureAddress());
+        if (iter != _monsersDeck->end()) iter++;
+        QPalette plte_btn;
+        plte_btn.setBrush(representersVector[var]->backgroundRole(),
+        QBrush(pxmp_btn.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
+                                                                 race_class_btn_size_height*HW_Screen_Size_Height,
+                                                                 Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+
+        representersVector[var]->setFlat(true);
+        representersVector[var]->setAutoFillBackground(true);
+        representersVector[var]->setPalette(plte_btn);
+        representersVector[var]->setText("");
+
     }
 
+
+
+
+//    QPixmap pxmp_btn("Pictures/No_Race_dbg.png");
+//    QPalette plte_icon_race_1;
+//    plte_icon_race_1.setBrush(ui->btn_race_1->backgroundRole(),
+//    QBrush(pxmp_btn.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
+//                                                             race_class_btn_size_height*HW_Screen_Size_Height,
+//                                                             Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+//    QPixmap pxmp_icon_class_1("Pictures/No_Class_dbg.png");
+//    QPalette plte_icon_class_1;
+//    plte_icon_class_1.setBrush(ui->btn_class_1->backgroundRole(),
+//    QBrush(pxmp_icon_class_1.scaled(race_class_btn_size_width*HW_Screen_Size_Width,
+//                                                             race_class_btn_size_height*HW_Screen_Size_Height,
+//                                                             Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+
+
+//    ui->btn_race_1->setFlat(true);
+//    ui->btn_race_1->setAutoFillBackground(true);
+//    ui->btn_race_1->setPalette(plte_icon_race_1);
+//    ui->btn_race_1->setText("");
+
+//    ui->btn_class_1->setFlat(true);
+//    ui->btn_class_1->setAutoFillBackground(true);
+//    ui->btn_class_1->setPalette(plte_icon_class_1);
+//    ui->btn_class_1->setText("");
+
+
+
+
+
+}
+
+void battleField::setMonsersDeck(const std::map<int, gameCardDoorMonster> *monsersDeck)
+{
+    _monsersDeck = monsersDeck;
 }
 

@@ -222,16 +222,8 @@ The_Game::The_Game(QWidget *parent) :
     qDebug() << "Weapons parsing complete!";
 
 
-    //Up to develop the "Show-Cards Animation"
-    //add five "cards" to the battlefield
-
-//    QPushButton* theBtn = new QPushButton (ui->GameField);
-//    theBtn->setText("Hello!");
-
-//    QPushButton* theBtn2 = new QPushButton (ui->GameField);
-//    theBtn2->setText("Hello_Again!");
-
-    //theCardsRepresenter();
+    //first pass there the Cards (after receiving them from server);
+    passMapsToBattleField();
 
     showTheCards();
 
@@ -1432,6 +1424,82 @@ void The_Game::showTheCards()
 {
     ui->GameField->cardsRepresenter();
 }
+
+void The_Game::passMapsToBattleField()
+{
+    ui->GameField->setMonsersDeck(monstersDeck());
+}
+
+const std::map<int, gameCardDoorMonster> &The_Game::monstersDeck() const
+{
+    return _monstersDeck;
+}
+
+const std::map<int, gameCardDoorAmplifier> &The_Game::amplifiersDeck() const
+{
+    return _amplifiersDeck;
+}
+
+const std::map<int, gameCardDoorCurse> &The_Game::cursesDeck() const
+{
+    return _cursesDeck;
+}
+
+const std::map<int, gameCardDoorProfession> &The_Game::professionsDeck() const
+{
+    return _professionsDeck;
+}
+
+const std::map<int, gameCardDoorRace> &The_Game::racesDeck() const
+{
+    return _racesDeck;
+}
+
+const std::map<int, gameCardDoorSpecialMechanic> &The_Game::specialMechanicsDeck() const
+{
+    return _specialMechanicsDeck;
+}
+
+const std::map<int, gameCardTreasureArmor> &The_Game::armorDeck() const
+{
+    return _armorDeck;
+}
+
+const std::map<int, gameCardTreasureArmorAmplifier> &The_Game::armorAmplifiersDeck() const
+{
+    return _armorAmplifiersDeck;
+}
+
+const std::map<int, gameCardTreasureBattleAmplifier> &The_Game::battleAmplifiersDeck() const
+{
+    return _battleAmplifiersDeck;
+}
+
+const std::map<int, gameCardTreasureLevelUp> &The_Game::levelUpDeck() const
+{
+    return _levelUpDeck;
+}
+
+const std::map<int, gameCardTreasureSpecialMechanic> &The_Game::specialMechanicsTreasureDeck() const
+{
+    return _specialMechanicsTreasureDeck;
+}
+
+const std::map<int, gameCardTreasureThingsAmplifiers> &The_Game::thingsAmplifiersDeck() const
+{
+    return _thingsAmplifiersDeck;
+}
+
+const std::map<int, gameCardTreasureWeapon> &The_Game::weaponsDeck() const
+{
+    return _weaponsDeck;
+}
+
+const std::map<int, gameCardDoorMonster> *The_Game::monstersDeck()
+{
+    return &_monstersDeck;
+}
+
 
 
 
