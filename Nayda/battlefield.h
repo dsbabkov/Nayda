@@ -90,7 +90,7 @@ private:
 
 
     bool _continueToRepresentCards = false;
-    int _currCardsArrayRepresentationStep = 0;
+    unsigned int _currCardsArrayRepresentationStep = 0;
 
 
 

@@ -206,22 +206,6 @@ void battleField::continueCardRepresentation()
     int HW_Screen_Size_Height = HW_Screen_Size.height();
     QPixmap pxmpMainBtn;
 
-//    _amplifiersIterator = _amplifiersDeck->begin();
-//    _cursesIterator = _cursesDeck->begin();
-//    _professionsIterator = _professionsDeck->begin();
-//    _racesIterator = _racesDeck->begin();
-//    _specialMechanicsIterator = _specialMechanicsDeck->begin();
-
-//    _armorIterator = _armorDeck->begin();
-//    _armorAmplifiersIterator = _armorAmplifiersDeck->begin();
-//    _battleAmplifiersIterator = _battleAmplifiersDeck->begin();
-//    _levelUpIterator = _levelUpDeck->begin();
-//    _specialMechanicsTreasureIterator = _specialMechanicsTreasureDeck->begin();
-//    _thingsAmplifiersIterator = _thingsAmplifiersDeck->begin();
-//    _weaponsIterator = _weaponsDeck->begin();
-
-
-
     if (_currCardsArrayRepresentationStep < _monstersDeck->size()) {
         pxmpMainBtn.load(_monstersIterator->second.pictureAddress());
         _monstersIterator++;
@@ -233,9 +217,123 @@ void battleField::continueCardRepresentation()
         _amplifiersIterator++;
         _currCardsArrayRepresentationStep++;
     }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+             + _amplifiersDeck->size() + _cursesDeck->size())){
+        pxmpMainBtn.load(_cursesIterator->second.pictureAddress());
+        _cursesIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+             + _amplifiersDeck->size() + _cursesDeck->size() + _professionsDeck->size())){
+        pxmpMainBtn.load(_professionsIterator->second.pictureAddress());
+        _professionsIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+             + _amplifiersDeck->size() + _cursesDeck->size() + _professionsDeck->size() +
+                                                  _racesDeck->size())){
+        pxmpMainBtn.load(_racesIterator->second.pictureAddress());
+        _racesIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+             + _amplifiersDeck->size() + _cursesDeck->size() + _professionsDeck->size() +
+                                                  _racesDeck->size() + _specialMechanicsDeck->size())){
+        pxmpMainBtn.load(_specialMechanicsIterator->second.pictureAddress());
+        _specialMechanicsIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size())){
+        pxmpMainBtn.load(_armorIterator->second.pictureAddress());
+        _armorIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size() + _armorAmplifiersDeck->size())){
+        pxmpMainBtn.load(_armorAmplifiersIterator->second.pictureAddress());
+        _armorAmplifiersIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size() + _armorAmplifiersDeck->size()
+                                                   + _battleAmplifiersDeck->size())){
+        pxmpMainBtn.load(_battleAmplifiersIterator->second.pictureAddress());
+        _battleAmplifiersIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size() + _armorAmplifiersDeck->size()
+                                                   + _battleAmplifiersDeck->size() + _levelUpDeck->size())){
+        pxmpMainBtn.load(_levelUpIterator->second.pictureAddress());
+        _levelUpIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size() + _armorAmplifiersDeck->size()
+                                                   + _battleAmplifiersDeck->size() + _levelUpDeck->size()
+                                                   + _specialMechanicsTreasureDeck->size())){
+        pxmpMainBtn.load(_specialMechanicsTreasureIterator->second.pictureAddress());
+        _specialMechanicsTreasureIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size() + _armorAmplifiersDeck->size()
+                                                   + _battleAmplifiersDeck->size() + _levelUpDeck->size()
+                                                   + _specialMechanicsTreasureDeck->size() + _thingsAmplifiersDeck->size())){
+        pxmpMainBtn.load(_thingsAmplifiersIterator->second.pictureAddress());
+        _thingsAmplifiersIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
+    else if (_currCardsArrayRepresentationStep < (_monstersDeck->size()
+                                                   + _amplifiersDeck->size() + _cursesDeck->size()
+                                                   + _professionsDeck->size() + _racesDeck->size()
+                                                   + _specialMechanicsDeck->size()
+                                                   + _armorDeck->size() + _armorAmplifiersDeck->size()
+                                                   + _battleAmplifiersDeck->size() + _levelUpDeck->size()
+                                                   + _specialMechanicsTreasureDeck->size() + _thingsAmplifiersDeck->size()
+                                                   + _weaponsDeck->size())){
+        pxmpMainBtn.load(_weaponsIterator->second.pictureAddress());
+        _weaponsIterator++;
+        _currCardsArrayRepresentationStep++;
+    }
     else {
         _monstersIterator = _monstersDeck->begin();
         _amplifiersIterator = _amplifiersDeck->begin();
+        _cursesIterator = _cursesDeck->begin();
+        _professionsIterator = _professionsDeck->begin();
+        _racesIterator = _racesDeck->begin();
+        _specialMechanicsIterator = _specialMechanicsDeck->begin();
+
+        _armorIterator = _armorDeck->begin();
+        _armorAmplifiersIterator = _armorAmplifiersDeck->begin();
+        _battleAmplifiersIterator = _battleAmplifiersDeck->begin();
+        _levelUpIterator = _levelUpDeck->begin();
+        _specialMechanicsTreasureIterator = _specialMechanicsTreasureDeck->begin();
+        _thingsAmplifiersIterator = _thingsAmplifiersDeck->begin();
+        _weaponsIterator = _weaponsDeck->begin();
+
+
+
         pxmpMainBtn.load(_monstersIterator->second.pictureAddress());
         _currCardsArrayRepresentationStep = 0;
     }
@@ -251,7 +349,7 @@ void battleField::continueCardRepresentation()
                               Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
     _theBtnMainRepresenter->setPalette(plte_btn);
 
-    _showCardsTimer->start(300);
+    _showCardsTimer->start(100);
 
 }
 
