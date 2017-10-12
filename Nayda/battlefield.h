@@ -91,6 +91,7 @@ private:
 
     bool _continueToRepresentCards = false;
     unsigned int _currCardsArrayRepresentationStep = 0;
+    int _timerCount = 100;
 
 
 

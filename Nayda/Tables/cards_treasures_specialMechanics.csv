@@ -4,7 +4,7 @@
 36;Pictures/treasures_specialMechanics/Friendship Potion.jpg;Friendship Potion;Basic;specialMechanic;200;1;eachFight;0
 37;Pictures/treasures_specialMechanics/Magic Lamp.jpg;Magic Lamp;Basic;specialMechanic;500;0;ownFight;0
 38;Pictures/treasures_specialMechanics/Pollymorph Potion.jpg;Pollymorph Potion;Basic;specialMechanic;1300;1;eachFight;0
-39;Pictures/treasures_specialMechanics/Hoard!.jpg;Hoard!;Basic;specialMechanic;0;0;immediately;0
+39;Pictures/treasures_specialMechanics/Hoard.jpg;Hoard;Basic;specialMechanic;0;0;immediately;0
 40;Pictures/treasures_specialMechanics/Wishing Ring_1.jpg;Wishing Ring_1;Basic;specialMechanic;500;0;anytime;0
 41;Pictures/treasures_specialMechanics/Invisibility Potion.jpg;Invisibility Potion;Basic;specialMechanic;200;1;afterFight;failedToFlee
 42;Pictures/treasures_specialMechanics/Flask of Glue.jpg;Flask of Glue;Basic;specialMechanic;100;0;afterFight;succeededToFlee
@@ -22,7 +22,7 @@
 97;Pictures/treasures_specialMechanics/Potion of Disbelief.jpg;Potion of Disbelief;WildAxe;specialMechanic;1000;1;eachFight;0
 98;Pictures/treasures_specialMechanics/Wishing Ring_3.jpg;Wishing Ring_3;WildAxe;specialMechanic;500;0;anytime;0
 99;Pictures/treasures_specialMechanics/Garage Sale.jpg;Garage Sale;WildAxe;specialMechanic;0;0;ownMove;onceReceived
-139;Pictures/treasures_specialMechanics/Take Me! Take Me!.jpg;Take Me! Take Me!;ClericalErrors;specialMechanic;0;0;eachFight;0
+139;Pictures/treasures_specialMechanics/TakeMeTakeMe.jpg;Take MeTake Me;ClericalErrors;specialMechanic;0;0;eachFight;0
 140;Pictures/treasures_specialMechanics/The Dungeon Casino.jpg;The Dungeon Casino;ClericalErrors;specialMechanic;0;0;exceptFight;0
 141;Pictures/treasures_specialMechanics/Potion of Apathy.jpg;Potion of Apathy;ClericalErrors;specialMechanic;0;1;eachFight;haveCompanion
 142;Pictures/treasures_specialMechanics/Feline Intervention.jpg;Feline Intervention;ClericalErrors;specialMechanic;0;0;dieWasPlayed;0
@@ -33,5 +33,5 @@
 147;Pictures/treasures_specialMechanics/Wishing Ring_4.jpg;Wishing Ring_4;ClericalErrors;specialMechanic;500;0;anytime;0
 148;Pictures/treasures_specialMechanics/Duck of Many Things.jpg;Duck of Many Things;ClericalErrors;specialMechanic;0;0;immediately;0
 149;Pictures/treasures_specialMechanics/Restraining Order.jpg;Restraining Order;ClericalErrors;specialMechanic;100;0;anytime;0
-150;Pictures/treasures_specialMechanics/Читерский  кубик3.jpg;Loaded Die_4;ClericalErrors;specialMechanic;300;0;dieWasPlayed;0
+150;Pictures/treasures_specialMechanics/Loaded Die_4.jpg;Loaded Die_4;ClericalErrors;specialMechanic;300;0;dieWasPlayed;0
 151;Pictures/treasures_specialMechanics/Hireling_2.jpg;Hireling_2;ClericalErrors;specialMechanic;0;0;anytime;0

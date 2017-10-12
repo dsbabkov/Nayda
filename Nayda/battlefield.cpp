@@ -349,12 +349,15 @@ void battleField::continueCardRepresentation()
                               Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
     _theBtnMainRepresenter->setPalette(plte_btn);
 
-    _showCardsTimer->start(100);
+    _showCardsTimer->start(_timerCount);
+
 
 }
 
 void battleField::startCardsRepresentation()
 {
-    _showCardsTimer->start(1000);
+    _showCardsTimer->start(_timerCount);
+    _timerCount = _timerCount*2;
+    if (_timerCount > 2000) _timerCount = 100;
 }
 
