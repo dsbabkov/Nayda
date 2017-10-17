@@ -35,6 +35,9 @@ Hand::Hand(QWidget *parent) :
 
 
 
+
+
+
 }
 
 Hand::~Hand()
