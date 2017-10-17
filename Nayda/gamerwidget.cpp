@@ -39,6 +39,8 @@ GamerWidget::GamerWidget(QWidget *parent) :
 
 
 
+
+
     QPixmap pxmp_icon_race_1("Pictures/No_Race_dbg.png");
     QPalette plte_icon_race_1;
     plte_icon_race_1.setBrush(ui->btn_race_1->backgroundRole(),
