@@ -7,7 +7,7 @@
 #include <Application/card.h>
 #include <QPushButton>
 #include <QTimer>
-
+//test comment
 
 namespace Ui {
 class battleField;
