@@ -5,6 +5,7 @@
 #include <QMap>
 #include <map>
 #include <cardsborderdefines.h>
+#include <vector>
 
 
 /*
