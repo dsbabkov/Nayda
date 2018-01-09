@@ -107,13 +107,20 @@ struct CardsKeysBorders {
 
 
 
+//class-prototype (draft only)
+//Despite of cards having somekind of the same nature,
+//the Game mechanics can be made much easier to implement if I am not using the cards as childs of prototype
+// "card", but make them completely separate natures as they ARE in real -
+// I am expecting that inheritance is not essential here, with such cards;
 
-class Game_Card
+
+
+class GameCard
 {
 
 public:
-    Game_Card();
-    Game_Card (int card_ID, QString picture_address, QString card_name, cardAddon card_Addon);
+    GameCard();
+    GameCard (int card_ID, QString picture_address, QString card_name, cardAddon card_Addon);
 
     int card_ID() const;
     void setCard_ID(int card_ID);
@@ -870,7 +877,7 @@ private:
   int _cards_left; //how many cards left in a game;
   int _time_replayed; //how many times were the stock replayed (somekind of a debug info)
 
-  std::vector<Game_Card> _stock;
+  std::vector<GameCard> _stock;
 
 
 };

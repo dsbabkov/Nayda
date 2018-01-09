@@ -222,7 +222,7 @@ private:
 
     //Game_Cards are filled inside the Game.cpp (constructor)
 
-    std::map <int, Game_Card> _basisStock;
+    //std::map <int, Game_Card> _basisStock;
     std::map <int, gameCardDoorMonster> _monstersDeck;
     std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
     std::map <int, gameCardDoorCurse> _cursesDeck;

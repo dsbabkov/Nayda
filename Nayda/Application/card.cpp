@@ -25,12 +25,12 @@ void Game_Card_Stock::setType(int type)
     _type = type;
 }
 
-Game_Card::Game_Card()
+GameCard::GameCard()
 {
     
 }
 
-Game_Card::Game_Card(int card_ID, QString picture_address, QString card_name, cardAddon card_Addon)
+GameCard::GameCard(int card_ID, QString picture_address, QString card_name, cardAddon card_Addon)
 {
     _card_ID = card_ID;
     _card_Picture_address = picture_address;
@@ -38,42 +38,42 @@ Game_Card::Game_Card(int card_ID, QString picture_address, QString card_name, ca
     _cardAddOn = card_Addon;
 }
 
-int Game_Card::card_ID() const
+int GameCard::card_ID() const
 {
     return _card_ID;
 }
 
-void Game_Card::setCard_ID(int card_ID)
+void GameCard::setCard_ID(int card_ID)
 {
     _card_ID = card_ID;
 }
 
-QString Game_Card::card_Picture_address() const
+QString GameCard::card_Picture_address() const
 {
     return _card_Picture_address;
 }
 
-void Game_Card::setCard_Picture_address(const QString &card_Picture_address)
+void GameCard::setCard_Picture_address(const QString &card_Picture_address)
 {
     _card_Picture_address = card_Picture_address;
 }
 
-QString Game_Card::card_Name() const
+QString GameCard::card_Name() const
 {
     return _card_Name;
 }
 
-void Game_Card::setCard_Name(const QString &card_Name)
+void GameCard::setCard_Name(const QString &card_Name)
 {
     _card_Name = card_Name;
 }
 
-cardAddon Game_Card::cardAddOn() const
+cardAddon GameCard::cardAddOn() const
 {
     return _cardAddOn;
 }
 
-void Game_Card::setCardAddOn(const cardAddon &cardAddOn)
+void GameCard::setCardAddOn(const cardAddon &cardAddOn)
 {
     _cardAddOn = cardAddOn;
 }
