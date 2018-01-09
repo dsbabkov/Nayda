@@ -6,9 +6,9 @@ player::player()
 
     _playerLevel = 1;
     _warPower = 1;
-    _cardsOnHands = 0;
+    _totalCardsOnHands = 0;
     _cardsOnHandsLimit = 5;
-    _cards_in_game = 0;
+    _totalCardsInGame = 0;
 
     _headSlotFull = false;
     _legsSlotFull = false;
@@ -185,12 +185,12 @@ void player::setHeadSlotFull(bool headSlotFull)
 
 int player::cards_in_game() const
 {
-    return _cards_in_game;
+    return _totalCardsInGame;
 }
 
 void player::setCards_in_game(int cards_in_game)
 {
-    _cards_in_game = cards_in_game;
+    _totalCardsInGame = cards_in_game;
 }
 
 int player::cardsOnHandsLimit() const
@@ -205,12 +205,12 @@ void player::setCardsOnHandsLimit(int cardsOnHandsLimit)
 
 int player::cardsOnHands() const
 {
-    return _cardsOnHands;
+    return _totalCardsOnHands;
 }
 
 void player::setCardsOnHands(int cardsOnHands)
 {
-    _cardsOnHands = cardsOnHands;
+    _totalCardsOnHands = cardsOnHands;
 }
 
 int player::warPower() const

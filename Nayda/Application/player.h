@@ -14,9 +14,9 @@ class player
 
     int _playerLevel;
     int _warPower;
-    int _cardsOnHands;
+    int _totalCardsOnHands;
     int _cardsOnHandsLimit;
-    int _cards_in_game;
+    int _totalCardsInGame;
 
 
     bool _headSlotFull;
@@ -45,6 +45,9 @@ class player
     std::map <Race_Passive_Abilities, Abilities_Keys_Races> _racePassiveAbilities;
     std::map <Profession_Active_Abilities, Abilities_Keys_Professions> _professionActiveAbilities;
     std::map <Profession_Passive_Abilities, Abilities_Keys_Professions> _professionPassiveAbilites;
+
+    std::vector<SimpleCard> _cardsOnHands;
+    std::vector<SimpleCard> _cardsInGame;
 
 
 public:

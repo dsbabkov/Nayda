@@ -113,6 +113,8 @@ struct CardsKeysBorders {
 // "card", but make them completely separate natures as they ARE in real -
 // I am expecting that inheritance is not essential here, with such cards;
 
+//use this as the elements of arrays, controlled by The Game.
+typedef std::pair<bool, unsigned int> SimpleCard;
 
 
 class GameCard
