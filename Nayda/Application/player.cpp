@@ -76,7 +76,7 @@ void player::addCardToHands(SimpleCard cardToBeAdded)
 
 }
 
-void player::removeCardFromHand(SimpleCard cardToBeRemoved)
+void player::removeCardFromHands(SimpleCard cardToBeRemoved)
 {
     std::vector<SimpleCard>::iterator it;
     it = std::find(_cardsOnHands.begin(), _cardsOnHands.end(), cardToBeRemoved);

@@ -131,10 +131,10 @@ The_Game::The_Game(QWidget *parent) :
 
     //creating opponents
     //remember, opponents less by 1 than total amount of players
-    for (int j = 0; j < m_number_of_players - 1; j++) {
-        this->opponent[j] = new GamerWidget;
-        opponent[j]->redraw_as_a_secondary_player();
-        opponent[j]->setIs_MainPlayer(false);
+    for (unsigned int j = 0; j < m_number_of_players - 1; j++) {
+        opponents.push_back(new GamerWidget);
+        opponents.back()->redraw_as_a_secondary_player();
+        opponents.back()->setIs_MainPlayer(false);
 
     }
 
@@ -142,8 +142,8 @@ The_Game::The_Game(QWidget *parent) :
 
     //first two of them to the top layout
     //fixed numbers, they are allways there
-    ui->top_opponents_layout->addWidget(this->opponent[0]);
-    ui->top_opponents_layout->addWidget(this->opponent[1]);
+    ui->top_opponents_layout->addWidget(opponents[0]);
+    ui->top_opponents_layout->addWidget(opponents[1]);
 
 
 
@@ -152,19 +152,19 @@ The_Game::The_Game(QWidget *parent) :
 
     //if there is(are) some other players, add them to the right_side layout
     if (m_number_of_players - 3 > 0) {
-        for (int i = 0; i < m_number_of_players - 3; i++) {
-            ui->right_side_opponents_layout->addWidget(this->opponent[2+i]);
+        for (unsigned int i = 0; i < m_number_of_players - 3; i++) {
+            ui->right_side_opponents_layout->addWidget(opponents[2+i]);
         }
     }
 
 
 
     //resizing 'em all
-    for (int j = 0; j < m_number_of_players - 1; j++) {
+    for (unsigned int j = 0; j < m_number_of_players - 1; j++) {
 
-        this->opponent[j]->setMinimumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
-        this->opponent[j]->setMaximumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
-        this->opponent[j]->setMaximumWidth(koeff_GamerWidget_size_Width*HW_Screen_Size_Width);
+        opponents[j]->setMinimumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
+        opponents[j]->setMaximumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
+        opponents[j]->setMaximumWidth(koeff_GamerWidget_size_Width*HW_Screen_Size_Width);
 
     }
 
@@ -1508,6 +1508,20 @@ const std::map<int, gameCardTreasureThingsAmplifiers> *The_Game::thingsAmplifier
 const std::map<int, gameCardTreasureWeapon> *The_Game::weaponsDeck()
 {
     return &_weaponsDeck;
+}
+
+void The_Game::givingCardsToPlayers()
+{
+    //define, how many players are presented;
+    //this value is received once from server side and can't be changed during the game if only the player is leaving the game;
+    int totalPlayers = m_number_of_players; //6 as default
+
+    //for
+
+
+
+
+
 }
 
 

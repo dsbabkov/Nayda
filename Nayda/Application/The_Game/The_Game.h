@@ -186,6 +186,17 @@ public:
 
 
 
+    //this process is responsible for giving cards to players, setting the Four Decks.
+    //in the Debug Version the Game Holds controll on each and every card Stack Action;
+    //remember to place prototypes for server-based functionality in all such places (where Cards Stack Action Takes place)
+    //first, make the as commented strings, to provide funtionality further...
+
+    //void initialCardsProcess();
+
+    void givingCardsToPlayers();
+
+
+
 
 signals:
     void dbg_to_be_shown(bool);
@@ -205,12 +216,12 @@ private:
     //game_settings
     int m_time_to_think;
     int m_time_for_move;
-    int m_number_of_players;
+    unsigned int m_number_of_players;
 
     //special option will allow to be more than 5 opponents
-    GamerWidget* opponent[5]; //make as controlled unique_ptr;
+    std::vector <GamerWidget*> opponents; //make as controlled unique_ptr;
 
-    player _players_opponents[5];
+    std::vector <player> _players_opponents; //5 at all
     player _main_player;
 
 
