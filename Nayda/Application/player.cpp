@@ -69,6 +69,28 @@ void player::setSuperMunchkin_without_second_profession(bool superMunchkin_witho
     _superMunchkin_without_second_profession = superMunchkin_without_second_profession;
 }
 
+void player::addCardToHands(SimpleCard cardToBeAdded)
+{
+    _cardsOnHands.push_back(cardToBeAdded);
+    qDebug() << "Card"<< (cardToBeAdded.first == 0 ? "Door" : "Treasure") << "with cardID = " << cardToBeAdded.second << "was successfully added to _cardsOnHands!";
+
+}
+
+void player::removeCardFromHand(SimpleCard cardToBeRemoved)
+{
+    std::vector<SimpleCard>::iterator it;
+    it = std::find(_cardsOnHands.begin(), _cardsOnHands.end(), cardToBeRemoved);
+    if (it != _cardsOnHands.end()) {
+
+
+        qDebug() << "Card"<< ((*it).first == 0 ? "Door" : "Treasure") << "with cardID = " << (*it).second << "was successfully removed from _cardsOnHands!";
+        _cardsOnHands.erase(it);
+    }
+    else {
+        qDebug() << "ERROR During deleting a card from _cardsOnHandsVector!" ;
+    }
+}
+
 bool player::halfBlood_without_second_race() const
 {
     return _halfBlood_without_second_race;

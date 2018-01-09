@@ -97,6 +97,9 @@ public:
     bool superMunchkin_without_second_profession() const;
     void setSuperMunchkin_without_second_profession(bool superMunchkin_without_second_profession);
 
+    void addCardToHands(SimpleCard);
+    void removeCardFromHand(SimpleCard);
+
 
 };
 
