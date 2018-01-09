@@ -22,7 +22,7 @@ Hand::Hand(QWidget *parent) :
 
 
     //place picture
-    QPixmap pxmp_HandCover("Pictures/Hand/greenDragon.png");
+    QPixmap pxmp_HandCover("Pictures/Hand/737666515.png");
     QPalette plte_HandCover;
     plte_HandCover.setBrush(backgroundRole(),
     QBrush(pxmp_HandCover.scaled(handCard_btn_size_width*HW_Screen_Size_Width,
