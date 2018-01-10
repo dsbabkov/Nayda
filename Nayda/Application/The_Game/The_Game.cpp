@@ -1560,12 +1560,12 @@ void The_Game::formingInitialDecks()
    qDebug() << "Size of Doors Stack Report: " << totalDoors;
 
     //the server knows exact values of sizes of arrays
-    for (unsigned int var = 0; var < totalTreasures; ++var) {
+    for (unsigned int var = 1; var < totalTreasures+1; ++var) {
 
         valuesTreasures.push_back(var);
 
     }
-    for (unsigned int var = 0; var < totalDoors; ++var) {
+    for (unsigned int var = 1; var < totalDoors+1; ++var) {
 
         valuesDoors.push_back(var);
 
