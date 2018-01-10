@@ -1,7 +1,7 @@
 #include "Application/The_Game/The_Game.h"
 #include "ui_The_Game.h"
-
-
+#include <ctime>
+#include <QTime>
 
 The_Game::The_Game(QWidget *parent) :
     QMainWindow(parent),
@@ -224,6 +224,10 @@ The_Game::The_Game(QWidget *parent) :
 
     //first pass there the Cards (after receiving them from server);
     passMapsToBattleField();
+
+
+    formingInitialDecks();
+
 
     showTheCards();
 
@@ -1510,11 +1514,15 @@ const std::map<int, gameCardTreasureWeapon> *The_Game::weaponsDeck()
     return &_weaponsDeck;
 }
 
+
+
+
 void The_Game::givingCardsToPlayers()
 {
     //define, how many players are presented;
     //this value is received once from server side and can't be changed during the game if only the player is leaving the game;
-    int totalPlayers = m_number_of_players; //6 as default
+    unsigned int totalPlayers = m_number_of_players; //6 as default
+
 
     //for
 
@@ -1522,6 +1530,65 @@ void The_Game::givingCardsToPlayers()
 
 
 
+}
+
+
+
+//this function might only be cold after the cards stacks are initialized.
+//If this rule is note completed, the sizes will be empty!
+void The_Game::formingInitialDecks()
+{
+    //start with the treasures..
+    std::vector<unsigned int> valuesTreasures;
+
+
+//    std::map <int, gameCardDoorMonster> _monstersDeck;
+//    std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
+//    std::map <int, gameCardDoorCurse> _cursesDeck;
+//    std::map <int, gameCardDoorProfession> _professionsDeck;
+//    std::map <int, gameCardDoorRace> _racesDeck;
+//    std::map <int, gameCardDoorSpecialMechanic> _specialMechanicsDeck;
+
+//    std::map <int, gameCardTreasureArmor> _armorDeck;
+//    std::map <int, gameCardTreasureArmorAmplifier> _armorAmplifiersDeck;
+//    std::map <int, gameCardTreasureBattleAmplifier> _battleAmplifiersDeck;
+//    std::map <int, gameCardTreasureLevelUp> _levelUpDeck;
+//    std::map <int, gameCardTreasureSpecialMechanic> _specialMechanicsTreasureDeck;
+//    std::map <int, gameCardTreasureThingsAmplifiers> _thingsAmplifiersDeck;
+//    std::map <int, gameCardTreasureWeapon> _weaponsDeck;
+
+
+    unsigned int totalTreasures = _armorDeck.size() + _armorAmplifiersDeck.size() + _battleAmplifiersDeck.size() + _levelUpDeck.size() +
+            _specialMechanicsTreasureDeck.size() + _thingsAmplifiersDeck.size() + _weaponsDeck.size();
+
+   if (!totalTreasures)  qDebug() << "Error during Treasures Stack Initialization. Stack is Empty! ";
+   qDebug() << "Size of Treasures Stack Report: " << totalTreasures;
+
+    //the server knows exact values of sizes of arrays
+    for (unsigned int var = 0; var < totalTreasures; ++var) {
+
+        valuesTreasures.push_back(var);
+
+    }
+    for (unsigned int var = 0; var < totalTreasures; ++var) {
+
+        unsigned int valuesLeft = valuesTreasures.size();
+        unsigned int currentPosition = randUnsignedInt(0, valuesLeft-1);
+        _treasuresDeck.push_back({true,valuesTreasures[currentPosition]});
+        valuesTreasures.erase(valuesTreasures.begin() + static_cast<int>(currentPosition)); //remove additional
+        valuesTreasures.shrink_to_fit();
+    }
+
+    qDebug() << "Treasures Stack is Filled Now!";
+
+
+
+}
+
+unsigned int The_Game::randUnsignedInt(unsigned int low, unsigned int high)
+{
+    // Random number between low and high
+    return static_cast<unsigned int>(qrand() % ((high + 1) - low) + low);
 }
 
 

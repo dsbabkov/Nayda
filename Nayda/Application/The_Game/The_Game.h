@@ -185,6 +185,13 @@ public:
     const std::map<int, gameCardTreasureWeapon> *weaponsDeck();
 
 
+    //Initial Decks;
+    //Their exact values should be stored on the SERVER SIDE
+    std::vector<SimpleCard> _treasuresDeck;
+    std::vector<SimpleCard> _doorsDeck;
+
+    std::vector<SimpleCard> _treasuresFold;
+    std::vector<SimpleCard> _doorsFold;
 
     //this process is responsible for giving cards to players, setting the Four Decks.
     //in the Debug Version the Game Holds controll on each and every card Stack Action;
@@ -195,6 +202,15 @@ public:
 
     void givingCardsToPlayers();
 
+
+    //This process should take place on the Server Side.
+    //Instead of forming an exact array of digits here, the Server should pass them one-by-one on clients requests..
+    //But for now, in Debug version, the procedure is executed on the clients' side.
+
+    //SERVREW
+    void formingInitialDecks();
+
+    unsigned int randUnsignedInt(unsigned int low, unsigned int high);
 
 
 
