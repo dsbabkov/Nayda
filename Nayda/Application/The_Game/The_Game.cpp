@@ -1540,29 +1540,24 @@ void The_Game::formingInitialDecks()
 {
     //start with the treasures..
     std::vector<unsigned int> valuesTreasures;
+    //continue with doors...
+    std::vector<unsigned int> valuesDoors;
 
 
-//    std::map <int, gameCardDoorMonster> _monstersDeck;
-//    std::map <int, gameCardDoorAmplifier> _amplifiersDeck;
-//    std::map <int, gameCardDoorCurse> _cursesDeck;
-//    std::map <int, gameCardDoorProfession> _professionsDeck;
-//    std::map <int, gameCardDoorRace> _racesDeck;
-//    std::map <int, gameCardDoorSpecialMechanic> _specialMechanicsDeck;
-
-//    std::map <int, gameCardTreasureArmor> _armorDeck;
-//    std::map <int, gameCardTreasureArmorAmplifier> _armorAmplifiersDeck;
-//    std::map <int, gameCardTreasureBattleAmplifier> _battleAmplifiersDeck;
-//    std::map <int, gameCardTreasureLevelUp> _levelUpDeck;
-//    std::map <int, gameCardTreasureSpecialMechanic> _specialMechanicsTreasureDeck;
-//    std::map <int, gameCardTreasureThingsAmplifiers> _thingsAmplifiersDeck;
-//    std::map <int, gameCardTreasureWeapon> _weaponsDeck;
 
 
     unsigned int totalTreasures = _armorDeck.size() + _armorAmplifiersDeck.size() + _battleAmplifiersDeck.size() + _levelUpDeck.size() +
             _specialMechanicsTreasureDeck.size() + _thingsAmplifiersDeck.size() + _weaponsDeck.size();
 
+
+    unsigned int totalDoors = _monstersDeck.size() + _amplifiersDeck.size() + _cursesDeck.size() + _professionsDeck.size() +
+            _racesDeck.size() + _specialMechanicsDeck.size();
+
+
    if (!totalTreasures)  qDebug() << "Error during Treasures Stack Initialization. Stack is Empty! ";
    qDebug() << "Size of Treasures Stack Report: " << totalTreasures;
+   if (!totalDoors)  qDebug() << "Error during Doors Stack Initialization. Stack is Empty! ";
+   qDebug() << "Size of Doors Stack Report: " << totalDoors;
 
     //the server knows exact values of sizes of arrays
     for (unsigned int var = 0; var < totalTreasures; ++var) {
@@ -1570,6 +1565,14 @@ void The_Game::formingInitialDecks()
         valuesTreasures.push_back(var);
 
     }
+    for (unsigned int var = 0; var < totalDoors; ++var) {
+
+        valuesDoors.push_back(var);
+
+    }
+
+
+
     for (unsigned int var = 0; var < totalTreasures; ++var) {
 
         unsigned int valuesLeft = valuesTreasures.size();
@@ -1580,6 +1583,18 @@ void The_Game::formingInitialDecks()
     }
 
     qDebug() << "Treasures Stack is Filled Now!";
+
+
+    for (unsigned int var = 0; var < totalDoors; ++var) {
+
+        unsigned int valuesLeft = valuesDoors.size();
+        unsigned int currentPosition = randUnsignedInt(0, valuesLeft-1);
+        _doorsDeck.push_back({true,valuesDoors[currentPosition]});
+        valuesDoors.erase(valuesDoors.begin() + static_cast<int>(currentPosition)); //remove additional
+        valuesDoors.shrink_to_fit();
+    }
+
+    qDebug() << "Doors Stack is Filled Now!";
 
 
 
