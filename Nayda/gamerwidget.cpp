@@ -22,7 +22,7 @@ GamerWidget::GamerWidget(QWidget *parent) :
 
     //setup the koefficients;
     const float race_class_btn_size_geometric_width_to_height_ratio = 2.71f;
-    const float race_class_btn_size_width = 0.0415f;
+    const float race_class_btn_size_width = 0.0395f;
     const float race_class_btn_size_height = race_class_btn_size_geometric_width_to_height_ratio*race_class_btn_size_width;
 
     //setup the "card"-race and "card"-class size

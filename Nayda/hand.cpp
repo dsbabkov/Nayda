@@ -31,7 +31,7 @@ Hand::Hand(QWidget *parent) :
 
 
     setAutoFillBackground(true);
-    setPalette(plte_HandCover);
+    //setPalette(plte_HandCover);
 
 
 }
@@ -239,7 +239,7 @@ void Hand::addNewCardToHands(SimpleCard card)
 
     //setup the koefficients;
     const float handCardSize_width_to_height_ratio = 2.71f;
-    const float handCardSizeWidht = 0.0415f;
+    const float handCardSizeWidht = 0.0315f;
     const float handCardSizeHeight = handCardSize_width_to_height_ratio*handCardSizeWidht;
 
 
