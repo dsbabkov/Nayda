@@ -243,7 +243,8 @@ The_Game::The_Game(QWidget *parent) :
 
 
     //first pass there the Cards (after receiving them from server);
-    passMapsToBattleField();
+    passDecksToBattleField();
+    passDecksToPlayerWdigets();
 
 
     formingInitialDecks();
@@ -1449,7 +1450,7 @@ void The_Game::showTheCards()
     ui->GameField->cardsRepresenter();
 }
 
-void The_Game::passMapsToBattleField()
+void The_Game::passDecksToBattleField()
 {
     ui->GameField->setMonsersDeck(monstersDeck());
     ui->GameField->setAmplifiersDeck(amplifiersDeck());
@@ -1464,6 +1465,45 @@ void The_Game::passMapsToBattleField()
     ui->GameField->setSpecialMechanicsTreasureDeck(specialMechanicsTreasureDeck());
     ui->GameField->setThingsAmplifiersDeck(thingsAmplifiersDeck());
     ui->GameField->setWeaponsDeck(weaponsDeck());
+
+
+}
+
+void The_Game::passDecksToPlayerWdigets()
+{
+    ui->MainGamer->setMonsersDeck(monstersDeck());
+    ui->MainGamer->setAmplifiersDeck(amplifiersDeck());
+    ui->MainGamer->setArmorAmplifiersDeck(armorAmplifiersDeck());
+    ui->MainGamer->setArmorDeck(armorDeck());
+    ui->MainGamer->setBattleAmplifiersDeck(battleAmplifiersDeck());
+    ui->MainGamer->setCursesDeck(cursesDeck());
+    ui->MainGamer->setLevelUpDeck(levelUpDeck());
+    ui->MainGamer->setProfessionsDeck(professionsDeck());
+    ui->MainGamer->setRacesDeck(racesDeck());
+    ui->MainGamer->setSpecialMechanicsDeck(specialMechanicsDeck());
+    ui->MainGamer->setSpecialMechanicsTreasureDeck(specialMechanicsTreasureDeck());
+    ui->MainGamer->setThingsAmplifiersDeck(thingsAmplifiersDeck());
+    ui->MainGamer->setWeaponsDeck(weaponsDeck());
+
+
+    for (unsigned int var = 0; var < _widgets4Opponents.size(); ++var) {
+
+
+        (_widgets4Opponents[var])->setMonsersDeck(monstersDeck());
+        (_widgets4Opponents[var])->setAmplifiersDeck(amplifiersDeck());
+        (_widgets4Opponents[var])->setArmorAmplifiersDeck(armorAmplifiersDeck());
+        (_widgets4Opponents[var])->setArmorDeck(armorDeck());
+        (_widgets4Opponents[var])->setBattleAmplifiersDeck(battleAmplifiersDeck());
+        (_widgets4Opponents[var])->setCursesDeck(cursesDeck());
+        (_widgets4Opponents[var])->setLevelUpDeck(levelUpDeck());
+        (_widgets4Opponents[var])->setProfessionsDeck(professionsDeck());
+        (_widgets4Opponents[var])->setRacesDeck(racesDeck());
+        (_widgets4Opponents[var])->setSpecialMechanicsDeck(specialMechanicsDeck());
+        (_widgets4Opponents[var])->setSpecialMechanicsTreasureDeck(specialMechanicsTreasureDeck());
+        (_widgets4Opponents[var])->setThingsAmplifiersDeck(thingsAmplifiersDeck());
+        (_widgets4Opponents[var])->setWeaponsDeck(weaponsDeck());
+
+    }
 
 
 }
@@ -1603,6 +1643,11 @@ void The_Game::givingCardsToPlayers()
 
 
 
+}
+
+void The_Game::showInitialCardsOnHands()
+{
+    //ui->MainGamer->
 }
 
 

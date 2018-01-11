@@ -165,8 +165,8 @@ public:
 
 
     void showTheCards();
-    void passMapsToBattleField();
-
+    void passDecksToBattleField();
+    void passDecksToPlayerWdigets();
 
 
     const std::map<int, gameCardDoorMonster> * monstersDeck();
@@ -214,6 +214,8 @@ public:
 
     //SERVREW
     void givingCardsToPlayers();
+
+    void showInitialCardsOnHands();
 
 
 signals:

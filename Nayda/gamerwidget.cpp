@@ -106,3 +106,68 @@ void GamerWidget::redraw_as_a_secondary_player()
 }
 
 
+
+void GamerWidget::setMonsersDeck(const std::map<int, gameCardDoorMonster> *monsersDeck)
+{
+    _monstersDeck = monsersDeck;
+}
+
+void GamerWidget::setAmplifiersDeck(const std::map<int, gameCardDoorAmplifier> *amplifiersDeck)
+{
+    _amplifiersDeck = amplifiersDeck;
+}
+
+void GamerWidget::setCursesDeck(const std::map<int, gameCardDoorCurse> *cursesDeck)
+{
+    _cursesDeck = cursesDeck;
+}
+
+void GamerWidget::setProfessionsDeck(const std::map<int, gameCardDoorProfession> *professionsDeck)
+{
+    _professionsDeck = professionsDeck;
+}
+
+void GamerWidget::setRacesDeck(const std::map<int, gameCardDoorRace> *racesDeck)
+{
+    _racesDeck = racesDeck;
+}
+
+void GamerWidget::setSpecialMechanicsDeck(const std::map<int, gameCardDoorSpecialMechanic> *specialMechanicsDeck)
+{
+    _specialMechanicsDeck = specialMechanicsDeck;
+}
+
+void GamerWidget::setArmorDeck(const std::map<int, gameCardTreasureArmor> *armorDeck)
+{
+    _armorDeck = armorDeck;
+}
+
+void GamerWidget::setArmorAmplifiersDeck(const std::map<int, gameCardTreasureArmorAmplifier> *armorAmplifiersDeck)
+{
+    _armorAmplifiersDeck = armorAmplifiersDeck;
+}
+
+void GamerWidget::setBattleAmplifiersDeck(const std::map<int, gameCardTreasureBattleAmplifier> *battleAmplifiersDeck)
+{
+    _battleAmplifiersDeck = battleAmplifiersDeck;
+}
+
+void GamerWidget::setLevelUpDeck(const std::map<int, gameCardTreasureLevelUp> *levelUpDeck)
+{
+    _levelUpDeck = levelUpDeck;
+}
+
+void GamerWidget::setSpecialMechanicsTreasureDeck(const std::map<int, gameCardTreasureSpecialMechanic> *specialMechanicsTreasureDeck)
+{
+    _specialMechanicsTreasureDeck = specialMechanicsTreasureDeck;
+}
+
+void GamerWidget::setThingsAmplifiersDeck(const std::map<int, gameCardTreasureThingsAmplifiers> *thingsAmplifiersDeck)
+{
+    _thingsAmplifiersDeck = thingsAmplifiersDeck;
+}
+
+void GamerWidget::setWeaponsDeck(const std::map<int, gameCardTreasureWeapon> *weaponsDeck)
+{
+    _weaponsDeck = weaponsDeck;
+}
