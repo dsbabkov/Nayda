@@ -200,7 +200,7 @@ public:
 
     //void initialCardsProcess();
 
-    void givingCardsToPlayers();
+
 
 
     //This process should take place on the Server Side.
@@ -212,6 +212,8 @@ public:
 
     unsigned int randUnsignedInt(unsigned int low, unsigned int high);
 
+    //SERVREW
+    void givingCardsToPlayers();
 
 
 signals:
@@ -235,11 +237,20 @@ private:
     unsigned int m_number_of_players;
 
     //special option will allow to be more than 5 opponents
-    std::vector <GamerWidget*> opponents; //make as controlled unique_ptr;
+    std::vector <GamerWidget*> _widgets4Opponents; //make as controlled unique_ptr;
 
-    std::vector <player> _players_opponents; //5 at all
+
+
+
     player _main_player;
 
+    player _opponent0;
+    player _opponent1;
+    player _opponent2;
+    player _opponent3;
+    player _opponent4;
+
+    std::vector <player> _players_opponents; //5 at all
 
     //this stock depends on the Game Mode;
     //Nonetheless, it is allways the same through all the game, since its only function is

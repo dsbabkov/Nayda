@@ -41,6 +41,15 @@ The_Game::The_Game(QWidget *parent) :
 
 
 
+    //Settings-up the Randomization. Disable in the DEBUG
+    // Create seed for the random
+    // That is needed only once on application startup
+    //QTime time = QTime::currentTime();
+    //qsrand((uint)time.msec());
+
+
+
+
     //Setting-up button's connections.
 
     //QObject::connect( ui->btnHide, SIGNAL(clicked()), this, SLOT(hide()));
@@ -131,10 +140,21 @@ The_Game::The_Game(QWidget *parent) :
 
     //creating opponents
     //remember, opponents less by 1 than total amount of players
+
+    //opponets
+
+    _players_opponents.push_back(_opponent0);
+    _players_opponents.push_back(_opponent1);
+    _players_opponents.push_back(_opponent2);
+    _players_opponents.push_back(_opponent3);
+    _players_opponents.push_back(_opponent4);
+
+
+    //widgets for them
     for (unsigned int j = 0; j < m_number_of_players - 1; j++) {
-        opponents.push_back(new GamerWidget);
-        opponents.back()->redraw_as_a_secondary_player();
-        opponents.back()->setIs_MainPlayer(false);
+        _widgets4Opponents.push_back(new GamerWidget);
+        _widgets4Opponents.back()->redraw_as_a_secondary_player();
+        _widgets4Opponents.back()->setIs_MainPlayer(false);
 
     }
 
@@ -142,8 +162,8 @@ The_Game::The_Game(QWidget *parent) :
 
     //first two of them to the top layout
     //fixed numbers, they are allways there
-    ui->top_opponents_layout->addWidget(opponents[0]);
-    ui->top_opponents_layout->addWidget(opponents[1]);
+    ui->top_opponents_layout->addWidget(_widgets4Opponents[0]);
+    ui->top_opponents_layout->addWidget(_widgets4Opponents[1]);
 
 
 
@@ -153,7 +173,7 @@ The_Game::The_Game(QWidget *parent) :
     //if there is(are) some other players, add them to the right_side layout
     if (m_number_of_players - 3 > 0) {
         for (unsigned int i = 0; i < m_number_of_players - 3; i++) {
-            ui->right_side_opponents_layout->addWidget(opponents[2+i]);
+            ui->right_side_opponents_layout->addWidget(_widgets4Opponents[2+i]);
         }
     }
 
@@ -162,9 +182,9 @@ The_Game::The_Game(QWidget *parent) :
     //resizing 'em all
     for (unsigned int j = 0; j < m_number_of_players - 1; j++) {
 
-        opponents[j]->setMinimumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
-        opponents[j]->setMaximumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
-        opponents[j]->setMaximumWidth(koeff_GamerWidget_size_Width*HW_Screen_Size_Width);
+        _widgets4Opponents[j]->setMinimumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
+        _widgets4Opponents[j]->setMaximumHeight(koeff_GamerWidget_size_Height*HW_Screen_Size_Heigh);
+        _widgets4Opponents[j]->setMaximumWidth(koeff_GamerWidget_size_Width*HW_Screen_Size_Width);
 
     }
 
@@ -227,7 +247,7 @@ The_Game::The_Game(QWidget *parent) :
 
 
     formingInitialDecks();
-
+    givingCardsToPlayers();
 
     showTheCards();
 
@@ -1516,17 +1536,70 @@ const std::map<int, gameCardTreasureWeapon> *The_Game::weaponsDeck()
 
 
 
+//This procedure is responsible for giving initial 8 cards to players.
+//If the Server is Working, it is resposible for providing this info for the end-client.
+//For the DEBUG version, it will give the numbers (cardIDs) to end-gamers directly.
+//No #ifdef directive for now.
 
 void The_Game::givingCardsToPlayers()
 {
+#ifdef DEBUG_NO_SERVER
+
     //define, how many players are presented;
     //this value is received once from server side and can't be changed during the game if only the player is leaving the game;
     unsigned int totalPlayers = m_number_of_players; //6 as default
+    unsigned int cardsToGive = 4;
+
+    //then it is necessary to give m_number_of_players*4 cards from doors stack, and
+    //the same quantity from the Treasures stack.
+
+    //start with the main player... (giving cards from the top)
+
+    for (unsigned int var = 0; var < cardsToGive; ++var) {
+
+        _main_player.addCardToHands(_doorsDeck.front());
+        _doorsDeck.erase(_doorsDeck.begin());
+    }
+
+    //giving cards to the other players...
+
+    for (unsigned int var = 0; var < m_number_of_players-1; ++var) {
+
+        for (unsigned int j = 0; j < cardsToGive; ++j ) {
+
+            _players_opponents[var].addCardToHands(_doorsDeck.front());
+            _doorsDeck.erase(_doorsDeck.begin());
+
+        }
+    }
+    qDebug() << "Doors are given to the players!";
+
+    //treasures..
+
+    for (unsigned int var = 0; var < cardsToGive; ++var) {
+
+        _main_player.addCardToHands(_treasuresDeck.front());
+        _treasuresDeck.erase(_treasuresDeck.begin());
+    }
+
+    //giving cards to the other players...
 
 
-    //for
+    for (unsigned int var = 0; var < m_number_of_players-1; ++var) {
+
+        for (unsigned int j = 0; j < cardsToGive; ++j ) {
+
+            _players_opponents[var].addCardToHands(_treasuresDeck.front());
+            _treasuresDeck.erase(_treasuresDeck.begin());
+
+        }
+    }
+    qDebug() << "Treasures are given to the players!";
 
 
+
+
+#endif
 
 
 
@@ -1538,6 +1611,9 @@ void The_Game::givingCardsToPlayers()
 //If this rule is note completed, the sizes will be empty!
 void The_Game::formingInitialDecks()
 {
+
+#ifdef DEBUG_NO_SERVER
+
     //start with the treasures..
     std::vector<unsigned int> valuesTreasures;
     //continue with doors...
@@ -1589,14 +1665,14 @@ void The_Game::formingInitialDecks()
 
         unsigned int valuesLeft = valuesDoors.size();
         unsigned int currentPosition = randUnsignedInt(0, valuesLeft-1);
-        _doorsDeck.push_back({true,valuesDoors[currentPosition]});
+        _doorsDeck.push_back({false,valuesDoors[currentPosition]});
         valuesDoors.erase(valuesDoors.begin() + static_cast<int>(currentPosition)); //remove additional
         valuesDoors.shrink_to_fit();
     }
 
     qDebug() << "Doors Stack is Filled Now!";
 
-
+#endif
 
 }
 
