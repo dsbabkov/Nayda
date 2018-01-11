@@ -34,13 +34,80 @@ Hand::Hand(QWidget *parent) :
     setPalette(plte_HandCover);
 
 
+}
 
 
+void Hand::setMonsersDeck(const std::map<int, gameCardDoorMonster> *monsersDeck)
+{
+    _monstersDeck = monsersDeck;
+}
 
+void Hand::setAmplifiersDeck(const std::map<int, gameCardDoorAmplifier> *amplifiersDeck)
+{
+    _amplifiersDeck = amplifiersDeck;
+}
 
+void Hand::setCursesDeck(const std::map<int, gameCardDoorCurse> *cursesDeck)
+{
+    _cursesDeck = cursesDeck;
+}
+
+void Hand::setProfessionsDeck(const std::map<int, gameCardDoorProfession> *professionsDeck)
+{
+    _professionsDeck = professionsDeck;
+}
+
+void Hand::setRacesDeck(const std::map<int, gameCardDoorRace> *racesDeck)
+{
+    _racesDeck = racesDeck;
+}
+
+void Hand::setSpecialMechanicsDeck(const std::map<int, gameCardDoorSpecialMechanic> *specialMechanicsDeck)
+{
+    _specialMechanicsDeck = specialMechanicsDeck;
+}
+
+void Hand::setArmorDeck(const std::map<int, gameCardTreasureArmor> *armorDeck)
+{
+    _armorDeck = armorDeck;
+}
+
+void Hand::setArmorAmplifiersDeck(const std::map<int, gameCardTreasureArmorAmplifier> *armorAmplifiersDeck)
+{
+    _armorAmplifiersDeck = armorAmplifiersDeck;
+}
+
+void Hand::setBattleAmplifiersDeck(const std::map<int, gameCardTreasureBattleAmplifier> *battleAmplifiersDeck)
+{
+    _battleAmplifiersDeck = battleAmplifiersDeck;
+}
+
+void Hand::setLevelUpDeck(const std::map<int, gameCardTreasureLevelUp> *levelUpDeck)
+{
+    _levelUpDeck = levelUpDeck;
+}
+
+void Hand::setSpecialMechanicsTreasureDeck(const std::map<int, gameCardTreasureSpecialMechanic> *specialMechanicsTreasureDeck)
+{
+    _specialMechanicsTreasureDeck = specialMechanicsTreasureDeck;
+}
+
+void Hand::setThingsAmplifiersDeck(const std::map<int, gameCardTreasureThingsAmplifiers> *thingsAmplifiersDeck)
+{
+    _thingsAmplifiersDeck = thingsAmplifiersDeck;
+}
+
+void Hand::setWeaponsDeck(const std::map<int, gameCardTreasureWeapon> *weaponsDeck)
+{
+    _weaponsDeck = weaponsDeck;
 }
 
 Hand::~Hand()
 {
     delete ui;
+}
+
+void Hand::addNewCardToHands(unsigned int cardID)
+{
+
 }

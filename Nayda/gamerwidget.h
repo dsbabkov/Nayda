@@ -43,6 +43,8 @@ public:
 
 
 
+
+
 private:
     Ui::GamerWidget *ui;
     bool _is_MainPlayer;
@@ -78,6 +80,14 @@ private:
     std::map<int, gameCardTreasureSpecialMechanic> :: const_iterator _specialMechanicsTreasureIterator;
     std::map<int, gameCardTreasureThingsAmplifiers> :: const_iterator _thingsAmplifiersIterator;
     std::map<int, gameCardTreasureWeapon> :: const_iterator _weaponsIterator;
+
+
+
+public:
+
+    void passCardsDecksToHandsWidget();
+    void addTheCardToHandsWidget(unsigned int cardID);
+
 
 
 };

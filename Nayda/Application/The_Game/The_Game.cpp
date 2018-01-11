@@ -1485,6 +1485,8 @@ void The_Game::passDecksToPlayerWdigets()
     ui->MainGamer->setThingsAmplifiersDeck(thingsAmplifiersDeck());
     ui->MainGamer->setWeaponsDeck(weaponsDeck());
 
+    ui->MainGamer->passCardsDecksToHandsWidget();
+
 
     for (unsigned int var = 0; var < _widgets4Opponents.size(); ++var) {
 
@@ -1502,6 +1504,7 @@ void The_Game::passDecksToPlayerWdigets()
         (_widgets4Opponents[var])->setSpecialMechanicsTreasureDeck(specialMechanicsTreasureDeck());
         (_widgets4Opponents[var])->setThingsAmplifiersDeck(thingsAmplifiersDeck());
         (_widgets4Opponents[var])->setWeaponsDeck(weaponsDeck());
+        (_widgets4Opponents[var])->passCardsDecksToHandsWidget();
 
     }
 

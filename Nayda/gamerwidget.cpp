@@ -171,3 +171,30 @@ void GamerWidget::setWeaponsDeck(const std::map<int, gameCardTreasureWeapon> *we
 {
     _weaponsDeck = weaponsDeck;
 }
+
+
+
+
+
+void GamerWidget::passCardsDecksToHandsWidget()
+{
+
+    ui->widget->setMonsersDeck(_monstersDeck);
+    ui->widget->setAmplifiersDeck(_amplifiersDeck);
+    ui->widget->setArmorAmplifiersDeck(_armorAmplifiersDeck);
+    ui->widget->setArmorDeck(_armorDeck);
+    ui->widget->setBattleAmplifiersDeck(_battleAmplifiersDeck);
+    ui->widget->setCursesDeck(_cursesDeck);
+    ui->widget->setLevelUpDeck(_levelUpDeck);
+    ui->widget->setProfessionsDeck(_professionsDeck);
+    ui->widget->setRacesDeck(_racesDeck);
+    ui->widget->setSpecialMechanicsDeck(_specialMechanicsDeck);
+    ui->widget->setSpecialMechanicsTreasureDeck(_specialMechanicsTreasureDeck);
+    ui->widget->setThingsAmplifiersDeck(_thingsAmplifiersDeck);
+    ui->widget->setWeaponsDeck(_weaponsDeck);
+}
+
+void GamerWidget::addTheCardToHandsWidget(unsigned int cardID)
+{
+
+}
