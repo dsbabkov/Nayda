@@ -203,16 +203,14 @@ void GamerWidget::addTheCardToHandsWidget(SimpleCard card)
 bool GamerWidget::eventFilter(QObject *o, QEvent *e)
 {
 
-    if (o == static_cast<QObject*>(ui->btn_class_1))  {
+    if (o == ui->btn_class_1)  {
         if (e->type() == QEvent::Enter) {
             qDebug() << "Mouse Enters Area!";
             return true;
-
         }
         else if (e->type() == QEvent::Leave) {
             qDebug() << "Mouse Leaves Area!";
             return true;
-
         }
         else {
             return QWidget::eventFilter(o, e);
