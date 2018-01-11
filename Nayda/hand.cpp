@@ -239,7 +239,7 @@ void Hand::addNewCardToHands(SimpleCard card)
 
     //setup the koefficients;
     const float handCardSize_width_to_height_ratio = 2.71f;
-    const float handCardSizeWidht = 0.0315f;
+    const float handCardSizeWidht = 0.019f;
     const float handCardSizeHeight = handCardSize_width_to_height_ratio*handCardSizeWidht;
 
 
