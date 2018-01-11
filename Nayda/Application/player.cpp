@@ -91,6 +91,16 @@ void player::removeCardFromHands(SimpleCard cardToBeRemoved)
     }
 }
 
+std::vector<SimpleCard> *player::cardsOnHandsVector()
+{
+    return &_cardsOnHands;
+}
+
+std::vector<SimpleCard> *player::cardsInGameVector()
+{
+    return &_cardsInGame;
+}
+
 bool player::halfBlood_without_second_race() const
 {
     return _halfBlood_without_second_race;

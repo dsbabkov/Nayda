@@ -86,7 +86,7 @@ private:
 public:
 
     void passCardsDecksToHandsWidget();
-    void addTheCardToHandsWidget(unsigned int cardID);
+    void addTheCardToHandsWidget(SimpleCard card);
 
 
 

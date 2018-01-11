@@ -194,7 +194,7 @@ void GamerWidget::passCardsDecksToHandsWidget()
     ui->widget->setWeaponsDeck(_weaponsDeck);
 }
 
-void GamerWidget::addTheCardToHandsWidget(unsigned int cardID)
+void GamerWidget::addTheCardToHandsWidget(SimpleCard card)
 {
-
+    ui->widget->addNewCardToHands(card);
 }

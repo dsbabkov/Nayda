@@ -249,6 +249,7 @@ The_Game::The_Game(QWidget *parent) :
 
     formingInitialDecks();
     givingCardsToPlayers();
+    showInitialCardsOnHands();
 
     showTheCards();
 
@@ -1650,7 +1651,22 @@ void The_Game::givingCardsToPlayers()
 
 void The_Game::showInitialCardsOnHands()
 {
-    //ui->MainGamer->
+    for (unsigned int var = 0; var < _main_player.cardsOnHandsVector()->size(); ++var) {
+
+        ui->MainGamer->addTheCardToHandsWidget(*((_main_player.cardsOnHandsVector())->begin() + static_cast<int>(var)));
+
+    }
+
+    for (unsigned int var = 0; var < _players_opponents.size(); ++var) {
+
+        unsigned int totalCardsToShow = (_players_opponents[var].cardsOnHandsVector())->size();
+        for (unsigned int j = 0; j < totalCardsToShow; ++j) {
+
+            _widgets4Opponents[var]->addTheCardToHandsWidget(*((_players_opponents[var].cardsOnHandsVector())->begin() + static_cast<int>(j)));
+        }
+
+    }
+
 }
 
 

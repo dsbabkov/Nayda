@@ -101,6 +101,10 @@ public:
     void removeCardFromHands(SimpleCard);
 
 
+    std::vector<SimpleCard>* cardsOnHandsVector();
+    std::vector<SimpleCard>* cardsInGameVector();
+
+
 };
 
 #endif // PLAYER_H

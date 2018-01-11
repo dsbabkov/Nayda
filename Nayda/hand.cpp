@@ -107,7 +107,171 @@ Hand::~Hand()
     delete ui;
 }
 
-void Hand::addNewCardToHands(unsigned int cardID)
+void Hand::addNewCardToHands(SimpleCard card)
 {
+
+
+    std::map<int, gameCardDoorMonster> :: const_iterator  _monstersIterator;
+    std::map<int, gameCardDoorAmplifier> :: const_iterator _amplifiersIterator;
+    std::map<int, gameCardDoorCurse> :: const_iterator _cursesIterator;
+    std::map<int, gameCardDoorProfession> :: const_iterator _professionsIterator;
+    std::map<int, gameCardDoorRace> :: const_iterator _racesIterator;
+    std::map<int, gameCardDoorSpecialMechanic> :: const_iterator _specialMechanicsIterator;
+
+    std::map<int, gameCardTreasureArmor> :: const_iterator _armorIterator;
+    std::map<int, gameCardTreasureArmorAmplifier> :: const_iterator _armorAmplifiersIterator;
+    std::map<int, gameCardTreasureBattleAmplifier> :: const_iterator _battleAmplifiersIterator;
+    std::map<int, gameCardTreasureLevelUp> :: const_iterator _levelUpIterator;
+    std::map<int, gameCardTreasureSpecialMechanic> :: const_iterator _specialMechanicsTreasureIterator;
+    std::map<int, gameCardTreasureThingsAmplifiers> :: const_iterator _thingsAmplifiersIterator;
+    std::map<int, gameCardTreasureWeapon> :: const_iterator _weaponsIterator;
+
+    QString currentPictureAddress;
+    bool isFound = false;
+    if (!card.first) { //door
+
+        _monstersIterator = _monstersDeck->find(static_cast <int> (card.second));
+        if (_monstersIterator != _monstersDeck->end()) {
+            currentPictureAddress = (*_monstersIterator).second.pictureAddress();
+            isFound = true;
+        }
+        if (!isFound) {
+            _amplifiersIterator = _amplifiersDeck->find(static_cast <int> (card.second));
+            if (_amplifiersIterator != _amplifiersDeck->end()) {
+                currentPictureAddress = (*_amplifiersIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _cursesIterator = _cursesDeck->find(static_cast <int> (card.second));
+            if (_cursesIterator != _cursesDeck->end()) {
+                currentPictureAddress = (*_cursesIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _professionsIterator = _professionsDeck->find(static_cast <int> (card.second));
+            if (_professionsIterator != _professionsDeck->end()) {
+                currentPictureAddress = (*_professionsIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _racesIterator = _racesDeck->find(static_cast <int> (card.second));
+            if (_racesIterator != _racesDeck->end()) {
+                currentPictureAddress = (*_racesIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _specialMechanicsIterator = _specialMechanicsDeck->find(static_cast <int> (card.second));
+            if (_specialMechanicsIterator != _specialMechanicsDeck->end()) {
+                currentPictureAddress = (*_specialMechanicsIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+
+
+    }
+    else { //treasure
+
+
+        _armorIterator = _armorDeck->find(static_cast <int> (card.second));
+        if (_armorIterator != _armorDeck->end()) {
+            currentPictureAddress = (*_armorIterator).second.pictureAddress();
+            isFound = true;
+        }
+        if (!isFound) {
+            _armorAmplifiersIterator = _armorAmplifiersDeck->find(static_cast <int> (card.second));
+            if (_armorAmplifiersIterator != _armorAmplifiersDeck->end()) {
+                currentPictureAddress = (*_armorAmplifiersIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _battleAmplifiersIterator = _battleAmplifiersDeck->find(static_cast <int> (card.second));
+            if (_battleAmplifiersIterator != _battleAmplifiersDeck->end()) {
+                currentPictureAddress = (*_battleAmplifiersIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _levelUpIterator = _levelUpDeck->find(static_cast <int> (card.second));
+            if (_levelUpIterator != _levelUpDeck->end()) {
+                currentPictureAddress = (*_levelUpIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _specialMechanicsTreasureIterator = _specialMechanicsTreasureDeck->find(static_cast <int> (card.second));
+            if (_specialMechanicsTreasureIterator != _specialMechanicsTreasureDeck->end()) {
+                currentPictureAddress = (*_specialMechanicsTreasureIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _thingsAmplifiersIterator = _thingsAmplifiersDeck->find(static_cast <int> (card.second));
+            if (_thingsAmplifiersIterator != _thingsAmplifiersDeck->end()) {
+                currentPictureAddress = (*_thingsAmplifiersIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+        if (!isFound) {
+            _weaponsIterator = _weaponsDeck->find(static_cast <int> (card.second));
+            if (_weaponsIterator != _weaponsDeck->end()) {
+                currentPictureAddress = (*_weaponsIterator).second.pictureAddress();
+                isFound = true;
+            }
+        }
+
+
+
+    }
+
+    if (!isFound) qDebug() << "Error during passing Cards to the Hands Shower! Check the number passed! " << card.second;
+
+    QPushButton* newCard = new QPushButton();
+
+    //find the HW size of the window
+    QRect HW_Screen_Size = QApplication::desktop()->screenGeometry();
+    int HW_Screen_Size_Width = HW_Screen_Size.width();
+    int HW_Screen_Size_Height = HW_Screen_Size.height();
+
+    //setup the koefficients;
+    const float handCardSize_width_to_height_ratio = 2.71f;
+    const float handCardSizeWidht = 0.0415f;
+    const float handCardSizeHeight = handCardSize_width_to_height_ratio*handCardSizeWidht;
+
+
+
+    newCard->setMaximumWidth(handCardSizeWidht*HW_Screen_Size_Width*2);
+    newCard->setMaximumHeight(handCardSizeHeight*HW_Screen_Size_Height*2);
+    newCard->setMinimumWidth(handCardSizeWidht*HW_Screen_Size_Width*2);
+    newCard->setMinimumHeight(handCardSizeHeight*HW_Screen_Size_Height*2);
+
+    QPixmap pxmpBtnMainRepresenter(currentPictureAddress);
+    QPalette plteBtnMainRepresenter;
+    plteBtnMainRepresenter.setBrush(newCard->backgroundRole(),
+    QBrush(pxmpBtnMainRepresenter.scaled(handCardSizeWidht*HW_Screen_Size_Width*2,
+                                                             handCardSizeHeight*HW_Screen_Size_Height*2,
+                                                             Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    this->layout()->addWidget(newCard);
+    //ui->verticalLayout->addWidget(_theBtnMainRepresenter);
+    //ui->verticalLayout->setAlignment(Qt::AlignHCenter);
+    this->layout()->setAlignment(Qt::AlignHCenter);
+    newCard->setFlat(true);
+    newCard->setAutoFillBackground(true);
+    newCard->setPalette(plteBtnMainRepresenter);
+
+
+
+
+    _cardsVector.push_back(newCard);
+
+
+
+
+
+
 
 }

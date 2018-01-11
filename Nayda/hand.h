@@ -6,6 +6,9 @@
 #include <QRect>
 #include <QPushButton>
 #include "Application/card.h"
+#include <QString>
+#include <QDebug>
+
 
 namespace Ui {
 class Hand;
@@ -90,7 +93,7 @@ public:
 
 public:
 
-    void addNewCardToHands(unsigned int cardID);
+    void addNewCardToHands(SimpleCard card);
 
 };
 
