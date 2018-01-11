@@ -88,6 +88,8 @@ public:
     void passCardsDecksToHandsWidget();
     void addTheCardToHandsWidget(SimpleCard card);
 
+    bool eventFilter(QObject *o, QEvent *e);
+
 
 
 };

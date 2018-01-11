@@ -36,7 +36,7 @@ GamerWidget::GamerWidget(QWidget *parent) :
     ui->btn_class_1->setMinimumWidth(race_class_btn_size_width*HW_Screen_Size_Width);
     ui->btn_class_1->setMinimumHeight(race_class_btn_size_height*HW_Screen_Size_Height);
 
-
+    //http://www.prog.org.ru/topic_7215_0.html
 
 
 
@@ -59,14 +59,15 @@ GamerWidget::GamerWidget(QWidget *parent) :
     ui->btn_race_1->setAutoFillBackground(true);
     ui->btn_race_1->setPalette(plte_icon_race_1);
     ui->btn_race_1->setText("");
+    ui->btn_race_1->installEventFilter(this);
 
     ui->btn_class_1->setFlat(true);
     ui->btn_class_1->setAutoFillBackground(true);
     ui->btn_class_1->setPalette(plte_icon_class_1);
     ui->btn_class_1->setText("");
+    ui->btn_class_1->installEventFilter(this);
 
-
-
+    ui->btn_diplomacy->installEventFilter(this);
 
 
 
@@ -198,3 +199,30 @@ void GamerWidget::addTheCardToHandsWidget(SimpleCard card)
 {
     ui->widget->addNewCardToHands(card);
 }
+
+bool GamerWidget::eventFilter(QObject *o, QEvent *e)
+{
+
+    if (o == static_cast<QObject*>(ui->btn_class_1))  {
+        if (e->type() == QEvent::Enter) {
+            qDebug() << "Mouse Enters Area!";
+            return true;
+
+        }
+        else if (e->type() == QEvent::Leave) {
+            qDebug() << "Mouse Leaves Area!";
+            return true;
+
+        }
+        else {
+            return QWidget::eventFilter(o, e);
+        }
+
+    }
+    else {
+        return QWidget::eventFilter(o, e);
+    }
+
+}
+
+
