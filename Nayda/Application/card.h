@@ -107,6 +107,8 @@ struct CardsKeysBorders {
 
 
 
+
+
 //class-prototype (draft only)
 //Despite of cards having somekind of the same nature,
 //the Game mechanics can be made much easier to implement if I am not using the cards as childs of prototype

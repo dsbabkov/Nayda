@@ -69,6 +69,9 @@ GamerWidget::GamerWidget(QWidget *parent) :
 
     ui->btn_diplomacy->installEventFilter(this);
 
+    //fill the classes-races vector with 0,0 card - this means "NoClass (0,1777)" and "NoRace (0, 0)" card.
+    _cardsRacesClassesGamerWidgetProperty.push_back({0,0}); //put there NoRace
+    _cardsRacesClassesGamerWidgetProperty.push_back({0,1777}); //put there NoClass
 
 
 
@@ -80,6 +83,16 @@ GamerWidget::GamerWidget(QWidget *parent) :
 
     qDebug() << "Size of the button, Width: " << race_class_btn_size_width*HW_Screen_Size_Width;
     qDebug() << "Size of the button, Height: " << race_class_btn_size_height*HW_Screen_Size_Height;
+
+
+
+    //Initialize the timer for cards show
+    _showCardsTimer = new QTimer(this);
+    _showCardsTimer->setSingleShot(true);
+    //connect timeout issue
+    connect(_showCardsTimer, &QTimer::timeout, this, &GamerWidget::_representTheCardInCenterSlot);
+
+
 
 }
 
@@ -198,6 +211,7 @@ void GamerWidget::passCardsDecksToHandsWidget()
 void GamerWidget::addTheCardToHandsWidget(SimpleCard card)
 {
     ui->widget->addNewCardToHands(card);
+    _cardsOnHandsGamerWidgetProperty.push_back(card);
 }
 
 bool GamerWidget::eventFilter(QObject *o, QEvent *e)
@@ -206,10 +220,14 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
     if (o == ui->btn_class_1)  {
         if (e->type() == QEvent::Enter) {
             qDebug() << "Mouse Enters Area!";
+            _currentCardToShowInCentre = {0,0}; //no Race
+            _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
+
             return true;
         }
         else if (e->type() == QEvent::Leave) {
             qDebug() << "Mouse Leaves Area!";
+            if (_showCardsTimer->isActive()) _showCardsTimer->stop();
             return true;
         }
         else {
@@ -221,6 +239,11 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
         return QWidget::eventFilter(o, e);
     }
 
+}
+
+void GamerWidget::_representTheCardInCenterSlot()
+{
+    emit _representTheCardInCentre(_currentCardToShowInCentre);
 }
 
 

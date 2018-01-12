@@ -30,6 +30,22 @@ player::player()
     _superMunchkin_without_second_profession = false;
 
 
+    //set default cards for races and classes;
+
+    _race1Card.first = 0;
+    _race1Card.second = 0;
+
+    _race2Card.first = 0;
+    _race2Card.second = 0;
+
+    _class1Card.first = 0;
+    _class1Card.second = 0;
+
+    _class2Card.first = 0;
+    _class2Card.second = 0;
+
+
+
 
 
 

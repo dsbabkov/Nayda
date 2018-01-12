@@ -38,7 +38,8 @@ SOURCES += main.cpp\
     Application/card.cpp \
     Application/player.cpp \
     battlefield.cpp \
-    hand.cpp
+    hand.cpp \
+    popupcard.cpp
 
 HEADERS  += main_application.h \
     Application/Before_The_Game/Before_The_Game.h \
@@ -53,7 +54,8 @@ HEADERS  += main_application.h \
     Application/player.h \
     battlefield.h \
     cardsborderdefines.h \
-    hand.h
+    hand.h \
+    popupcard.h
 
 FORMS    += main_application.ui \
     Application/Before_The_Game/Before_The_Game.ui \
@@ -65,4 +67,5 @@ FORMS    += main_application.ui \
     gameinfowidget.ui \
     start_new_room.ui \
     battlefield.ui \
-    hand.ui
+    hand.ui \
+    popupcard.ui

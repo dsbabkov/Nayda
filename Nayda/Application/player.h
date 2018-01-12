@@ -50,6 +50,14 @@ class player
     std::vector<SimpleCard> _cardsInGame;
 
 
+    //Cards responsible for the Races and Classes
+    SimpleCard _race1Card;
+    SimpleCard _race2Card;
+    SimpleCard _class1Card;
+    SimpleCard _class2Card;
+
+
+
 public:
 
 
@@ -103,6 +111,13 @@ public:
 
     std::vector<SimpleCard>* cardsOnHandsVector();
     std::vector<SimpleCard>* cardsInGameVector();
+
+private:
+
+    //it is necessary to save the property in the player class of the card responsible for the
+    //class review
+
+    //SimpleCard
 
 
 };

@@ -2,6 +2,7 @@
 #include "ui_The_Game.h"
 #include <ctime>
 #include <QTime>
+#include "popupcard.h"
 
 The_Game::The_Game(QWidget *parent) :
     QMainWindow(parent),
@@ -56,6 +57,13 @@ The_Game::The_Game(QWidget *parent) :
     QObject::connect(ui->btn_switch_back, SIGNAL(clicked()), this, SLOT(hide()));
     QObject::connect(this, SIGNAL(dbg_to_be_shown(bool)), this, SLOT(showFullScreen()));//SLOT(showFullScreen())) SLOT(show();
     QObject::connect(ui->btn_switch_back, SIGNAL(clicked(bool)), this, SLOT(dbg_return_to_the_main_window()));
+
+
+    //Setting the in-Game connections with other Widgets
+
+    connect(ui->MainGamer, &GamerWidget::_representTheCardInCentre, this, &The_Game::showTheCardInCentre);
+
+
 
 
     //setting-up main Game Ico
@@ -244,7 +252,7 @@ The_Game::The_Game(QWidget *parent) :
 
     //first pass there the Cards (after receiving them from server);
     passDecksToBattleField();
-    passDecksToPlayerWdigets();
+    passDecksToPlayerWidgets();
 
 
     formingInitialDecks();
@@ -252,6 +260,14 @@ The_Game::The_Game(QWidget *parent) :
     showInitialCardsOnHands();
 
     showTheCards();
+
+
+    //create popUpCard Widget
+
+    _popUpCardWidget = new PopUpCard();
+
+    //pass the cards to PopUp Widget
+    passDecksToPopUpCardWidget();
 
 
 }
@@ -1470,7 +1486,7 @@ void The_Game::passDecksToBattleField()
 
 }
 
-void The_Game::passDecksToPlayerWdigets()
+void The_Game::passDecksToPlayerWidgets()
 {
     ui->MainGamer->setMonsersDeck(monstersDeck());
     ui->MainGamer->setAmplifiersDeck(amplifiersDeck());
@@ -1508,6 +1524,25 @@ void The_Game::passDecksToPlayerWdigets()
         (_widgets4Opponents[var])->passCardsDecksToHandsWidget();
 
     }
+
+
+}
+
+void The_Game::passDecksToPopUpCardWidget()
+{
+    _popUpCardWidget->setMonsersDeck(monstersDeck());
+    _popUpCardWidget->setAmplifiersDeck(amplifiersDeck());
+    _popUpCardWidget->setArmorAmplifiersDeck(armorAmplifiersDeck());
+    _popUpCardWidget->setArmorDeck(armorDeck());
+    _popUpCardWidget->setBattleAmplifiersDeck(battleAmplifiersDeck());
+    _popUpCardWidget->setCursesDeck(cursesDeck());
+    _popUpCardWidget->setLevelUpDeck(levelUpDeck());
+    _popUpCardWidget->setProfessionsDeck(professionsDeck());
+    _popUpCardWidget->setRacesDeck(racesDeck());
+    _popUpCardWidget->setSpecialMechanicsDeck(specialMechanicsDeck());
+    _popUpCardWidget->setSpecialMechanicsTreasureDeck(specialMechanicsTreasureDeck());
+    _popUpCardWidget->setThingsAmplifiersDeck(thingsAmplifiersDeck());
+    _popUpCardWidget->setWeaponsDeck(weaponsDeck());
 
 
 }
@@ -1784,6 +1819,15 @@ void The_Game::dbg_was_pushed_to_game_mode()
 void The_Game::dbg_return_to_the_main_window()
 {
     emit dbg_return_to_before_the_game(true);
+}
+
+void The_Game::showTheCardInCentre(SimpleCard card)
+{
+    //pass the card to PopUpWidget
+
+    _popUpCardWidget->setUpPopUpCard(card);
+    _popUpCardWidget->show();
+
 }
 
 

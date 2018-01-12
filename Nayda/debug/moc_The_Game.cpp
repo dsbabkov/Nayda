@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_The_Game_t {
-    QByteArrayData data[6];
-    char stringdata0[114];
+    QByteArrayData data[9];
+    char stringdata0[150];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,13 +36,17 @@ QT_MOC_LITERAL(1, 9, 15), // "dbg_to_be_shown"
 QT_MOC_LITERAL(2, 25, 0), // ""
 QT_MOC_LITERAL(3, 26, 29), // "dbg_return_to_before_the_game"
 QT_MOC_LITERAL(4, 56, 27), // "dbg_was_pushed_to_game_mode"
-QT_MOC_LITERAL(5, 84, 29) // "dbg_return_to_the_main_window"
+QT_MOC_LITERAL(5, 84, 29), // "dbg_return_to_the_main_window"
+QT_MOC_LITERAL(6, 114, 19), // "showTheCardInCentre"
+QT_MOC_LITERAL(7, 134, 10), // "SimpleCard"
+QT_MOC_LITERAL(8, 145, 4) // "card"
 
     },
     "The_Game\0dbg_to_be_shown\0\0"
     "dbg_return_to_before_the_game\0"
     "dbg_was_pushed_to_game_mode\0"
-    "dbg_return_to_the_main_window"
+    "dbg_return_to_the_main_window\0"
+    "showTheCardInCentre\0SimpleCard\0card"
 };
 #undef QT_MOC_LITERAL
 
@@ -52,7 +56,7 @@ static const uint qt_meta_data_The_Game[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,12 +64,13 @@ static const uint qt_meta_data_The_Game[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06 /* Public */,
-       3,    1,   37,    2, 0x06 /* Public */,
+       1,    1,   39,    2, 0x06 /* Public */,
+       3,    1,   42,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   40,    2, 0x0a /* Public */,
-       5,    0,   41,    2, 0x0a /* Public */,
+       4,    0,   45,    2, 0x0a /* Public */,
+       5,    0,   46,    2, 0x0a /* Public */,
+       6,    1,   47,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    2,
@@ -74,6 +79,7 @@ static const uint qt_meta_data_The_Game[] = {
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 7,    8,
 
        0        // eod
 };
@@ -88,6 +94,7 @@ void The_Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 1: _t->dbg_return_to_before_the_game((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 2: _t->dbg_was_pushed_to_game_mode(); break;
         case 3: _t->dbg_return_to_the_main_window(); break;
+        case 4: _t->showTheCardInCentre((*reinterpret_cast< SimpleCard(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -135,13 +142,13 @@ int The_Game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

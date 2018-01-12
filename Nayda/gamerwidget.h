@@ -6,7 +6,7 @@
 #include <QDebug>
 
 #include "Application/card.h"
-
+#include <QTimer>
 
 namespace Ui {
 class GamerWidget;
@@ -46,6 +46,8 @@ public:
 
 
 private:
+
+
     Ui::GamerWidget *ui;
     bool _is_MainPlayer;
 
@@ -91,6 +93,24 @@ public:
     bool eventFilter(QObject *o, QEvent *e);
 
 
+private:
+
+    QTimer *_showCardsTimer;
+    unsigned int _timeToShowTheCard = 1500; //ms
+    SimpleCard _currentCardToShowInCentre;
+
+    std::vector<SimpleCard> _cardsOnHandsGamerWidgetProperty;
+    std::vector<SimpleCard> _cardsRacesClassesGamerWidgetProperty;
+    std::vector<SimpleCard> _cardsInGameWidgetGamerProperty;
+
+
+signals:
+
+    void _representTheCardInCentre(SimpleCard);
+
+public slots:
+
+    void _representTheCardInCenterSlot();
 
 };
 
