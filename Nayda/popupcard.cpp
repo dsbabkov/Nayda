@@ -126,8 +126,11 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
 
     //setup the koefficients;
     const float handCardSize_width_to_height_ratio = 2.71f;
-    const float handCardSizeWidht = 0.375f;
+    const float handCardSizeWidht = 0.0975f;
     const float handCardSizeHeight = handCardSize_width_to_height_ratio*handCardSizeWidht;
+
+    //resize the Widget
+    this->resize(handCardSizeWidht*HW_Screen_Size_Width + 20, handCardSizeHeight*HW_Screen_Size_Height + 20);
 
 
     if ((!card.first) && (!card.second)) { //the card is Card_No_Race
