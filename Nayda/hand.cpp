@@ -34,6 +34,12 @@ Hand::Hand(QWidget *parent) :
     //setPalette(plte_HandCover);
 
 
+    _showCardsTimer = new QTimer(this);
+    _showCardsTimer->setSingleShot(true);
+    //connect timeout issue
+    connect(_showCardsTimer, &QTimer::timeout, this, &Hand::_showTheCardInCentreSlot);
+
+
 }
 
 
@@ -263,15 +269,52 @@ void Hand::addNewCardToHands(SimpleCard card)
     newCard->setAutoFillBackground(true);
     newCard->setPalette(plteBtnMainRepresenter);
 
-
+    //set The Filter:
+    newCard->installEventFilter(this);
 
 
     _cardsVector.push_back(newCard);
+    _cardsOnHandsHandsWidgetProperty.push_back(card);
 
 
 
 
 
+
+}
+
+void Hand::_showTheCardInCentreSlot()
+{
+    emit _showTheCard(_currentCardToShowInCentre);
+}
+
+bool Hand::eventFilter(QObject *o, QEvent *e)
+{
+
+    for (unsigned int var = 0; var < _cardsVector.size(); ++var) {
+        if (o == _cardsVector[var]) {
+
+            if (e->type() == QEvent::Enter) {
+                qDebug() << "Mouse Enters Area!";
+                _currentCardToShowInCentre = _cardsOnHandsHandsWidgetProperty[var]; //no Class
+                _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
+
+                return true;
+            }
+            else if (e->type() == QEvent::Leave) {
+                qDebug() << "Mouse Leaves Area!";
+                if (_showCardsTimer->isActive()) _showCardsTimer->stop();
+                return true;
+            }
+            else {
+                return QWidget::eventFilter(o, e);
+            }
+
+        }
+
+    }
+
+    return QWidget::eventFilter(o, e);
 
 
 }

@@ -91,6 +91,7 @@ GamerWidget::GamerWidget(QWidget *parent) :
     _showCardsTimer->setSingleShot(true);
     //connect timeout issue
     connect(_showCardsTimer, &QTimer::timeout, this, &GamerWidget::_representTheCardInCenterSlot);
+    connect(ui->widget, &Hand::_showTheCard, this, &GamerWidget::_representTheCardFromHandsInCentre);
 
 
 
@@ -220,6 +221,24 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
     if (o == ui->btn_class_1)  {
         if (e->type() == QEvent::Enter) {
             qDebug() << "Mouse Enters Area!";
+            _currentCardToShowInCentre = {0,1777}; //no Class
+            _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
+
+            return true;
+        }
+        else if (e->type() == QEvent::Leave) {
+            qDebug() << "Mouse Leaves Area!";
+            if (_showCardsTimer->isActive()) _showCardsTimer->stop();
+            return true;
+        }
+        else {
+            return QWidget::eventFilter(o, e);
+        }
+
+    }
+    if (o == ui->btn_race_1)  {
+        if (e->type() == QEvent::Enter) {
+            qDebug() << "Mouse Enters Area!";
             _currentCardToShowInCentre = {0,0}; //no Race
             _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
 
@@ -235,6 +254,8 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
         }
 
     }
+
+
     else {
         return QWidget::eventFilter(o, e);
     }
@@ -244,6 +265,12 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
 void GamerWidget::_representTheCardInCenterSlot()
 {
     emit _representTheCardInCentre(_currentCardToShowInCentre);
+}
+
+void GamerWidget::_representTheCardFromHandsInCentre(SimpleCard card)
+{
+    emit _representTheCardInCentre(card);
+
 }
 
 

@@ -111,6 +111,7 @@ signals:
 public slots:
 
     void _representTheCardInCenterSlot();
+    void _representTheCardFromHandsInCentre(SimpleCard);
 
 };
 

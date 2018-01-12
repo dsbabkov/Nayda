@@ -124,6 +124,7 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
 
     QString currentPictureAddress;
     bool isFound = false;
+    bool isNoClassNoRace = false;
 
 
 
@@ -156,6 +157,7 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
         ui->theCard->setText("");
 
         isFound = true;
+        isNoClassNoRace = true;
     }
     else if ((!card.first) && (card.second == 1777)) {
         QPixmap pxmp_icon_class_1("Pictures/No_Class_dbg.png");
@@ -170,6 +172,9 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
         ui->theCard->setAutoFillBackground(true);
         ui->theCard->setPalette(plte_icon_class_1);
         ui->theCard->setText("");
+
+        isFound = true;
+        isNoClassNoRace = true;
 
     }
 
@@ -216,6 +221,8 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
                 isFound = true;
             }
         }
+
+
 
 
     }
@@ -276,19 +283,24 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
 
     if (!isFound) qDebug() << "Error during passing Cards to the Hands Shower! Check the number passed! " << card.second;
 
+    if ((isFound) && (!isNoClassNoRace)) {
 
-    //setUpTheCard
-    QPixmap pxmp_theCard("Pictures/No_Race_dbg.png");
-    QPalette plte_theCard;
-    plte_theCard.setBrush(ui->theCard->backgroundRole(),
-    QBrush(pxmp_theCard.scaled(handCardSizeWidht*HW_Screen_Size_Width,
-                                                             handCardSizeHeight*HW_Screen_Size_Height,
-                                                             Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+        //setUpTheCard
+        QPixmap pxmp_theCard(currentPictureAddress);
+        QPalette plte_theCard;
+        plte_theCard.setBrush(ui->theCard->backgroundRole(),
+        QBrush(pxmp_theCard.scaled(handCardSizeWidht*HW_Screen_Size_Width,
+                                                                 handCardSizeHeight*HW_Screen_Size_Height,
+                                                                 Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
 
-    ui->theCard->setFlat(true);
-    ui->theCard->setAutoFillBackground(true);
-    ui->theCard->setPalette(plte_theCard);
-    ui->theCard->setText("");
+        ui->theCard->setFlat(true);
+        ui->theCard->setAutoFillBackground(true);
+        ui->theCard->setPalette(plte_theCard);
+        ui->theCard->setText("");
+
+    }
+
+
 
 
 }

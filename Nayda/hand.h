@@ -8,7 +8,7 @@
 #include "Application/card.h"
 #include <QString>
 #include <QDebug>
-
+#include <QTimer>
 
 namespace Ui {
 class Hand;
@@ -94,6 +94,26 @@ public:
 public:
 
     void addNewCardToHands(SimpleCard card);
+
+
+private:
+
+    QTimer *_showCardsTimer;
+    unsigned int _timeToShowTheCard = 1500; //ms
+    SimpleCard _currentCardToShowInCentre;
+    std::vector<SimpleCard> _cardsOnHandsHandsWidgetProperty;
+
+signals:
+
+    void _showTheCard(SimpleCard card);
+
+public slots:
+
+    void _showTheCardInCentreSlot();
+
+public:
+
+    bool eventFilter(QObject *o, QEvent *e);
 
 };
 
