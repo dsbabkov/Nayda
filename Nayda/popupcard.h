@@ -8,6 +8,8 @@
 #include <QTimer>
 #include "Application/card.h"
 
+#include <QDebug>
+
 namespace Ui {
 class PopUpCard;
 }

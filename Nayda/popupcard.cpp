@@ -86,14 +86,22 @@ void PopUpCard::show()
     animation.setStartValue(0.0);   // Стартовое значение будет 0 (полностью прозрачный виджет)
     animation.setEndValue(1.0);     // Конечное - полностью непрозрачный виджет
 
-    setGeometry(QApplication::desktop()->availableGeometry().width() - 36 - width() + QApplication::desktop() -> availableGeometry().x(),
-                QApplication::desktop()->availableGeometry().height() - 36 - height() + QApplication::desktop() -> availableGeometry().y(),
+    setGeometry(QApplication::desktop()->availableGeometry().width() / 2  -  width() / 2 + QApplication::desktop() -> availableGeometry().x(),
+                QApplication::desktop()->availableGeometry().height() / 2  - height() /2 + QApplication::desktop() -> availableGeometry().y(),
                 width(),
                 height());
+    qDebug() << "Available Geometry Width" << QApplication::desktop()->availableGeometry().width();
+    qDebug() << "Available Geometry X: " << QApplication::desktop() -> availableGeometry().x();
+    qDebug() << "Width: " << width();
+    qDebug() << "Available Geometry Height" << QApplication::desktop()->availableGeometry().height();
+    qDebug() << "Available Geometry Y: " << QApplication::desktop() -> availableGeometry().y();
+    qDebug() << "Width: " << width();
+
+
     QWidget::show();                // Отображаем виджет, который полностью прозрачен
 
     animation.start();              // И запускаем анимацию
-    timer->start(3000);             // А также стартуем таймер, который запустит скрытие уведомления через 3 секунды
+    timer->start(5000);             // А также стартуем таймер, который запустит скрытие уведомления через 3 секунды
 }
 
 void PopUpCard::setUpPopUpCard(SimpleCard card)
