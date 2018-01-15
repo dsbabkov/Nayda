@@ -106,6 +106,7 @@ private:
 signals:
 
     void _showTheCard(SimpleCard card);
+    void _hideTheCard(bool);
 
 public slots:
 

@@ -304,6 +304,7 @@ bool Hand::eventFilter(QObject *o, QEvent *e)
             else if (e->type() == QEvent::Leave) {
                 qDebug() << "Mouse Leaves Area!";
                 if (_showCardsTimer->isActive()) _showCardsTimer->stop();
+                emit _hideTheCard(true);
                 return true;
             }
             else {

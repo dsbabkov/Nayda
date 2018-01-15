@@ -62,6 +62,7 @@ The_Game::The_Game(QWidget *parent) :
     //Setting the in-Game connections with other Widgets
 
     connect(ui->MainGamer, &GamerWidget::_representTheCardInCentre, this, &The_Game::showTheCardInCentre);
+    connect(ui->MainGamer, &GamerWidget::_hideTheCardInCentre, this, &The_Game::hideTheCardInCentre);
 
 
 
@@ -204,6 +205,7 @@ The_Game::The_Game(QWidget *parent) :
 
     for (unsigned int var = 0; var < _widgets4Opponents.size(); ++var) {
         connect(_widgets4Opponents[var], &GamerWidget::_representTheCardInCentre, this, &The_Game::showTheCardInCentre);
+        connect(_widgets4Opponents[var], &GamerWidget::_hideTheCardInCentre, this, &The_Game::hideTheCardInCentre);
     }
 
 
@@ -1837,6 +1839,11 @@ void The_Game::showTheCardInCentre(SimpleCard card)
     _popUpCardWidget->setUpPopUpCard(card);
     _popUpCardWidget->show();
 
+}
+
+void The_Game::hideTheCardInCentre(bool)
+{
+    _popUpCardWidget->hideAnimation();
 }
 
 

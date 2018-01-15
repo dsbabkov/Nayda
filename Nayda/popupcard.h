@@ -10,6 +10,9 @@
 
 #include <QDebug>
 
+
+#define fadingTime 300
+
 namespace Ui {
 class PopUpCard;
 }
@@ -42,7 +45,7 @@ public slots:
     void setUpPopUpCard (SimpleCard card);
 
 
-private slots:
+public slots:
     void hideAnimation();                   // Слот для запуска анимации скрытия
     void hide();                            /* По окончании анимации, в данном слоте делается проверка,
                                              * виден ли виджет, или его необходимо скрыть

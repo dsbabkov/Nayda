@@ -233,6 +233,7 @@ public slots:
 public slots:
 
     void showTheCardInCentre(SimpleCard card);
+    void hideTheCardInCentre(bool);
 
     
 private:

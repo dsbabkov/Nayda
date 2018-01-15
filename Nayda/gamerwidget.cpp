@@ -92,6 +92,8 @@ GamerWidget::GamerWidget(QWidget *parent) :
     //connect timeout issue
     connect(_showCardsTimer, &QTimer::timeout, this, &GamerWidget::_representTheCardInCenterSlot);
     connect(ui->widget, &Hand::_showTheCard, this, &GamerWidget::_representTheCardFromHandsInCentre);
+    connect(ui->widget, &Hand::_hideTheCard, this, &GamerWidget::_hideTheCardInCentreSlot);
+
 
 
 
@@ -229,6 +231,7 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
         else if (e->type() == QEvent::Leave) {
             qDebug() << "Mouse Leaves Area!";
             if (_showCardsTimer->isActive()) _showCardsTimer->stop();
+            emit _hideTheCardInCentre(true); //close the card!
             return true;
         }
         else {
@@ -247,6 +250,7 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
         else if (e->type() == QEvent::Leave) {
             qDebug() << "Mouse Leaves Area!";
             if (_showCardsTimer->isActive()) _showCardsTimer->stop();
+            emit _hideTheCardInCentre(true); //close the card!
             return true;
         }
         else {
@@ -271,6 +275,11 @@ void GamerWidget::_representTheCardFromHandsInCentre(SimpleCard card)
 {
     emit _representTheCardInCentre(card);
 
+}
+
+void GamerWidget::_hideTheCardInCentreSlot(bool)
+{
+    emit _hideTheCardInCentre(true);
 }
 
 

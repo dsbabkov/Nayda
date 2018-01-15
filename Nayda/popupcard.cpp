@@ -44,6 +44,7 @@ PopUpCard::PopUpCard(QWidget *parent) :
 
 
 
+
 }
 
 void PopUpCard::paintEvent(QPaintEvent *event)
@@ -308,7 +309,7 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
 void PopUpCard::hideAnimation()
 {
     timer->stop();                  // Останавливаем таймер
-    animation.setDuration(1000);    // Настраиваем длительность анимации
+    animation.setDuration(fadingTime);    // Настраиваем длительность анимации
     animation.setStartValue(1.0);   // Стартовое значение будет 1 (полностью непрозрачный виджет)
     animation.setEndValue(0.0);     // Конечное - полностью прозрачный виджет
     animation.start();              // И запускаем анимацию
