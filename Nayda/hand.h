@@ -9,6 +9,7 @@
 #include <QString>
 #include <QDebug>
 #include <QTimer>
+#include <QPoint>
 
 namespace Ui {
 class Hand;
@@ -101,16 +102,21 @@ private:
     QTimer *_showCardsTimer;
     unsigned int _timeToShowTheCard = 100; //ms
     SimpleCard _currentCardToShowInCentre;
+    PositionedCard _currentCardToShowNearItsPosition;
     std::vector<SimpleCard> _cardsOnHandsHandsWidgetProperty;
+
+
 
 signals:
 
     void _showTheCard(SimpleCard card);
+//    void _showTheCardNearItsPosition(PositionedCard card);
     void _hideTheCard(bool);
 
 public slots:
 
     void _showTheCardInCentreSlot();
+//    void _showTheCardNearItsPositionSlot();
 
 public:
 

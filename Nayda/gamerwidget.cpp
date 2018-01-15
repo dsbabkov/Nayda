@@ -94,6 +94,11 @@ GamerWidget::GamerWidget(QWidget *parent) :
     connect(ui->widget, &Hand::_showTheCard, this, &GamerWidget::_representTheCardFromHandsInCentre);
     connect(ui->widget, &Hand::_hideTheCard, this, &GamerWidget::_hideTheCardInCentreSlot);
 
+//    connect(_showCardsTimer, &QTimer::timeout, this, &GamerWidget::_representTheCardNearItsPositionSlot);
+//    connect(ui->widget, &Hand::_showTheCard, this, &GamerWidget::_representTheCardFromHandsNearItsPosition);
+//    connect(ui->widget, &Hand::_hideTheCard, this, &GamerWidget::_hideTheCardNearItsPosition);
+
+
 
 
 
@@ -225,6 +230,11 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
             qDebug() << "Mouse Enters Area!";
             _currentCardToShowInCentre = {0,1777}; //no Class
             _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
+            _currentCardToShowNearItsPosition.card = {0,1777};
+            _currentCardToShowNearItsPosition.positionTopLeft = { QWidget::mapToGlobal(ui->btn_class_1->pos()).x(),
+                                                                  QWidget::mapToGlobal(ui->btn_class_1->pos()).y()};
+            _currentCardToShowNearItsPosition.positionBottomRight = { QWidget::mapToGlobal(ui->btn_class_1->pos()).x() + ui->btn_class_1->width(),
+                                                                  QWidget::mapToGlobal(ui->btn_class_1->pos()).y() + ui->btn_class_1->height()};
 
             return true;
         }
@@ -244,6 +254,11 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
             qDebug() << "Mouse Enters Area!";
             _currentCardToShowInCentre = {0,0}; //no Race
             _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
+            _currentCardToShowNearItsPosition.card = {0,0};
+            _currentCardToShowNearItsPosition.positionTopLeft = { QWidget::mapToGlobal(ui->btn_race_1->pos()).x(),
+                                                                  QWidget::mapToGlobal(ui->btn_race_1->pos()).y()};
+            _currentCardToShowNearItsPosition.positionBottomRight = { QWidget::mapToGlobal(ui->btn_race_1->pos()).x() + ui->btn_class_1->width(),
+                                                                  QWidget::mapToGlobal(ui->btn_race_1->pos()).y() + ui->btn_class_1->height()};
 
             return true;
         }
@@ -281,5 +296,21 @@ void GamerWidget::_hideTheCardInCentreSlot(bool)
 {
     emit _hideTheCardInCentre(true);
 }
+
+//void GamerWidget::_representTheCardNearItsPositionSlot()
+//{
+//    emit _representTheCardNearItsPosition(_currentCardToShowNearItsPosition);
+//}
+
+
+//void GamerWidget::_representTheCardFromHandsNearItsPosition(PositionedCard card)
+//{
+//    emit _representTheCardNearItsPosition(card);
+//}
+
+//void GamerWidget::_hideTheCardNearItsPositionSlot(bool)
+//{
+//    emit _hideTheCardNearItsPosition(true);
+//}
 
 

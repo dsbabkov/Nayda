@@ -9,7 +9,7 @@
 #include "Application/card.h"
 
 #include <QDebug>
-
+#include <QPoint>
 
 #define fadingTime 150
 //Not not to hide the card on timeout event.
@@ -44,7 +44,11 @@ public slots:
     void show();                            /* Собственный метод показа виджета
                                                * Необходимо для преварительной настройки анимации
                                               * */
+    void show(QPoint positionTopLeft, QPoint positionBottomRight);
+
     void setUpPopUpCard (SimpleCard card);
+    //void setUpPopUpCard (PositionedCard card);
+
 
 
 public slots:
@@ -61,6 +65,8 @@ private:
     QPropertyAnimation animation;   // Свойство анимации для всплывающего сообщения
     float popupOpacity;     // Свойства полупрозрачности виджета
     QTimer *timer;          // Таймер, по которому виджет будет скрыт
+
+    QPoint _position;
 
 
 private:

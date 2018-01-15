@@ -64,6 +64,8 @@ The_Game::The_Game(QWidget *parent) :
     connect(ui->MainGamer, &GamerWidget::_representTheCardInCentre, this, &The_Game::showTheCardInCentre);
     connect(ui->MainGamer, &GamerWidget::_hideTheCardInCentre, this, &The_Game::hideTheCardInCentre);
 
+//    connect(ui->MainGamer, &GamerWidget::_representTheCardNearItsPosition, this, &The_Game::showTheCardNearItsPosition);
+//    connect(ui->MainGamer, &GamerWidget::_hideTheCardNearItsPosition, this, &The_Game::hideTheCardInCentre);
 
 
 
@@ -208,6 +210,11 @@ The_Game::The_Game(QWidget *parent) :
         connect(_widgets4Opponents[var], &GamerWidget::_hideTheCardInCentre, this, &The_Game::hideTheCardInCentre);
     }
 
+
+//    for (unsigned int var = 0; var < _widgets4Opponents.size(); ++var) {
+//        connect(_widgets4Opponents[var], &GamerWidget::_representTheCardNearItsPosition, this, &The_Game::showTheCardNearItsPosition);
+//        connect(_widgets4Opponents[var], &GamerWidget::_hideTheCardNearItsPosition, this, &The_Game::hideTheCardNearItsPosition);
+//    }
 
 #endif
 
@@ -1841,9 +1848,20 @@ void The_Game::showTheCardInCentre(SimpleCard card)
 
 }
 
+//void The_Game::showTheCardNearItsPosition(PositionedCard card)
+//{
+//    _popUpCardWidget->setUpPopUpCard(card.card);
+//    _popUpCardWidget->show(card.positionTopLeft, card.positionBottomRight);
+//}
+
 void The_Game::hideTheCardInCentre(bool)
 {
     _popUpCardWidget->hideAnimation();
 }
+
+//void The_Game::hideTheCardNearItsPosition(bool)
+//{
+//    _popUpCardWidget->hideAnimation();
+//}
 
 

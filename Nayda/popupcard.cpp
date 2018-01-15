@@ -112,6 +112,37 @@ void PopUpCard::show()
 
 }
 
+void PopUpCard::show(QPoint positionTopLeft, QPoint positionBottomRight)
+{
+    setWindowOpacity(0.0);  // Устанавливаем прозрачность в ноль
+
+    animation.setDuration(150);     // Настраиваем длительность анимации
+    animation.setStartValue(0.0);   // Стартовое значение будет 0 (полностью прозрачный виджет)
+    animation.setEndValue(1.0);     // Конечное - полностью непрозрачный виджет
+
+    setGeometry(QApplication::desktop()->availableGeometry().width() / 2  -  width() / 2 + QApplication::desktop() -> availableGeometry().x(),
+                QApplication::desktop()->availableGeometry().height() / 2  - height() /2 + QApplication::desktop() -> availableGeometry().y(),
+                width(),
+                height());
+//    qDebug() << "Available Geometry Width" << QApplication::desktop()->availableGeometry().width();
+//    qDebug() << "Available Geometry X: " << QApplication::desktop() -> availableGeometry().x();
+//    qDebug() << "Width: " << width();
+//    qDebug() << "Available Geometry Height" << QApplication::desktop()->availableGeometry().height();
+//    qDebug() << "Available Geometry Y: " << QApplication::desktop() -> availableGeometry().y();
+//    qDebug() << "Width: " << width();
+
+
+    QWidget::show();                // Отображаем виджет, который полностью прозрачен
+
+    animation.start();              // И запускаем анимацию
+
+#ifdef HIDE_THE_CARD_ON_TIMEOUT
+    //timer->start(5000);             // А также стартуем таймер, который запустит скрытие уведомления через 3 секунды
+#endif
+
+
+}
+
 void PopUpCard::setUpPopUpCard(SimpleCard card)
 {
     //ui->theCard
@@ -312,6 +343,8 @@ void PopUpCard::setUpPopUpCard(SimpleCard card)
 
 
 }
+
+
 
 void PopUpCard::hideAnimation()
 {

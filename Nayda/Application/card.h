@@ -6,6 +6,7 @@
 #include <map>
 #include <cardsborderdefines.h>
 #include <vector>
+#include <QPoint>
 
 
 /*
@@ -117,6 +118,12 @@ struct CardsKeysBorders {
 
 //use this as the elements of arrays, controlled by The Game.
 typedef std::pair<bool, unsigned int> SimpleCard;
+
+struct PositionedCard {
+    SimpleCard card;
+    QPoint positionTopLeft;
+    QPoint positionBottomRight;
+};
 
 
 class GameCard

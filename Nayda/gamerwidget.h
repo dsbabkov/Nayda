@@ -98,6 +98,7 @@ private:
     QTimer *_showCardsTimer;
     unsigned int _timeToShowTheCard = 100; //ms
     SimpleCard _currentCardToShowInCentre;
+    PositionedCard _currentCardToShowNearItsPosition;
 
     std::vector<SimpleCard> _cardsOnHandsGamerWidgetProperty;
     std::vector<SimpleCard> _cardsRacesClassesGamerWidgetProperty;
@@ -109,11 +110,19 @@ signals:
     void _representTheCardInCentre(SimpleCard);
     void _hideTheCardInCentre(bool);
 
+//    void _representTheCardNearItsPosition(PositionedCard);
+//    void _hideTheCardNearItsPosition(bool);
+
 public slots:
 
     void _representTheCardInCenterSlot();
     void _representTheCardFromHandsInCentre(SimpleCard);
     void _hideTheCardInCentreSlot(bool);
+
+
+//    void _representTheCardNearItsPositionSlot();
+//    void _representTheCardFromHandsNearItsPosition(PositionedCard);
+//    void _hideTheCardNearItsPositionSlot(bool);
 
 
 };

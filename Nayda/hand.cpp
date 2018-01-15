@@ -38,6 +38,7 @@ Hand::Hand(QWidget *parent) :
     _showCardsTimer->setSingleShot(true);
     //connect timeout issue
     connect(_showCardsTimer, &QTimer::timeout, this, &Hand::_showTheCardInCentreSlot);
+//    connect(_showCardsTimer, &QTimer::timeout ,this, &Hand::_showTheCardNearItsPositionSlot);
 
 
 }
@@ -288,6 +289,11 @@ void Hand::_showTheCardInCentreSlot()
     emit _showTheCard(_currentCardToShowInCentre);
 }
 
+//void Hand::_showTheCardNearItsPositionSlot()
+//{
+//    emit _showTheCardNearItsPosition(_currentCardToShowNearItsPosition);
+//}
+
 bool Hand::eventFilter(QObject *o, QEvent *e)
 {
 
@@ -299,6 +305,13 @@ bool Hand::eventFilter(QObject *o, QEvent *e)
                 _currentCardToShowInCentre = _cardsOnHandsHandsWidgetProperty[var]; //no Class
                 qDebug() << "Size of the card, X: " << QWidget::mapToGlobal(_cardsVector[var]->pos()).x();
                 qDebug() << "Size of the card, Y: " <<  QWidget::mapToGlobal(_cardsVector[var]->pos()).y();
+                qDebug() << "Size of the card, H: " << _cardsVector[var]->height();
+                qDebug() << "Size of the card, W: " << _cardsVector[var]->width();
+                _currentCardToShowNearItsPosition.card = _cardsOnHandsHandsWidgetProperty[var];
+                _currentCardToShowNearItsPosition.positionTopLeft = { QWidget::mapToGlobal(_cardsVector[var]->pos()).x(),
+                                                                      QWidget::mapToGlobal(_cardsVector[var]->pos()).y()};
+                _currentCardToShowNearItsPosition.positionBottomRight = { QWidget::mapToGlobal(_cardsVector[var]->pos()).x() + _cardsVector[var]->width(),
+                                                                      QWidget::mapToGlobal(_cardsVector[var]->pos()).y() + _cardsVector[var]->height()};
 
                 _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
 
