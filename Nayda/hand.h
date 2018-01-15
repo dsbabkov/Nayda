@@ -99,7 +99,7 @@ public:
 private:
 
     QTimer *_showCardsTimer;
-    unsigned int _timeToShowTheCard = 1500; //ms
+    unsigned int _timeToShowTheCard = 100; //ms
     SimpleCard _currentCardToShowInCentre;
     std::vector<SimpleCard> _cardsOnHandsHandsWidgetProperty;
 
