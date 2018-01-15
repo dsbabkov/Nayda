@@ -200,6 +200,15 @@ The_Game::The_Game(QWidget *parent) :
     qDebug() << "Maximum Width of the Gamer_Widget: " << koeff_GamerWidget_size_Width*HW_Screen_Size_Width;
 
 
+#ifdef DEBUG_NO_SERVER
+
+    for (unsigned int var = 0; var < _widgets4Opponents.size(); ++var) {
+        connect(_widgets4Opponents[var], &GamerWidget::_representTheCardInCentre, this, &The_Game::showTheCardInCentre);
+    }
+
+
+#endif
+
 
     //Game_Card kamikazeKobolds(1,"Pictures/No_Class_dbg.png","Kamikaze Kobolds",cardAddon::ClirickalMistakes);
     //_basisStock.insert({1, kamikazeKobolds});
