@@ -11,7 +11,9 @@
 #include <QDebug>
 
 
-#define fadingTime 300
+#define fadingTime 150
+//Not not to hide the card on timeout event.
+//#define HIDE_THE_CARD_ON_TIMEOUT
 
 namespace Ui {
 class PopUpCard;

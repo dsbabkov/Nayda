@@ -40,8 +40,10 @@ PopUpCard::PopUpCard(QWidget *parent) :
 
     // По сигналу таймера будет произведено скрытие уведомления, если оно видимо
     timer = new QTimer();
-    connect(timer, &QTimer::timeout, this, &PopUpCard::hideAnimation);
 
+#ifdef HIDE_THE_CARD_ON_TIMEOUT
+    connect(timer, &QTimer::timeout, this, &PopUpCard::hideAnimation);
+#endif
 
 
 
@@ -91,18 +93,23 @@ void PopUpCard::show()
                 QApplication::desktop()->availableGeometry().height() / 2  - height() /2 + QApplication::desktop() -> availableGeometry().y(),
                 width(),
                 height());
-    qDebug() << "Available Geometry Width" << QApplication::desktop()->availableGeometry().width();
-    qDebug() << "Available Geometry X: " << QApplication::desktop() -> availableGeometry().x();
-    qDebug() << "Width: " << width();
-    qDebug() << "Available Geometry Height" << QApplication::desktop()->availableGeometry().height();
-    qDebug() << "Available Geometry Y: " << QApplication::desktop() -> availableGeometry().y();
-    qDebug() << "Width: " << width();
+//    qDebug() << "Available Geometry Width" << QApplication::desktop()->availableGeometry().width();
+//    qDebug() << "Available Geometry X: " << QApplication::desktop() -> availableGeometry().x();
+//    qDebug() << "Width: " << width();
+//    qDebug() << "Available Geometry Height" << QApplication::desktop()->availableGeometry().height();
+//    qDebug() << "Available Geometry Y: " << QApplication::desktop() -> availableGeometry().y();
+//    qDebug() << "Width: " << width();
 
 
     QWidget::show();                // Отображаем виджет, который полностью прозрачен
 
     animation.start();              // И запускаем анимацию
-    timer->start(5000);             // А также стартуем таймер, который запустит скрытие уведомления через 3 секунды
+
+#ifdef HIDE_THE_CARD_ON_TIMEOUT
+    //timer->start(5000);             // А также стартуем таймер, который запустит скрытие уведомления через 3 секунды
+#endif
+
+
 }
 
 void PopUpCard::setUpPopUpCard(SimpleCard card)

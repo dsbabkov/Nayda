@@ -297,7 +297,11 @@ bool Hand::eventFilter(QObject *o, QEvent *e)
             if (e->type() == QEvent::Enter) {
                 qDebug() << "Mouse Enters Area!";
                 _currentCardToShowInCentre = _cardsOnHandsHandsWidgetProperty[var]; //no Class
+                qDebug() << "Size of the card, X: " << QWidget::mapToGlobal(_cardsVector[var]->pos()).x();
+                qDebug() << "Size of the card, Y: " <<  QWidget::mapToGlobal(_cardsVector[var]->pos()).y();
+
                 _showCardsTimer->start(static_cast<int>(_timeToShowTheCard));
+
 
                 return true;
             }
