@@ -120,8 +120,35 @@ void PopUpCard::show(QPoint positionTopLeft, QPoint positionBottomRight)
     animation.setStartValue(0.0);   // Стартовое значение будет 0 (полностью прозрачный виджет)
     animation.setEndValue(1.0);     // Конечное - полностью непрозрачный виджет
 
-    setGeometry(QApplication::desktop()->availableGeometry().width() / 2  -  width() / 2 + QApplication::desktop() -> availableGeometry().x(),
-                QApplication::desktop()->availableGeometry().height() / 2  - height() /2 + QApplication::desktop() -> availableGeometry().y(),
+    int yPos = 0;
+    int xPos = 0;
+
+
+    //Check the position!
+
+    if (positionTopLeft.y() - height() - 30 < 0) { //higher, than allowed
+
+        yPos = positionBottomRight.y() + 10;
+
+    }
+    else {
+
+        yPos =  positionTopLeft.y() - height() - 10;
+
+    }
+
+    if (positionBottomRight.x() + width() + 10 > QApplication::desktop()->availableGeometry().width()) { //righter, than allowed
+
+        xPos = QApplication::desktop()->availableGeometry().width() - width() - 10;
+    }
+    else {
+
+        xPos = positionTopLeft.x();
+    }
+
+
+    setGeometry(xPos,
+                yPos,
                 width(),
                 height());
 //    qDebug() << "Available Geometry Width" << QApplication::desktop()->availableGeometry().width();

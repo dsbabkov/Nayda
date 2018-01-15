@@ -109,7 +109,8 @@ private:
 
 signals:
 
-    void _showTheCard(SimpleCard card);
+//    void _showTheCard(SimpleCard card);
+    void _showTheCard(PositionedCard card);
 //    void _showTheCardNearItsPosition(PositionedCard card);
     void _hideTheCard(bool);
 

@@ -107,7 +107,7 @@ private:
 
 signals:
 
-    void _representTheCardInCentre(SimpleCard);
+    void _representTheCardInCentre(PositionedCard);
     void _hideTheCardInCentre(bool);
 
 //    void _representTheCardNearItsPosition(PositionedCard);
@@ -116,7 +116,7 @@ signals:
 public slots:
 
     void _representTheCardInCenterSlot();
-    void _representTheCardFromHandsInCentre(SimpleCard);
+    void _representTheCardFromHandsInCentre(PositionedCard);
     void _hideTheCardInCentreSlot(bool);
 
 

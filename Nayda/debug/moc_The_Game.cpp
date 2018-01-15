@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_The_Game_t {
     QByteArrayData data[10];
-    char stringdata0[170];
+    char stringdata0[174];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,17 +38,17 @@ QT_MOC_LITERAL(3, 26, 29), // "dbg_return_to_before_the_game"
 QT_MOC_LITERAL(4, 56, 27), // "dbg_was_pushed_to_game_mode"
 QT_MOC_LITERAL(5, 84, 29), // "dbg_return_to_the_main_window"
 QT_MOC_LITERAL(6, 114, 19), // "showTheCardInCentre"
-QT_MOC_LITERAL(7, 134, 10), // "SimpleCard"
-QT_MOC_LITERAL(8, 145, 4), // "card"
-QT_MOC_LITERAL(9, 150, 19) // "hideTheCardInCentre"
+QT_MOC_LITERAL(7, 134, 14), // "PositionedCard"
+QT_MOC_LITERAL(8, 149, 4), // "card"
+QT_MOC_LITERAL(9, 154, 19) // "hideTheCardInCentre"
 
     },
     "The_Game\0dbg_to_be_shown\0\0"
     "dbg_return_to_before_the_game\0"
     "dbg_was_pushed_to_game_mode\0"
     "dbg_return_to_the_main_window\0"
-    "showTheCardInCentre\0SimpleCard\0card\0"
-    "hideTheCardInCentre"
+    "showTheCardInCentre\0PositionedCard\0"
+    "card\0hideTheCardInCentre"
 };
 #undef QT_MOC_LITERAL
 
@@ -98,7 +98,7 @@ void The_Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 1: _t->dbg_return_to_before_the_game((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 2: _t->dbg_was_pushed_to_game_mode(); break;
         case 3: _t->dbg_return_to_the_main_window(); break;
-        case 4: _t->showTheCardInCentre((*reinterpret_cast< SimpleCard(*)>(_a[1]))); break;
+        case 4: _t->showTheCardInCentre((*reinterpret_cast< PositionedCard(*)>(_a[1]))); break;
         case 5: _t->hideTheCardInCentre((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }

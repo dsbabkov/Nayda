@@ -1839,12 +1839,12 @@ void The_Game::dbg_return_to_the_main_window()
     emit dbg_return_to_before_the_game(true);
 }
 
-void The_Game::showTheCardInCentre(SimpleCard card)
+void The_Game::showTheCardInCentre(PositionedCard card)
 {
     //pass the card to PopUpWidget
 
-    _popUpCardWidget->setUpPopUpCard(card);
-    _popUpCardWidget->show();
+    _popUpCardWidget->setUpPopUpCard(card.card);
+    _popUpCardWidget->show(card.positionTopLeft, card.positionBottomRight);
 
 }
 

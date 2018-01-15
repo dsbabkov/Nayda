@@ -286,7 +286,7 @@ void Hand::addNewCardToHands(SimpleCard card)
 
 void Hand::_showTheCardInCentreSlot()
 {
-    emit _showTheCard(_currentCardToShowInCentre);
+    emit _showTheCard(_currentCardToShowNearItsPosition);
 }
 
 //void Hand::_showTheCardNearItsPositionSlot()

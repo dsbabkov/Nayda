@@ -283,10 +283,10 @@ bool GamerWidget::eventFilter(QObject *o, QEvent *e)
 
 void GamerWidget::_representTheCardInCenterSlot()
 {
-    emit _representTheCardInCentre(_currentCardToShowInCentre);
+    emit _representTheCardInCentre(_currentCardToShowNearItsPosition);
 }
 
-void GamerWidget::_representTheCardFromHandsInCentre(SimpleCard card)
+void GamerWidget::_representTheCardFromHandsInCentre(PositionedCard card)
 {
     emit _representTheCardInCentre(card);
 

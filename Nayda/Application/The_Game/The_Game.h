@@ -232,7 +232,7 @@ public slots:
 
 public slots:
 
-    void showTheCardInCentre(SimpleCard card);
+    void showTheCardInCentre(PositionedCard card);
     //void showTheCardNearItsPosition(PositionedCard card);
     void hideTheCardInCentre(bool);
     //void hideTheCardNearItsPosition(bool);
